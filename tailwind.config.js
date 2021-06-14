@@ -120,12 +120,14 @@ module.exports = {
 					h1: {
 						marginBottom: "0rem",
 						color: "#31261D",
+						fontSize: "2.25rem"
 					},
 					h2: {
 						marginTop: "0rem",
 						marginBottom: "0rem",
 						color: "#31261D",
-						maxWidth: "90ch"
+						maxWidth: "90ch",
+						fontSize: "2rem"
 					},
 					h3: {
 						marginTop: "0rem",

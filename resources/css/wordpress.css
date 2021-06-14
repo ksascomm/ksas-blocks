@@ -732,6 +732,7 @@ ul.page-numbers li .page-numbers.current {
 .prose h1.entry-title {
   margin-top: 1.5rem;
   margin-bottom: 0.5rem;
+  font-size: 2.25rem;
 }
 
 .lg\:prose-lg h2 {
