@@ -1,0 +1,79 @@
+.entry-content > *:not(.testimonial.alignwide):not(.testimonial.alignfull):not(.testimonial.alignleft):not(.testimonial.alignright):not(.testimonial.is-style-wide) {
+	max-width: 58rem;
+	width: calc(100% - 2rem);
+}
+
+.testimonial.alignwide {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+.testimonial-image {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+.testimonial h3 {
+  margin-top: .5rem !important;
+  margin-bottom: 0 !important;
+}
+
+.testimonial.is-admin {
+  display: flex;
+  justify-content: space-between;
+}
+
+.testimonial.is-admin .testimonial-image {
+    width: 5rem;
+    -o-object-fit: cover;
+    object-fit: cover;
+    height: 5rem;
+    border-width: 2px;
+    border-radius: 9999px;
+    border-style: solid;
+}
+
+.shadow-lg {
+  --tw-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.testimonial.is-admin .px-8 {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+.testimonial.is-admin .py-4 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+.testimonial.is-admin .max-w-md {
+  max-width: 28rem;
+}
+.testimonial.is-admin .my-20 {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+.testimonial.is-admin .rounded-lg {
+  border-radius: 0.5rem;
+}
+.testimonial.is-admin .bg-white {
+  --tw-bg-opacity: 1;
+  background-color: rgba(254, 254, 254, var(--tw-bg-opacity));
+}
+
+.testimonial.is-admin .-mt-16 {
+  margin-top: -4rem;
+}
+.testimonial.is-admin .md\:justify-end {
+  justify-content: flex-end;
+}
+.testimonial.is-admin .flex {
+  display: flex;
+}
+
+@media (min-width: 1000px) {
+  .entry-content>.testimonial.alignfull:not(.wp-block-group.has-background), .entry-content>.testimonial.alignwide:not(.wp-block-group.has-background) {
+    margin-bottom: 4rem;
+    margin-top: 4rem;
+  }
+}

@@ -1,0 +1,290 @@
+/*
+Description: Used to style the content editor in posts and pages
+*/
+
+@font-face {
+  font-family: "quadon-bold";
+  src: url("../dist/fonts/quadon/Quadon-Bold.eot");
+  src: url("../dist/fonts/quadon/Quadon-Bold.eot?#iefix")
+      format("embedded-opentype"),
+    url("../dist/fonts/quadon/Quadon-Bold.woff") format("woff"),
+    url("../dist/fonts/quadon/Quadon-Bold.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "gentona-light";
+  src: url("../dist/fonts/gentona/Gentona-Light.eot");
+  src: url("../dist/fonts/gentona/Gentona-Light.eot?#iefix")
+      format("embedded-opentype"),
+    url("../dist/fonts/gentona/Gentona-Light.woff") format("woff"),
+    url("../dist/fonts/gentona/Gentona-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "gentona-semibold";
+  src: url("../dist/fonts/gentona/Gentona-SemiBold.eot");
+  src: url("../dist/fonts/gentona/Gentona-SemiBold.eot?#iefix")
+      format("embedded-opentype"),
+    url("../dist/fonts/gentona/Gentona-SemiBold.woff") format("woff"),
+    url("../dist/fonts/gentona/Gentona-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Main column width */
+.wp-block, #editor div.block-editor-writing-flow {
+  max-width: 100%;
+}
+
+/* Width of "wide" blocks */
+.wp-block[data-align="wide"] {
+  max-width: 95%;
+}
+
+/* Width of "full-width" blocks */
+.wp-block[data-align="full"] {
+  max-width: none;
+}
+
+
+body {
+  font-family: "gentona-light", "Helvetica Neue", Roboto, sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+  color: #31261d;
+}
+
+/* TinyMCE Editor */
+.editor-styles-wrapper p strong,
+.editor-rich-text p strong {
+  font-family: "gentona-semibold", "Helvetica Neue", Roboto, sans-serif;
+  font-weight: 600;
+}
+
+p b,
+p strong,
+li b,
+li strong {
+  font-family: "gentona-semibold", "Helvetica Neue", Roboto, sans-serif;
+  font-weight: 600;
+}
+
+p u,
+li u {
+  text-decoration: none;
+}
+
+.rich-text.editor-rich-text__editable.block-editor-rich-text__editable.wp-block-button__link {
+  font-size: 18px;
+}
+
+/* Links */
+.editor-block-list__layout a {
+  color: #002d72;
+}
+
+.editor-block-list__layout a:hover {
+  color: #31261d;
+}
+
+.wp-block-file * + .wp-block-file__button {
+  display: none;
+}
+
+.wp-block-button__link {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 0 1rem 0;
+  padding: 0.85em 1em;
+  border: 1px solid transparent;
+  border-radius: 0;
+  transition: background-color 0.25s ease-out, color 0.25s ease-out;
+  font-family: inherit;
+  font-size: 0.9rem;
+  -webkit-appearance: none;
+  line-height: 1;
+  text-align: center;
+  cursor: pointer;
+  background-color: #002d72;
+  color: #fefefe;
+}
+
+.wp-block-button__link:hover {
+  background-color: #00050c;
+  color: #fff;
+}
+
+/* The Post Title */
+.editor-post-title__block .editor-post-title__input {
+  font-family: "quadon-bold", "Helvetica Neue", Roboto, sans-serif;
+  font-weight: 500;
+}
+
+/* Headings */
+.editor-writing-flow .wp-block h1 {
+  font-family: "quadon-bold", "Helvetica Neue", Roboto, sans-serif;
+  font-weight: 500;
+}
+.editor-writing-flow .wp-block h2,
+.editor-writing-flow .wp-block h3,
+.editor-writing-flow .wp-block h4,
+.editor-writing-flow .wp-block h5,
+.editor-writing-flow .wp-block h6 {
+  font-family: "gentona-semibold", "Helvetica Neue", Roboto, sans-serif;
+  font-weight: 600;
+}
+
+h1 {
+  font-family: "quadon-bold", "Helvetica Neue", Roboto, sans-serif;
+  font-weight: 500;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "gentona-semibold", "Helvetica Neue", Roboto, sans-serif;
+  font-weight: 600;
+}
+
+/* Blockquote styles */
+.wp-block-quote__citation {
+  font-size: 1rem;
+  font-family: "gentona-semibold", "Helvetica Neue", Roboto, sans-serif;
+  font-weight: 600;
+  color: #31261d;
+}
+
+.wp-block-quote__citation:before, .wp-block-quote__citation:before {
+  content: "— ";
+}
+
+.wp-block-quote.is-large, .wp-block-quote.is-style-large {
+  border-left: 0.25em solid #31261D;
+}
+
+.wp-block-quote.is-large p, .wp-block-quote.is-style-large p {
+  font-style: normal;
+}
+
+.wp-block-quote.is-style-large .wp-block-quote__citation {
+  font-size: 1.125em;
+}
+
+/* Event Calendar Plugin */
+.tribe-editor__subtitle .tribe-editor__btn--label, .tribe-editor__event-price__price, .tribe-editor__venue .tribe-editor__venue__name h3.tribe-editor__venue__name-heading, .tribe-editor__organizer__details p {
+  font-family: "gentona-semibold", "Helvetica Neue", Roboto, sans-serif;
+  font-weight: 600;
+}
+
+.tribe-editor__venue__address, .tribe-editor__venue__phone, .tribe-editor__venue__website, .tribe-editor__event-website__label-text input, .tribe-editor__events-link .tribe-editor__btn--link input, .block-editor-url-input__input[type=text] {
+  font-family: "gentona-light", "Helvetica Neue", Roboto, sans-serif;
+  font-weight: 300;
+}
+
+.tribe-editor__organizer__details p, .tribe-editor__events-link .tribe-editor__btn--link input, .tribe-editor__venue__address a {
+  color: #002d72;
+}
+
+.tribe-editor__event-website__label-text input {
+  background-color: #002d72;
+  border-color: #002d72;
+}
+
+.tribe-editor__event-website__url .block-editor-url-input__input[type=text] {
+  font-size: 1.25rem;
+  font-family: "gentona-semibold", "Helvetica Neue", Roboto, sans-serif;
+  font-weight: 600;
+  color: #002d72;
+}
+
+.tribe-editor__btn--link.tribe-events-ical svg path, .tribe-editor__btn--link.tribe-events-gcal svg path {
+  fill: #002d72;
+}
+
+.tribe-editor__separator {
+  color: #31261d;
+}
+
+.tribe-editor__featured-image .components-placeholder.components-placeholder {
+  box-shadow: inset 0 0 0 1px #e5e2e0;
+}
+
+section.tribe-editor__subtitle.tribe-editor__date-time.tribe-common__plugin-block-hook {
+  box-shadow: inset 0 0 0 1px #e5e2e0 !important;
+}
+
+h2.tribe-editor__subtitle__headline {
+  margin: 1rem;
+  padding: 1rem 0;
+}
+
+.post-type-tribe_events p.rich-text.block-editor-rich-text__editable {
+  border: 1px solid black !important;
+}
+
+.tribe-editor__featured-image .components-placeholder__instructions {
+  font-family: "gentona-light", "Helvetica Neue", Roboto, sans-serif;
+  font-weight: 300;
+  color: #4A484C;
+}
+
+
+/* Fields converted from Classic to Block Editor */
+.tribe-editor__btn--label strong, .tribe-editor__event-details .tribe-editor__meta-group .tribe-editor__events-section__headline input, .tribe-editor__block strong, .tribe-editor__block p strong {
+  color: #31261d;
+  font-family: "gentona-semibold", "Helvetica Neue", Roboto, sans-serif;
+  font-weight: 600;
+}
+
+.tribe-editor__block, .tribe-editor__block p, .block-editor .block-editor-plain-text, .tribe-editor__btn--label, .tribe-editor__soc__input {
+  font-family: "gentona-light", "Helvetica Neue", Roboto, sans-serif;
+  font-weight: 300;
+}
+
+.tribe-editor__subtitle__headline-date, .tribe-editor__separator, .tribe-editor__subtitle .tribe-editor__event-cost span {
+  font-size: 1.25rem;
+}
+
+.tribe-editor__block, .tribe-editor__block p {
+  font-size: 1rem;
+}
+
+.block-editor-block-list__block.wp-block.is-selected input.tribe-editor__date-input {
+  font-size: 1.25rem;
+  color: #31261d;
+  font-family: "gentona-semibold", "Helvetica Neue", Roboto, sans-serif;
+  font-weight: 600;
+}
+
+
+p.block-editor-rich-text__editable {
+  box-shadow: inset 0 0 0 1px #e5e2e0 !important;
+  padding: .25rem;
+}
+
+:root .has-primary-color {
+	color: #002d72;
+}
+
+:root .has-primary-background-color {
+	background-color: #002d72;
+	color: #fefefe;
+}
+
+.right-call-to-action.has-white-background-color, .left-call-to-action.has-white-background-color {
+	background: url('../dist/images/blueInWhite_corner1.svg') no-repeat right bottom;
+  background-color: #fefefe;
+  background-size: 2.666666666666667rem auto;
+  border: .06667rem solid #002d72;
+  border-bottom: none;
+  box-shadow: 0 0.4rem 0 0 #002d72;
+}

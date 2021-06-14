@@ -1,0 +1,255 @@
+/*--------------------------------------------------------------
+# Custom Fonts
+--------------------------------------------------------------*/
+
+@font-face {
+	font-family: "quadon";
+	src: url("../fonts/quadon/Quadon-Medium.eot");
+	src: url("../fonts/quadon/Quadon-Medium.eot?#iefix")
+			format("embedded-opentype"),
+		url("../fonts/quadon/Quadon-Medium.woff") format("woff"),
+		url("../fonts/quadon/Quadon-Medium.ttf") format("truetype");
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "gentona-light";
+	src: url("../fonts/gentona/Gentona-Light.eot");
+	src: url("../fonts/gentona/Gentona-Light.eot?#iefix")
+			format("embedded-opentype"),
+		url("../fonts/gentona/Gentona-Light.woff") format("woff"),
+		url("../fonts/gentona/Gentona-Light.ttf") format("truetype");
+	font-weight: 300;
+	font-style: normal;
+	font-display: fallback;
+}
+
+@font-face {
+	font-family: "gentona-semibold";
+	src: url("../fonts/gentona/Gentona-SemiBold.eot");
+	src: url("../fonts/gentona/Gentona-SemiBold.eot?#iefix")
+			format("embedded-opentype"),
+		url("../fonts/gentona/Gentona-SemiBold.woff") format("woff"),
+		url("../fonts/gentona/Gentona-SemiBold.ttf") format("truetype");
+	font-weight: 600;
+	font-style: normal;
+	font-display: fallback;
+}
+
+@font-face {
+	font-family: "gentona-bold";
+	src: url("../fonts/gentona/Gentona-Bold.eot");
+	src: url("../fonts/gentona/Gentona-Bold.eot?#iefix")
+			format("embedded-opentype"),
+		url("../fonts/gentona/Gentona-Bold.woff") format("woff"),
+		url("../fonts/gentona/Gentona-Bold.ttf") format("truetype");
+	font-weight: 700;
+	font-style: normal;
+	font-display: fallback;
+}
+
+@font-face {
+    font-family: 'icomoon';
+    src:url('../fonts/icomoon/icomoon.eot');
+    src:url('../fonts/icomoon/icomoon.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/icomoon/icomoon.woff') format('woff'),
+        url('../fonts/icomoon/icomoon.ttf') format('truetype'),
+        url('../fonts/icomoon/icomoon.svg#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-arrow-right14:before {
+    content: "\e97f";
+}
+.icon-arrow-right6:before {
+    content: "\e986";
+}
+.icon-atom2:before {
+    content: "\e90b";
+}
+.icon-book:before {
+    content: "\e90e";
+}
+.icon-book3:before {
+    content: "\e905";
+}
+.icon-bookmark:before {
+    content: "\e914";
+}
+.icon-brain:before {
+    content: "\e907";
+}
+.icon-bubble:before {
+    content: "\e9f8";
+}
+.icon-bubbles2:before {
+    content: "\e90c";
+}
+.icon-bubbles3:before {
+    content: "\e90d";
+}
+.icon-calculator3:before {
+    content: "\e916";
+}
+.icon-calendar:before {
+    content: "\ea34";
+}
+.icon-calendar2:before {
+    content: "\ea38";
+}
+.icon-camera:before {
+    content: "\ea3c";
+}
+.icon-download4:before {
+    content: "\eb17";
+}
+.icon-earth:before {
+    content: "\eb2c";
+}
+.icon-earth2:before {
+    content: "\e909";
+}
+.icon-facebook2:before {
+    content: "\eb61";
+}
+.icon-file-excel:before {
+    content: "\eb6f";
+}
+.icon-file-pdf:before {
+    content: "\eb79";
+}
+.icon-file-play:before {
+    content: "\eb7c";
+}
+.icon-file-word:before {
+    content: "\eb8d";
+}
+.icon-file-zip:before {
+    content: "\eb90";
+}
+.icon-flag:before {
+    content: "\e910";
+}
+.icon-home:before {
+    content: "\ec2e";
+}
+.icon-image2:before {
+    content: "\e915";
+}
+.icon-images2:before {
+    content: "\ec44";
+}
+.icon-lab:before {
+    content: "\e90f";
+}
+.icon-leaf:before {
+    content: "\e904";
+}
+.icon-library2:before {
+    content: "\e908";
+}
+.icon-link:before {
+    content: "\e91b";
+}
+.icon-location:before {
+    content: "\ec89";
+}
+.icon-mail:before {
+    content: "\eca0";
+}
+.icon-map4:before {
+    content: "\e911";
+}
+.icon-microscope:before {
+    content: "\e912";
+}
+.icon-mobile:before {
+    content: "\ecda";
+}
+.icon-movie:before {
+    content: "\e913";
+}
+.icon-music2:before {
+    content: "\e919";
+}
+.icon-new-tab:before {
+    content: "\ecf5";
+}
+.icon-new-tab2:before {
+    content: "\ecf6";
+}
+.icon-newspaper:before {
+    content: "\ecf7";
+}
+.icon-palette:before {
+    content: "\e91e";
+}
+.icon-paw:before {
+    content: "\e90a";
+}
+.icon-pen3:before {
+    content: "\e91f";
+}
+.icon-phone:before {
+    content: "\ed33";
+}
+.icon-play4:before {
+    content: "\ed59";
+}
+.icon-printer4:before {
+    content: "\ed7e";
+}
+.icon-pulse:before {
+    content: "\e917";
+}
+.icon-puzzle3:before {
+    content: "\e918";
+}
+.icon-quotes-left:before {
+    content: "\ed93";
+}
+.icon-rocket:before {
+    content: "\e91c";
+}
+.icon-search:before {
+    content: "\edc4";
+}
+.icon-share:before {
+    content: "\edd8";
+}
+.icon-square:before {
+    content: "\ee26";
+}
+.icon-stats-growth:before {
+    content: "\e91a";
+}
+.icon-theater:before {
+    content: "\e91d";
+}
+.icon-user:before {
+    content: "\eeda";
+}
+.icon-users:before {
+    content: "\e906";
+}
+.icon-video-camera2:before {
+    content: "\eef8";
+}

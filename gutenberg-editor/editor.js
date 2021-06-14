@@ -1,0 +1,1 @@
+// Used to remove block options in editor

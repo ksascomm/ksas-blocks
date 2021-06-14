@@ -1,0 +1,83 @@
+{
+    "key": "group_606f091040991",
+    "title": "Homepage",
+    "fields": [
+        {
+            "key": "field_606f098bb10a9",
+            "label": "Show Homepage News Feed",
+            "name": "show_homepage_news_feed",
+            "type": "true_false",
+            "instructions": "Show posts on your homepage?",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_606f0916b10a6",
+            "label": "Homepage News Header",
+            "name": "homepage_news_header",
+            "type": "text",
+            "instructions": "Enter the headline for the news feed on the homepage",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "News & Announcements",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_606f094db10a7",
+            "label": "Homepage News Posts",
+            "name": "homepage_news_posts",
+            "type": "number",
+            "instructions": "Enter the number of posts you would like displayed on the homepage",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 3,
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "min": "",
+            "max": "",
+            "step": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "theme-general-settings"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1621279619
+}
