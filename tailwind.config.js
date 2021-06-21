@@ -163,7 +163,9 @@ module.exports = {
 						color: "#31261D"
 					},
 					table: {
-						fontSize: "1rem"
+						fontSize: "1rem",
+						marginTop: ".5rem",
+						marginBottom: ".5rem"
 					},
 					thead: {
 						color: "#31261D"

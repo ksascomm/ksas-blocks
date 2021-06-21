@@ -267,7 +267,7 @@ hr.news-divider:after {
 }
 
 .site-title small {
-  font-size: 50%;
+  font-size: 75%;
 }
 
 ul.primary-menu .current_page_ancestor, ul.primary-menu .current-menu-item {
@@ -735,9 +735,11 @@ ul.page-numbers li .page-numbers.current {
   font-size: 2.25rem;
 }
 
-.lg\:prose-lg h2 {
+.lg\:prose-lg h2, .lg\:prose-lg h3 {
 	margin-top: inherit !important;
 }
+
+
 /*--------------------------------------------------------------
 # Block Overrides
 --------------------------------------------------------------*/
@@ -1148,7 +1150,7 @@ body:not(.enable-search-modal) .header-titles-wrapper {
 }
 
 .site-title {
-	font-size: 2.1rem;
+	font-size: 2rem;
 	font-weight: 600;
 	line-height: 1;
 }
@@ -1988,7 +1990,7 @@ button.search-untoggle {
 	/* Site Header --------------------------- */
 
 	.site-title {
-		font-size: 2.4rem;
+		font-size: 2rem;
 		font-weight: 700;
 	}
 
