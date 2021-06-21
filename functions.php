@@ -205,6 +205,11 @@ require get_template_directory() . '/inc/svg-icons.php';
 require get_template_directory() . '/inc/class-twentytwenty-script-loader.php';
 
 /**
+ * Open Graph Meta Tags
+ */
+require get_template_directory() . '/inc/open-graph-icons.php';
+
+/**
  * Load ACF compatibility file.
  */
 if ( function_exists( 'acf_add_options_page' ) ) {

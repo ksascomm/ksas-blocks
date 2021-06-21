@@ -17,6 +17,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="date" content="<?php the_modified_date(); ?>" />
 	<link rel="profile" href="https://gmpg.org/xfn/11">
+	<meta name="msapplication-config" content="<?php echo esc_url( get_template_directory_uri() ); ?>/dist/images/favicons/browserconfig.xml" />
 	<title><?php create_page_title(); ?></title>
 	<?php wp_head(); ?>
 	<!-- Global site tag (gtag.js) - Google Analytics -->
