@@ -163,6 +163,7 @@ if (mix.inProduction()) {
           /^class/,
           /^align/,
           /^schema/,
+          /([href$=])\w+/,
         ],
       }),
     ]

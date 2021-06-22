@@ -183,6 +183,10 @@ module.exports = {
 						marginTop: ".5rem",
 						marginBottom: ".5rem",
 					},
+					pre: {
+						backgroundColor: "#f8f8f8",
+						color: "#31261d"
+					}
 				},
 			],
         },
