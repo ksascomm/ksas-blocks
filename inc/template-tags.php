@@ -343,40 +343,9 @@ function twentytwenty_body_classes( $classes ) {
 		$classes[] = 'not-showing-comments';
 	}
 
-	// Check if avatars are visible.
-	$classes[] = get_option( 'show_avatars' ) ? 'show-avatars' : 'hide-avatars';
-
 	// Slim page template class names (class = name - file suffix).
 	if ( is_page_template() ) {
 		$classes[] = basename( get_page_template_slug(), '.php' );
-	}
-
-	// Check for the elements output in the top part of the footer.
-	$has_footer_menu = has_nav_menu( 'footer' );
-	$has_social_menu = has_nav_menu( 'social' );
-	$has_sidebar_1   = is_active_sidebar( 'sidebar-1' );
-	$has_sidebar_2   = is_active_sidebar( 'sidebar-2' );
-	$has_sidebar_3   = is_active_sidebar( 'sidebar-3' );
-	$has_sidebar_3   = is_active_sidebar( 'sidebar-4' );
-
-	// Add a class indicating whether those elements are output.
-	if ( $has_footer_menu || $has_social_menu || $has_sidebar_1 || $has_sidebar_2 || $has_sidebar_3 || $has_sidebar_4 ) {
-		$classes[] = 'footer-top-visible';
-	} else {
-		$classes[] = 'footer-top-hidden';
-	}
-
-	// Get header/footer background color.
-	$header_footer_background = get_theme_mod( 'header_footer_background_color', '#ffffff' );
-	$header_footer_background = strtolower( '#' . ltrim( $header_footer_background, '#' ) );
-
-	// Get content background color.
-	$background_color = get_theme_mod( 'background_color', 'f5efe0' );
-	$background_color = strtolower( '#' . ltrim( $background_color, '#' ) );
-
-	// Add extra class if main background and header/footer background are the same color.
-	if ( $background_color === $header_footer_background ) {
-		$classes[] = 'reduced-spacing';
 	}
 
 	return $classes;
