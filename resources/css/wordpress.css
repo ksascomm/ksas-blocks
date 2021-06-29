@@ -67,6 +67,19 @@ form.post-password-form input {
 	@apply bg-grey-lightest p-2;
 }
 
+.ginput_container input, .ginput_container select, .ginput_container textarea {
+	@apply border-2 border-grey;
+}
+
+.gform_footer [type='submit'] {
+	@apply bg-blue text-white p-2 hover:bg-blue-light;
+}
+
+label.gfield_label {
+	@apply font-semi;
+}
+
+
 /* Interactive
 	 ========================================================================== */
 

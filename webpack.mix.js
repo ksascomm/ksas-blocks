@@ -1,6 +1,6 @@
 const mix = require("laravel-mix");
 const tailwindcss = require("tailwindcss");
-const path = require('path')
+const path = require("path");
 const glob = require("glob-all");
 const PurgecssPlugin = require("purgecss-webpack-plugin");
 
@@ -27,7 +27,7 @@ const config = {
 /* ==========================================================================
   Purge CSS Extractors
   ========================================================================== */
-const TailwindExtractor = content => {
+const TailwindExtractor = (content) => {
   return content.match(/[A-Za-z0-9-_:\/]+/g) || [];
 };
 
@@ -36,17 +36,12 @@ const TailwindExtractor = content => {
   ========================================================================== */
 mix
   // handle JS files
-  .scripts([
-    "resources/js/twentytwenty.js"]
-    , "dist/js/bundle.min.js")
+  .scripts(["resources/js/twentytwenty.js"], "dist/js/bundle.min.js")
   //.disableNotifications()
 
-	.postCss(
-		"./resources/css/style.css",
-		"./dist/css/style.css", [
-			require('tailwindcss')("./tailwind.config.js")
-		]
-	)
+  .postCss("./resources/css/style.css", "./dist/css/style.css", [
+    require("tailwindcss")("./tailwind.config.js"),
+  ])
 
   //Minify and move js to dist directory
   //.babel(
@@ -117,7 +112,7 @@ if (mix.inProduction()) {
           },
         ],
 
-       safelist: [
+        safelist: [
           "p",
           "h1",
           "h2",
@@ -144,10 +139,10 @@ if (mix.inProduction()) {
           "menu-toggle",
           "sub-menu",
           "callout",
-					"breadcrumbs",
-					"current-item",
+          "breadcrumbs",
+          "current-item",
           "current_page_item",
-					"page-numbers",
+          "page-numbers",
           "sticky",
           "current_page_ancestor",
           "loop-entry",
@@ -156,6 +151,9 @@ if (mix.inProduction()) {
           ":after",
           ":before",
           "form",
+          "ginput_container",
+          "gform_footer",
+          "gfield_label",
           /^has-/,
           /(^wp-block-)\w+/,
           /(^c-accordion)\w+/,
@@ -166,6 +164,6 @@ if (mix.inProduction()) {
           /([href$=])\w+/,
         ],
       }),
-    ]
+    ],
   });
 }
