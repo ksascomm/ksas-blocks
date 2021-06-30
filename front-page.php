@@ -10,7 +10,7 @@
 get_header();
 ?>
 
-	<main id="site-content" class="site-main front prose prose-sm sm:prose lg:prose-lg xl:prose-2xl ">
+	<main id="site-content" class="site-main front prose sm:prose lg:prose-lg xl:prose-2xl ">
 
 		<?php
 		while ( have_posts() ) :
@@ -33,7 +33,7 @@ get_header();
 
 		<div class="divider div-transparent div-dot"></div>
 		<div class="news-section mb-24">
-			<div class="prose prose-sm sm:prose lg:prose-lg xl:prose-xl mx-auto">
+			<div class="prose sm:prose lg:prose-lg xl:prose-xl mx-auto">
 				<div class="flex justify-between">
 					<div>
 						<h2><?php echo esc_html( $heading ); ?>

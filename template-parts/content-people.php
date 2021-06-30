@@ -38,7 +38,7 @@
 			<?php the_title(); ?>
 		<?php endif; ?>
 		</h2>
-		
+
 		<?php if ( get_post_meta( $post->ID, 'ecpt_position', true ) ) : ?>
 			<h3><?php echo esc_html( get_post_meta( $post->ID, 'ecpt_position', true ) ); ?></h3>
 		<?php endif; ?>

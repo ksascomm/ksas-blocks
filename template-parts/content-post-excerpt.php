@@ -9,7 +9,7 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class( 'article-excerpt prose prose-sm sm:prose lg:prose-lg xl:prose-xl mx-auto border-b border-solid border-grey pt-4 mb-4'); ?> aria-label="<?php the_title();?>">
+<article id="post-<?php the_ID(); ?>" <?php post_class( 'article-excerpt prose sm:prose lg:prose-lg xl:prose-xl mx-auto border-b border-solid border-grey pt-4 mb-4'); ?> aria-label="<?php the_title();?>">
 	<header class="entry-header">
 		<?php
 

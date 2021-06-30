@@ -9,7 +9,7 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class( 'prose prose-sm sm:prose lg:prose-lg xl:prose-xl mx-auto' ); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class( 'prose sm:prose lg:prose-lg xl:prose-xl mx-auto' ); ?>>
 	<header class="entry-header">
 		<?php
 		if ( is_singular() ) :
