@@ -43,10 +43,9 @@ if ( $is_preview ) {
 						<h3><?php the_sub_field( 'title' ); ?></h3>
 						<p><?php the_sub_field( 'caption' ); ?></p>
 						<?php
-						$slide_link = get_sub_field( 'link' );
-						if ( $slide_link ) :
+						if ( get_sub_field( 'link' ) ) :
 							?>
-							<a class="button p-4 bg-blue hover:bg-blue-sky hover:text-black transform" href="<?php echo esc_url( $link ); ?>" aria-label="<?php the_sub_field( 'title' ); ?>">Find Out More <span class="far fa-arrow-alt-circle-right"></span></a>
+							<a class="button p-4 bg-blue hover:bg-blue-sky hover:text-black transform" href="<?php the_sub_field( 'link' ); ?>" aria-label="<?php the_sub_field( 'title' ); ?>">Find Out More <span class="far fa-arrow-alt-circle-right"></span></a>
 						<?php endif; ?>
 					</div>
 				</div>
