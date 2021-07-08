@@ -13,7 +13,7 @@
 
 <div class="flex flex-wrap lg:flex-nowrap">
 	<?php if ( has_post_thumbnail() ) : ?>
-		<div class="pr-4 flex-initial headshot">
+		<div class="pr-4 flex-none headshot">
 			<?php
 				the_post_thumbnail(
 					'medium',
@@ -28,7 +28,7 @@
 			?>
 		</div>
 	<?php endif; ?>
-	<div class="flex-initial">
+	<div class="flex-grow">
 		<h2 class="font-heavy my-0">
 		<?php if ( get_post_meta( $post->ID, 'ecpt_website', true ) ) : ?>
 			<a href="<?php echo esc_html( get_post_meta( $post->ID, 'ecpt_website', true ) ); ?>" title="<?php the_title(); ?>'s webpage" target="_blank">
