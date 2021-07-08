@@ -366,8 +366,8 @@ if ( function_exists( 'register_block_pattern' ) ) {
 			'content'       => '
 			<!-- wp:group {"align":"wide","className":"four-column-feature"} -->
 			<div class="wp-block-group alignwide four-column-feature"><div class="wp-block-group__inner-container"><!-- wp:columns {"className":""} -->
-			<div class="wp-block-columns"><!-- wp:column {"width":"41%","className":"border-r-4 border-black"} -->
-			<div class="wp-block-column border-r-4 border-black" style="flex-basis:41%"><!-- wp:heading {"className":""} -->
+			<div class="wp-block-columns"><!-- wp:column {"width":"41%","className":"border-r-4 border-primary"} -->
+			<div class="wp-block-column border-r-4 border-primary" style="flex-basis:41%"><!-- wp:heading {"className":""} -->
 			<h2 class="">Transport is defined as a movement</h2>
 			<!-- /wp:heading --></div>
 			<!-- /wp:column -->

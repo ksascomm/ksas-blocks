@@ -59,7 +59,7 @@ get_header();
 
 			if ( $people_query->have_posts() ) :
 				?>
-				<div class="role-title <?php echo esc_html( $position->slug ); ?>">
+				<div class="pt-2 role-title <?php echo esc_html( $position->slug ); ?>">
 					<h3 class="uppercase"><?php echo esc_html( $position_name ); ?></h3>
 				</div>
 

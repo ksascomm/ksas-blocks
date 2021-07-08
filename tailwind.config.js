@@ -1,13 +1,23 @@
 const { NoEmitOnErrorsPlugin } = require("webpack");
 
 module.exports = {
+  mode: "jit",
   purge: [
-    "*.php",
-    "template-parts/*.php",
-    "template-parts/*/*.php",
-    "template-parts/*/*/*.php",
-    "page-templates/*.php",
-    "inc/*.php",
+    "./comments.php",
+    "./header.php",
+    "./footer.php",
+    "./single.php",
+    "./index.php",
+    "./404.php",
+    "./page.php",
+    "./front-page.php",
+    "./template-parts/*.php",
+    "./template-parts/*/*.php",
+    "./template-parts/*/*/*.php",
+    "./page-templates/*.php",
+    "./inc/*.php",
+    "./resources/js/*.js",
+    "./resources/css/wordpress.css",
   ],
   theme: {
     screens: {
@@ -18,11 +28,7 @@ module.exports = {
       "2xl": "100rem",
     },
     colors: {
-      primary: "hsl(260 100% 50%)",
       primary: "#31261D",
-      secondary: "#002d72",
-      transparent: "transparent",
-      black: "#31261D",
       "old-black": "#2c2c33",
       "grey-darkest": "#4A484C",
       grey: "#e5e2e0",
@@ -31,30 +37,19 @@ module.exports = {
       white: "#fefefe",
       blue: "#002d72",
       "blue-light": "#68ace5",
-      "blue-lightest": "#c3dcf5",
-      "blue-sky": "#418fde",
     },
     fontSize: {
-      sm: ".875rem",
       base: "1rem",
       lg: "1.125rem",
       xl: "1.25rem",
       "2xl": "1.5rem",
       "3xl": "1.875rem",
       "4xl": "2.25rem",
-      "5xl": "3rem",
     },
     fontWeight: {
       normal: "400",
+      semibold: "600",
       bold: "700",
-    },
-    ratios: {
-      xs: 1.125,
-      sm: 1.333,
-      md: 1.5,
-      lg: 1.618,
-      xl: 2,
-      "2xl": 3,
     },
     fontFamily: {
       sans: [
@@ -119,21 +114,21 @@ module.exports = {
                 fontSize: "2.25rem",
               },
               h2: {
-                marginTop: "0rem",
-                marginBottom: "0rem",
+                marginTop: "0.5rem",
+                marginBottom: "0.5rem",
                 color: "#31261D",
                 maxWidth: "90ch",
                 fontSize: "2rem",
               },
               h3: {
-                marginTop: "0rem",
-                marginBottom: "0rem",
+                marginTop: "0.5rem",
+                marginBottom: "0.5rem",
                 fontSize: "1.6rem",
                 color: "#31261D",
               },
               h4: {
-                marginTop: "0rem",
-                marginBottom: "0rem",
+                marginTop: "0.5rem",
+                marginBottom: "0.5rem",
                 color: "#31261D",
                 fontSize: "1.25rem",
               },
@@ -183,15 +178,34 @@ module.exports = {
                 backgroundColor: "#f8f8f8",
                 color: "#31261d",
               },
+              small: {
+                fontSize: "75%",
+              },
             },
           ],
+        },
+        lg: {
+          css: {
+            h2: {
+              marginTop: "0.5rem",
+              marginBottom: "0.5rem",
+            },
+            h3: {
+              marginTop: "0.5rem",
+              marginBottom: "0.5rem",
+            },
+            img: {
+              marginTop: "0rem",
+              marginBottom: "0rem",
+            },
+          },
         },
       },
     },
   },
   plugins: [
     require("@tailwindcss/typography")({
-      modifiers: ["sm", "lg"],
+      modifiers: ["lg"],
     }),
   ],
   variants: {

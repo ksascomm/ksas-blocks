@@ -238,7 +238,7 @@ add_action( 'wp_print_footer_scripts', 'twentytwenty_skip_link_focus_fix' );
  * Include a skip to content link at the top of the page so that users can bypass the menu.
  */
 function twentytwenty_skip_link() {
-	echo '<div role="navigation" aria-label="Skip to main content"><a class="skip-link screen-reader-text" href="#site-content">' . __( 'Skip to the content', 'ksas-blocks' ) . '</a></div>';
+	echo '<div role="navigation" aria-label="Skip to main content"><a class="skip-link sr-only" href="#site-content">' . __( 'Skip to the content', 'ksas-blocks' ) . '</a></div>';
 }
 
 add_action( 'wp_body_open', 'twentytwenty_skip_link', 5 );

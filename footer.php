@@ -41,11 +41,11 @@
 			</ul>
 		</div>
 		<div class="social-media m-4 col-span-4 lg:col-span-1 mx-auto">
-			<a href="https://facebook.com/JHUArtsSciences"><span class="fab fa-facebook-square fa-2x pr-2"></span><span class="screen-reader-text">Facebook</span></a>
-			<a href="https://www.instagram.com/JHUArtsSciences/"><span class=" fab fa-instagram fa-2x pr-2"></span><span class="screen-reader-text">Instagram</span></a>
-			<a href="https://twitter.com/JHUArtsSciences"><span class="fab fa-twitter fa-2x pr-2"></span><span class="screen-reader-text">Twitter</span></a>
-			<a href="https://www.youtube.com/user/jhuksas"><span class="fab fa-youtube fa-2x pr-2"></span><span class="screen-reader-text">YouTube</span></a>
-			<a href="https://www.tiktok.com/@jhuartssciences"><span class="fab fa-tiktok fa-2x"></span><span class="screen-reader-text pr-2">TikTok</span></a>
+			<a href="https://facebook.com/JHUArtsSciences"><span class="fab fa-facebook-square fa-2x pr-2"></span><span class="sr-only">Facebook</span></a>
+			<a href="https://www.instagram.com/JHUArtsSciences/"><span class=" fab fa-instagram fa-2x pr-2"></span><span class="sr-only">Instagram</span></a>
+			<a href="https://twitter.com/JHUArtsSciences"><span class="fab fa-twitter fa-2x pr-2"></span><span class="sr-only">Twitter</span></a>
+			<a href="https://www.youtube.com/user/jhuksas"><span class="fab fa-youtube fa-2x pr-2"></span><span class="sr-only">YouTube</span></a>
+			<a href="https://www.tiktok.com/@jhuartssciences"><span class="fab fa-tiktok fa-2x"></span><span class="sr-only pr-2">TikTok</span></a>
 		</div>
 		<div class="col-span-4 my-2">
 			<?php if ( get_field( 'custom_address', 'option' ) ) : ?>

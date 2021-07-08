@@ -37,7 +37,7 @@
 				sprintf(
 					wp_kses(
 						/* translators: %s: Name of current post. Only visible to screen readers */
-						__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'ksas-blocks' ),
+						__( 'Continue reading<span class="sr-only"> "%s"</span>', 'ksas-blocks' ),
 						array(
 							'span' => array(
 								'class' => array(),

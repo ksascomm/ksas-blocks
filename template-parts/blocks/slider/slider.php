@@ -45,7 +45,7 @@ if ( $is_preview ) {
 						<?php
 						if ( get_sub_field( 'link' ) ) :
 							?>
-							<a class="button p-4 bg-blue hover:bg-blue-sky hover:text-black transform" href="<?php the_sub_field( 'link' ); ?>" aria-label="<?php the_sub_field( 'title' ); ?>">Find Out More <span class="far fa-arrow-alt-circle-right"></span></a>
+							<a class="button p-4 bg-blue hover:bg-blue-light hover:text-primary transform" href="<?php the_sub_field( 'link' ); ?>" aria-label="<?php the_sub_field( 'title' ); ?>">Find Out More <span class="far fa-arrow-alt-circle-right"></span></a>
 						<?php endif; ?>
 					</div>
 				</div>

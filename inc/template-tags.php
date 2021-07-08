@@ -80,7 +80,7 @@ if ( ! function_exists( 'ksas_blocks_entry_footer' ) ) :
 				sprintf(
 					wp_kses(
 						/* translators: %s: post title */
-						__( 'Leave a Comment<span class="screen-reader-text"> on %s</span>', 'ksas-blocks' ),
+						__( 'Leave a Comment<span class="sr-only"> on %s</span>', 'ksas-blocks' ),
 						array(
 							'span' => array(
 								'class' => array(),
@@ -97,7 +97,7 @@ if ( ! function_exists( 'ksas_blocks_entry_footer' ) ) :
 			sprintf(
 				wp_kses(
 					/* translators: %s: Name of current post. Only visible to screen readers */
-					__( 'Edit <span class="screen-reader-text">%s</span>', 'ksas-blocks' ),
+					__( 'Edit <span class="sr-only">%s</span>', 'ksas-blocks' ),
 					array(
 						'span' => array(
 							'class' => array(),
@@ -231,7 +231,7 @@ function twentytwenty_add_sub_toggles_to_main_menu( $args, $item, $depth ) {
 			$toggle_duration      = twentytwenty_toggle_duration();
 
 			// Add the sub menu toggle.
-			$args->after .= '<button class="toggle sub-menu-toggle fill-children-current-color" data-toggle-target="' . $toggle_target_string . '" data-toggle-type="slidetoggle" data-toggle-duration="' . absint( $toggle_duration ) . '" aria-expanded="false"><span class="screen-reader-text">' . __( 'Show sub menu', 'ksas-blocks' ) . '</span>' . twentytwenty_get_theme_svg( 'chevron-down' ) . '</button>';
+			$args->after .= '<button class="toggle sub-menu-toggle fill-children-current-color" data-toggle-target="' . $toggle_target_string . '" data-toggle-type="slidetoggle" data-toggle-duration="' . absint( $toggle_duration ) . '" aria-expanded="false"><span class="sr-only">' . __( 'Show sub menu', 'ksas-blocks' ) . '</span>' . twentytwenty_get_theme_svg( 'chevron-down' ) . '</button>';
 
 		}
 

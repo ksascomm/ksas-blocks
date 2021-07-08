@@ -15,7 +15,7 @@ get_header();
 		<?php if ( have_posts() ) : ?>
 
 			<header class="page-header prose px-12 py-6">
-				<h1 class="page-title">
+				<h1 class="entry-title">
 					<?php
 					/* translators: %s: search query. */
 					printf( esc_html__( 'Search Results for: %s', 'ksas-blocks' ), '<span>' . get_search_query() . '</span>' );

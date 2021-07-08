@@ -12,7 +12,7 @@
 <div class="mx-auto max-w-screen-xl" id="post-<?php the_ID(); ?>">
 	<div class="md:container md:mx-auto pb-2">
 		<div class="flex flex-col w-full">
-			<div class="sm:text-xl text-xl font-medium text-black">
+			<div class="text-xl font-medium text-primary">
 			<?php ksas_blocks_post_thumbnail(); ?>
 			<?php
 			the_content();
@@ -31,7 +31,7 @@
 						sprintf(
 							wp_kses(
 								/* translators: %s: Name of current post. Only visible to screen readers */
-								__( 'Edit <span class="screen-reader-text">%s</span>', 'ksas-blocks' ),
+								__( 'Edit <span class="sr-only">%s</span>', 'ksas-blocks' ),
 								array(
 									'span' => array(
 										'class' => array(),
