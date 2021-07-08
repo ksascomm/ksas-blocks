@@ -29,7 +29,7 @@
 		</div>
 	<?php endif; ?>
 	<div class="flex-initial">
-		<h2 class="font-heavy font-bold my-0">
+		<h2 class="font-heavy my-0">
 		<?php if ( get_post_meta( $post->ID, 'ecpt_website', true ) ) : ?>
 			<a href="<?php echo esc_html( get_post_meta( $post->ID, 'ecpt_website', true ) ); ?>" title="<?php the_title(); ?>'s webpage" target="_blank">
 				<?php the_title(); ?>
@@ -62,6 +62,10 @@
 
 				<?php echo email_munge( $email ); ?> </a><br>
 		<?php endif; ?>
+
+		<?php if ( get_post_meta( $post->ID, 'ecpt_expertise', true ) ) : ?>
+			<p class="pr-2"><strong>Research Interests:&nbsp;</strong><?php echo esc_html( get_post_meta($post->ID, 'ecpt_expertise', true) ); ?></p>
+		<?php endif; ?>	
 	</div>
 </div>
 	<?php if ( get_edit_post_link() ) : ?>
@@ -71,7 +75,7 @@
 				sprintf(
 					wp_kses(
 						/* translators: %s: Name of current post. Only visible to screen readers */
-						__( 'Edit <span class="screen-reader-text">%s</span>', 'ksas-blocks' ),
+						__( 'Edit <span class="sr-only">%s</span>', 'ksas-blocks' ),
 						array(
 							'span' => array(
 								'class' => array(),
