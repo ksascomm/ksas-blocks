@@ -14,16 +14,18 @@
 		<div class="flex flex-col w-full">
 			<div class="text-xl font-medium text-primary">
 			<?php ksas_blocks_post_thumbnail(); ?>
-			<?php
-			the_content();
+			<div class="entry-content">
+				<?php
+				the_content();
 
-			wp_link_pages(
-				array(
-					'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'ksas-blocks' ),
-					'after'  => '</div>',
-				)
-			);
-			?>
+				wp_link_pages(
+					array(
+						'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'ksas-blocks' ),
+						'after'  => '</div>',
+					)
+				);
+				?>
+			</div>
 			<?php if ( get_edit_post_link() ) : ?>
 				<footer class="entry-footer">
 					<?php

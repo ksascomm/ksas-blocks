@@ -32,7 +32,7 @@ get_header();
 			?>
 
 		<div class="divider div-transparent div-dot"></div>
-		<div class="news-section mb-24">
+		<div class="news-section mb-24 px-2 sm:px-0">
 			<div class="prose sm:prose lg:prose-lg xl:prose-xl mx-auto">
 				<div class="flex justify-between">
 					<div>

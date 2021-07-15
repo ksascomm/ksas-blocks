@@ -324,7 +324,7 @@ if ( function_exists( 'register_block_pattern' ) ) {
 
 			<!-- wp:columns -->
 			<div class="wp-block-columns three-column-feature"><!-- wp:column -->
-			<div class="wp-block-column px-6 py-8 overflow-hidden bg-white rounded-md shadow-md"><!-- wp:heading -->
+			<div class="wp-block-column mb-4 px-6 py-8 overflow-hidden bg-white rounded-md shadow-md"><!-- wp:heading -->
 			<h2>Explore</h2>
 			<!-- /wp:heading -->
 
@@ -334,7 +334,7 @@ if ( function_exists( 'register_block_pattern' ) ) {
 			<!-- /wp:column -->
 
 			<!-- wp:column -->
-			<div class="wp-block-column px-6 py-8 overflow-hidden bg-white rounded-md shadow-md"><!-- wp:heading -->
+			<div class="wp-block-column mb-4 px-6 py-8 overflow-hidden bg-white rounded-md shadow-md"><!-- wp:heading -->
 			<h2>Learn</h2>
 			<!-- /wp:heading -->
 
@@ -344,7 +344,7 @@ if ( function_exists( 'register_block_pattern' ) ) {
 			<!-- /wp:column -->
 
 			<!-- wp:column -->
-			<div class="wp-block-column px-6 py-8 overflow-hidden bg-white rounded-md shadow-md"><!-- wp:heading -->
+			<div class="wp-block-column mb-4 px-6 py-8 overflow-hidden bg-white rounded-md shadow-md"><!-- wp:heading -->
 			<h2>Discover</h2>
 			<!-- /wp:heading -->
 
