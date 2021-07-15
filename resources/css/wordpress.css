@@ -230,12 +230,12 @@ span.posted-on {
 /*--------------------------------------------------------------
 # Components
 --------------------------------------------------------------*/
-.entry-content {
+.entry-content, .entry-header {
 	@apply pl-2 pr-1;
 }
 
 @screen sm {
-	.entry-content {
+	.entry-content, .entry-header {
 		@apply pl-0 pr-0;
 	}
 }
@@ -678,7 +678,7 @@ ul.page-numbers li .page-numbers.current {
 --------------------------------------------- */
 
 .breadcrumbs {
-	@apply text-grey-darkest -mb-4;
+	@apply text-grey-darkest -mb-4 py-4 px-2;
 }
 
 .breadcrumbs span.current-item,
@@ -826,7 +826,11 @@ ul.page-numbers li .page-numbers.current {
 }
 
 .prose .wp-block-gallery ul > li {
-  padding-left: inherit;
+	padding-left: inherit;
+}
+
+.prose .wp-block-gallery ul > li::before {
+	display: none;
 }
 
 .prose .wp-block-gallery ul > li a {
