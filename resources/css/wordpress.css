@@ -238,7 +238,7 @@ span.posted-on {
 	@apply pl-2 pr-1;
 }
 
-@screen sm {
+@screen lg {
 	.entry-content, .entry-header {
 		@apply pl-0 pr-0;
 	}
