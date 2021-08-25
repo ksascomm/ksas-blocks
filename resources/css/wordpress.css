@@ -127,6 +127,10 @@ label.gfield_label {
 	@apply object-left object-scale-down h-16 m-6;
 }
 
+.site-footer .text-center p a {
+	@apply font-heavy font-bold;
+}
+
 footer a:hover {
 	@apply text-blue-light;
 }
@@ -268,7 +272,7 @@ span.posted-on {
 }
 
 ul.primary-menu .current_page_ancestor, ul.primary-menu .current-menu-item {
-  @apply bg-grey;
+  @apply bg-grey-cool bg-opacity-50;
 }
 
 /* Primary Menu ---------------------------- */
@@ -311,7 +315,7 @@ ul.primary-menu {
 }
 
 .primary-menu li {
-	@apply font-semi text-lg hover:bg-grey-lightest relative leading-tight;
+	@apply font-semi text-lg hover:bg-grey-cool hover:bg-opacity-50 relative;
 }
 
 .primary-menu > li.menu-item-has-children > a {
@@ -320,6 +324,7 @@ ul.primary-menu {
 
 .primary-menu > li > .icon {
 	right: 2.5%;
+	right: 1%;
 	top: calc(50% - 0.5rem);
 }
 
@@ -338,12 +343,12 @@ ul.primary-menu {
 .primary-menu ul {
 	@apply bg-white text-primary shadow-md;
 	border-radius: 0.4rem;
-	font-size: 1.5rem;
+	font-size: 1rem;
 	opacity: 0;
-	padding: 1rem 0;
+	padding: 0;
 	position: absolute;
 	right: 9999rem;
-	top: calc(100% + 1rem);
+	top: calc(100% + .25rem);
 	transition: opacity 0.15s linear, transform 0.15s linear, left 0s 0.15s;
 	transform: translateY(0.6rem);
 	/*width: 20rem;*/
@@ -385,14 +390,15 @@ ul.primary-menu {
 	border: none;
 	color: inherit;
 	display: block;
-	padding: 1rem;
 	transition: background-color 0.15s linear;
 	width: 100%;
+	font-size: 1rem;
 }
 
 .primary-menu ul li.menu-item-has-children .icon {
 	position: absolute;
 	right: 1.5rem;
+	right: .5rem;
 	top: calc(50% - 0.75rem);
 	transform: rotate(225deg);
 }
@@ -470,11 +476,11 @@ body.touch-enabled .primary-menu ul li.menu-item-has-children > a {
 
 /* Posts and pages
 --------------------------------------------- */
-.sticky {
+.wp-sticky {
   @apply bg-grey-lightest border-2 border-solid border-grey m-4 block p-4;
 }
 
-.sticky hr {
+.wp-sticky hr {
   @apply hidden;
 }
 
@@ -776,7 +782,7 @@ ul.page-numbers li .page-numbers.current {
   max-width: 175ch;
 }
 
-.front.prose p, .front.prose ul {
+.front.prose p, .front.prose ul, .front.prose .entry-content h3, .front.prose .entry-content h4 {
 	@apply mx-auto max-w-5xl !important;
 }
 

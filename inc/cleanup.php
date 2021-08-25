@@ -113,3 +113,16 @@ function special_nav_class( $classes, $item ) {
 	}	
 	return $classes;
 }
+
+// Change the class for sticky posts to .wp-sticky to avoid conflicts with Tailwind's sticky class.
+if ( ! function_exists( 'ksas_blocks__sticky_posts' ) ) :
+	function ksas_blocks__sticky_posts( $classes ) {
+		if ( in_array( 'sticky', $classes, true ) ) {
+			$classes = array_diff($classes, array('sticky'));
+			$classes[] = 'wp-sticky';
+		}
+		return $classes;
+	}
+	add_filter('post_class','ksas_blocks__sticky_posts');
+	
+	endif;

@@ -14,6 +14,7 @@
 <footer class="site-footer bg-old-black text-white mt-20 border-t-1 border-grey-darkest relative">
 	<div class="bottom-auto top-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden -mt-20" style="height: 80px" >
 		<svg
+		role="img"
 			class="absolute bottom-0 overflow-hidden"
 			xmlns="http://www.w3.org/2000/svg"
 			preserveAspectRatio="none"
@@ -31,7 +32,7 @@
 	<div class="site-info p-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4">
 		<div class="m-2 col-span-4 lg:col-span-1">				
 			<a href="https://www.jhu.edu/">
-			<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/dist/images/university.shield.svg" class="h-auto w-full sm:w-1/2 sm:mx-auto lg:w-full p-5" alt="JHU shield in the footer">
+			<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/dist/images/university.shield.svg" class="h-auto w-full sm:w-1/2 sm:mx-auto lg:w-full p-5" alt="JHU shield in the footer" role="img">
 			</a>	
 		</div>
 		<div class="col-span-4 lg:col-span-2">
