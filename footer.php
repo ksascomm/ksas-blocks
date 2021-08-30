@@ -14,7 +14,6 @@
 <footer class="site-footer bg-old-black text-white mt-20 border-t-1 border-grey-darkest relative">
 	<div class="bottom-auto top-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden -mt-20" style="height: 80px" >
 		<svg
-		role="img"
 		alt=""
 			class="absolute bottom-0 overflow-hidden"
 			xmlns="http://www.w3.org/2000/svg"
