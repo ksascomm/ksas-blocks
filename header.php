@@ -41,8 +41,8 @@
 </head>
 
 <body <?php body_class(); ?>>
+<a class="skip-link screen-reader-text" href="#site-content"><?php esc_html_e( 'Skip to content', 'ksas-blocks' ); ?></a>
 <?php wp_body_open(); ?>
-	<a class="skip-link screen-reader-text" href="#site-content"><?php esc_html_e( 'Skip to content', 'ksas-blocks' ); ?></a>
 	<header id="site-header" class="header-footer-group sm:justify-between shadow sm:items-baseline w-full bg-blue" role="banner">
 		<div class="header-titles-wrapper">
 			<div class="header-inner section-inner">
