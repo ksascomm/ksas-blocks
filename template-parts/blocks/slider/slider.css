@@ -149,6 +149,6 @@
 
 @media screen and (min-width:1500px) {
   .slider.swiper-container.alignfull {
-    margin-left: calc(70% - 50vw) !important;
+    margin-left: calc(70% - 50vw);
   }
 }
