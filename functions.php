@@ -155,6 +155,17 @@ function ksas_blocks_widgets_init() {
 			'after_title'   => '</h2>',
 		)
 	);
+	register_sidebar(
+		array(
+			'name'          => esc_html__( 'Footer', 'ksas-blocks' ),
+			'id'            => 'sidebar-footer',
+			'description'   => esc_html__( 'Add widgets here to appear in your footer.', 'ksas-blocks' ),
+			'before_widget' => '<section id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</section>',
+			'before_title'  => '<h2 class="widget-title">',
+			'after_title'   => '</h2>',
+		)
+	);
 }
 add_action( 'widgets_init', 'ksas_blocks_widgets_init' );
 
@@ -256,8 +267,6 @@ function ksas_blocks_scripts() {
 	wp_script_add_data( 'ksas-blocks-script', 'defer', true );
 
 	wp_enqueue_script( 'font-awesome', 'https://kit.fontawesome.com/ed22ca715b.js', array(), '5.15.1', false );
-
-	wp_enqueue_script( 'google-tag-manager', 'https://www.googletagmanager.com/gtag/js?id=UA-40512757-1', array(), null, false );
 }
 add_action( 'wp_enqueue_scripts', 'ksas_blocks_scripts' );
 
@@ -335,4 +344,53 @@ function my_register_blocks() {
 			)
 		);
 	}
+}
+
+/**
+ * Count the number of widgets in a sidebar
+ * Works for up to ten widgets
+ * Usage <?php ctm_sidebar_class( 'promo' ); ?> where promo is the name of the sidebar
+ */
+function ctm_sidebar_class( $sidebar_name ) {
+	global $sidebars_widgets;
+	$count = count ($sidebars_widgets[$sidebar_name]);
+	
+	switch ( $count ) {
+		case '1':
+			$class = 'one';
+			break;
+		case '2':
+			$class = 'two';
+			break;
+		case '3':
+			$class = 'three';
+			break;
+		case '4':
+			$class = 'four';
+			break;
+		case '5':
+			$class = 'five';
+			break;
+		case '6':
+			$class = 'six';
+			break;
+		case '7':
+			$class = 'seven';
+			break;
+		case '8':
+			$class = 'eight';
+			break;
+		case '9':
+			$class = 'nine';
+			break;
+		case '10':
+			$class = 'ten';
+			break;
+		default:
+			$class = '';
+			break;
+	}
+
+	if ( $class )
+		echo $class;
 }

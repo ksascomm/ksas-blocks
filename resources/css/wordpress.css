@@ -406,7 +406,7 @@ ul.primary-menu {
 /* DEEP DOWN */
 
 .primary-menu ul ul {
-	top: -1rem;
+	top: 0rem;
 }
 
 .primary-menu ul li.menu-item-has-children:hover > ul,
@@ -573,6 +573,82 @@ footer.entry-footer {
 
 .widget p strong {
 	@apply font-heavy;
+}
+
+:root {
+	--footer-widget----spacing-horizontal: 1rem;
+	--footer-widget----spacing-vertical: 1rem;
+}
+.footer-widget-area {
+	margin-top: calc(3 * var(--footer-widget----spacing-vertical));
+	position: relative;
+	padding-top: calc(2 * var(--footer-widget----spacing-vertical));
+}
+
+.footer-widget-area .widget {
+	@apply bg-none border-none shadow-none lg:px-12;
+}
+
+.footer-widget-area .image, .footer-widget-area .image:not(.one):not(.two) {
+	display: none;
+}
+
+@media only screen and (min-width: 652px) {
+
+	.footer-widget-area {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		column-gap: calc(2 * var(--footer-widget----spacing-horizontal));
+	}
+}
+@media only screen and (min-width: 1024px) {
+
+	.footer-widget-area {
+		grid-template-columns: repeat(3, 1fr);
+	}
+
+	.footer-widget-area h2 {
+		@apply text-3xl;
+	}
+
+	.footer-widget-area p, .footer-widget-area li {
+		@apply text-lg leading-normal;
+	}
+
+	.footer-widget-area .image {
+		@apply absolute right-20 block top-10 opacity-60;
+	}
+}
+@media only screen and (max-width: 481px) {
+
+	.footer-widget-area {
+		margin-top: calc(3 * var(--footer-widget----spacing-vertical));
+	}
+}
+
+.footer-widget-area ul .sub-menu-toggle {
+	display: none;
+}
+
+.footer-widget-area:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.footer-widget-area ul li {
+	@apply relative pl-7 flow-root;
+}
+
+.footer-widget-area ul li:before {
+    content: "";
+    position: absolute;
+    background-color: #31261D;
+    border-radius: 50%;
+    width: 0.375em;
+    height: 0.375em;
+    top: calc(0.875em - 0.1875em);
+    left: 0.25em;
 }
 
 /* Captions
@@ -787,8 +863,8 @@ ul.page-numbers li .page-numbers.current {
 }
 
 .news-section .entry-content p {
-	@apply mt-2 mb-4 ml-0;
-	
+	@apply mt-2 mb-4;
+	margin-left: 0px !important;
 }
 
 .news-section .prose h3.entry-title, .blog .prose h3.entry-title {
@@ -796,7 +872,7 @@ ul.page-numbers li .page-numbers.current {
 }
 
 .news-section .prose.article-excerpt img {
-	@apply mt-2;
+	@apply my-2;
 }
 
 .front.prose .wp-block-quote {

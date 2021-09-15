@@ -21,6 +21,7 @@
 	<title><?php create_page_title(); ?></title>
 	<?php wp_head(); ?>
 	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-100553583-1"></script>
 	<script>
 		window.dataLayer = window.dataLayer || [];
 		function gtag(){dataLayer.push(arguments);}
