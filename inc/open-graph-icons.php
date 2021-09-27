@@ -17,10 +17,10 @@ function facebook_open_graph() {
 		$excerpt = get_bloginfo( 'title' );
 	}
 
-		echo '<meta property="og:title" content="' . get_the_title() . ' | ' . get_bloginfo( 'title' ) . '"/>';
-		echo '<meta property="og:description" content="' . $excerpt . '"/>';
+		echo '<meta property="og:title" content="' . esc_html( get_the_title() ) . ' | ' . esc_html( get_bloginfo( 'title' ) ) . '"/>';
+		echo '<meta property="og:description" content="' . esc_html( $excerpt ) . '"/>';
 		echo '<meta property="og:type" content="article"/>';
-		echo '<meta property="og:url" content="' . get_permalink() . '"/>';
+		echo '<meta property="og:url" content="' . esc_url( get_permalink() ) . '"/>';
 		echo '<meta name="twitter:card" content="summary" />';
 		echo '<meta name="twitter:site" content="@JHUArtsSciences" />';
 
