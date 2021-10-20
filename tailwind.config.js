@@ -186,6 +186,15 @@ module.exports = {
               small: {
                 fontSize: "75%",
               },
+              blockquote: {
+                color: "#31261d",
+                fontFamily: "Gentona-SemiBold, system-ui",
+                fontWeight: "600",
+                borderLeftColor: "#bfccd9",
+              },
+              "blockquote p:first-of-type::before": {
+                content: "none",
+              },
             },
           ],
         },

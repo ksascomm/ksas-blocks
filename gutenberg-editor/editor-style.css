@@ -295,3 +295,7 @@ ul.block-editor-rich-text__editable li, ol.block-editor-rich-text__editable li {
   border-bottom: none;
   box-shadow: 0 0.4rem 0 0 #002d72;
 }
+
+.wp-block-buttons>.wp-block-button.wp-block-button__width-50 {
+	width: calc(50% - .5em);
+}

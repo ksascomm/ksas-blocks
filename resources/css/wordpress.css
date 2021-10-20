@@ -8,7 +8,7 @@
 	- Typography
 	- Elements
 	- Links
-	- Forms
+	- Tables
 # Layouts
 # Components
 	- Navigation
@@ -196,8 +196,23 @@ span.posted-on {
 	content: '\f1c4';
 }
 
-/* Forms
+/* Tables
 --------------------------------------------- */
+.wp-block-table td, .wp-block-table th {
+	@apply p-2 border border-solid border-grey-cool break-normal;
+}
+
+.wp-block-table td p, .wp-block-table th p {
+	@apply m-0 !important;
+}
+
+tbody td:first-child, thead th:first-child {
+	@apply pl-3 !important;
+}
+
+.wp-block-table th {
+	@apply border-b-0 bg-grey-lightest font-semi font-semibold p-2 text-center;
+}
 
 /*--------------------------------------------------------------
 # Layouts
@@ -316,6 +331,16 @@ ul.primary-menu {
 
 .primary-menu li {
 	@apply font-semi text-lg hover:bg-grey-cool hover:bg-opacity-50 relative;
+}
+
+.primary-menu li.external a::after {
+	font-family: "Font Awesome 5 Free"; 
+	font-weight: 900;
+	content:"\f360";
+    float: right;
+    font-size: 85%;
+    padding-left: 5px;
+	display:inline-block;
 }
 
 .primary-menu > li.menu-item-has-children > a {
@@ -575,6 +600,10 @@ footer.entry-footer {
 	@apply font-heavy;
 }
 
+.widget .textwidget.custom-html-widget a.button {
+	@apply bg-blue text-white border-0 py-3 px-4 hover:bg-blue-light;
+}
+
 :root {
 	--footer-widget----spacing-horizontal: 1rem;
 	--footer-widget----spacing-vertical: 1rem;
@@ -585,7 +614,7 @@ footer.entry-footer {
 	padding-top: calc(2 * var(--footer-widget----spacing-vertical));
 }
 
-.footer-widget-area .widget {
+.footer-widget-area .widget, .footer-widget-area .tribe-compatibility-container {
 	@apply bg-none border-none shadow-none lg:px-12;
 }
 
@@ -649,6 +678,32 @@ footer.entry-footer {
     height: 0.375em;
     top: calc(0.875em - 0.1875em);
     left: 0.25em;
+}
+
+/* Events Calendar Widget Styes Must Go Here, Not in Tribe-Events Directory */
+.footer-widget-area .tribe-events-widget h2.tribe-events-widget-events-list__header-title.tribe-common-h6.tribe-common-h--alt {
+	font-size: 1.875rem;
+	margin-bottom: 0.5rem;
+    font-family: Gentona-Bold, system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, sans-serif;
+    font-weight: 700;
+}
+
+.footer-widget-area .tribe-events-widget .tribe-events-widget-events-list__event-title a {
+	@apply text-blue font-heavy text-lg;
+}
+
+.footer-widget-area .tribe-events-widget span.tribe-event-date-start,
+.footer-widget-area .tribe-events-widget span.tribe-events-widget-events-list__event-date-tag-month,
+.footer-widget-area .tribe-events-widget span.tribe-events-widget-events-list__event-date-tag-daynum.tribe-common-h2.tribe-common-h4--min-medium {
+	@apply text-primary;
+}
+
+.footer-widget-area .tribe-events-widget .tribe-events-widget-events-list__view-more.tribe-common-b1.tribe-common-b2--min-medium {
+	@apply bg-blue text-white py-3 px-4 m-4 inline-block font-semi;
+}
+
+.footer-widget-area .tribe-events-widget .tribe-events-widget-events-list__view-more.tribe-common-b1.tribe-common-b2--min-medium a {
+	@apply uppercase font-semi p-4 mx-auto;
 }
 
 /* Captions
@@ -837,14 +892,32 @@ ul.page-numbers li .page-numbers.current {
 # Prose Overrides
 --------------------------------------------------------------*/
 
-.prose ol {
-	counter-reset: section !important;
+.prose .entry-content ol {
+	counter-reset: section;
 	list-style-type: decimal;
 }
-.prose ol > li::before {
-	counter-increment: section !important;
-	content: counter(section) "." !important;
+.prose .entry-content ol > li::before {
+	counter-increment: section;
+	content: counter(section) ".";
 }
+
+.prose .entry-content ol.reversed
+{
+    list-style-type:none;
+}
+.prose .entry-content ol.reversed > li
+{
+    counter-increment:start-from -1;
+}
+.prose .entry-content ol.reversed > li:before
+{
+    content:counter(start-from) ". ";
+}
+
+* html .prose .entry-content ol.reversed { list-style-type:decimal; }
+*+html .prose .entry-content ol.reversed { list-style-type:decimal; }
+
+
 
 .prose a {
   @apply transition-colors ease-in-out duration-200;
@@ -965,11 +1038,18 @@ ul.page-numbers li .page-numbers.current {
 }
 
 .wp-block-button__link {
-	padding: .75rem 1.25rem;
     --tw-text-opacity: 1;
     color: rgba(254,254,254,var(--tw-text-opacity));
 	border-radius: 0;
-	@apply bg-blue text-white inline-flex py-3 px-5 text-base items-center border-none focus:outline-none;
+	@apply bg-blue text-white text-base items-center border-none focus:outline-none;
+}
+
+.wp-block-buttons>.wp-block-button.wp-block-button__width-50 {
+	width: calc(50% - .5em);
+}
+
+.wp-block-buttons {
+	@apply my-4
 }
 
 .right-call-to-action.has-white-background-color, .left-call-to-action.has-white-background-color {

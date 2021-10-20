@@ -152,3 +152,7 @@
     margin-left: calc(70% - 50vw);
   }
 }
+
+.slider.alignfull {
+  margin-top: 0;
+}
