@@ -4,6 +4,7 @@
 # Generic
 	- Forms
 	- Link Overrides
+	- Lists
 # Base
 	- Typography
 	- Elements
@@ -135,6 +136,53 @@ footer a:hover {
 	@apply text-blue-light;
 }
 
+/* Lists (Override Prose's Inexplicable ::before)
+--------------------------------------------- */
+/* Set up ol and ul so that they scope the list-item counter */
+.prose ol, .prose ul {
+	counter-reset: list-item;
+}
+
+/* Default list style types for lists */
+.prose ol { list-style-type: decimal; }
+.prose ul { list-style-type: toggle(disc, circle, square); }
+
+/* The type attribute on ol and ul elements */
+.prose ul[type="disc"]   { list-style-type: disc;   }
+.prose ul[type="circle"] { list-style-type: circle; }
+.prose ul[type="square"] { list-style-type: square; }
+.prose ol[type="1"] { list-style-type: decimal;     }
+.prose ol[type="a"] { list-style-type: lower-alpha; }
+.prose ol[type="A"] { list-style-type: upper-alpha; }
+.prose ol[type="i"] { list-style-type: lower-roman; }
+.prose ol[type="I"] { list-style-type: upper-roman; }
+
+/* The start attribute on ol elements */
+.prose ol[start] {
+counter-reset: list-item calc(attr(start integer, 1) - 1);
+}
+
+/* The value attribute on li elements */
+.prose li[value] {
+counter-set: list-item attr(value integer);
+}
+
+/* Handling reversed lists */
+.prose ol[reversed] {
+counter-reset: reversed(list-item);
+}
+.prose ol[reversed][start] {
+counter-reset: reversed(list-item) calc(attr(start integer) + 1);
+}
+
+/* Box Model Rules */
+.prose ol, .prose ul {
+display: block;
+margin-block: 1em;
+marker-side: match-parent;
+padding-inline-start: 40px;
+}
+
 /*--------------------------------------------------------------
 # Base
 --------------------------------------------------------------*/
@@ -152,6 +200,10 @@ h2, h3, h4, h5 {
 
 h2.entry-title {
 	@apply mt-2 !important;
+}
+
+mark {
+	background: transparent;
 }
 
 
