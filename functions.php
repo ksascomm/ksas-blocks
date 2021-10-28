@@ -323,8 +323,8 @@ function my_register_blocks() {
 				'align'           => 'full',
 				'mode'            => 'preview',
 				'enqueue_assets'  => function() {
-					wp_enqueue_style( 'swiper', 'https://unpkg.com/swiper/swiper-bundle.css', array(), '7.0.1' );
-					wp_enqueue_script( 'swiper', 'https://unpkg.com/swiper/swiper-bundle.min.js', array( 'jquery' ), '7.0.1', true );
+					wp_enqueue_style( 'swiper', 'https://unpkg.com/swiper/swiper-bundle.css', array(), '7.1.0' );
+					wp_enqueue_script( 'swiper', 'https://unpkg.com/swiper/swiper-bundle.min.js', array( 'jquery' ), '7.1.0', true );
 					wp_enqueue_style( 'block-slider', get_template_directory_uri() . '/template-parts/blocks/slider/slider.css', array(), '1.0.0' );
 					wp_enqueue_script( 'block-slider', get_template_directory_uri() . '/template-parts/blocks/slider/slider.js', array(), '1.0.0', true );
 				},

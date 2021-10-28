@@ -37,7 +37,8 @@ if ( $is_preview ) {
 				?>
 				<div class="swiper-slide grid grid-cols-1 lg:grid-cols-3 gap-4">
 					<div class="slide-image col-span-2">
-						<?php echo wp_get_attachment_image( $image['id'], 'full' ); ?>	
+						<?php echo wp_get_attachment_image( $image['id'], 'full', "", array( 'class' => 'swiper-lazy' ) ); ?>
+						<div class="swiper-lazy-preloader"></div>
 					</div>
 					<div class="slide-caption">
 						<h3><?php the_sub_field( 'title' ); ?></h3>

@@ -3,12 +3,12 @@ Description: Used to style the content editor in posts and pages
 */
 
 @font-face {
-  font-family: "quadon-bold";
-  src: url("../dist/fonts/quadon/Quadon-Bold.eot");
-  src: url("../dist/fonts/quadon/Quadon-Bold.eot?#iefix")
+  font-family: "quadon-medium";
+  src: url("../dist/fonts/quadon/Quadon-Medium.eot");
+  src: url("../dist/fonts/quadon/Quadon-Medium.eot?#iefix")
       format("embedded-opentype"),
-    url("../dist/fonts/quadon/Quadon-Bold.woff") format("woff"),
-    url("../dist/fonts/quadon/Quadon-Bold.ttf") format("truetype");
+    url("../dist/fonts/quadon/Quadon-Medium.woff") format("woff"),
+    url("../dist/fonts/quadon/Quadon-Medium.ttf") format("truetype");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -90,8 +90,38 @@ li u {
   color: #002d72;
 }
 
-.block-editor-block-list__layout a:hover {
-  color: #31261d;
+
+
+a.acf-icon {
+  color: #555d66;
+}
+
+a.acf-icon:hover {
+  background: #f3f5f6;
+  border-color: #0071a1;
+  color: #0071a1;
+}
+
+a.acf-icon.-minus:hover, a.acf-icon.-cancel:hover {
+  background: #f7efef;
+  border-color: #a10000;
+  color: #dc3232;
+}
+
+.acf-icon.dark {
+  color: #eee;
+}
+
+a.acf-icon.dark:hover {
+  color: #00b9eb;
+}
+
+a.acf-icon.dark.-minus:hover, a.acf-icon.dark.-cancel:hover {
+  color: #D54E21;
+}
+
+a.acf-button.button.button-primary {
+  color: #fefefe;
 }
 
 .wp-block-file * + .wp-block-file__button {

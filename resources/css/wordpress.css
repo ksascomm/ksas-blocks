@@ -1081,6 +1081,10 @@ ul.page-numbers li .page-numbers.current {
 	@apply bg-primary;
 }
 
+.has-text-align-center {
+	@apply text-left;
+}
+
 .has-heritage-blue-background-color *, .has-black-background-color *, .has-primary-background-color * {
 	@apply text-white !important;
 }
@@ -1101,7 +1105,7 @@ ul.page-numbers li .page-numbers.current {
 }
 
 .wp-block-buttons {
-	@apply my-4
+	@apply my-4;
 }
 
 .right-call-to-action.has-white-background-color, .left-call-to-action.has-white-background-color {
@@ -1121,7 +1125,7 @@ ul.page-numbers li .page-numbers.current {
 	display: inherit;
 }
 
-/** === Callouts === */
+/* Block: KSAS Callouts ------------------------------ */
 .wp-block-ksas-callouts-ksas-callout-block {
 	@apply relative p-4 border border-primary text-primary my-4;
 }
@@ -1144,8 +1148,7 @@ ul.page-numbers li .page-numbers.current {
 	@apply my-0 !important;
 }
 
-
-/** === Accordion === */
+/* Block: Accordion ------------------------------ */
 .wp-block-pb-accordion-item.c-accordion__item {
 	@apply my-2 pb-2 w-5/6;
 }
@@ -1243,8 +1246,11 @@ ul.page-numbers li .page-numbers.current {
 	@apply my-2 !important;
 }
 
-/* People
---------------------------------------------- */
+.wp-block-group > h2.has-text-align-center, .wp-block-group > p.has-text-align-center {
+	text-align: center;
+}
+
+/* Block Pattern: People/Staff Listing ------------------------------ */
 .people h2 {
   @apply my-1 !important;
 }
@@ -1271,6 +1277,14 @@ ul.page-numbers li .page-numbers.current {
 [class^="eplus"] { 
 	@apply mt-2 !important;
 }
+
+/* Block: Heading ------------------------------ */
+h2.alignwide, h3.alignwide, h4.alignwide, h5.alignwide,
+h2.alignfull, h3.alignfull, h4.alignfull, h5.alignfull {
+	@apply ml-0 my-2 !important;
+}
+
+/* Block: Paragraph ------------------------------ */
 
 
 /*--------------------------------------------------------------

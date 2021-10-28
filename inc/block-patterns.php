@@ -25,6 +25,37 @@ if ( function_exists( 'register_block_pattern_category' ) ) {
  * Register Block Patterns.
  */
 if ( function_exists( 'register_block_pattern' ) ) {
+	// Simple Hero Section
+	register_block_pattern(
+		'ksasblocks/simple-hero',
+		array(
+			'title'         => esc_html__( 'Simple Hero', 'ksas-blocks' ),
+			'categories'    => array( 'ksas-blocks' ),
+			'viewportWidth' => 1400,
+			'content'       => '
+			<!-- wp:columns {"verticalAlignment":"center","align":"wide"} -->
+			<div class="wp-block-columns alignwide are-vertically-aligned-center"><!-- wp:column {"verticalAlignment":"center"} -->
+			<div class="wp-block-column is-vertically-aligned-center"><!-- wp:heading {"className":"mt-0"} -->
+			<h2 class="mt-0">Study Living Systems from Unique Perspectives</h2>
+			<!-- /wp:heading -->
+			
+			<!-- wp:paragraph -->
+			<p>The&nbsp;Thomas C. Jenkins Department of Biophysics&nbsp;has a long tradition of excellence in research and teaching and of developing leaders in the scientific community.</p>
+			<!-- /wp:paragraph -->
+			
+			<!-- wp:button {"backgroundColor":"heritage-blue","style":{"border":{"radius":2}}} -->
+			<div class="wp-block-button"><a class="wp-block-button__link has-heritage-blue-background-color has-background" style="border-radius:2px">Get Started</a></div>
+			<!-- /wp:button --></div>
+			<!-- /wp:column -->
+			
+			<!-- wp:column {"verticalAlignment":"center"} -->
+			<div class="wp-block-column is-vertically-aligned-center"><!-- wp:cover {"url":"http://sites.krieger.jhu.edu/wp-content/themes/ksas-blocks/resources/images/campus3.jpg","id":1869,"dimRatio":0,"minHeight":500,"style":{"color":{}}} -->
+			<div class="wp-block-cover" style="min-height:500px"><img class="wp-block-cover__image-background wp-image-1869" alt="" src="http://sites.krieger.jhu.edu/wp-content/themes/ksas-blocks/resources/images/campus3.jpg" data-object-fit="cover"/><div class="wp-block-cover__inner-container"></div></div>
+			<!-- /wp:cover --></div>
+			<!-- /wp:column --></div>
+			<!-- /wp:columns -->',
+		)
+	);
 	// Staff Listing Vertical.
 	register_block_pattern(
 		'ksasblocks/staff-listing',

@@ -47,7 +47,7 @@
 					);
 					?>
 				</footer><!-- .entry-footer -->
-			<?php endif; ?>			
+			<?php endif; ?>
 			</div>
 		</div>
 	</div>

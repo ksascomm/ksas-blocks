@@ -104,14 +104,15 @@ module.exports = {
                 backgroundColor: "#31261D",
               },
               "ol > li::before": {
+                display: "none",
                 backgroundColor: "#fefefe",
                 color: "#31261D",
               },
               "ol > li": {
-                display: "flow-root",
+                display: "list-item",
               },
               "ul > li": {
-                display: "flow-root",
+                display: "list-item",
               },
               h1: {
                 marginBottom: "0rem",
