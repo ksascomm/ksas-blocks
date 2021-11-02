@@ -95,20 +95,3 @@ function custom_gutenberg_css() {
 	add_editor_style( 'gutenberg-editor/editor-style.css' ); // tries to include editor-style.css directly from your theme folder..
 }
 add_action( 'after_setup_theme', 'custom_gutenberg_css' );
-
-// Fix embeds inside Gutenberg saved blocks.
-// Move priority of `do_blocks` to be earlier than `\WP_Embed::run_shortcode`.
-add_action(
-	'init',
-	function() {
-		global $wp_embed;
-
-		if (
-		has_filter( 'the_content', 'do_blocks' ) === 9 &&
-		has_filter( 'the_content', array( $wp_embed, 'run_shortcode' ) ) === 8
-		) {
-			remove_filter( 'the_content', 'do_blocks', 9 );
-			add_filter( 'the_content', 'do_blocks', 7 );
-		}
-	}
-);
