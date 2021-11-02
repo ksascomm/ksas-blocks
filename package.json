@@ -12,21 +12,21 @@
   "dependencies": {
     "@tailwindcss/typography": "^0.4.1",
     "cross-env": "^7.0.3",
-    "laravel-mix": "^6.0.31"
+    "laravel-mix": "^6.0.37"
   },
   "devDependencies": {
-    "@wordpress/scripts": "^18.0.1",
-    "browser-sync": "^2.27.5",
+    "@wordpress/scripts": "^19.0.0",
+    "browser-sync": "^2.27.7",
     "browser-sync-webpack-plugin": "^2.3.0",
     "glob-all": "^3.2.1",
-    "postcss": "^8.3.8",
-    "postcss-loader": "^6.1.1",
+    "postcss": "^8.3.11",
+    "postcss-loader": "^6.2.0",
     "purgecss-webpack-plugin": "^4.0.3",
     "tailwind-heropatterns": "0.0.8",
-    "tailwindcss": "^2.2.16",
+    "tailwindcss": "^2.2.19",
     "url-loader": "^4.1.1",
     "vue-template-compiler": "^2.6.14",
-    "webpack": "^5.54.0",
-    "webpack-dev-server": "^4.3.0"
+    "webpack": "^5.61.0",
+    "webpack-dev-server": "^4.4.0"
   }
 }
