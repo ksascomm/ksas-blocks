@@ -11,7 +11,7 @@ if ( is_active_sidebar( 'sidebar-footer' ) ) : ?>
 
 	<aside class="footer-widget-area bg-grey-cool bg-opacity-50">
 		<?php dynamic_sidebar( 'sidebar-footer' ); ?>
-		<div class="image <?php ctm_sidebar_class( 'sidebar-footer' ); ?>">
+		<div class="image <?php ksas_blocks_sidebar_class( 'sidebar-footer' ); ?>">
 			<div class="h-40 w-40">
 				<!-- Generator: Adobe Illustrator 23.0.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 				<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"

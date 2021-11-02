@@ -35,3 +35,43 @@ function ksas_blocks_pingback_header() {
 	}
 }
 add_action( 'wp_head', 'ksas_blocks_pingback_header' );
+
+/**
+ * Add custom text to <title> using pre_get_document_title hook
+ *
+ * @param array $title <title> element.
+ */
+function custom_ksasacademic_page_title( $title ) {
+	if ( is_front_page() && is_home() ) {
+		$title = get_bloginfo( 'name' ) . ' | Johns Hopkins University';
+		return $title;
+	} elseif ( is_front_page() ) {
+		$title = get_bloginfo( 'name' ) . ' | Johns Hopkins University';
+		return $title;
+	} elseif ( is_home() ) {
+		$title = get_the_title( get_option( 'page_for_posts', true ) ) . ' | ' . get_bloginfo( 'name' ) . ' | Johns Hopkins University';
+		return $title;
+	} elseif ( is_category() ) {
+		$title = single_cat_title( '', false ) . ' | ' . get_bloginfo( 'name' ) . ' | Johns Hopkins University';
+		return $title;
+	} elseif ( is_author() ) {
+		global $post;
+		$title = get_the_author_meta( 'display_name', $post->post_author ) . ' Author Archives | ' . get_bloginfo( 'name' ) . ' | Johns Hopkins University';
+		return $title;
+	} elseif ( is_archive() ) {
+		$title = single_cat_title( '', false ) . ' | ' . get_bloginfo( 'name' ) . ' | Johns Hopkins University';
+		return $title;
+	} elseif ( is_single() ) {
+		$title = get_the_title() . ' | ' . get_bloginfo( 'name' ) . ' | Johns Hopkins University';
+		return $title;
+	} elseif ( is_page() ) {
+		$title = get_the_title() . ' | ' . get_bloginfo( 'name' ) . ' | Johns Hopkins University';
+		return $title;
+	} elseif ( is_404() ) {
+		$title = 'Page Not Found | ' . get_bloginfo( 'name' ) . ' | Johns Hopkins University';
+		return $title;
+	} else {
+		return $title;
+	}
+}
+add_filter( 'pre_get_document_title', 'custom_ksasacademic_page_title', 9999 );

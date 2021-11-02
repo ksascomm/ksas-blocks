@@ -92,7 +92,7 @@ if ( ! function_exists( 'ksas_blocks_setup' ) ) :
 		// Set content-width.
 		global $content_width;
 		if ( ! isset( $content_width ) ) {
-			$content_width = 640;
+			$content_width = 1000;
 		}
 
 		/*
@@ -228,24 +228,6 @@ if ( function_exists( 'acf_add_options_page' ) ) {
 }
 
 /**
- * Fix skip link focus in IE11.
- *
- * This does not enqueue the script because it is tiny and because it is only for IE11,
- * thus it does not warrant having an entire dedicated blocking script being loaded.
- *
- * @link https://git.io/vWdr2
- */
-function twentytwenty_skip_link_focus_fix() {
-	// The following is minified via `terser --compress --mangle -- assets/js/skip-link-focus-fix.js`.
-	?>
-	<script>
-	/(trident|msie)/i.test(navigator.userAgent)&&document.getElementById&&window.addEventListener&&window.addEventListener("hashchange",function(){var t,e=location.hash.substring(1);/^[A-z0-9_-]+$/.test(e)&&(t=document.getElementById(e))&&(/^(?:a|select|input|button|textarea)$/i.test(t.tagName)||(t.tabIndex=-1),t.focus())},!1);
-	</script>
-	<?php
-}
-add_action( 'wp_print_footer_scripts', 'twentytwenty_skip_link_focus_fix' );
-
-/**
  * Include a skip to content link at the top of the page so that users can bypass the menu.
  */
 function twentytwenty_skip_link() {
@@ -272,7 +254,7 @@ add_action( 'wp_enqueue_scripts', 'ksas_blocks_scripts' );
 
 /** Add defer attribute to specific scripts */
 function add_defer_attribute( $tag, $handle ) {
-	// add script handles to the array below
+	// Add script handles to the array below.
 	$scripts_to_defer = array( 'font-awesome' );
 
 	foreach ( $scripts_to_defer as $defer_script ) {
@@ -287,7 +269,7 @@ add_filter( 'script_loader_tag', 'add_defer_attribute', 10, 2 );
 
 /** Add async attribute to specific scripts */
 function add_async_attribute( $tag, $handle ) {
-	// add script handles to the array below
+	// Add script handles to the array below.
 	$scripts_to_async = array( 'google-tag-manager' );
 
 	foreach ( $scripts_to_async as $async_script ) {
@@ -349,12 +331,11 @@ function my_register_blocks() {
 /**
  * Count the number of widgets in a sidebar
  * Works for up to ten widgets
- * Usage <?php ctm_sidebar_class( 'promo' ); ?> where promo is the name of the sidebar
+ * Usage <?php ksas_blocks_sidebar_class( 'sidebar-footer' ); ?> where sidebar-footer is the name of the sidebar
  */
-function ctm_sidebar_class( $sidebar_name ) {
+function ksas_blocks_sidebar_class( $sidebar_name ) {
 	global $sidebars_widgets;
-	$count = count ($sidebars_widgets[$sidebar_name]);
-	
+	$count = count( $sidebars_widgets[ $sidebar_name ] );
 	switch ( $count ) {
 		case '1':
 			$class = 'one';
@@ -390,75 +371,7 @@ function ctm_sidebar_class( $sidebar_name ) {
 			$class = '';
 			break;
 	}
-
-	if ( $class )
-		echo $class;
+	if ( $class ) :
+			echo esc_html( $class );
+	endif;
 }
-
-/**
- * Add custom text to <title> using pre_get_document_title hook
- */
-function custom_ksasacademic_page_title( $title ) {
-	if ( is_front_page() && is_home() ) {
-		$title = get_bloginfo( 'name' ) . ' | Johns Hopkins University';
-		return $title;
-	} elseif ( is_front_page() ) {
-		$title = get_bloginfo( 'name' ) . ' | Johns Hopkins University';
-		return $title;
-	} elseif ( is_home() ) {
-		$title = get_the_title( get_option( 'page_for_posts', true ) ) . ' | ' . get_bloginfo( 'name' ) . ' | Johns Hopkins University';
-		return $title;
-	} elseif ( is_category() ) {
-		$title = single_cat_title( '', false ) . ' | ' . get_bloginfo( 'name' ) . ' | Johns Hopkins University';
-		return $title;
-	} elseif ( is_author() ) {
-		global $post;
-		$title = get_the_author_meta( 'display_name', $post->post_author ) . ' Author Archives | ' . get_bloginfo( 'name' ) . ' | Johns Hopkins University';
-		return $title;
-	} elseif ( is_archive() ) {
-		$title = single_cat_title( '', false ) . ' | ' . get_bloginfo( 'name' ) . ' | Johns Hopkins University';
-		return $title;
-	} elseif ( is_single() ) {
-		$title = get_the_title() . ' | ' . get_bloginfo( 'name' ) . ' | Johns Hopkins University';
-		return $title;
-	} elseif ( is_page() ) {
-		$title = get_the_title() . ' | ' . get_bloginfo( 'name' ) . ' | Johns Hopkins University';
-		return $title;
-	} elseif ( is_404() ) {
-		$title = 'Page Not Found | ' . get_bloginfo( 'name' ) . ' | Johns Hopkins University';
-		return $title;
-	} else {
-		return $title;
-	}
-}
-
-add_filter( 'pre_get_document_title', 'custom_ksasacademic_page_title', 9999 );
-
-
-/** Disable/Clean Inline Styles */
-function clean_post_content( $content ) {
-	// Remove inline styling.
-	//$content = preg_replace( '/(<[^>]+) style=".*?"/i', '$1', $content );
-	$content = preg_replace( '/(<[span>]+) style=".*?"/i', '$1', $content );
-	$content = preg_replace( '/font-family\:.+?;/i', '', $content );
-	$content = preg_replace( '/color\:.+?;/i', '', $content );
-
-	// Remove font tag.
-	$content = preg_replace( '/<font[^>]+>/', '', $content );
-
-	// Remove empty tags.
-	$post_cleaners = array(
-		'<p></p>'             => '',
-		'<p> </p>'            => '',
-		'<p>&nbsp;</p>'       => '',
-		'<span></span>'       => '',
-		'<span> </span>'      => '',
-		'<span>&nbsp;</span>' => '',
-		'<font>'              => '',
-		'</font>'             => '',
-	);
-	$content       = strtr( $content, $post_cleaners );
-
-	return $content;
-}
-add_filter( 'the_content', 'clean_post_content' );

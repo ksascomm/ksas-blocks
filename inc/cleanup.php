@@ -24,7 +24,7 @@ if ( ! function_exists( 'ksas_blocks_start_cleanup' ) ) :
 	add_action( 'after_setup_theme', 'ksas_blocks_start_cleanup' );
 endif;
 /**
- * Clean up head.+
+ * Clean up head
  * ----------------------------------------------------------------------------
  */
 
@@ -99,7 +99,7 @@ if ( ! function_exists( 'ksas_blocks_remove_recent_comments_style' ) ) :
 	}
 endif;
 
-// Remove extraneous menu classes
+// Remove extraneous menu classes.
 add_filter( 'nav_menu_css_class', 'special_nav_class', 10, 2 );
 function special_nav_class( $classes, $item ) {
 	if ( ( $key = array_search( 'menu-item-object-page', $classes ) ) !== false ) {
@@ -110,7 +110,7 @@ function special_nav_class( $classes, $item ) {
 	}
 	if ( ( $key = array_search( 'page_item', $classes ) ) !== false ) {
 		unset( $classes[ $key ] );
-	}	
+	}
 	return $classes;
 }
 
@@ -118,11 +118,38 @@ function special_nav_class( $classes, $item ) {
 if ( ! function_exists( 'ksas_blocks__sticky_posts' ) ) :
 	function ksas_blocks__sticky_posts( $classes ) {
 		if ( in_array( 'sticky', $classes, true ) ) {
-			$classes = array_diff($classes, array('sticky'));
+			$classes   = array_diff( $classes, array( 'sticky' ) );
 			$classes[] = 'wp-sticky';
 		}
 		return $classes;
 	}
-	add_filter('post_class','ksas_blocks__sticky_posts');
-	
-	endif;
+	add_filter( 'post_class', 'ksas_blocks__sticky_posts' );
+
+endif;
+
+/** Disable/Clean Inline Styles */
+function clean_post_content( $content ) {
+	// Remove inline styling.
+	$content = preg_replace( '/(<[span>]+) style=".*?"/i', '$1', $content );
+	$content = preg_replace( '/font-family\:.+?;/i', '', $content );
+	$content = preg_replace( '/color\:.+?;/i', '', $content );
+
+	// Remove font tag.
+	$content = preg_replace( '/<font[^>]+>/', '', $content );
+
+	// Remove empty tags.
+	$post_cleaners = array(
+		'<p></p>'             => '',
+		'<p> </p>'            => '',
+		'<p>&nbsp;</p>'       => '',
+		'<span></span>'       => '',
+		'<span> </span>'      => '',
+		'<span>&nbsp;</span>' => '',
+		'<font>'              => '',
+		'</font>'             => '',
+	);
+	$content       = strtr( $content, $post_cleaners );
+
+	return $content;
+}
+add_filter( 'the_content', 'clean_post_content' );
