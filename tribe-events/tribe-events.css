@@ -147,11 +147,15 @@ a.tribe-events-calendar-list__event-title-link.tribe-common-anchor-thin:hover {
 }
 
 .tribe-common .tribe-common-h--alt {
-  font-family: "gentona-bold";
+  font-family: "gentona-bold", system-ui, BlinkMacSystemFont, -apple-system,
+    Segoe UI, sans-serif;
 }
 
-.tribe-events .tribe-events-calendar-latest-past__event-featured-image-link,
 a.tribe-events-c-view-selector__list-item-link {
+  border: 0 !important;
+}
+
+.tribe-events .tribe-events-calendar-latest-past__event-featured-image-link {
   border: 0;
 }
 
