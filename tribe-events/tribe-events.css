@@ -24,9 +24,11 @@ span.tribe-events-c-top-bar__datepicker-desktop.tribe-common-a11y-hidden {
     Segoe UI, sans-serif;
 }
 
-.tribe-events .tribe-events-calendar-latest-past__event-datetime, .tribe-events .tribe-events-calendar-latest-past__event-date-tag-month, 
+.tribe-events .tribe-events-calendar-latest-past__event-datetime,
+.tribe-events .tribe-events-calendar-latest-past__event-date-tag-month,
 .tribe-events .tribe-events-calendar-latest-past__event-date-tag-year {
-  font-family: "gentona-semibold", system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, sans-serif;
+  font-family: "gentona-semibold", system-ui, BlinkMacSystemFont, -apple-system,
+    Segoe UI, sans-serif;
 }
 
 a.tribe-events-calendar-latest-past__event-title-link.tribe-common-anchor-thin {
@@ -65,52 +67,53 @@ a.tribe-events-calendar-latest-past__event-title-link.tribe-common-anchor-thin:h
 }
 
 .tribe-events-calendar-month__day.tribe-events-calendar-month__day--past {
-	background-color: #f8f8f8;
+  background-color: #f8f8f8;
 }
 
 /* Single Event View */
 .tribe-events-single.tribe-blocks-editor h2.tribe-events-schedule__datetime {
-	font-family: "gentona-semibold", system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, sans-serif;
+  font-family: "gentona-semibold", system-ui, BlinkMacSystemFont, -apple-system,
+    Segoe UI, sans-serif;
 }
 
 span.tribe-events-schedule__separator.tribe-events-schedule__separator--date {
-	color: #31261d;
+  color: #31261d;
 }
 
 .tribe-events-single.tribe-blocks-editor p {
-	font-size: 1.25rem;
-	color: #31261d;
+  font-size: 1.25rem;
+  color: #31261d;
 }
 
 .tribe-events-single.tribe-blocks-editor p a {
-	color: #002d72;
-	border-bottom-width: 2px;
-	border-style: dashed;
-	--tw-border-opacity: 1;
-	border-color: rgba(229, 226, 224, var(--tw-border-opacity));
-	--tw-text-opacity: 1;
-	text-decoration: none;
-	transition-property: background-color, border-color, color, fill, stroke;
-	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-	transition-duration: 150ms;
-	transition-duration: 200ms;
-	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  color: #002d72;
+  border-bottom-width: 2px;
+  border-style: dashed;
+  --tw-border-opacity: 1;
+  border-color: rgba(229, 226, 224, var(--tw-border-opacity));
+  --tw-text-opacity: 1;
+  text-decoration: none;
+  transition-property: background-color, border-color, color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+  transition-duration: 200ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .tribe-events-single.tribe-blocks-editor p a:hover {
-border-bottom-width: 2px;
-border-style: solid;
---tw-border-opacity: 1;
-border-color: rgba(74, 72, 76, var(--tw-border-opacity));
---tw-text-opacity: 1;
-color: rgba(49, 38, 29, var(--tw-text-opacity));
+  border-bottom-width: 2px;
+  border-style: solid;
+  --tw-border-opacity: 1;
+  border-color: rgba(74, 72, 76, var(--tw-border-opacity));
+  --tw-text-opacity: 1;
+  color: rgba(49, 38, 29, var(--tw-text-opacity));
 }
 .tribe-events-single.tribe-blocks-editor .tribe-events-notices {
-	background-color: #fff2d9;
-	position: relative;
-    margin: 0 0 1rem;
-    padding: 1rem;
-    border: 1px solid rgba(10,10,10,.25);
-    border-radius: 0;
-    color: #31261d;
+  background-color: #fff2d9;
+  position: relative;
+  margin: 0 0 1rem;
+  padding: 1rem;
+  border: 1px solid rgba(10, 10, 10, 0.25);
+  border-radius: 0;
+  color: #31261d;
 }
