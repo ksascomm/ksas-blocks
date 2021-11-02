@@ -121,7 +121,8 @@ span.tribe-events-schedule__separator.tribe-events-schedule__separator--date {
 .tribe-events-c-view-selector__list-item::before,
 .tribe-events-c-top-bar__nav-list-item::before,
 .tribe-events-c-nav__list-item::before,
-.tribe-events-notices li::before {
+.tribe-events-notices li::before,
+.tribe-events-c-messages__message-list-item::before {
   display: none;
 }
 
