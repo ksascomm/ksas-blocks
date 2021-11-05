@@ -63,6 +63,25 @@ get_header();
 
 		<?php endif; // end of if field_name logic ?>
 
+		<?php
+
+		if ( get_field( 'hub_api', 'option' ) ) : 
+	// If ACF Conditional is YES, display news feed.?>
+	<div class="divider div-transparent div-dot"></div>
+		<div class="news-section mb-24 px-2 sm:px-0">
+				<div class="prose sm:prose lg:prose-lg xl:prose-xl mx-auto">
+					<div class="flex justify-between">
+						<div>
+						<h2>Related News from <a href="https://hub.jhu.edu/" aria-label="hub website">The Hub</a></h2>
+						</div>
+					</div>
+				</div>
+				<?php get_template_part( 'template-parts/content', 'hub-api' ); ?>
+		</div>
+		<?php else : // field_name returned false ?>
+
+		<?php endif; // end of if field_name logic ?>
+
 	</main><!-- #main -->
 
 <?php

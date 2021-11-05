@@ -1,9 +1,10 @@
-.entry-content > *:not(.testimonial.alignwide):not(.testimonial.alignfull):not(.testimonial.alignleft):not(.testimonial.alignright):not(.testimonial.is-style-wide) {
-	max-width: 58rem;
-	width: calc(100% - 2rem);
+.entry-content
+  > *:not(.testimonial.alignwide):not(.testimonial.alignfull):not(.testimonial.alignleft):not(.testimonial.alignright):not(.testimonial.is-style-wide) {
+  max-width: 58rem;
+  width: calc(100% - 2rem);
 }
 
-.testimonial.alignwide {
+/*.testimonial.alignwide {
   margin-top: 0 !important;
   margin-bottom: 0 !important;
 }
@@ -14,7 +15,7 @@
 }
 
 .testimonial h3 {
-  margin-top: .5rem !important;
+  margin-top: 0.5rem !important;
   margin-bottom: 0 !important;
 }
 
@@ -24,18 +25,20 @@
 }
 
 .testimonial.is-admin .testimonial-image {
-    width: 5rem;
-    -o-object-fit: cover;
-    object-fit: cover;
-    height: 5rem;
-    border-width: 2px;
-    border-radius: 9999px;
-    border-style: solid;
+  width: 5rem;
+  -o-object-fit: cover;
+  object-fit: cover;
+  height: 5rem;
+  border-width: 2px;
+  border-radius: 9999px;
+  border-style: solid;
 }
 
 .shadow-lg {
-  --tw-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  --tw-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+    var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
 .testimonial.is-admin .px-8 {
@@ -72,8 +75,156 @@
 }
 
 @media (min-width: 1000px) {
-  .entry-content>.testimonial.alignfull:not(.wp-block-group.has-background), .entry-content>.testimonial.alignwide:not(.wp-block-group.has-background) {
+  .entry-content > .testimonial.alignfull:not(.wp-block-group.has-background),
+  .entry-content > .testimonial.alignwide:not(.wp-block-group.has-background) {
     margin-bottom: 4rem;
     margin-top: 4rem;
+  }
+}*/
+
+.block-padding {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+@media (min-width: 1024px) {
+  .block-padding {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+}
+
+.wp-block-acf-testimonials {
+  margin-left: auto;
+  position: relative;
+  margin-top: 4rem;
+}
+@media (min-width: 1024px) {
+  .wp-block-acf-testimonials {
+    margin-right: 0px;
+    margin-top: 0px;
+    margin-left: 8rem;
+  }
+}
+
+.testimonial-callout {
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  --tw-bg-opacity: 1;
+  --tw-text-opacity: 1;
+  transform: translateX(var(--tw-translate-x)) translateY(var(--tw-translate-y))
+    rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y))
+    scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  max-width: 24rem;
+  border-bottom-left-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
+  position: relative;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  z-index: 20;
+  padding: 1.5rem 2rem;
+  background: rgba(248, 248, 248, var(--tw-bg-opacity));
+  font-size: 0.875rem;
+  line-height: 1.625;
+}
+.testimonial-callout h3,
+.testimonial-callout h4,
+.testimonial-callout p,
+.testimonial-callout a {
+  color: inherit;
+}
+
+.testimonial-callout h3 {
+  font-size: 1.5rem;
+}
+
+.testimonial-callout p {
+  margin-top: 0.25rem !important;
+  margin-bottom: 0.25rem !important;
+}
+@media (min-width: 640px) {
+  .testimonial-callout {
+    position: absolute;
+    padding: 1rem 1.25rem;
+  }
+}
+@media (min-width: 768px) {
+  .testimonial-callout {
+    border-radius: 0px;
+    --tw-translate-x: -8rem;
+    --tw-translate-y: 8rem;
+    margin-right: -4rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .testimonial-callout {
+    margin-right: 0px;
+  }
+}
+
+.testimonial-container {
+  position: relative;
+  z-index: 40;
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  transform: translateX(var(--tw-translate-x)) translateY(var(--tw-translate-y))
+    rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y))
+    scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+@media (min-width: 1280px) {
+  .testimonial-container {
+    --tw-translate-x: -6rem;
+    --tw-translate-y: -4rem;
+  }
+}
+
+.testimonial-svg {
+  --tw-translate-x: 2.5rem;
+  --tw-translate-y: 2.5rem;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  transform: translateX(var(--tw-translate-x)) translateY(var(--tw-translate-y))
+    rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y))
+    scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  pointer-events: none;
+  z-index: -1;
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  height: 8rem;
+  width: 8rem;
+  opacity: 0.25;
+  --tw-text-opacity: 1;
+  color: rgba(0, 45, 114, var(--tw-text-opacity));
+  fill: currentcolor;
+}
+
+.testimonial-offset {
+  position: absolute;
+  inset: 0px;
+  --tw-bg-opacity: 1;
+  background-color: rgba(104, 172, 229, var(--tw-bg-opacity));
+  border-radius: 0.25rem;
+}
+
+@media (min-width: 1280px) {
+  .testimonial-offset {
+    margin-bottom: -2rem;
   }
 }

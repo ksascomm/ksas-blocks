@@ -60,6 +60,123 @@
             "min": "",
             "max": "",
             "step": ""
+        },
+        {
+            "key": "field_61841b2ef07a4",
+            "label": "Hub API",
+            "name": "hub_api",
+            "type": "true_false",
+            "instructions": "Show Hub feed on your homepage?",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_61841bbbf07a5",
+            "label": "Hub Topic or Keywords",
+            "name": "hub_topic_keywords",
+            "type": "radio",
+            "instructions": "Do you want to display Hub articles via topic or keyword? You may only select one.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_61841b2ef07a4",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "topic": "Topic",
+                "keyword": "Keyword"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "default_value": "",
+            "layout": "vertical",
+            "return_format": "value",
+            "save_other_choice": 0
+        },
+        {
+            "key": "field_61841bfcf07a7",
+            "label": "Hub Topics",
+            "name": "hub_topics",
+            "type": "radio",
+            "instructions": "Choose a relevant Hub Topic from the list above",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_61841bbbf07a5",
+                        "operator": "==",
+                        "value": "topic"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "32": "Arts & Culture",
+                "3158": "At Work",
+                "34": "Athletics",
+                "31": "Health",
+                "167": "Politics & Society",
+                "33": "Science & Technology",
+                "36": "Student Life",
+                "35": "University News",
+                "37": "Voices & Opinion"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "default_value": "",
+            "layout": "vertical",
+            "return_format": "value",
+            "save_other_choice": 0
+        },
+        {
+            "key": "field_61841bf8f07a6",
+            "label": "Hub Keywords",
+            "name": "hub_keywords",
+            "type": "text",
+            "instructions": "Enter keywords. Use hyphens instead of spaces (comma separated, no spaces) ie. physics,arts-and-sciences.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_61841bbbf07a5",
+                        "operator": "==",
+                        "value": "keyword"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
         }
     ],
     "location": [
@@ -79,5 +196,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1621279619
+    "modified": 1636049274
 }
