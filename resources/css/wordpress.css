@@ -452,7 +452,7 @@ ul.primary-menu {
 .primary-menu a {
   color: inherit;
   display: block;
-  line-height: 1.2;
+  line-height: 1.4;
   text-decoration: none;
   word-break: normal;
   word-wrap: normal;
@@ -514,6 +514,7 @@ ul.primary-menu {
   transition: background-color 0.15s linear;
   width: 100%;
   font-size: 1rem;
+  line-height: 1.2;
 }
 
 .primary-menu ul li.menu-item-has-children .icon {
