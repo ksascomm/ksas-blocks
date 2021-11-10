@@ -1,10 +1,10 @@
-.entry-content
+/*.entry-content
   > *:not(.testimonial.alignwide):not(.testimonial.alignfull):not(.testimonial.alignleft):not(.testimonial.alignright):not(.testimonial.is-style-wide) {
   max-width: 58rem;
   width: calc(100% - 2rem);
 }
 
-/*.testimonial.alignwide {
+.testimonial.alignwide {
   margin-top: 0 !important;
   margin-bottom: 0 !important;
 }
