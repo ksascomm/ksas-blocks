@@ -1043,6 +1043,7 @@ ul.page-numbers li .page-numbers.current {
 
 .front.prose p,
 .front.prose ul,
+.front.prose .entry-content h2,
 .front.prose .entry-content h3,
 .front.prose .entry-content h4 {
   @apply mx-auto max-w-5xl !important;
@@ -1201,6 +1202,25 @@ a {
   display: inherit;
 }
 
+figure.wp-block-pullquote {
+  @apply my-0 mx-auto p-2 !important;
+}
+
+.wp-block-column figure.wp-block-embed.is-type-video,
+.wp-block-column .wp-block-embed__wrapper {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%;
+}
+.wp-block-column figure.wp-block-embed.is-type-video iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
 /* Block: KSAS Callouts ------------------------------ */
 .wp-block-ksas-callouts-ksas-callout-block {
   @apply relative p-4 border border-primary text-primary my-4;
@@ -1294,8 +1314,19 @@ a {
   @apply my-2;
 }
 
+.wp-block-group > h2.has-text-align-center,
+.wp-block-group > p.has-text-align-center {
+  text-align: center;
+}
+
+/* Block Pattern: Three & Four Column Features ------------------------------ */
+
 .three-column-feature {
   @apply -mx-2;
+}
+
+.alignfull .three-column-feature {
+  @apply mx-0 py-2 px-20;
 }
 
 .three-column-feature h2,
@@ -1322,6 +1353,7 @@ a {
   @apply text-lg;
 }
 
+/* Block Pattern: People/Staff Listing ------------------------------ */
 .wp-block-columns.staff-listing-horizontal {
   @apply mb-0;
 }
@@ -1345,12 +1377,6 @@ a {
   @apply my-2 !important;
 }
 
-.wp-block-group > h2.has-text-align-center,
-.wp-block-group > p.has-text-align-center {
-  text-align: center;
-}
-
-/* Block Pattern: People/Staff Listing ------------------------------ */
 .people h2 {
   @apply my-1 !important;
 }
