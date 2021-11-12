@@ -121,20 +121,42 @@ if ( ! function_exists( 'ksas_blocks_post_thumbnail' ) ) :
 		if ( post_password_required() || is_attachment() || ! has_post_thumbnail() ) {
 			return;
 		}
-		if ( is_front_page() ) : ?>
+		if ( is_front_page() ) :
+			// Add 'alignfull' class on front page template.
+		?>
 
 			<div class="post-thumbnail alignfull">
 				<?php the_post_thumbnail( 'full' ); ?>
 			</div><!-- .post-thumbnail -->
 			<?php
-		elseif ( is_singular() ) :
+		elseif ( is_singular() && 'post' !== get_post_type() ) :
+			// Keep thumb landscape & same width as content area on a PAGE page, not Post!
 			?>
 
 			<div class="post-thumbnail">
 				<?php the_post_thumbnail( 'full' ); ?>
 			</div><!-- .post-thumbnail -->
 
-		<?php else : ?>
+		<?php elseif (is_singular() && 'post' == get_post_type() ) :
+			// Make image portrait and float left on single news Posts.
+			?>
+			<?php
+			the_post_thumbnail(
+				'large',
+				array(
+					'class' => 'md:float-left max-w-sm mr-6 mb-6',
+					'alt'   => the_title_attribute(
+						array(
+							'echo' => false,
+						)
+					),
+				)
+			);
+			?>
+
+		<?php else :
+			// Fallback: make image a link.
+			?>
 
 			<a class="post-thumbnail" href="<?php the_permalink(); ?>" aria-hidden="true" tabindex="-1">
 				<?php
@@ -152,7 +174,7 @@ if ( ! function_exists( 'ksas_blocks_post_thumbnail' ) ) :
 			</a>
 
 			<?php
-		endif; // End is_singular().
+		endif;
 	}
 endif;
 
