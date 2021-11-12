@@ -658,6 +658,10 @@ footer.entry-footer {
   @apply px-6;
 }
 
+.single-post .prose .post img.wp-post-image {
+  margin-bottom: 1.5rem !important;
+}
+
 /* Widgets
 --------------------------------------------- */
 .widget {
