@@ -71,7 +71,8 @@ a.tribe-events-calendar-latest-past__event-title-link.tribe-common-anchor-thin:h
 }
 
 /* Single Event View */
-.tribe-events-single.tribe-blocks-editor h2.tribe-events-schedule__datetime {
+.tribe-events-single.tribe-blocks-editor h2.tribe-events-schedule__datetime,
+.tribe-events-single h2.tribe-events-schedule__datetime {
   font-family: "gentona-semibold", system-ui, BlinkMacSystemFont, -apple-system,
     Segoe UI, sans-serif;
 }
@@ -80,12 +81,14 @@ span.tribe-events-schedule__separator.tribe-events-schedule__separator--date {
   color: #31261d;
 }
 
-.tribe-events-single.tribe-blocks-editor p {
+.tribe-events-single.tribe-blocks-editor p,
+.tribe-events-single p {
   font-size: 1.25rem;
   color: #31261d;
 }
 
-.tribe-events-single.tribe-blocks-editor p a {
+.tribe-events-single.tribe-blocks-editor p a,
+.tribe-events-single p a {
   color: #002d72;
   border-bottom-width: 2px;
   border-style: dashed;
@@ -100,7 +103,8 @@ span.tribe-events-schedule__separator.tribe-events-schedule__separator--date {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.tribe-events-single.tribe-blocks-editor p a:hover {
+.tribe-events-single.tribe-blocks-editor p a:hover,
+.tribe-events-single p a:hover {
   border-bottom-width: 2px;
   border-style: solid;
   --tw-border-opacity: 1;
@@ -108,7 +112,8 @@ span.tribe-events-schedule__separator.tribe-events-schedule__separator--date {
   --tw-text-opacity: 1;
   color: rgba(49, 38, 29, var(--tw-text-opacity));
 }
-.tribe-events-single.tribe-blocks-editor .tribe-events-notices {
+.tribe-events-single.tribe-blocks-editor .tribe-events-notices,
+.tribe-events-single .tribe-events-notices {
   background-color: #fff2d9;
   position: relative;
   margin: 0 0 1rem;
@@ -164,4 +169,27 @@ a.tribe-events-c-view-selector__list-item-link {
 .tribe-events
   .tribe-events-calendar-latest-past__event-featured-image-link:hover {
   border: 0;
+}
+
+h1.tribe-events-single-event-title {
+  font-family: Quadon, Georgia, serif;
+}
+
+.tribe-event-date-start,
+.tribe-event-time,
+.tribe-events-content,
+.tribe-events-button,
+.tribe-events-single-section > *,
+.tribe-events-content > *,
+.tribe-events-nav-pagination {
+  font-family: "gentona-light", system-ui, BlinkMacSystemFont, -apple-system,
+    Segoe UI, sans-serif;
+  color: #31261d;
+}
+
+.tribe-events-single .tribe-events-sub-nav .tribe-events-nav-next a,
+.tribe-events-single .tribe-events-sub-nav .tribe-events-nav-previous a {
+  font-family: "gentona-light", system-ui, BlinkMacSystemFont, -apple-system,
+    Segoe UI, sans-serif;
+  color: #002d72 !important;
 }
