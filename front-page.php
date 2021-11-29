@@ -66,13 +66,13 @@ get_header();
 		<?php
 
 		if ( get_field( 'hub_api', 'option' ) ) : 
-	// If ACF Conditional is YES, display news feed.?>
+	// If ACF Conditional is YES, display Hub Feed.?>
 	<div class="divider div-transparent div-dot"></div>
 		<div class="news-section mb-24 px-2 sm:px-0">
 				<div class="prose sm:prose lg:prose-lg xl:prose-xl mx-auto">
 					<div class="flex justify-between">
 						<div>
-						<h2>Related News from <a href="https://hub.jhu.edu/" aria-label="hub website">The Hub</a></h2>
+						<h2>Related News from <a href="https://hub.jhu.edu/" aria-label="The Hub">The Hub</a></h2>
 						</div>
 					</div>
 				</div>
