@@ -107,7 +107,7 @@
 		</div><!-- .header-titles-wrapper -->
 		<div class="header-navigation-wrapper bg-white">
 			<div class="header-inner section-inner flex">
-				<nav class="primary-menu-wrapper flex-auto" aria-label="<?php echo esc_attr_x( 'Horizontal', 'menu', 'ksas-blocks' ); ?>">
+				<nav class="primary-menu-wrapper" aria-label="<?php echo esc_attr_x( 'Horizontal', 'menu', 'ksas-blocks' ); ?>">
 					<ul class="primary-menu reset-list-style">
 					<?php
 						wp_nav_menu(
