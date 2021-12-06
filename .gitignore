@@ -27,3 +27,4 @@ phpcs.xml.dist
 *.log
 *.sql
 *.sqlite
+.DS_Store
