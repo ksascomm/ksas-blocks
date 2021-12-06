@@ -43,6 +43,10 @@
 				<h3><?php echo get_post_meta( $post->ID, 'ecpt_position', true ); ?></h3>
 			<?php endif; ?>
 
+			<?php if ( get_post_meta( $post->ID, 'ecpt_degrees', true ) ) : ?>
+				<h4><?php echo get_post_meta( $post->ID, 'ecpt_degrees', true ); ?></h4>
+			<?php endif; ?>
+
 			<?php if ( get_post_meta( $post->ID, 'ecpt_office', true ) ) : ?>
 				<span class="fas fa-map-marker-alt" aria-hidden="true"></span> <?php echo esc_html( get_post_meta( $post->ID, 'ecpt_office', true ) ); ?><br>
 			<?php endif; ?>
