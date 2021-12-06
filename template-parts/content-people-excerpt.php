@@ -1,6 +1,6 @@
 <?php
 /**
- * Template part for displaying People CPT content in people-direcory.php
+ * Template part for displaying People CPT excerpt in people-direcory.php
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
@@ -34,7 +34,7 @@
 			<a href="<?php echo esc_html( get_post_meta( $post->ID, 'ecpt_website', true ) ); ?>" title="<?php the_title(); ?>'s webpage" target="_blank">
 				<?php the_title(); ?>
 			</a>
-		<?php else : ?>
+		<?php else: ?>
 			<?php the_title(); ?>
 		<?php endif; ?>
 		</h2>
