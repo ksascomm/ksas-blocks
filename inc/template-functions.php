@@ -49,8 +49,14 @@ function custom_ksasacademic_page_title( $title ) {
 		$title = get_bloginfo( 'name' ) . ' | Johns Hopkins University';
 		return $title;
 	} elseif ( is_home() ) {
-		$title = get_the_title( get_option( 'page_for_posts', true ) ) . ' | ' . get_bloginfo( 'name' ) . ' | Johns Hopkins University';
-		return $title;
+		if ( is_paged() ) {
+			$page_number = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
+			$title       = get_the_title( get_option( 'page_for_posts', true ) ) . ' Page ' . $page_number . ' | ' . get_bloginfo( 'name' ) . ' | Johns Hopkins University';
+			return $title;
+		} else {
+			$title = get_the_title( get_option( 'page_for_posts', true ) ) . ' | ' . get_bloginfo( 'name' ) . ' | Johns Hopkins University';
+			return $title;
+		}
 	} elseif ( is_category() ) {
 		$title = single_cat_title( '', false ) . ' | ' . get_bloginfo( 'name' ) . ' | Johns Hopkins University';
 		return $title;
