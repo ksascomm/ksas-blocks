@@ -691,7 +691,7 @@ footer.entry-footer {
 }
 
 .widget p {
-  @apply leading-snug text-base pb-4;
+  @apply text-base pb-4;
 }
 
 .widget p strong {
