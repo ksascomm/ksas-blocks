@@ -2,7 +2,6 @@
 /**
  * Template Name: Page With Sidebar Left
  *
- *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
  * @package KSAS_Blocks

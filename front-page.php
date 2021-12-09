@@ -59,14 +59,15 @@ get_header();
 			endif;
 			?>
 		</div>
-		<?php else : // field_name returned false ?>
+		<?php else : // field_name returned false. ?>
 
-		<?php endif; // end of if field_name logic ?>
+		<?php endif; // end of if field_name logic. ?>
 
 		<?php
 
-		if ( get_field( 'hub_api', 'option' ) ) : 
-	// If ACF Conditional is YES, display Hub Feed.?>
+		if ( get_field( 'hub_api', 'option' ) ) :
+			// If ACF Conditional is YES, display Hub Feed.
+			?>
 	<div class="divider div-transparent div-dot"></div>
 		<div class="news-section mb-24 px-2 sm:px-0">
 				<div class="prose sm:prose lg:prose-lg xl:prose-xl mx-auto">
@@ -78,9 +79,9 @@ get_header();
 				</div>
 				<?php get_template_part( 'template-parts/content', 'hub-api' ); ?>
 		</div>
-		<?php else : // field_name returned false ?>
+		<?php else : // field_name returned false. ?>
 
-		<?php endif; // end of if field_name logic ?>
+		<?php endif; // end of if field_name logic. ?>
 
 	</main><!-- #main -->
 

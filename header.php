@@ -46,11 +46,12 @@
 	})(window,document,'script','dataLayer','GTM-5VTN64C');</script>
 	<!-- End Google Tag Manager -->
 	<?php
-	if ( get_field( 'siteimprove', 'option' ) ): ?>
+	if ( get_field( 'siteimprove', 'option' ) ) :
+		?>
 	<!-- Siteimprove Analytics -->
 	<script async src="https://siteimproveanalytics.com/js/siteanalyze_11464.js"></script>
 	<!-- End Siteimprove Analytics -->
-	<?php endif;?>
+	<?php endif; ?>
 </head>
 
 <body <?php body_class(); ?>>
