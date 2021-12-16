@@ -1,8 +1,7 @@
 const { NoEmitOnErrorsPlugin } = require("webpack");
 
 module.exports = {
-  mode: "jit",
-  purge: [
+  content: [
     "./comments.php",
     "./header.php",
     "./footer.php",
@@ -222,8 +221,5 @@ module.exports = {
     require("@tailwindcss/typography")({
       modifiers: ["lg"],
     }),
-  ],
-  variants: {
-    borderWidth: ["responsive", "hover", "focus"],
-  },
+  ]
 };
