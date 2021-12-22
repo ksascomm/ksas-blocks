@@ -11,10 +11,10 @@ module.exports = {
     "./home.php",
     "./index.php",
     "./page.php",
-    "./sidebar.php",
-    "./single.php",
     "./search.php",
     "./searchform.php",
+    "./sidebar.php",
+    "./single.php",
     "./inc/*.php",
     "./page-templates/*.php",
     "./resources/js/*.js",
@@ -99,6 +99,15 @@ module.exports = {
               lineHeight: "1.6",
               fontSize: "1.25rem",
               maxWidth: "100ch",
+              '--tw-prose-body': "#31261D",
+              '--tw-prose-bullets': "#31261D",
+              '--tw-prose-headings': "#31261D",
+              '--tw-prose-links': "#002d72",
+              '--tw-prose-bold': "#31261D",
+              '--tw-prose-code': "#31261D",
+              '--tw-prose-pre-code': "#31261d",
+              '--tw-prose-pre-bg': "#f8f8f8",
+              '--tw-prose-quotes': "#31261d",
               "ul > li::before": {
                 backgroundColor: "#31261D",
               },
@@ -115,13 +124,11 @@ module.exports = {
               },
               h1: {
                 marginBottom: "0rem",
-                color: "#31261D",
                 fontSize: "2.25rem",
               },
               h2: {
                 marginTop: "0.5rem",
                 marginBottom: "0.5rem",
-                color: "#31261D",
                 maxWidth: "90ch",
                 fontSize: "2rem",
               },
@@ -129,12 +136,10 @@ module.exports = {
                 marginTop: "0.5rem",
                 marginBottom: "0.5rem",
                 fontSize: "1.6rem",
-                color: "#31261D",
               },
               h4: {
                 marginTop: "0.5rem",
                 marginBottom: "0.5rem",
-                color: "#31261D",
                 fontSize: "1.25rem",
               },
               p: {
@@ -147,16 +152,11 @@ module.exports = {
                 marginBottom: ".25rem",
               },
               a: {
-                color: "#002d72",
                 textDecoration: "none",
                 transition: "none",
               },
               strong: {
-                color: "#31261D",
                 fontFamily: "Gentona-Bold, system-ui",
-              },
-              code: {
-                color: "#31261D",
               },
               table: {
                 fontSize: "1rem",
@@ -179,15 +179,10 @@ module.exports = {
                 marginTop: ".5rem",
                 marginBottom: ".5rem",
               },
-              pre: {
-                backgroundColor: "#f8f8f8",
-                color: "#31261d",
-              },
               small: {
                 fontSize: "75%",
               },
               blockquote: {
-                color: "#31261d",
                 fontFamily: "Gentona-SemiBold, system-ui",
                 fontWeight: "600",
                 borderLeftColor: "#bfccd9",
