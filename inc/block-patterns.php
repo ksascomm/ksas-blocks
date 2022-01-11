@@ -257,81 +257,6 @@ if ( function_exists( 'register_block_pattern' ) ) {
 		)
 	);
 
-	// Call to Action.
-	register_block_pattern(
-		'ksasblocks/call-to-action',
-		array(
-			'title'         => esc_html__( 'Call to Action', 'ksas-blocks' ),
-			'categories'    => array( 'ksas-blocks' ),
-			'viewportWidth' => 1400,
-			'content'       => implode(
-				'',
-				array(
-					'<!-- wp:group {"align":"wide","style":{"color":{"background":"#bfccd9"}}} -->',
-					'<div class="wp-block-group alignwide has-background" style="background-color:#bfccd9"><div class="wp-block-group__inner-container"><!-- wp:group -->',
-					'<div class="wp-block-group"><div class="wp-block-group__inner-container"><!-- wp:heading {"align":"center"} -->',
-					'<h2 class="has-text-align-center">' . esc_html__( 'Support the Museum and Get Exclusive Offers', 'ksas-blocks' ) . '</h2>',
-					'<!-- /wp:heading -->',
-					'<!-- wp:paragraph {"align":"center"} -->',
-					'<p class="has-text-align-center">' . esc_html__( 'Members get access to exclusive exhibits and sales. Our memberships cost $99.99 and are billed annually.', 'ksas-blocks' ) . '</p>',
-					'<!-- /wp:paragraph -->',
-					'<!-- wp:button {"align":"center","className":"is-style-fill"} -->',
-					'<div class="wp-block-button aligncenter is-style-fill"><a class="wp-block-button__link" href="#">' . esc_html__( 'Become a Member', 'ksas-blocks' ) . '</a></div>',
-					'<!-- /wp:button --></div></div>',
-					'<!-- /wp:group --></div></div>',
-					'<!-- /wp:group -->',
-				)
-			),
-		)
-	);
-
-	// Double Call to Action.
-	register_block_pattern(
-		'ksasblocks/double-call-to-action',
-		array(
-			'title'         => esc_html__( 'Double Call to Action', 'ksas-blocks' ),
-			'categories'    => array( 'ksas-blocks' ),
-			'viewportWidth' => 1400,
-			'content'       => implode(
-				'',
-				array(
-					'<!-- wp:columns {"align":"wide"} -->',
-					'<div class="wp-block-columns alignwide calls-to-action"><!-- wp:column -->',
-					'<div class="wp-block-column"><!-- wp:group {"style":{"color":{"background":"#fefefe"}}} -->',
-					'<div class="wp-block-group has-background left-call-to-action has-white-background-color" style="background-color:#fefefe"><div class="wp-block-group__inner-container"><!-- wp:heading {"align":"center"} -->',
-					'<h2 class="has-text-align-center">' . esc_html__( 'The Museum', 'ksas-blocks' ) . '</h2>',
-					'<!-- /wp:heading -->',
-					'<!-- wp:paragraph {"align":"center"} -->',
-					'<p class="has-text-align-center">' . esc_html__( 'Award-winning exhibitions featuring internationally-renowned artists.', 'ksas-blocks' ) . '</p>',
-					'<!-- /wp:paragraph -->',
-					'<!-- wp:buttons {"align":"center"} -->',
-					'<div class="wp-block-buttons aligncenter"><!-- wp:button {"className":"is-style-fill"} -->',
-					'<div class="wp-block-button is-style-fill"><a class="wp-block-button__link">' . esc_html__( 'Read More', 'ksas-blocks' ) . '</a></div>',
-					'<!-- /wp:button --></div>',
-					'<!-- /wp:buttons --></div></div>',
-					'<!-- /wp:group --></div>',
-					'<!-- /wp:column -->',
-					'<!-- wp:column -->',
-					'<div class="wp-block-column"><!-- wp:group {"style":{"color":{"background":"#fefefe"}}} -->',
-					'<div class="wp-block-group has-background right-call-to-action has-white-background-color" style="background-color:#fefefe"><div class="wp-block-group__inner-container"><!-- wp:heading {"align":"center"} -->',
-					'<h2 class="has-text-align-center">' . esc_html__( 'The Store', 'ksas-blocks' ) . '</h2>',
-					'<!-- /wp:heading -->',
-					'<!-- wp:paragraph {"align":"center"} -->',
-					'<p class="has-text-align-center">' . esc_html__( 'An awe-inspiring collection of books, prints, and gifts from our exhibitions.', 'ksas-blocks' ) . '</p>',
-					'<!-- /wp:paragraph -->',
-					'<!-- wp:buttons {"align":"center"} -->',
-					'<div class="wp-block-buttons aligncenter"><!-- wp:button {"className":"is-style-fill"} -->',
-					'<div class="wp-block-button is-style-fill"><a class="wp-block-button__link">' . esc_html__( 'Shop Now', 'ksas-blocks' ) . '</a></div>',
-					'<!-- /wp:button --></div>',
-					'<!-- /wp:buttons --></div></div>',
-					'<!-- /wp:group --></div>',
-					'<!-- /wp:column --></div>',
-					'<!-- /wp:columns -->',
-				)
-			),
-		)
-	);
-
 	// Three Column Feature.
 	register_block_pattern(
 		'ksasblocks/three-column-feature',
@@ -511,7 +436,82 @@ if ( function_exists( 'register_block_pattern' ) ) {
 		)
 	);
 
-	// Introduction.
+	// Single Call to Action.
+	register_block_pattern(
+		'ksasblocks/call-to-action',
+		array(
+			'title'         => esc_html__( 'Call to Action', 'ksas-blocks' ),
+			'categories'    => array( 'ksas-blocks' ),
+			'viewportWidth' => 1400,
+			'content'       => implode(
+				'',
+				array(
+					'<!-- wp:group {"align":"wide","style":{"color":{"background":"#bfccd9"}}} -->',
+					'<div class="wp-block-group alignwide has-background" style="background-color:#bfccd9"><div class="wp-block-group__inner-container"><!-- wp:group -->',
+					'<div class="wp-block-group"><div class="wp-block-group__inner-container"><!-- wp:heading {"align":"center"} -->',
+					'<h2 class="has-text-align-center">' . esc_html__( 'Support the Museum and Get Exclusive Offers', 'ksas-blocks' ) . '</h2>',
+					'<!-- /wp:heading -->',
+					'<!-- wp:paragraph {"align":"center"} -->',
+					'<p class="has-text-align-center">' . esc_html__( 'Members get access to exclusive exhibits and sales. Our memberships cost $99.99 and are billed annually.', 'ksas-blocks' ) . '</p>',
+					'<!-- /wp:paragraph -->',
+					'<!-- wp:button {"align":"center","className":"is-style-fill"} -->',
+					'<div class="wp-block-button aligncenter is-style-fill"><a class="wp-block-button__link" href="#">' . esc_html__( 'Become a Member', 'ksas-blocks' ) . '</a></div>',
+					'<!-- /wp:button --></div></div>',
+					'<!-- /wp:group --></div></div>',
+					'<!-- /wp:group -->',
+				)
+			),
+		)
+	);
+
+	// Double Call to Action.
+	register_block_pattern(
+		'ksasblocks/double-call-to-action',
+		array(
+			'title'         => esc_html__( 'Double Call to Action', 'ksas-blocks' ),
+			'categories'    => array( 'ksas-blocks' ),
+			'viewportWidth' => 1400,
+			'content'       => implode(
+				'',
+				array(
+					'<!-- wp:columns {"align":"wide"} -->',
+					'<div class="wp-block-columns alignwide calls-to-action"><!-- wp:column -->',
+					'<div class="wp-block-column"><!-- wp:group {"style":{"color":{"background":"#fefefe"}}} -->',
+					'<div class="wp-block-group has-background left-call-to-action has-white-background-color" style="background-color:#fefefe"><div class="wp-block-group__inner-container"><!-- wp:heading {"align":"center"} -->',
+					'<h2 class="has-text-align-center">' . esc_html__( 'The Museum', 'ksas-blocks' ) . '</h2>',
+					'<!-- /wp:heading -->',
+					'<!-- wp:paragraph {"align":"center"} -->',
+					'<p class="has-text-align-center">' . esc_html__( 'Award-winning exhibitions featuring internationally-renowned artists.', 'ksas-blocks' ) . '</p>',
+					'<!-- /wp:paragraph -->',
+					'<!-- wp:buttons {"align":"center"} -->',
+					'<div class="wp-block-buttons aligncenter"><!-- wp:button {"className":"is-style-fill"} -->',
+					'<div class="wp-block-button is-style-fill"><a class="wp-block-button__link">' . esc_html__( 'Read More', 'ksas-blocks' ) . '</a></div>',
+					'<!-- /wp:button --></div>',
+					'<!-- /wp:buttons --></div></div>',
+					'<!-- /wp:group --></div>',
+					'<!-- /wp:column -->',
+					'<!-- wp:column -->',
+					'<div class="wp-block-column"><!-- wp:group {"style":{"color":{"background":"#fefefe"}}} -->',
+					'<div class="wp-block-group has-background right-call-to-action has-white-background-color" style="background-color:#fefefe"><div class="wp-block-group__inner-container"><!-- wp:heading {"align":"center"} -->',
+					'<h2 class="has-text-align-center">' . esc_html__( 'The Store', 'ksas-blocks' ) . '</h2>',
+					'<!-- /wp:heading -->',
+					'<!-- wp:paragraph {"align":"center"} -->',
+					'<p class="has-text-align-center">' . esc_html__( 'An awe-inspiring collection of books, prints, and gifts from our exhibitions.', 'ksas-blocks' ) . '</p>',
+					'<!-- /wp:paragraph -->',
+					'<!-- wp:buttons {"align":"center"} -->',
+					'<div class="wp-block-buttons aligncenter"><!-- wp:button {"className":"is-style-fill"} -->',
+					'<div class="wp-block-button is-style-fill"><a class="wp-block-button__link">' . esc_html__( 'Shop Now', 'ksas-blocks' ) . '</a></div>',
+					'<!-- /wp:button --></div>',
+					'<!-- /wp:buttons --></div></div>',
+					'<!-- /wp:group --></div>',
+					'<!-- /wp:column --></div>',
+					'<!-- /wp:columns -->',
+				)
+			),
+		)
+	);
+
+	// Horizontal Call to Action
 	register_block_pattern(
 		'ksasblocks/horizontal-cta',
 		array(
