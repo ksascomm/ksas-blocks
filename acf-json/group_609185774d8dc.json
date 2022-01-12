@@ -27,7 +27,7 @@
             {
                 "param": "options_page",
                 "operator": "==",
-                "value": "acf-options-contact-footer"
+                "value": "acf-options-footer"
             }
         ]
     ],
