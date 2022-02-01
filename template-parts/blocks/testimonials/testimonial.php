@@ -49,7 +49,7 @@ if ( $the_query->have_posts() ) : ?>
 			the_post_thumbnail(
 				'large',
 				array(
-					'class' => 'inline max-w-full w-96 rounded z-20',
+					'class' => 'inline max-w-full w-64 md:w-96 rounded z-20',
 					'alt'   => esc_html( get_the_title() ),
 				)
 			);

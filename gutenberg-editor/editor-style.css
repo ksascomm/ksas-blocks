@@ -4,11 +4,7 @@ Description: Used to style the content editor in posts and pages
 
 @font-face {
   font-family: "quadon-medium";
-  src: url("../dist/fonts/quadon/Quadon-Medium.eot");
-  src: url("../dist/fonts/quadon/Quadon-Medium.eot?#iefix")
-      format("embedded-opentype"),
-    url("../dist/fonts/quadon/Quadon-Medium.woff") format("woff"),
-    url("../dist/fonts/quadon/Quadon-Medium.ttf") format("truetype");
+  src: url("../dist/fonts/quadon/Quadon-Medium.woff") format("woff");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -16,11 +12,7 @@ Description: Used to style the content editor in posts and pages
 
 @font-face {
   font-family: "gentona-light";
-  src: url("../dist/fonts/gentona/Gentona-Light.eot");
-  src: url("../dist/fonts/gentona/Gentona-Light.eot?#iefix")
-      format("embedded-opentype"),
-    url("../dist/fonts/gentona/Gentona-Light.woff") format("woff"),
-    url("../dist/fonts/gentona/Gentona-Light.ttf") format("truetype");
+  src: url("../dist/fonts/gentona/Gentona-Light.woff") format("woff");
   font-weight: 300;
   font-style: normal;
   font-display: swap;
@@ -28,11 +20,7 @@ Description: Used to style the content editor in posts and pages
 
 @font-face {
   font-family: "gentona-semibold";
-  src: url("../dist/fonts/gentona/Gentona-SemiBold.eot");
-  src: url("../dist/fonts/gentona/Gentona-SemiBold.eot?#iefix")
-      format("embedded-opentype"),
-    url("../dist/fonts/gentona/Gentona-SemiBold.woff") format("woff"),
-    url("../dist/fonts/gentona/Gentona-SemiBold.ttf") format("truetype");
+  src: url("../dist/fonts/gentona/Gentona-SemiBold.woff") format("woff");
   font-weight: 600;
   font-style: normal;
   font-display: swap;
@@ -153,13 +141,13 @@ a.acf-button.button.button-primary {
 
 /* The Post Title */
 .editor-post-title__block .editor-post-title__input {
-  font-family: "quadon-bold", "Helvetica Neue", Roboto, sans-serif;
+  font-family: "quadon-medium", "Helvetica Neue", Roboto, sans-serif;
   font-weight: 500;
 }
 
 /* Headings */
 .editor-writing-flow .wp-block h1 {
-  font-family: "quadon-bold", "Helvetica Neue", Roboto, sans-serif;
+  font-family: "quadon-medium", "Helvetica Neue", Roboto, sans-serif;
   font-weight: 500;
 }
 .editor-writing-flow .wp-block h2,
@@ -172,7 +160,7 @@ a.acf-button.button.button-primary {
 }
 
 h1 {
-  font-family: "quadon-bold", "Helvetica Neue", Roboto, sans-serif;
+  font-family: "quadon-medium", "Helvetica Neue", Roboto, sans-serif;
   font-weight: 500;
 }
 

@@ -1119,8 +1119,8 @@ ul.page-numbers li .page-numbers.current {
   @apply text-primary border-primary border-b-2 border-solid;
 }
 
-.front.prose {
-  max-width: 175ch;
+.front.prose, .front.prose .container {
+  max-width: 100vw;
 }
 
 .front.prose p,
@@ -1396,8 +1396,8 @@ figure.wp-block-pullquote {
   @apply my-2;
 }
 
-.wp-block-group > h2.has-text-align-center,
-.wp-block-group > p.has-text-align-center {
+.wp-block-group .has-text-align-center,
+.wp-block-media-text .has-text-align-center {
   text-align: center;
 }
 
@@ -2413,9 +2413,17 @@ button.search-untoggle {
 }
 
 @media (min-width: 990px) {
-  .alignfull {
+  .wp-block-group.alignfull,
+  .wp-block-cover.alignfull,
+  .post-thumbnail.alignfull {
     width: 100vw;
     margin-left: calc(50% - 50vw);
+  }
+  .wp-block-button.alignfull {
+    max-width: 100%;
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
@@ -2424,6 +2432,44 @@ button.search-untoggle {
     margin-left: 0px;
     margin-right: 0px;
   }
+}
+
+.wp-site-blocks,
+body > .is-root-container,
+.edit-post-visual-editor__post-title-wrapper,
+.wp-block-group.alignfull,
+.wp-block-group.has-background,
+.wp-block-cover.alignfull,
+.is-root-container .wp-block[data-align="full"] > .wp-block-group,
+.is-root-container .wp-block[data-align="full"] > .wp-block-cover {
+	padding-left: var(--wp--custom--spacing--outer);
+	padding-right: var(--wp--custom--spacing--outer);
+}
+
+.wp-site-blocks .alignfull,
+.wp-site-blocks > .wp-block-group.has-background,
+.wp-site-blocks > .wp-block-cover,
+.wp-site-blocks > .wp-block-template-part > .wp-block-group.has-background,
+.wp-site-blocks > .wp-block-template-part > .wp-block-cover,
+body > .is-root-container > .wp-block-group.has-background,
+body > .is-root-container > .wp-block-cover,
+body > .is-root-container > .wp-block-template-part > .wp-block-group.has-background,
+body > .is-root-container > .wp-block-template-part > .wp-block-cover,
+.is-root-container .wp-block[data-align="full"] {
+	margin-left: calc(-1 * var(--wp--custom--spacing--outer)) !important;
+	margin-right: calc(-1 * var(--wp--custom--spacing--outer)) !important;
+	width: unset;
+}
+
+/* Blocks inside columns don't have negative margins. */
+.wp-site-blocks .wp-block-columns .wp-block-column .alignfull,
+.is-root-container .wp-block-columns .wp-block-column .wp-block[data-align="full"],
+/* We also want to avoid stacking negative margins. */
+.wp-site-blocks .alignfull:not(.wp-block-group) .alignfull,
+.is-root-container .wp-block[data-align="full"] > *:not(.wp-block-group) .wp-block[data-align="full"] {
+	margin-left: auto !important;
+	margin-right: auto !important;
+	width: inherit;
 }
 
 @media (min-width: 1000px) {
