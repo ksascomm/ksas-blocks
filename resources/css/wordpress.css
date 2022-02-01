@@ -2414,7 +2414,7 @@ button.search-untoggle {
 
 @media (min-width: 990px) {
   .wp-block-group.alignfull,
-  .wp-block-columns.alignfull
+  .wp-block-columns.alignfull,
   .wp-block-cover.alignfull,
   .post-thumbnail.alignfull {
     width: 100vw;
