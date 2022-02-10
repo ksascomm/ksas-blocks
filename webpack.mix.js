@@ -154,6 +154,7 @@ if (mix.inProduction()) {
           "ginput_container",
           "gform_footer",
           "gfield_label",
+          "blog",
           /^has-/,
           /(^wp-block-)\w+/,
           /(^c-accordion)\w+/,

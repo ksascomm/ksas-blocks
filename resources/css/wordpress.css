@@ -1137,7 +1137,7 @@ ul.page-numbers li .page-numbers.current {
 }
 
 .news-section .prose h3.entry-title,
-.blog .prose h3.entry-title {
+.blog .site-main.prose h3.entry-title {
   @apply mt-0 !important;
 }
 
