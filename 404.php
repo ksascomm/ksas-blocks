@@ -11,14 +11,13 @@ get_header();
 ?>
 
 	<main id="site-content" class="site-main prose sm:prose lg:prose-lg mx-auto">
-		<div class="breadcrumbs" typeof="BreadcrumbList" vocab="https://schema.org/">
 		<?php
-		if ( function_exists( 'bcn_display' ) ) {
-			bcn_display();
-		}
-		?>
+		if ( function_exists( 'bcn_display' ) ) :?>
+		<div class="breadcrumbs" typeof="BreadcrumbList" vocab="https://schema.org/">
+			<?php bcn_display(); ?>
 		</div>
-		<section class="error-404 not-found prose px-12 py-6">
+		<?php endif; ?>
+		<section class="error-404 not-found prose p-6">
 			<header class="page-header">
 				<h1 class="entry-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'ksas-blocks' ); ?></h1>
 			</header><!-- .page-header -->
