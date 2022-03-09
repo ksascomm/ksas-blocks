@@ -43,7 +43,7 @@
 	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-	})(window,document,'script','dataLayer','GTM-5VTN64C');</script>
+	})(window,document,'script','dataLayer','GTM-PDL5K37');</script>
 	<!-- End Google Tag Manager -->
 	<?php
 	if ( get_field( 'siteimprove', 'option' ) ) :
@@ -55,6 +55,10 @@
 </head>
 
 <body <?php body_class(); ?>>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PDL5K37"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 <a class="skip-link screen-reader-text" href="#site-content"><?php esc_html_e( 'Skip to content', 'ksas-blocks' ); ?></a>
 <?php wp_body_open(); ?>
 	<header id="site-header" class="header-footer-group sm:justify-between shadow sm:items-baseline w-full bg-blue" role="banner">
