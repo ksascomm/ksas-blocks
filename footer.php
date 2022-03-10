@@ -15,7 +15,7 @@
 	<div class="bottom-auto top-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden -mt-20 <?php if ( is_active_sidebar( 'sidebar-footer' ) ) : ?> bg-grey-cool bg-opacity-50 <?php endif; ?>" style="height: 80px" >
 		<svg
 		alt=""
-			class="absolute bottom-0 overflow-hidden"
+			class="absolute -bottom-px overflow-hidden"
 			xmlns="http://www.w3.org/2000/svg"
 			preserveAspectRatio="none"
 			version="1.1"
@@ -42,11 +42,11 @@
 			</ul>
 		</div>
 		<div class="social-media m-4 col-span-4 lg:col-span-1 mx-auto">
-			<a href="https://facebook.com/JHUArtsSciences"><span class="fab fa-facebook-square fa-2x pr-2"></span><span class="sr-only">Facebook</span></a>
-			<a href="https://www.instagram.com/JHUArtsSciences/"><span class=" fab fa-instagram fa-2x pr-2"></span><span class="sr-only">Instagram</span></a>
-			<a href="https://twitter.com/JHUArtsSciences"><span class="fab fa-twitter fa-2x pr-2"></span><span class="sr-only">Twitter</span></a>
-			<a href="https://www.youtube.com/user/jhuksas"><span class="fab fa-youtube fa-2x pr-2"></span><span class="sr-only">YouTube</span></a>
-			<a href="https://www.tiktok.com/@jhuartssciences"><span class="fab fa-tiktok fa-2x"></span><span class="sr-only pr-2">TikTok</span></a>
+			<a href="https://facebook.com/JHUArtsSciences"><span class="fa-brands fa-facebook fa-2x pr-2"></span><span class="sr-only">Facebook</span></a>
+			<a href="https://www.instagram.com/JHUArtsSciences/"><span class="fa-brands fa-instagram fa-2x pr-2"></span><span class="sr-only">Instagram</span></a>
+			<a href="https://twitter.com/JHUArtsSciences"><span class="fa-brands fa-twitter fa-2x pr-2"></span><span class="sr-only">Twitter</span></a>
+			<a href="https://www.youtube.com/user/jhuksas"><span class="fa-brands fa-youtube fa-2x pr-2"></span><span class="sr-only">YouTube</span></a>
+			<a href="https://www.tiktok.com/@jhuartssciences"><span class="fa-brands fa-tiktok fa-2x"></span><span class="sr-only pr-2">TikTok</span></a>
 		</div>
 		<div class="col-span-4 my-2">
 			<?php if ( get_field( 'custom_address', 'option' ) ) : ?>

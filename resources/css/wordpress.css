@@ -265,22 +265,28 @@ span.posted-on {
 .entry-content a[href$=".xlsx"]:after,
 .entry-content a[href$=".ppt"]:after,
 .entry-content a[href$=".pptx"]:after {
-  font-family: "Font Awesome 5 Free";
+  display: inline-block;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
   @apply text-primary text-lg pl-1;
 }
 .entry-content a[href$=".pdf"]:after {
+  font: var(--fa-font-light);
   content: "\f1c1";
 }
 .entry-content a[href$=".doc"]:after,
 .entry-content a[href$=".docx"]:after {
+  font: var(--fa-font-light);
   content: "\f1c2";
 }
 .entry-content a[href$=".xls"]:after,
 .entry-content a[href$=".xlsx"]:after {
+  font: var(--fa-font-light);
   content: "\f1c3";
 }
 .entry-content a[href$=".ppt"]:after,
 .entry-content a[href$=".pptx"]:after {
+  font: var(--fa-font-light);
   content: "\f1c4";
 }
 
@@ -431,13 +437,13 @@ ul.primary-menu {
 }
 
 .primary-menu li.external a::after {
-  font-family: "Font Awesome 5 Free";
-  font-weight: 900;
-  content: "\f360";
-  float: right;
+  display: inline-block;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font: var(--fa-font-regular);
+  content: "\f14c";
   font-size: 85%;
   padding-left: 5px;
-  display: inline-block;
 }
 
 .primary-menu > li.menu-item-has-children > a {

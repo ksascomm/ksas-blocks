@@ -40,7 +40,7 @@ get_header();
 					</div>
 					<div>
 						<a class="button" href="<?php echo esc_url( get_permalink( get_option( 'page_for_posts' ) ) ); ?>">
-							View All Posts&nbsp;<span class="fa fa-chevron-circle-right" aria-hidden="true"></span></a>
+							View All Posts&nbsp;<span class="fa-solid fa-circle-chevron-right" aria-hidden="true"></span></a>
 					</div>
 				</div>
 			</div>

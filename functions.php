@@ -248,7 +248,7 @@ function ksas_blocks_scripts() {
 	wp_enqueue_script( 'ksas-blocks-script', get_template_directory_uri() . '/dist/js/bundle.min.js', array(), KSAS_BLOCKS_VERSION, true );
 	wp_script_add_data( 'ksas-blocks-script', 'defer', true );
 
-	wp_enqueue_script( 'font-awesome', 'https://kit.fontawesome.com/ed22ca715b.js', array(), '5.15.1', false );
+	wp_enqueue_script( 'font-awesome', 'https://kit.fontawesome.com/72c92fef89.js', array(), '6.0.0', false );
 }
 add_action( 'wp_enqueue_scripts', 'ksas_blocks_scripts' );
 

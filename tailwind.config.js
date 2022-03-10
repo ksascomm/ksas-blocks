@@ -105,9 +105,10 @@ module.exports = {
               '--tw-prose-links': "#002d72",
               '--tw-prose-bold': "#31261D",
               '--tw-prose-code': "#31261D",
-              '--tw-prose-pre-code': "#31261d",
+              '--tw-prose-pre-code': "#31261D",
               '--tw-prose-pre-bg': "#f8f8f8",
-              '--tw-prose-quotes': "#31261d",
+              '--tw-prose-quotes': "#31261D",
+              '--tw-prose-counters': "31261D",
               "ul > li::before": {
                 backgroundColor: "#31261D",
               },
