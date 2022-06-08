@@ -248,7 +248,7 @@ function ksas_blocks_scripts() {
 	wp_enqueue_script( 'ksas-blocks-script', get_template_directory_uri() . '/dist/js/bundle.min.js', array(), KSAS_BLOCKS_VERSION, true );
 	wp_script_add_data( 'ksas-blocks-script', 'defer', true );
 
-	wp_enqueue_script( 'font-awesome', 'https://kit.fontawesome.com/72c92fef89.js', array(), '6.0.0', false );
+	wp_enqueue_script( 'font-awesome', 'https://kit.fontawesome.com/72c92fef89.js', array(), '6.1.1', false );
 }
 add_action( 'wp_enqueue_scripts', 'ksas_blocks_scripts' );
 
@@ -305,8 +305,8 @@ function my_register_blocks() {
 				'align'           => 'full',
 				'mode'            => 'preview',
 				'enqueue_assets'  => function() {
-					wp_enqueue_style( 'swiper', 'https://unpkg.com/swiper/swiper-bundle.css', array(), '8.0.6' );
-					wp_enqueue_script( 'swiper', 'https://unpkg.com/swiper/swiper-bundle.min.js', array( 'jquery' ), '8.0.6', true );
+					wp_enqueue_style( 'swiper', 'https://unpkg.com/swiper/swiper-bundle.css', array(), '8.2.2' );
+					wp_enqueue_script( 'swiper', 'https://unpkg.com/swiper/swiper-bundle.min.js', array( 'jquery' ), '8.2.2', true );
 					wp_enqueue_style( 'block-slider', get_template_directory_uri() . '/template-parts/blocks/slider/slider.css', array(), '1.0.0' );
 					wp_enqueue_script( 'block-slider', get_template_directory_uri() . '/template-parts/blocks/slider/slider.js', array(), '1.0.0', true );
 				},
