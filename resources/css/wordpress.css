@@ -1407,6 +1407,14 @@ figure.wp-block-pullquote {
   text-align: center;
 }
 
+
+/* Simple Hero Block Pattern */
+@media (min-width: 767px) and (max-width:1300px) {
+  .front.prose .entry-content .wp-block-columns.are-vertically-aligned-center {
+    @apply px-4;
+  }  
+}
+
 /* Block Pattern: Three & Four Column Features ------------------------------ */
 
 .three-column-feature {
