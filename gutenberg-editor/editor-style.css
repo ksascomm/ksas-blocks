@@ -317,3 +317,7 @@ ul.block-editor-rich-text__editable li, ol.block-editor-rich-text__editable li {
 .wp-block-buttons>.wp-block-button.wp-block-button__width-50 {
 	width: calc(50% - .5em);
 }
+
+.pl-12 {
+  padding-left: 3rem;
+}
