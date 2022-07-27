@@ -25,16 +25,13 @@
 		window.dataLayer = window.dataLayer || [];
 		function gtag(){dataLayer.push(arguments);}
 		gtag('js', new Date());
-
+		gtag('config', 'UA-100553583-1');
 		gtag('config', 'UA-40512757-1');
 		<?php
 		$analytics_id = get_field( 'google_analytics_id', 'option' );
-		$default_id = 'UA-100553583-1';
-		?>
-		<?php if ( $analytics_id ) : ?>
+		if ( $analytics_id ) :
+			?>
 		gtag('config', '<?php echo $analytics_id; ?>');
-		<?php else : ?>
-		gtag('config', '<?php echo $default_id; ?>');
 		<?php endif; ?>
 	</script>
 	<!-- End Google Analytics -->
@@ -84,7 +81,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 							if (
 								$ksas_blocks_description || is_customize_preview() ) :
 								$ksas_blocks_description = get_bloginfo( 'description', 'display' );
-								echo '<span class="block font-normal pt-1 text-xl">' . $ksas_blocks_description .'</span>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped 
+								echo '<span class="block font-normal pt-1 text-xl">' . $ksas_blocks_description . '</span>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped 
 								?>
 								<?php endif; ?>
 							<?php bloginfo( 'name' ); ?>
@@ -117,8 +114,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 					<?php
 						wp_nav_menu(
 							array(
-								'container'  => '',
-								'items_wrap' => '%3$s',
+								'container'      => '',
+								'items_wrap'     => '%3$s',
 								// 'show_toggles'   => true,
 								'theme_location' => 'main-nav',
 								// 'walker'   => new TwentyTwenty_Walker_Page(),
