@@ -33,8 +33,8 @@ if ( function_exists( 'register_block_pattern' ) ) {
 			'categories'    => array( 'ksas-blocks' ),
 			'viewportWidth' => 1400,
 			'content'       => '
-			<!-- wp:columns {"verticalAlignment":"center","align":"wide"} -->
-			<div class="wp-block-columns alignwide are-vertically-aligned-center"><!-- wp:column {"verticalAlignment":"center"} -->
+			<!-- wp:columns {"verticalAlignment":"center"} -->
+			<div class="wp-block-columns are-vertically-aligned-center px-2"><!-- wp:column {"verticalAlignment":"center"} -->
 			<div class="wp-block-column is-vertically-aligned-center"><!-- wp:heading {"className":"mt-0"} -->
 			<h2 class="mt-0">Study Living Systems from Unique Perspectives</h2>
 			<!-- /wp:heading -->
