@@ -518,9 +518,41 @@ if ( function_exists( 'register_block_pattern' ) ) {
 			'title'         => esc_html__( 'Horizontal Call to Action', 'ksas-blocks' ),
 			'categories'    => array( 'ksas-blocks' ),
 			'viewportWidth' => 1400,
-			'content'       => "
-			<!-- wp:group {\"customBackgroundColor\":\"#f8f8f8\",\"align\":\"full\",\"className\":\"ek-padding\\u002d\\u002dxl\"} -->\n<div class=\"wp-block-group alignfull has-background ek-padding--xl\" style=\"background-color:#f8f8f8\"><div class=\"wp-block-group__inner-container\"><!-- wp:columns {\"align\":\"wide\"} -->\n<div class=\"wp-block-columns alignwide\"><!-- wp:column -->\n<div class=\"wp-block-column\"><!-- wp:heading {\"className\":\"mt-0\"} -->\n<h2 class=\"mt-0\">We are locally crafted food &amp; wine serving since 1980.</h2>\n<!-- /wp:heading -->\n\n<!-- wp:paragraph -->\n<p>Lorem ipsum odor amet, consectetuer adipiscing elit. Turpis finibus vulputate molestie, proin fermentum velit. Dictumst ac imperdiet quis eros a est massa varius. </p>\n<!-- /wp:paragraph -->\n\n<!-- wp:button {\"customBackgroundColor\":\"#002d72\",\"customTextColor\":\"#fefefe\",\"className\":\"is-style-fill\"} -->\n<div class=\"wp-block-button is-style-fill\"><a class=\"wp-block-button__link has-text-color has-background\" style=\"background-color:#002d72;color:#fefefe\">More About Us</a></div>\n<!-- /wp:button --></div>\n<!-- /wp:column -->\n\n<!-- wp:column -->\n<div class=\"wp-block-column\"><!-- wp:image {\"sizeSlug\":\"large\"} -->\n<figure class=\"wp-block-image size-large\"><img src=\"https://source.unsplash.com/HlNcigvUi4Q/900x900\" alt=\"Food Image\"/></figure>\n<!-- /wp:image --></div>\n<!-- /wp:column -->\n\n<!-- wp:column -->\n<div class=\"wp-block-column\"><!-- wp:spacer {\"editorskit\":{\"mobile\":false,\"devices\":false,\"desktop\":true,\"tablet\":true,\"loggedin\":true,\"loggedout\":true,\"acf_visibility\":\"\",\"acf_field\":\"\",\"acf_condition\":\"\",\"acf_value\":\"\",\"migrated\":false,\"unit_test\":false}} -->\n<div style=\"height:100px\" aria-hidden=\"true\" class=\"wp-block-spacer editorskit-no-mobile\"></div>\n<!-- /wp:spacer -->\n\n<!-- wp:image {\"sizeSlug\":\"large\"} -->\n<figure class=\"wp-block-image size-large\"><img src=\"http://source.unsplash.com/PUDQGDlM_V8/900x900\" alt=\"Food Image\"/></figure>\n<!-- /wp:image --></div>\n<!-- /wp:column --></div>\n<!-- /wp:columns --></div></div>\n<!-- /wp:group -->
-			",
+			'content'       => '
+			<!-- wp:group {"align":"full","style":{"color":{"background":"#f8f8f8"}}} -->
+			<div class="wp-block-group alignfull has-background" style="background-color:#f8f8f8"><!-- wp:columns {"align":"wide","className":"pl-12"} -->
+			<div class="wp-block-columns alignwide pl-12"><!-- wp:column -->
+			<div class="wp-block-column"><!-- wp:heading {"className":"mt-0"} -->
+			<h2 class="mt-0">We are locally crafted food &amp; wine serving since 1980.</h2>
+			<!-- /wp:heading -->
+			
+			<!-- wp:paragraph -->
+			<p>Lorem ipsum odor amet, consectetuer adipiscing elit. Turpis finibus vulputate molestie, proin fermentum velit. Dictumst ac imperdiet quis eros a est massa varius. </p>
+			<!-- /wp:paragraph -->
+			
+			<!-- wp:button {"backgroundColor":"heritage-blue","style":{"border":{"radius":"2px"}}} -->
+			<div class="wp-block-button"><a class="wp-block-button__link has-heritage-blue-background-color has-background" style="border-radius:2px">More About Us</a></div>
+			<!-- /wp:button --></div>
+			<!-- /wp:column -->
+			
+			<!-- wp:column -->
+			<div class="wp-block-column"><!-- wp:image {"sizeSlug":"large"} -->
+			<figure class="wp-block-image size-large"><img src="https://source.unsplash.com/HlNcigvUi4Q/900x900" alt="Food Image"/></figure>
+			<!-- /wp:image --></div>
+			<!-- /wp:column -->
+			
+			<!-- wp:column -->
+			<div class="wp-block-column"><!-- wp:spacer {"className":"editorskit-no-mobile"} -->
+			<div style="height:100px" aria-hidden="true" class="wp-block-spacer editorskit-no-mobile"></div>
+			<!-- /wp:spacer -->
+			
+			<!-- wp:image {"sizeSlug":"large"} -->
+			<figure class="wp-block-image size-large"><img src="http://source.unsplash.com/PUDQGDlM_V8/900x900" alt="Food Image"/></figure>
+			<!-- /wp:image --></div>
+			<!-- /wp:column --></div>
+			<!-- /wp:columns --></div>
+			<!-- /wp:group -->
+			',
 		)
 	);
 }
