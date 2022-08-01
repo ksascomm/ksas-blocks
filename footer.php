@@ -12,7 +12,11 @@
 ?>
 <?php get_template_part( 'template-parts/footer-widgets' ); ?>
 <footer class="site-footer bg-old-black text-white mt-20 border-t-1 border-grey-darkest relative">
-	<div class="bottom-auto top-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden -mt-20 <?php if ( is_active_sidebar( 'sidebar-footer' ) ) : ?> bg-grey-cool bg-opacity-50 <?php endif; ?>" style="height: 80px" >
+	<div class="bottom-auto top-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden -mt-20 
+	<?php
+	if ( is_active_sidebar( 'sidebar-footer' ) ) :
+		?>
+		 bg-grey-cool bg-opacity-50 <?php endif; ?>" style="height: 80px" >
 		<svg
 		alt=""
 			class="absolute -bottom-px overflow-hidden"
@@ -36,7 +40,7 @@
 			</a>	
 		</div>
 		<div class="col-span-4 lg:col-span-2">
-			<ul class="flex m-4 justify-center" role="menu">
+			<ul class="flex m-4 justify-center" role="menu" aria-label="University Policies">
 				<li role="menuitem" class="ml-4"><a href="https://accessibility.jhu.edu/">Accessibility</a></li>
 				<li role="menuitem" class="ml-4"><a href="https://it.johnshopkins.edu/policies/privacystatement">Privacy Statement</a></li>
 			</ul>
