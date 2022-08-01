@@ -1011,13 +1011,14 @@ ul.page-numbers li .page-numbers.current {
 --------------------------------------------- */
 
 .breadcrumbs {
-  @apply text-grey-darkest -mb-4 py-4 px-2;
+  @apply text-grey-darkest -mb-4 py-6;
 }
 
 .breadcrumbs span.current-item,
 .breadcrumbs span a {
-  @apply uppercase border-none mx-4;
+  @apply uppercase border-none mx-4 tracking-wide;
   font-size: 0.875rem;
+  word-spacing: 0.05em;
 }
 
 .breadcrumbs span.current-item {
@@ -1029,6 +1030,13 @@ ul.page-numbers li .page-numbers.current {
   @apply ml-0 !important;
 }
 
+@media only screen and (max-width: 740px) {
+  .breadcrumbs {
+    @apply overflow-hidden absolute w-px h-px;
+    clip: rect(1px 1px 1px 1px);
+    clip: rect(1px,1px,1px,1px);
+  }
+}
 /* Yoast
 --------------------------------------------- */
 .prose p.schema-how-to-step-text,
