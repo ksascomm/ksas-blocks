@@ -1037,6 +1037,7 @@ ul.page-numbers li .page-numbers.current {
     clip: rect(1px,1px,1px,1px);
   }
 }
+
 /* Yoast
 --------------------------------------------- */
 .prose p.schema-how-to-step-text,
@@ -2566,10 +2567,10 @@ body > .is-root-container > .wp-block-template-part > .wp-block-cover,
     background: #dedfdf;
     content: "";
     display: block;
-    height: 2rem;
+    height: 2.5rem;
     position: absolute;
     left: 0;
-    top: calc(50% - 1.35rem);
+    top: calc(50% - 1.25rem);
     width: 0.1rem;
   }
 

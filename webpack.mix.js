@@ -8,7 +8,7 @@ const PurgecssPlugin = require("purgecss-webpack-plugin");
   Config
   ========================================================================== */
 const config = {
-  proxyUrl: "krieger.local/template-academic-small",
+  proxyUrl: "https://krieger.local/mbi",
   injectChanges: true,
   port: 3000,
   openOnStart: true,
