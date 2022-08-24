@@ -80,8 +80,9 @@ a.tribe-events-calendar-latest-past__event-title-link.tribe-common-anchor-thin:h
     Segoe UI, sans-serif !important;
 }
 
-span.tribe-events-schedule__separator.tribe-events-schedule__separator--date {
-  color: #31261d;
+span.tribe-events-schedule__separator.tribe-events-schedule__separator--date,
+.tribe-events-schedule__all-day, .tribe-events-schedule__separator, .tribe-events-schedule__timezone {
+  color: #31261d !important;
 }
 
 .tribe-events-single.tribe-blocks-editor p,
