@@ -1051,6 +1051,74 @@ ul.page-numbers li .page-numbers.current {
   @apply bg-grey-lightest border-2 border-solid border-grey m-4 block p-4;
 }
 
+/* Events Calendar Blocks
+--------------------------------------------- */
+.tribe-events-widget-events-list__event-title-link.tribe-common-anchor-thin,
+.tribe-events-widget-events-list__event-date-tag-daynum.tribe-common-h2.tribe-common-h4--min-medium,
+.tribe-events-widget-events-list__event-date-tag-month,
+.tribe-events-widget-events-list__header-title.tribe-common-h6.tribe-common-h--alt {
+  @apply font-heavy !important;
+}
+
+.tribe-events-widget-events-list__event-title-link.tribe-common-anchor-thin {
+  @apply text-blue border-grey border-b-2 border-dashed no-underline transition-colors ease-in-out duration-200
+}
+
+.front.prose .tribe-events-widget-events-list__event-title.tribe-common-h7,
+.front.prose .tribe-events-widget-events-list__header-title.tribe-common-h6.tribe-common-h--alt {
+  @apply ml-0 mr-0 !important;
+}
+
+.tribe-events-widget-events-list__event-datetime {
+  @apply text-lg font-sans;
+}
+
+.tribe-events-widget-events-list__header-title.tribe-common-h6.tribe-common-h--alt {
+  @apply text-3xl !important;
+}
+
+.tribe-events-widget-events-list__view-more-link.tribe-common-anchor-thin {
+  @apply font-sans bg-blue text-white inline-flex py-2 px-3 text-base items-center border-none focus:outline-none !important;
+  font-weight: 500;
+}
+
+.tribe-events-widget-events-list__view-more-link.tribe-common-anchor-thin:hover {
+  @apply border-none text-primary bg-blue-light !important;
+}
+
+.tribe-common-g-row.tribe-events-widget-events-list__event-row {
+  @apply p-4 border-grey border-solid border-2;
+}
+
+.tribe-events-widget-events-list__event-date-tag-month {
+  @apply text-primary font-semibold !important;
+}
+
+p.tribe-events-back a,
+.tribe-events-c-subscribe-dropdown__list-item-link {
+  @apply font-semi;
+}
+
+.tribe-common .tribe-common-c-btn-border, .tribe-common a.tribe-common-c-btn-border {
+  @apply border-blue !important
+}
+
+.tribe-common button,
+.tribe-common-c-svgicon.tribe-common-c-svgicon--cal-export.tribe-events-c-subscribe-dropdown__export-icon,
+.tribe-common-c-svgicon.tribe-common-c-svgicon--caret-down.tribe-events-c-subscribe-dropdown__button-icon {
+  @apply text-blue;
+}
+
+.single-tribe_events .tribe-events-c-subscribe-dropdown .tribe-events-c-subscribe-dropdown__button:hover {
+  @apply bg-blue !important;
+}
+
+.single-tribe_events .tribe-events-c-subscribe-dropdown .tribe-events-c-subscribe-dropdown__button:hover > .tribe-events-c-subscribe-dropdown__button-text,
+.single-tribe_events .tribe-events-c-subscribe-dropdown .tribe-events-c-subscribe-dropdown__button:hover > .tribe-common-c-svgicon.tribe-common-c-svgicon--cal-export.tribe-events-c-subscribe-dropdown__export-icon,
+.single-tribe_events .tribe-events-c-subscribe-dropdown .tribe-events-c-subscribe-dropdown__button:hover > .tribe-common-c-svgicon.tribe-common-c-svgicon--caret-down.tribe-events-c-subscribe-dropdown__button-icon {
+  @apply text-white;
+}
+
 /*--------------------------------------------------------------
 # Utilities
 --------------------------------------------------------------*/
@@ -1344,11 +1412,11 @@ figure.wp-block-pullquote {
 
 /* Block: Accordion ------------------------------ */
 .wp-block-pb-accordion-item.c-accordion__item {
-  @apply my-2 pb-2 w-5/6;
+  @apply my-2 pb-2;
 }
 
 .wp-block-pb-accordion-item.c-accordion__item .c-accordion__title {
-  @apply text-blue font-heavy font-bold text-lg p-4 border-grey-cool border my-0;
+  @apply text-blue font-heavy font-bold text-lg p-4 border-grey-cool border my-0 max-w-full;
 }
 
 .wp-block-pb-accordion-item.c-accordion__item .c-accordion__title::after {
