@@ -242,3 +242,24 @@ a.tribe-events-c-subscribe-dropdown__list-item-link:hover {
   font-family: gentona-bold, "Helvetica Neue", Roboto, sans-serif;
 }
 
+.tribe-events-calendar-list .tribe-event-categories li {
+  display: inline;
+  border: 1px solid #002d72;
+  background-color: #002d72;
+  padding: 3px 9px;
+  border-radius: 30px;
+  margin-right: 3px;
+  font-size: 0.8em;
+}
+.tribe-events-calendar-list .tribe-event-categories li:hover {
+  background-color: #fefefe !important;
+}
+.tribe-events-calendar-list .tribe-event-categories li a {
+  color: #fefefe !important;
+border: none !important;
+font-family: "gentona-semibold", system-ui, BlinkMacSystemFont, -apple-system,
+Segoe UI, sans-serif;
+}
+.tribe-events-calendar-list .tribe-event-categories li:hover a {
+  color: #002d72 !important;
+}
