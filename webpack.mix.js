@@ -2,7 +2,7 @@ const mix = require("laravel-mix");
 const tailwindcss = require("tailwindcss");
 const path = require("path");
 const glob = require("glob-all");
-const PurgecssPlugin = require("purgecss-webpack-plugin");
+const { PurgeCSSPlugin } = require("purgecss-webpack-plugin");
 
 /* ==========================================================================
   Config
@@ -98,11 +98,10 @@ if (mix.inProduction()) {
   // more examples can be found at https://gist.github.com/jack-pallot/217a5d172ffa43c8c85df2cb41b80bad
   mix.webpackConfig({
     plugins: [
-      new PurgecssPlugin({
+      new PurgeCSSPlugin({
         paths: glob.sync([
           path.join(__dirname, "./**/*.php"),
-          path.join(__dirname, "resources/js/**/*.js"),
-          path.join(__dirname, "resources/js/components/**/*.vue"),
+          path.join(__dirname, "resources/js/**/*.js")
         ]),
 
         extractors: [
