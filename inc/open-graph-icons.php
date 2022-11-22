@@ -13,6 +13,10 @@ function meta_open_graph() {
 			$excerpt = wp_strip_all_tags( $post->post_content );
 			$excerpt = str_replace( '', "'", $excerpt );
 			$excerpt = wp_trim_words( $post->post_content, 55, '...' );
+	} elseif ( is_singular( 'people' ) ) {
+		$longexcerpt = wp_strip_all_tags( get_post_meta( $post->ID, 'ecpt_bio', true ) );
+		$longexcerpt = str_replace( '', "'", $longexcerpt );
+		$excerpt     = wp_trim_words( $longexcerpt, 15, '...' );
 	} else {
 		$excerpt = get_bloginfo( 'title' );
 	}
@@ -21,6 +25,8 @@ function meta_open_graph() {
 		echo '<meta property="og:description" content="' . esc_html( $excerpt ) . '"/>';
 		echo '<meta property="og:type" content="article"/>';
 		echo '<meta property="og:url" content="' . esc_url( get_permalink() ) . '"/>';
+		echo '<meta property="article:published_time" content="' . get_the_date( 'c' ) . '"/>';
+		echo '<meta property="article:modified_time" content="' . get_the_modified_date( 'c' ) . '"/>';
 		echo '<meta name="twitter:card" content="summary" />';
 		echo '<meta name="twitter:site" content="@JHUArtsSciences" />';
 
