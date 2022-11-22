@@ -1061,7 +1061,11 @@ ul.page-numbers li .page-numbers.current {
 }
 
 .tribe-events-widget-events-list__event-title-link.tribe-common-anchor-thin {
-  @apply text-blue border-grey border-b-2 border-dashed no-underline transition-colors ease-in-out duration-200
+  @apply text-blue border-grey border-b-2 border-dashed no-underline transition-colors ease-in-out duration-200 !important;
+}
+
+.tribe-events-widget-events-list__event-title-link.tribe-common-anchor-thin:hover {
+  @apply text-primary border-grey-darkest border-b-2 border-solid !important;
 }
 
 .front.prose .tribe-events-widget-events-list__event-title.tribe-common-h7,

@@ -263,21 +263,3 @@ Segoe UI, sans-serif;
 .tribe-events-calendar-list .tribe-event-categories li:hover a {
   color: #002d72 !important;
 }
-
-.tribe-common .tribe-common-anchor-thin {
-  border-bottom-width: 2px;
-  border-style: dashed;
-  --tw-border-opacity: 1;
-  border-color: rgb(229 226 224 / var(--tw-border-opacity));
-  --tw-text-opacity: 1;
-  color: rgb(0 45 114 / var(--tw-text-opacity));
-}
-
-.tribe-common .tribe-common-anchor-thin:hover {
-  border-bottom: 2px solid var(--tec-color-link-primary);
-  color:#31261d;
-}
-
-.tribe-common a:visited {
-  color: #002d72;
-}
