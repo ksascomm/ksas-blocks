@@ -87,7 +87,7 @@ span.tribe-events-schedule__separator.tribe-events-schedule__separator--date,
 
 .tribe-events-single.tribe-blocks-editor p,
 .tribe-events-single p {
-  font-size: 1.25rem;
+  font-size: 1.25rem !important;
   color: #31261d;
 }
 
