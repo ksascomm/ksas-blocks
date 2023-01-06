@@ -403,16 +403,30 @@ ul.primary-menu {
   @apply text-primary flex flex-wrap;
 }
 
-.primary-menu .icon {
+.primary-menu .icon::after {
+  display: inline-block;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font: var(--fa-font-solid);
+  content: "\f107";
+  font-size: 85%;
+  padding-left: 5px;
+}
+
+
+/*.primary-menu .icon {
   display: block;
   height: 0.6rem;
   position: absolute;
   pointer-events: none;
   transform: rotate(-45deg);
   width: 1.3rem;
-}
+  font: var(--fa-font-solid);
+  content: '\f028';
+  font-weight: 900;
+}*/
 
-.primary-menu .icon::before,
+/*.primary-menu .icon::before,
 .primary-menu .icon::after {
   content: "";
   display: block;
@@ -430,7 +444,7 @@ ul.primary-menu {
 .primary-menu .icon::after {
   height: 0.2rem;
   width: 0.7rem;
-}
+}*/
 
 .primary-menu li {
   @apply font-semi text-lg hover:bg-grey-cool hover:bg-opacity-50 relative;
@@ -446,9 +460,9 @@ ul.primary-menu {
   padding-left: 5px;
 }
 
-.primary-menu > li.menu-item-has-children > a {
-  padding-right: 2rem;
-}
+/*.primary-menu > li.menu-item-has-children > a {
+ margin-right: 1rem;
+}*/
 
 .primary-menu > li > .icon {
   right: 2.5%;
@@ -456,27 +470,58 @@ ul.primary-menu {
   top: calc(50% - 0.5rem);
 }
 
-.primary-menu a {
-  color: inherit;
+.primary-menu > li {
+  padding: .375rem .5rem;
+  line-height: 1.5;
+}
+
+.primary-menu li > a {
+  /*color: inherit;
   display: block;
   line-height: 1.4;
   text-decoration: none;
   word-break: normal;
   word-wrap: normal;
-  padding: 1rem;
+  padding: 1rem;*/
+  display: inline-block;
+  padding: .375rem .5rem;
+}
+
+.primary-menu li > a,
+.primary-menu ul li a {
+  border-bottom-width: 2px;
+  border-style: solid;
+  --tw-border-opacity: 1;
+  border-color: transparent;
+  --tw-text-opacity: 1;
+  color: rgb(49 38 29 / var(--tw-text-opacity));
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+  transition-duration: 300ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/*.primary-menu ul li a {
+  border: inherit;
+}*/
+
+.primary-menu li > a:hover,
+.primary-menu ul li a:hover {
+  border-bottom-width: 2px;
+  border-color: rgb(49 38 29 / var(--tw-border-opacity));
 }
 
 /* SUB MENU */
 
 .primary-menu ul {
   @apply bg-white text-primary shadow-md;
-  border-radius: 0.4rem;
+  /*border-radius: 0.4rem;*/
   font-size: 1rem;
   opacity: 0;
   padding: 0;
   position: absolute;
   right: 9999rem;
-  top: calc(100% + 0.25rem);
+  top: calc(100% + 0.125rem);
+  top: 100%;
   transition: opacity 0.15s linear, transform 0.15s linear, left 0s 0.15s;
   transform: translateY(0.6rem);
   /*width: 20rem;*/
@@ -502,7 +547,7 @@ ul.primary-menu {
 }
 
 .primary-menu ul::before {
-  height: 2rem;
+  height: .5rem;
   left: 0;
   right: 0;
 }
@@ -515,13 +560,14 @@ ul.primary-menu {
 
 .primary-menu ul a {
   background: transparent;
-  border: none;
   color: inherit;
-  display: block;
+  /*display: block;
+  border: none;*/
   transition: background-color 0.15s linear;
   width: 100%;
   font-size: 1rem;
   line-height: 1.2;
+  padding: 1rem;
 }
 
 .primary-menu ul li.menu-item-has-children .icon {
@@ -529,8 +575,11 @@ ul.primary-menu {
   right: 1.5rem;
   right: 0.5rem;
   top: calc(50% - 0.75rem);
-  transform: rotate(225deg);
+  transform: rotate(270deg);
+  border: none;
 }
+
+
 
 /* DEEP DOWN */
 
