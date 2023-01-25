@@ -147,6 +147,12 @@ footer a:hover {
   counter-reset: list-item;
 }
 
+.single-post .prose .entry-content ol, 
+.single-post .prose .entry-content ul {
+  padding-inline-start: inherit;
+  list-style-position: inside;
+}
+
 /* Default list style types for lists */
 .prose ol {
   list-style-type: decimal;
@@ -205,7 +211,7 @@ footer a:hover {
   display: block;
   margin-block: 1em;
   marker-side: match-parent;
-  padding-inline-start: 40px;
+  /*padding-inline-start: 40px;*/
 }
 
 /*--------------------------------------------------------------
@@ -241,7 +247,7 @@ span.posted-on {
 }
 
 .entry-meta {
-  @apply my-0 uppercase !important;
+  @apply mt-0 mb-2 uppercase !important;
 }
 
 .news-section a.button {
@@ -716,6 +722,10 @@ footer.entry-footer {
 
 .single-post .prose .post img.wp-post-image {
   margin-bottom: 1.5rem !important;
+}
+
+.single-post .prose .entry-content p:first-of-type {
+  margin-top: 0;
 }
 
 /* Widgets
