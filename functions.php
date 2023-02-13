@@ -303,12 +303,14 @@ function my_register_blocks() {
 				'category'        => 'formatting',
 				'icon'            => 'images-alt2',
 				'align'           => 'full',
-				'mode'            => 'preview',
+				'mode'            => 'edit',
 				'enqueue_assets'  => function() {
-					wp_enqueue_style( 'swiper', 'https://unpkg.com/swiper/swiper-bundle.css', array(), '8.2.2' );
-					wp_enqueue_script( 'swiper', 'https://unpkg.com/swiper/swiper-bundle.min.js', array( 'jquery' ), '8.2.2', true );
+					wp_enqueue_style( 'swiper', 'https://unpkg.com/swiper/swiper-bundle.css', array(), '9.0.5' );
+					wp_enqueue_script( 'swiper', 'https://unpkg.com/swiper/swiper-bundle.min.js', array( 'jquery' ), '9.0.5', true );
+					wp_script_add_data( 'swiper', 'defer', true );
 					wp_enqueue_style( 'block-slider', get_template_directory_uri() . '/template-parts/blocks/slider/slider.css', array(), '1.0.0' );
 					wp_enqueue_script( 'block-slider', get_template_directory_uri() . '/template-parts/blocks/slider/slider.js', array(), '1.0.0', true );
+					wp_script_add_data( 'block-slider', 'defer', true );
 				},
 			)
 		);

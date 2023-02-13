@@ -50,7 +50,9 @@
   }
 }
 
-
+.grid.swiper-slide {
+  display: grid;
+}
 
 .swiper-slide {
   /*text-align: center;

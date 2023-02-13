@@ -27,7 +27,7 @@ if ( $is_preview ) {
 }
 
 ?>
-<div id="<?php echo esc_attr( $block_id ); ?>" class="<?php echo esc_attr( $class_name ); ?> swiper-container">
+<div id="<?php echo esc_attr( $block_id ); ?>" class="<?php echo esc_attr( $class_name ); ?> swiper swiper-container">
 	<?php if ( have_rows( 'slides' ) ) : ?>
 		<div class="swiper-wrapper">
 			<?php

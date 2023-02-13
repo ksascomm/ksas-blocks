@@ -18,9 +18,12 @@
       spaceBetween: 30,
       loop: true,
       preloadImages: false,
-      lazy: true,
       keyboard: {
         enabled: true,
+      },
+      effect: 'fade',
+      fadeEffect: {
+        crossFade: true
       },
       pagination: {
         el: ".swiper-pagination",
@@ -29,6 +32,10 @@
       navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
+      },
+      a11y: {
+        prevSlideMessage: 'Previous slide',
+        nextSlideMessage: 'Next slide',
       },
     });
   };
