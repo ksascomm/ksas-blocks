@@ -70,10 +70,10 @@ function custom_ksasacademic_page_title( $title ) {
 			return $title;
 		endif;
 	} elseif ( is_single() ) {
-		$title = the_title_attribute() . ' | ' . get_bloginfo( 'name' ) . ' | Johns Hopkins University';
+		$title = the_title_attribute( 'echo=0' ) . ' | ' . get_bloginfo( 'name' ) . ' | Johns Hopkins University';
 		return $title;
 	} elseif ( is_page() ) {
-		$title = the_title_attribute() . ' | ' . get_bloginfo( 'name' ) . ' | Johns Hopkins University';
+		$title = the_title_attribute( 'echo=0' ) . ' | ' . get_bloginfo( 'name' ) . ' | Johns Hopkins University';
 		return $title;
 	} elseif ( is_404() ) {
 		$title = 'Page Not Found | ' . get_bloginfo( 'name' ) . ' | Johns Hopkins University';
