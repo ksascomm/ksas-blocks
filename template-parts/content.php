@@ -18,12 +18,15 @@
 			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 		endif;
 
-		if ( 'post' === get_post_type() ) :
+		if ( get_post_type() === 'post' || get_post_type() === 'bulletinboard' ) :
 			?>
 			<div class="entry-meta">
 				<?php
 				ksas_blocks_posted_on();
 				?>
+				<?php if ( get_field( 'bulletin_deadline' ) ) : ?>
+					<br><span class="deadline"><?php the_field( 'bulletin_deadline' ); ?></span>
+				<?php endif; ?>
 			</div><!-- .entry-meta -->
 		<?php endif; ?>
 	</header><!-- .entry-header -->
