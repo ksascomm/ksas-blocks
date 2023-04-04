@@ -16,7 +16,7 @@
 	<?php
 	if ( is_active_sidebar( 'sidebar-footer' ) ) :
 		?>
-		 bg-grey-cool bg-opacity-50 <?php endif; ?>" style="height: 80px" >
+		bg-grey-cool bg-opacity-50 <?php endif; ?>" style="height: 80px" >
 		<svg
 		alt=""
 			class="absolute -bottom-px overflow-hidden"
@@ -34,10 +34,10 @@
 		</svg>
 	</div>
 	<div class="site-info p-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4">
-		<div class="m-2 col-span-4 lg:col-span-1">				
+		<div class="m-2 col-span-4 lg:col-span-1">
 			<a href="https://www.jhu.edu/">
 			<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/dist/images/university.shield.svg" class="h-auto w-full sm:w-1/2 sm:mx-auto lg:w-full p-5" alt="JHU shield in the footer">
-			</a>	
+			</a>
 		</div>
 		<div class="col-span-4 lg:col-span-2">
 			<ul class="flex m-4 justify-center" role="menu" aria-label="University Policies">

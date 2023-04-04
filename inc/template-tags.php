@@ -123,7 +123,7 @@ if ( ! function_exists( 'ksas_blocks_post_thumbnail' ) ) :
 		}
 		if ( is_front_page() ) :
 			// Add 'alignfull' class on front page template.
-		?>
+			?>
 
 			<div class="post-thumbnail alignfull">
 				<?php the_post_thumbnail( 'full' ); ?>
@@ -137,7 +137,8 @@ if ( ! function_exists( 'ksas_blocks_post_thumbnail' ) ) :
 				<?php the_post_thumbnail( 'full' ); ?>
 			</div><!-- .post-thumbnail -->
 
-		<?php elseif (is_singular() && 'post' == get_post_type() ) :
+			<?php
+		elseif ( is_singular() && 'post' == get_post_type() ) :
 			// Make image portrait and float left on single news Posts.
 			?>
 			<?php
@@ -154,7 +155,8 @@ if ( ! function_exists( 'ksas_blocks_post_thumbnail' ) ) :
 			);
 			?>
 
-		<?php else :
+			<?php
+		else :
 			// Fallback: make image a link.
 			?>
 
