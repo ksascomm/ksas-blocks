@@ -234,7 +234,7 @@ a.tribe-events-c-subscribe-dropdown__list-item-link:hover {
   border-bottom-width: 0px !important;
 }
 
-.tribe-events .tribe-events-calendar-list__event-title-link:visited, {
+.tribe-events .tribe-events-calendar-list__event-title-link:visited {
   color: #002d72;
 }
 
@@ -299,4 +299,12 @@ transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
 .tribe-block.tribe-block__events-link {
   display: none;
+}
+
+.single-tribe_events .tribe-blocks-editor .tribe-events-single-event-title {
+	line-height: 1.2;
+}
+
+.tribe-events-sub-nav li a {
+	background: transparent;
 }
