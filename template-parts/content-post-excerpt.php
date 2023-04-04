@@ -54,17 +54,13 @@
 				);
 			?>
 		<div class="entry-content flex-grow sm:pl-8">
-			<?php
-				the_excerpt();
-			?>
+		<?php echo esc_html( wp_trim_words( get_the_excerpt(), 55, '...' ) ); ?>
 		</div><!-- .entry-content -->
 			</div>
 	<?php else : ?>
 
 		<div class="entry-content">
-			<?php
-				the_excerpt();
-			?>
+			<?php echo esc_html( wp_trim_words( get_the_excerpt(), 55, '...' ) ); ?>
 		</div><!-- .entry-content -->
 
 	<?php endif; ?>
