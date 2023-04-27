@@ -60,6 +60,16 @@ body {
   overflow-x: hidden;
 }
 
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+main {
+  flex-grow: 1;
+  width: 100%;
+ }
+
 /**
  * Prevent `sub` and `sup` elements from affecting the line height in
  * all browsers.
@@ -727,6 +737,7 @@ footer.entry-footer {
 .single-post .prose .entry-content p:first-of-type {
   margin-top: 0;
 }
+
 
 /* Widgets
 --------------------------------------------- */

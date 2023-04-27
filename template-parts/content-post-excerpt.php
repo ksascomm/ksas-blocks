@@ -44,7 +44,7 @@
 				the_post_thumbnail(
 					'medium',
 					array(
-						'class' => 'shrink object-cover object-top sm:mb-0 mb-4 mt-0',
+						'class' => 'shrink object-cover object-top !sm:mb-0 !mb-4 !mt-0',
 						'alt'   => the_title_attribute(
 							array(
 								'echo' => false,
