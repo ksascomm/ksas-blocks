@@ -1796,6 +1796,22 @@ button.toggle.search-toggle.desktop-search-toggle svg {
   text-decoration: none;
 }
 
+.page-content .search-form input[type="color"],
+.page-content .search-form input[type="date"],
+.page-content .search-form input[type="datetime"],
+.page-content .search-form input[type="email"],
+.page-content .search-form input[type="number"],
+.page-content .search-form input[type="password"],
+.page-content .search-form input[type="search"],
+.page-content .search-form input[type="text"],
+.page-content .search-form input[type="time"],
+.page-content .search-form input[type="url"] {
+  border: 1px solid #d6d6d6;
+  border-radius: 3px;
+  color: #31261d;
+  padding: 3px;
+}
+
 /* Cover Modals ------------------------------ */
 
 .cover-modal {
