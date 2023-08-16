@@ -261,7 +261,7 @@ span.posted-on {
 }
 
 .news-section a.button {
-  @apply bg-blue text-white inline-flex py-2 px-3 text-base items-center border-none focus:outline-none;
+  @apply bg-blue text-white inline-flex py-2 px-3 text-base items-center border-none;
 }
 
 .news-section a.button:hover {
@@ -1152,7 +1152,7 @@ ul.page-numbers li .page-numbers.current {
 }
 
 .tribe-events-widget-events-list__view-more-link.tribe-common-anchor-thin {
-  @apply font-sans bg-blue text-white inline-flex py-2 px-3 text-base items-center border-none focus:outline-none !important;
+  @apply font-sans bg-blue text-white inline-flex py-2 px-3 text-base items-center border-none !important;
   font-weight: 500;
 }
 
@@ -1410,7 +1410,7 @@ a {
   --tw-text-opacity: 1;
   color: rgba(254, 254, 254, var(--tw-text-opacity));
   border-radius: 0;
-  @apply bg-blue text-white text-base items-center border-none focus:outline-none;
+  @apply bg-blue text-white text-base items-center border-none;
 }
 
 .wp-block-buttons > .wp-block-button.wp-block-button__width-50 {
