@@ -375,3 +375,11 @@ a.tribe-events-series-relationship-single-marker__title.tribe-common-cta--alt:ho
 .tribe-events-series-relationship-marker, .tribe-events-series-relationship-single-marker {
 	font-family: gentona-bold,"Helvetica Neue",Roboto,sans-serif !important;
 }
+
+/* Hide Flyers or Images without alt text! */
+.tribe-events-single img[alt=""],
+.tribe-events-single img:not([alt]),
+img.tribe-events-calendar-latest-past__event-featured-image[alt=""],
+img.tribe-events-calendar-latest-past__event-featured-image:not([alt]) {
+  display: none;
+}
