@@ -380,6 +380,10 @@ a.tribe-events-series-relationship-single-marker__title.tribe-common-cta--alt:ho
 .tribe-events-single img[alt=""],
 .tribe-events-single img:not([alt]),
 img.tribe-events-calendar-latest-past__event-featured-image[alt=""],
-img.tribe-events-calendar-latest-past__event-featured-image:not([alt]) {
+img.tribe-events-calendar-latest-past__event-featured-image:not([alt]),
+img.tribe-events-calendar-day__event-featured-image-link[alt=""],
+img.tribe-events-calendar-day__event-featured-image-link:not([alt]),
+img.tribe-events-calendar-list__event-featured-image[alt=""],
+img.tribe-events-calendar-list__event-featured-image:not([alt]) {
   display: none;
 }
