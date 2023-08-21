@@ -19,22 +19,6 @@
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 	<meta name="msapplication-config" content="<?php echo esc_url( get_template_directory_uri() ); ?>/dist/images/favicons/browserconfig.xml" />
 	<?php wp_head(); ?>
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-100553583-1"></script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag(){dataLayer.push(arguments);}
-		gtag('js', new Date());
-		gtag('config', 'UA-100553583-1');
-		gtag('config', 'UA-40512757-1');
-		<?php
-		$analytics_id = get_field( 'google_analytics_id', 'option' );
-		if ( $analytics_id ) :
-			?>
-		gtag('config', '<?php echo $analytics_id; ?>');
-		<?php endif; ?>
-	</script>
-	<!-- End Google Analytics -->
 	<!-- Google Tag Manager -->
 	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -89,7 +73,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 						</h1>
 					</div>
 				</div><!-- .header-titles -->
-				<button class="toggle search-toggle mobile-search-toggle" data-toggle-target=".search-modal" data-toggle-body-class="showing-search-modal" data-set-focus=".search-modal .search-field" aria-expanded="false">
+				<button class="toggle search-toggle mobile-search-toggle" data-toggle-target=".search-modal" data-toggle-body-class="showing-search-modal" data-set-focus=".search-modal .search-field" aria-expanded="false" type="button">
 					<span class="toggle-inner">
 						<span class="toggle-icon">
 							<?php twentytwenty_the_theme_svg( 'search' ); ?>
@@ -97,7 +81,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 						<span class="toggle-text"><?php _ex( 'Search', 'toggle text', 'ksas-blocks' ); ?></span>
 					</span>
 				</button><!-- .search-toggle -->
-				<button class="toggle nav-toggle mobile-nav-toggle" data-toggle-target=".menu-modal"  data-toggle-body-class="showing-menu-modal" aria-expanded="false" data-set-focus=".close-nav-toggle">
+				<button class="toggle nav-toggle mobile-nav-toggle" data-toggle-target=".menu-modal"  data-toggle-body-class="showing-menu-modal" aria-expanded="false" data-set-focus=".close-nav-toggle" type="button">
 					<span class="toggle-inner">
 						<span class="toggle-icon">
 							<?php twentytwenty_the_theme_svg( 'ellipsis' ); ?>
@@ -108,28 +92,29 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 			</div><!-- .header-inner -->
 		</div><!-- .header-titles-wrapper -->
 		<div class="header-navigation-wrapper bg-white">
-			<div class="header-inner section-inner flex">
-				<nav class="primary-menu-wrapper" aria-label="<?php echo esc_attr_x( 'Main Navigation', 'menu', 'ksas-blocks' ); ?>">
-					<ul class="primary-menu reset-list-style">
-					<?php
-						wp_nav_menu(
-							array(
-								'container'      => '',
-								'items_wrap'     => '%3$s',
-								// 'show_toggles'   => true,
-								'theme_location' => 'main-nav',
-								// 'walker'   => new TwentyTwenty_Walker_Page(),
-							)
-						);
-						?>
-					</ul>
-				</nav><!-- .primary-menu-wrapper -->
-
-				<div class="header-toggles hide-no-js flex-auto">
+			<div class="header-inner section-inner flex justify-between">
+				<div class="menu-container">
+					<button class="menu-button" aria-controls="site-header-menu" type="button"><span class="screen-reader-text"><?php esc_html_e( 'Menu', 'rwc' ); ?></span></button>
+					<div id="site-header-menu" class="site-header-menu text-primary">
+						<nav id="site-navigation" class="main-navigation" role="navigation" aria-label="<?php esc_attr_e( 'Primary Menu', 'rwc' ); ?>">
+						<?php
+							wp_nav_menu(
+								array(
+									'theme_location'  => 'main-nav',
+									'menu_id'         => 'primary-menu',
+									'container_class' => 'nav-primary',
+									'depth'           => 3,
+								)
+							);
+							?>
+						</nav>
+					</div>
+				</div><!-- .primary-menu-wrapper -->
+				<div class="header-toggles hide-no-js">
 
 					<div class="toggle-wrapper search-toggle-wrapper">
 
-						<button class="toggle search-toggle desktop-search-toggle" data-toggle-target=".search-modal" data-toggle-body-class="showing-search-modal" data-set-focus=".search-modal .search-field" aria-expanded="false">
+						<button class="toggle search-toggle desktop-search-toggle" data-toggle-target=".search-modal" data-toggle-body-class="showing-search-modal" data-set-focus=".search-modal .search-field" aria-expanded="false" type="button">
 							<span class="toggle-inner">
 							<?php twentytwenty_the_theme_svg( 'search' ); ?>
 								<span class="toggle-text"><?php _ex( 'Search', 'toggle text', 'ksas-blocks' ); ?></span>

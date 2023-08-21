@@ -36,7 +36,7 @@ const TailwindExtractor = (content) => {
   ========================================================================== */
 mix
   // handle JS files
-  .scripts(["resources/js/twentytwenty.js"], "dist/js/bundle.min.js")
+  .scripts(["resources/js/twentytwenty.js", "resources/js/navbar.js"], "dist/js/bundle.min.js")
   //.disableNotifications()
 
   .postCss("./resources/css/style.css", "./dist/css/style.css", [

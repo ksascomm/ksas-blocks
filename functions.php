@@ -245,10 +245,11 @@ function ksas_blocks_scripts() {
 	wp_enqueue_style( 'ksas-blocks-style', get_template_directory_uri() . '/dist/css/style.css', array(), filemtime( get_template_directory() . '/dist/css/style.css' ), false );
 	wp_style_add_data( 'ksas-blocks-style', 'rtl', 'replace' );
 
-	wp_enqueue_script( 'ksas-blocks-script', get_template_directory_uri() . '/dist/js/bundle.min.js', array(), KSAS_BLOCKS_VERSION, true );
+	wp_enqueue_script( 'ksas-blocks-script', get_template_directory_uri() . '/dist/js/bundle.min.js', array( 'jquery' ), KSAS_BLOCKS_VERSION, true );
 	wp_script_add_data( 'ksas-blocks-script', 'defer', true );
 
-	wp_enqueue_script( 'font-awesome', 'https://kit.fontawesome.com/72c92fef89.js', array(), '6.1.2', false );
+	wp_enqueue_script( 'font-awesome', 'https://kit.fontawesome.com/72c92fef89.js', array(), '6.4.2', false );
+	wp_script_add_data( 'fontawesome', array( 'crossorigin' ), array( 'anonymous' ) );
 }
 add_action( 'wp_enqueue_scripts', 'ksas_blocks_scripts' );
 
@@ -376,4 +377,18 @@ function ksas_blocks_sidebar_class( $sidebar_name ) {
 	if ( $class ) :
 			echo esc_html( $class );
 	endif;
+}
+
+/**
+ * Get the top ancestor ID
+ * Used to only show child & grandchild pages in sidebar dropdown menu
+ */
+function get_the_top_ancestor_id() {
+	global $post;
+	if ( $post->post_parent ) {
+		$ancestors = array_reverse( get_post_ancestors( $post->ID ) );
+		return $ancestors[0];
+	} else {
+		return $post->ID;
+	}
 }

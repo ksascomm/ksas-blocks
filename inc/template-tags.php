@@ -253,20 +253,13 @@ function twentytwenty_add_sub_toggles_to_main_menu( $args, $item, $depth ) {
 			$toggle_duration      = twentytwenty_toggle_duration();
 
 			// Add the sub menu toggle.
-			$args->after .= '<button class="toggle sub-menu-toggle fill-children-current-color" data-toggle-target="' . $toggle_target_string . '" data-toggle-type="slidetoggle" data-toggle-duration="' . absint( $toggle_duration ) . '" aria-expanded="false"><span class="sr-only">' . __( 'Show sub menu', 'ksas-blocks' ) . '</span>' . twentytwenty_get_theme_svg( 'chevron-down' ) . '</button>';
+			$args->after .= '<button class="toggle sub-menu-toggle fill-children-current-color" data-toggle-target="' . $toggle_target_string . '" data-toggle-type="slidetoggle" data-toggle-duration="' . absint( $toggle_duration ) . '" aria-expanded="false" type="button"><span class="sr-only">' . __( 'Show sub menu', 'ksas-blocks' ) . '</span>' . twentytwenty_get_theme_svg( 'chevron-down' ) . '</button>';
 
 		}
 
 		// Close the wrapper.
 		$args->after .= '</div><!-- .ancestor-wrapper -->';
 
-		// Add sub menu icons to the primary menu without toggles.
-	} elseif ( 'main-nav' === $args->theme_location ) {
-		if ( in_array( 'menu-item-has-children', $item->classes, true ) ) {
-			$args->after = '<span class="icon"></span>';
-		} else {
-			$args->after = '';
-		}
 	}
 
 	return $args;

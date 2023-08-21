@@ -294,6 +294,10 @@ Segoe UI, sans-serif;
   color: #002d72 !important;
 }
 
+.tribe-block__venue {
+  border: none;
+}
+
 /* AGHI/Non-Block Editor Styles */
 .tribe-events-event-image img {
 	max-width: 500px;
