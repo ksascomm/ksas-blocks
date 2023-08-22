@@ -295,7 +295,7 @@ Segoe UI, sans-serif;
 }
 
 .tribe-block__venue {
-  border: none;
+  border: none !important;
 }
 
 /* AGHI/Non-Block Editor Styles */
