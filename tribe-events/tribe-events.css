@@ -87,6 +87,9 @@ a.tribe-events-calendar-latest-past__event-title-link.tribe-common-anchor-thin:h
   font-size: 1.5rem;
 }
 
+.page .tribe-common-l-container.tribe-events-l-container {
+  padding-top: 2rem !important
+}
 
 /* Single Event View */
 .tribe-events-single.tribe-blocks-editor h2.tribe-events-schedule__datetime,
