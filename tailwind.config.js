@@ -51,7 +51,9 @@ module.exports = {
       "4xl": "2.25rem",
     },
     fontWeight: {
+      light: "300",
       normal: "400",
+      medium: "500",
       semibold: "600",
       bold: "700",
     },
@@ -99,6 +101,7 @@ module.exports = {
               lineHeight: "1.6",
               fontSize: "1.25rem",
               maxWidth: "100ch",
+              fontWeight: "300",
               '--tw-prose-body': "#31261D",
               '--tw-prose-bullets': "#31261D",
               '--tw-prose-headings': "#31261D",
@@ -126,38 +129,46 @@ module.exports = {
               h1: {
                 marginBottom: "0rem",
                 fontSize: "2.25rem",
+                fontWeight: "400",
               },
               h2: {
                 marginTop: "0.5rem",
                 marginBottom: "0.5rem",
                 maxWidth: "90ch",
                 fontSize: "2rem",
+                fontWeight: "600",
               },
               h3: {
                 marginTop: "0.5rem",
                 marginBottom: "0.5rem",
                 fontSize: "1.6rem",
+                fontWeight: "600",
               },
               h4: {
                 marginTop: "0.5rem",
                 marginBottom: "0.5rem",
                 fontSize: "1.25rem",
+                fontWeight: "600",
               },
               p: {
                 marginTop: "1rem",
                 marginBottom: "1rem",
+                fontWeight: "300",
               },
               li: {
                 maxWidth: "90ch",
                 marginTop: "0rem",
                 marginBottom: ".25rem",
+                fontWeight: "300",
               },
               a: {
                 textDecoration: "none",
                 transition: "none",
+                fontWeight: "300",
               },
               strong: {
                 fontFamily: "Gentona-Bold, system-ui",
+                fontWeight: "700",
               },
               table: {
                 fontSize: "1rem",

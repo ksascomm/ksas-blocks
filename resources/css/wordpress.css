@@ -141,6 +141,10 @@ label.gfield_label {
   @apply object-left object-scale-down h-16 m-6;
 }
 
+.site-footer {
+  @apply font-light font-sans;
+}
+
 .site-footer .text-center p a {
   @apply font-heavy font-bold;
 }
@@ -253,7 +257,7 @@ mark {
 /* Elements
 --------------------------------------------- */
 span.posted-on {
-  @apply font-semi text-base md:text-lg -my-2;
+  @apply font-semi font-semibold text-base md:text-lg -my-2;
 }
 
 .entry-meta {
@@ -306,6 +310,20 @@ span.posted-on {
   content: "\f1c4";
 }
 
+.entry-title.external-link a:after,
+.main-navigation li.external a:after {
+  display: inline-block;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  @apply text-lg pl-1;
+  font: var(--fa-font-light);
+  content: "\f360";
+}
+
+.main-navigation li.external a:after {
+  font: var(--fa-font-solid);
+}
+
 /* Tables
 --------------------------------------------- */
 .wp-block-table td,
@@ -326,6 +344,12 @@ thead th:first-child {
 .wp-block-table th {
   @apply border-b-0 bg-grey-lightest font-semi font-semibold p-2 text-center;
 }
+
+/*! purgecss start ignore */
+.tablepress th {
+  @apply font-semi font-semibold !important;
+}
+/*! purgecss end ignore */
 
 /*--------------------------------------------------------------
 # Layouts
@@ -436,7 +460,7 @@ ul.primary-menu a[aria-current] {
   min-height: 30px;
 }
 .main-navigation ul a {
-  @apply font-sans text-lg relative;
+  @apply font-sans text-lg relative font-light;
 }
 
 .main-navigation .nav-primary ul.menu > li.menu-item:not(:last-child)::after {
@@ -862,6 +886,10 @@ footer.entry-footer {
   max-width: 100%;
 }
 
+.widget .textwidget {
+  @apply font-sans font-light;
+}
+
 .widget h2 {
   @apply text-xl font-heavy font-bold mb-2;
 }
@@ -878,8 +906,9 @@ footer.entry-footer {
   @apply text-base pb-4;
 }
 
-.widget p strong {
-  @apply font-heavy;
+.widget p strong,
+.widget strong {
+  @apply font-heavy font-bold;
 }
 
 .widget .textwidget.custom-html-widget a.button {
@@ -1404,6 +1433,11 @@ p.tribe-events-back a,
 .news-section .prose h3.entry-title,
 .blog .site-main.prose h3.entry-title {
   @apply mt-0 !important;
+}
+
+.news-section .prose h3.entry-title a,
+.blog .site-main.prose h3.entry-title a {
+  @apply font-semibold;
 }
 
 .news-section .prose.article-excerpt img {
@@ -1983,7 +2017,9 @@ body:not(.enable-search-modal) .header-titles-wrapper {
 }
 
 .site-title {
+  font-family: "quadon-bold", Georgia, serif;
   line-height: 1;
+  font-weight: 500;
 }
 
 .site-title a {
@@ -2100,7 +2136,7 @@ body:not(.enable-search-modal) .site-logo img {
 
 .toggle-inner .toggle-text {
   font-size: 1rem;
-  /*font-weight: 600;*/
+  font-weight: 300;
   position: absolute;
   top: calc(100% + 0.25rem);
   width: auto;
@@ -2261,8 +2297,8 @@ button.close-nav-toggle .toggle-text {
 
 .modal-menu > li > a,
 .modal-menu > li > .ancestor-wrapper > a {
+  @apply font-semi font-semibold;
   font-size: 1.5rem;
-  font-weight: 700;
   letter-spacing: -0.0375em;
 }
 
@@ -2320,7 +2356,7 @@ button.sub-menu-toggle.active svg {
 
 .modal-menu ul li a {
   color: inherit;
-  font-weight: 500;
+  font-weight: 300;
   font-size: 1.25rem;
 }
 

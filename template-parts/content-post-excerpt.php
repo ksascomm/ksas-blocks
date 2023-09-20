@@ -9,9 +9,9 @@
 
 ?>
 <?php if ( is_sticky() ) : ?>
-	<article id="post-<?php the_ID(); ?>" <?php post_class( 'article-excerpt prose sm:prose lg:prose-lg xl:prose-xl mx-auto pt-4 mb-4 wp-sticky' ); ?> aria-label="<?php the_title(); ?>">
+	<article id="post-<?php the_ID(); ?>" <?php post_class( 'article-excerpt prose lg:prose-lg xl:prose-xl mx-auto pt-4 mb-4 wp-sticky' ); ?> aria-label="<?php the_title(); ?>">
 	<?php else : ?>
-<article id="post-<?php the_ID(); ?>" <?php post_class( 'article-excerpt prose sm:prose lg:prose-lg xl:prose-xl mx-auto border-b border-solid border-grey pt-4 mb-4' ); ?> aria-label="<?php the_title(); ?>">
+<article id="post-<?php the_ID(); ?>" <?php post_class( 'article-excerpt prose lg:prose-lg xl:prose-xl mx-auto border-b border-solid border-grey pt-4 mb-4' ); ?> aria-label="<?php the_title(); ?>">
 	<?php endif; ?>
 	<header class="entry-header">
 		<?php
@@ -53,15 +53,15 @@
 					)
 				);
 			?>
-		<div class="entry-content flex-grow sm:pl-8">
-		<?php echo esc_html( wp_trim_words( get_the_excerpt(), 55, '...' ) ); ?>
-		</div><!-- .entry-content -->
-			</div>
+			<div class="entry-content flex-grow sm:pl-8">
+				<p><?php echo esc_html( wp_trim_words( get_the_excerpt(), 55, '...' ) ); ?></p>
+			</div><!-- .entry-content -->
+		</div>
 	<?php else : ?>
 
-		<div class="entry-content">
-			<?php echo esc_html( wp_trim_words( get_the_excerpt(), 55, '...' ) ); ?>
-		</div><!-- .entry-content -->
+			<div class="entry-content">
+				<p><?php echo esc_html( wp_trim_words( get_the_excerpt(), 55, '...' ) ); ?></p>
+			</div><!-- .entry-content -->
 
 	<?php endif; ?>
 

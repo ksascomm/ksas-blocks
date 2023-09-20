@@ -96,6 +96,7 @@ a.tribe-events-calendar-latest-past__event-title-link.tribe-common-anchor-thin:h
 .tribe-events-single h2.tribe-events-schedule__datetime {
   font-family: "gentona-semibold", system-ui, BlinkMacSystemFont, -apple-system,
     Segoe UI, sans-serif !important;
+  font-weight: 600 !important;
 }
 
 span.tribe-events-schedule__separator.tribe-events-schedule__separator--date,
@@ -200,6 +201,8 @@ a.tribe-events-c-view-selector__list-item-link {
 
 h1.tribe-events-single-event-title {
   font-family: Quadon, Georgia, serif;
+  font-weight: 400 !important;
+  font-size: 2.25rem !important;
 }
 
 .tribe-event-date-start,
@@ -212,7 +215,13 @@ h1.tribe-events-single-event-title {
 .tribe-events-nav-pagination {
   font-family: "gentona-light", system-ui, BlinkMacSystemFont, -apple-system,
     Segoe UI, sans-serif;
-  color: #31261d;
+  color: hsl(27, 26%, 15%);
+}
+
+.tribe-events-content a strong,
+.tribe-events-content a b, {
+  font-family: "gentona-bold", system-ui, BlinkMacSystemFont, -apple-system,
+    Segoe UI, sans-serif !important;
 }
 
 .tribe-events-meta-group.tribe-events-meta-group-details,
@@ -226,6 +235,7 @@ h1.tribe-events-single-event-title {
   font-family: "gentona-light", system-ui, BlinkMacSystemFont, -apple-system,
     Segoe UI, sans-serif;
   color: #002d72 !important;
+  font-weight: 300 !important;
 }
 
 
@@ -235,9 +245,9 @@ h1.tribe-events-single-event-title {
   font-size: 1.25rem !important;
 }
 
-ul.tribe-events-sub-nav a,
-.tribe-events-back a, {
-  font-size: 1.25rem;
+ul.tribe-events-sub-nav li a,
+.tribe-events-back a {
+  font-size: 1.25rem !important;
 }
 
 .tribe-events-single .tribe-events-sub-nav {

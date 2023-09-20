@@ -58,7 +58,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 					<?php endif; ?>
 					</div>
 					<div class="lg:col-span-2">
-						<h1 class="site-title font-serif font-bold text-2xl sm:text-xl md:text-2xl lg:text-4xl mt-4 lg:mt-0 mb-12 md:mb-0">
+						<h1 class="site-title text-2xl sm:text-xl md:text-2xl lg:text-4xl mt-4 lg:mt-0 mb-12 md:mb-0">
 						<a class=" text-white" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
 							<?php
 								$ksas_blocks_description = get_bloginfo( 'description', 'display' );

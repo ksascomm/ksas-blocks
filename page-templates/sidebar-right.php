@@ -10,7 +10,7 @@
 get_header();
 ?>
 <div class="flex flex-wrap p-1 sm:p-2 md:p-4">
-	<main id="site-content" class="site-main page-with-sidebar w-full lg:w-3/4 prose sm:prose lg:prose-lg mx-auto">
+	<main id="site-content" class="site-main page-with-sidebar w-full lg:w-3/4 prose lg:prose-lg mx-auto">
 		<?php
 		if ( function_exists( 'bcn_display' ) ) :?>
 		<div class="breadcrumbs" typeof="BreadcrumbList" vocab="https://schema.org/">

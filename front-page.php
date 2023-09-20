@@ -10,7 +10,7 @@
 get_header();
 ?>
 
-	<main id="site-content" class="site-main front prose sm:prose lg:prose-lg">
+	<main id="site-content" class="site-main front prose lg:prose-lg">
 
 		<?php
 		while ( have_posts() ) :
@@ -33,7 +33,7 @@ get_header();
 
 		<div class="divider div-transparent div-dot"></div>
 		<div class="news-section mb-24 px-2 sm:px-0">
-			<div class="prose sm:prose lg:prose-lg xl:prose-xl mx-auto">
+			<div class="prose lg:prose-lg xl:prose-xl mx-auto">
 				<div class="flex justify-between">
 					<div>
 						<h2><?php echo esc_html( $heading ); ?>
@@ -70,7 +70,7 @@ get_header();
 			?>
 	<div class="divider div-transparent div-dot"></div>
 		<div class="news-section mb-24 px-2 sm:px-0">
-				<div class="prose sm:prose lg:prose-lg xl:prose-xl mx-auto">
+				<div class="prose lg:prose-lg xl:prose-xl mx-auto">
 					<div class="flex justify-between">
 						<div>
 						<h2>Related News from <a href="https://hub.jhu.edu/" aria-label="The Hub">The Hub</a></h2>

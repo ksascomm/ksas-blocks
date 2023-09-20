@@ -28,7 +28,7 @@ if ( is_array( $hub_articles ) ) {
 		?>
 
 
-<article <?php post_class( 'article-excerpt prose sm:prose lg:prose-lg xl:prose-xl mx-auto border-b border-solid border-grey pt-4 mb-4' ); ?> aria-labelledby="post-<?php echo esc_html( $hub_article['id'] ); ?>">
+<article <?php post_class( 'article-excerpt prose lg:prose-lg xl:prose-xl mx-auto border-b border-solid border-grey pt-4 mb-4' ); ?> aria-labelledby="post-<?php echo esc_html( $hub_article['id'] ); ?>">
 	<header class="entry-header">
 		<?php
 		$date = $hub_article['publish_date'];
