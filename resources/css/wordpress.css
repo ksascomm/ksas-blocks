@@ -865,6 +865,14 @@ footer.entry-footer {
 .single-post .prose .post img.wp-post-image {
   margin-bottom: 1.5rem !important;
 }
+.news-section .article-excerpt img[alt=""],
+.news-section .article-excerpt img:not([alt]),
+.blog .article-excerpt img[alt=""],
+.blog .article-excerpt img:not([alt]),
+.single-post .prose .post img[alt=""], 
+.single-post .prose .post img:not([alt]) {
+  display: none;
+}
 
 .single-post .prose .entry-content p:first-of-type {
   margin-top: 0;

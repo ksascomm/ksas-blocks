@@ -404,3 +404,23 @@ img.tribe-events-calendar-list__event-featured-image[alt=""],
 img.tribe-events-calendar-list__event-featured-image:not([alt]) {
   display: none;
 }
+
+/* Month View Tooltips */
+.tribe-events-calendar-month__calendar-event-tooltip-description.tribe-common-b3,
+.tribe-events-calendar-month__calendar-event-tooltip-datetime{
+	font-size: .85rem!important;
+}
+
+@media screen and (min-width: 1023px) {
+	.tribe-events-tooltip-theme {
+    width: 400px !important;
+    max-width: unset !important;
+}
+.tribe-events-tooltip-theme .tribe-events-calendar-month__calendar-event-tooltip-featured-image-wrapper {
+    float: left;
+    margin-right: 2em;
+}
+.tribe-events-tooltip-theme .tribe-events-calendar-month__calendar-event-tooltip-title {
+    clear: none;
+}
+}

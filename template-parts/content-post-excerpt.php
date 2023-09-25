@@ -44,16 +44,11 @@
 				the_post_thumbnail(
 					'medium',
 					array(
-						'class' => 'shrink object-cover object-top !sm:mb-0 !mb-4 !mt-0',
-						'alt'   => the_title_attribute(
-							array(
-								'echo' => false,
-							)
-						),
+						'class' => 'shrink object-cover object-top !sm:mb-0 !mb-4 !mt-0 sm:mr-8 mr-0',
 					)
 				);
 			?>
-			<div class="entry-content flex-grow sm:pl-8">
+			<div class="entry-content flex-grow">
 				<p><?php echo esc_html( wp_trim_words( get_the_excerpt(), 55, '...' ) ); ?></p>
 			</div><!-- .entry-content -->
 		</div>
