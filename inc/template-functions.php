@@ -83,34 +83,3 @@ function custom_ksasacademic_page_title( $title ) {
 	}
 }
 add_filter( 'pre_get_document_title', 'custom_ksasacademic_page_title', 9999 );
-
-/**
- * Setting Default Blocks in the Block Editor
- *
- * @link https://theeventscalendar.com/knowledgebase/k/change-the-default-event-template-in-block-editor
- */
-add_filter(
-	'tribe_events_editor_default_template',
-	function( $template ) {
-		$template = array(
-			array( 'tribe/event-datetime' ),
-			array(
-				'core/paragraph',
-				array(
-					'placeholder' => __( 'Add Event Description...', 'the-events-calendar' ),
-				),
-			),
-			array( 'tribe/featured-image' ),
-			array( 'tribe/event-venue' ),
-			array(
-				'tribe/event-links',
-				array(
-					'placeholder' => __( 'Click Me to Add Link', 'the-events-calendar' ),
-				),
-			),
-		);
-		return $template;
-	},
-	11,
-	1
-);
