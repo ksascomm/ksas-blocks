@@ -104,6 +104,11 @@ span.tribe-events-schedule__separator.tribe-events-schedule__separator--date,
   color: #31261d !important;
 }
 
+.tribe-events-schedule h2 {
+  font-size: 1.25rem !important;
+  margin: 0 !important;
+}
+
 .tribe-events-single.tribe-blocks-editor p,
 .tribe-events-single p {
   font-size: 1.25rem !important;

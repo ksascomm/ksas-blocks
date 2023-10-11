@@ -876,6 +876,7 @@ footer.entry-footer {
   display: none;
 }
 /*! purgecss end ignore */
+
 .single-post .prose .entry-content p:first-of-type {
   margin-top: 0;
 }
@@ -1823,7 +1824,7 @@ h5.alignfull {
 
 /* Sections ---------------------------------- */
 
-section {
+.section {
   padding: 5rem 0;
   width: 100%;
 }
@@ -2612,7 +2613,7 @@ button.search-untoggle {
 
   /* SECTIONS */
 
-  section {
+  .section {
     padding: 8rem 0;
   }
 
