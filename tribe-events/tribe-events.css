@@ -17,10 +17,11 @@ tribe-common .tribe-common-h3,
 tribe-common .tribe-common-h4,
 tribe-common .tribe-common-h5,
 .tribe-common .tribe-common-h6,
-h2.tribe-events-calendar-latest-past__heading.tribe-common-h5.tribe-common-h3--min-medium,
+.tribe-events-calendar-latest-past__heading.tribe-common-h5.tribe-common-h3--min-medium,
 span.tribe-events-c-top-bar__datepicker-desktop.tribe-common-a11y-hidden {
   font-family: "gentona-semibold", system-ui, BlinkMacSystemFont, -apple-system,
     Segoe UI, sans-serif;
+  font-weight: 600;
 }
 
 .tribe-events .tribe-events-calendar-latest-past__event-datetime,
@@ -110,7 +111,8 @@ span.tribe-events-schedule__separator.tribe-events-schedule__separator--date,
 }
 
 .tribe-events-single.tribe-blocks-editor p,
-.tribe-events-single p {
+.tribe-events-single p,
+.tribe-events-single ul {
   font-size: 1.25rem !important;
   color: #31261d;
 }
@@ -316,6 +318,10 @@ Segoe UI, sans-serif;
   border: none !important;
 }
 
+.tribe-events-calendar-list__event-datetime-featured-text.tribe-common-a11y-visual-hide {
+  font-family: 'gentona-bold';
+}
+
 /* AGHI/Non-Block Editor Styles */
 .tribe-events-event-image img {
 	max-width: 500px;
@@ -428,4 +434,8 @@ img.tribe-events-calendar-list__event-featured-image:not([alt]) {
 .tribe-events-tooltip-theme .tribe-events-calendar-month__calendar-event-tooltip-title {
     clear: none;
 }
+}
+
+.tribe-events-content blockquote::before {
+  content: none !important;
 }

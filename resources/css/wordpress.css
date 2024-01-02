@@ -228,6 +228,29 @@ footer a:hover {
   /*padding-inline-start: 40px;*/
 }
 
+.prose blockquote {
+  margin-top: 1.3333333em;
+  margin-bottom: 1.3333333em;
+}
+
+.prose blockquote p:first-of-type {
+  @apply mt-0;
+}
+
+.prose blockquote cite {
+  margin-bottom: 1.3333333em;
+  margin-top: 1.3333333em;
+  display: inherit;
+}
+
+.prose blockquote cite::before {
+  content: "\2014";
+}
+
+.prose blockquote p:last-of-type {
+  @apply mb-0;
+}
+
 /*--------------------------------------------------------------
 # Base
 --------------------------------------------------------------*/
