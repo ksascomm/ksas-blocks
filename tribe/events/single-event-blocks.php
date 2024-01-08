@@ -22,7 +22,7 @@ if ( ! empty( $event_id ) && function_exists( 'tribe_is_recurring_event' ) ) {
 	$is_recurring = tribe_is_recurring_event( $event_id );
 }
 ?>
-<main id="site-content" class="site-main prose lg:prose-lg">
+<main id="site-content" class="site-main prose lg:prose-lg mx-auto">
 	<div id="tribe-events-content" class="tribe-events-single tribe-blocks-editor">
 		<?php $this->template( 'single-event/back-link' ); ?>
 		<?php $this->template( 'single-event/notices' ); ?>

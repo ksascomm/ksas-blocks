@@ -71,7 +71,7 @@ $title = apply_filters( 'tribe_events_single_event_title_html', the_title( $befo
 $cost  = tribe_get_formatted_cost( $event_id );
 
 ?>
-<main id="site-content" class="site-main prose lg:prose-lg">
+<main id="site-content" class="site-main prose lg:prose-lg mx-auto">
 
 	<div id="tribe-events-content" class="tribe-events-single">
 
