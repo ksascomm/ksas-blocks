@@ -231,10 +231,19 @@ h1.tribe-events-single-event-title {
     Segoe UI, sans-serif !important;
 }
 
+.tribe-events-meta-group .tribe-events-single-section-title {
+  font-size: 1.125rem !important;
+}
+
 .tribe-events-meta-group.tribe-events-meta-group-details,
 .tribe-events-meta-group.tribe-events-meta-group-organizer,
-.tribe-events-single-section.tribe-events-event-meta.secondary.tribe-clearfix {
+.tribe-events-single-section.tribe-events-event-meta.secondary.tribe-clearfix,
+.tribe-events-meta-group.tribe-events-meta-group-venue {
   font-size: 1rem;
+}
+
+.tribe-events-single-section.tribe-events-event-meta.primary.tribe-clearfix {
+  width: 100%;
 }
 
 .tribe-events-single .tribe-events-sub-nav .tribe-events-nav-next a,
@@ -284,7 +293,30 @@ a.tribe-events-c-subscribe-dropdown__list-item-link:hover {
 }
 
 .tribe-events .tribe-events-calendar-list__event-title-link:visited {
+  color: #002d72 !important;
+}
+
+.tribe-common .tribe-common-anchor-thin {
   color: #002d72;
+  border-bottom-width: 2px;
+  border-style: dashed;
+  --tw-border-opacity: 1;
+  border-color: rgba(229, 226, 224, var(--tw-border-opacity));
+  --tw-text-opacity: 1;
+  text-decoration: none;
+  transition-property: background-color, border-color, color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+  transition-duration: 200ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.tribe-common .tribe-common-anchor-thin:hover{
+  border-bottom-width: 2px;
+  border-style: solid;
+  --tw-border-opacity: 1;
+  border-color: rgba(74, 72, 76, var(--tw-border-opacity));
+  --tw-text-opacity: 1;
+  color: rgba(49, 38, 29, var(--tw-text-opacity));
 }
 
 .tribe-events .tribe-common .tribe-common-form-control-text__input, .tribe-events .tribe-common--breakpoint-medium.tribe-common .tribe-common-form-control-text__input, .tribe-events .tribe-events-c-view-selector__list-item-text, .tribe-events .tribe-events-calendar-latest-past__event-row, .tribe-events .tribe-events-calendar-list__event-date-tag-weekday,
@@ -366,7 +398,11 @@ transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 	background: transparent;
 }
 
-.tribe-events-series-relationship-marker, .tribe-events-series-relationship-single-marker {
+.tribe-events-series-relationship-marker, 
+.tribe-events-series-relationship-single-marker,
+.tribe-events-event-categories-label,
+.tribe-events-meta-group .tribe-events-single-section-title,
+.tribe-events-meta-group dt {
   font-family: "gentona-semibold", system-ui, BlinkMacSystemFont, -apple-system,
   Segoe UI, sans-serif !important;
   font-weight: 600 !important;
