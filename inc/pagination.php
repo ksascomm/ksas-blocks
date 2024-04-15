@@ -2,7 +2,8 @@
 /**
  * Custom Pagination
  *
- * @package KSAS_Blocks
+ * @package KSAS_Department_Tailwind
+ * @link sourced from https://www.wpbeginner.com/wp-themes/how-to-add-numeric-pagination-in-your-wordpress-theme/
  */
 
 if ( ! function_exists( 'ksas_blocks_pagination' ) ) :
@@ -10,27 +11,76 @@ if ( ! function_exists( 'ksas_blocks_pagination' ) ) :
 	 * Set up the pagination function.
 	 */
 	function ksas_blocks_pagination() {
-		global $wp_query;
-		$total = $wp_query->max_num_pages;
-		// Only paginate if we have more than one page!
-		if ( $total > 1 ) {
-			// Get the current page.
-			if (
-				! $current_page = get_query_var( 'paged' )
-			)
-				$current_page = 1;
-			// Structure of “format” depends on whether we’re using pretty permalinks.
-			$format = empty( get_option( 'permalink_structure' ) ) ? '&page=%#%' : 'page/%#%/';
-			echo paginate_links(
-				array(
-					'base'     => get_pagenum_link( 1 ) . '%_%',
-					'format'   => $format,
-					'current'  => $current_page,
-					'total'    => $total,
-					'mid_size' => 4,
-					'type'     => 'list',
-				)
-			);
+		if ( is_singular() ) {
+			return;
 		}
+
+		global $wp_query;
+
+		/** Stop execution if there's only 1 page */
+		if ( $wp_query->max_num_pages <= 1 ) {
+			return;
+		}
+
+		$paged = get_query_var( 'paged' ) ? absint( get_query_var( 'paged' ) ) : 1;
+		$max   = intval( $wp_query->max_num_pages );
+
+		/** Add current page to the array */
+		if ( $paged >= 1 ) {
+			$links[] = $paged;
+		}
+
+		/** Add the pages around the current page to the array */
+		if ( $paged >= 3 ) {
+			$links[] = $paged - 1;
+			$links[] = $paged - 2;
+		}
+
+		if ( ( $paged + 2 ) <= $max ) {
+			$links[] = $paged + 2;
+			$links[] = $paged + 1;
+		}
+
+		echo '<div class="navigation"><ul class="page-numbers">' . "\n";
+
+		/** Previous Post Link */
+		if ( get_previous_posts_link() ) {
+			printf( '<li>%s</li>' . "\n", get_previous_posts_link() );
+		}
+
+		/** Link to first page, plus ellipses if necessary */
+		if ( ! in_array( 1, $links ) ) {
+			$class = 1 == $paged ? ' class="active"' : '';
+
+			printf( '<li%s><a href="%s">%s</a></li>' . "\n", $class, esc_url( get_pagenum_link( 1 ) ), '1' );
+
+			if ( ! in_array( 2, $links ) ) {
+				echo '<li>…</li>';
+			}
+		}
+
+		/** Link to current page, plus 2 pages in either direction if necessary */
+		sort( $links );
+		foreach ( (array) $links as $link ) {
+			$class = $paged == $link ? ' class="active"' : '';
+			printf( '<li%s><a href="%s">%s</a></li>' . "\n", $class, esc_url( get_pagenum_link( $link ) ), $link );
+		}
+
+		/** Link to last page, plus ellipses if necessary */
+		if ( ! in_array( $max, $links ) ) {
+			if ( ! in_array( $max - 1, $links ) ) {
+				echo '<li>…</li>' . "\n";
+			}
+
+			$class = $paged == $max ? ' class="active"' : '';
+			printf( '<li%s><a href="%s">%s</a></li>' . "\n", $class, esc_url( get_pagenum_link( $max ) ), $max );
+		}
+
+		/** Next Post Link */
+		if ( get_next_posts_link() ) {
+			printf( '<li>%s</li>' . "\n", get_next_posts_link() );
+		}
+
+		echo '</ul></div>' . "\n";
 	}
 endif;

@@ -227,30 +227,6 @@ footer a:hover {
   marker-side: match-parent;
   /*padding-inline-start: 40px;*/
 }
-
-.prose blockquote {
-  margin-top: 1.3333333em;
-  margin-bottom: 1.3333333em;
-}
-
-.prose blockquote p:first-of-type {
-  @apply mt-0;
-}
-
-.prose blockquote cite {
-  margin-bottom: 1.3333333em;
-  margin-top: 1.3333333em;
-  display: inherit;
-}
-
-.prose blockquote cite::before {
-  content: "\2014";
-}
-
-.prose blockquote p:last-of-type {
-  @apply mb-0;
-}
-
 /*--------------------------------------------------------------
 # Base
 --------------------------------------------------------------*/
@@ -1137,27 +1113,27 @@ footer.entry-footer {
 /* Pagination
 --------------------------------------------- */
 
-ul.page-numbers {
-  @apply flex flex-row py-1 px-2 font-sans justify-center;
+.navigation ul.page-numbers {
+  @apply flex flex-row py-1 px-2 justify-center;
 }
 
-ul.page-numbers li {
+.navigation ul.page-numbers li {
   @apply m-4 inline-block;
 }
 
-ul.page-numbers li:before {
+.navigation ul.page-numbers li:before {
   @apply hidden;
 }
 
-ul.page-numbers li a.page-numbers {
-  @apply p-2 border-0;
+.navigation ul.page-numbers li a {
+  @apply p-2 border-0 font-sans font-light;
 }
 
-ul.page-numbers li a.page-numbers:hover {
+ul.page-numbers li a:hover {
   @apply bg-grey-lightest;
 }
 
-ul.page-numbers li .page-numbers.current {
+ul.page-numbers li.active a {
   @apply bg-blue text-white p-2;
 }
 
@@ -1446,6 +1422,30 @@ p.tribe-events-back a,
 .prose a:hover {
   @apply text-primary border-primary border-b-2 border-solid;
 }
+
+.prose blockquote {
+  margin-top: 1.3333333em;
+  margin-bottom: 1.3333333em;
+}
+
+.prose blockquote p:first-of-type {
+  @apply mt-0;
+}
+
+.prose blockquote cite {
+  margin-bottom: 1.3333333em;
+  margin-top: 1.3333333em;
+  display: inherit;
+}
+
+.prose blockquote cite::before {
+  content: "\2014";
+}
+
+.prose blockquote p:last-of-type {
+  @apply mb-0;
+}
+
 
 .front.prose, .front.prose .container {
   max-width: 100vw;
