@@ -10,11 +10,48 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-	</header><!-- .entry-header -->
-
-	<?php ksas_blocks_post_thumbnail(); ?>
+<?php
+	if ( has_post_thumbnail() ) : ?>
+	<div class="alignfull featured-image-area front-featured-image-area" role="banner">
+		<div class="flex bg-white h-20 lg:h-80">
+			<div class="flex lg:items-center lg:justify-start xl:justify-center text-left px-6 sm:w-full lg:w-2/5">
+				<h1 class="entry-title">
+					<?php the_title(); ?>
+				</h1>
+			</div>
+			<div class="hidden lg:block lg:w-3/5" style="clip-path:polygon(5% 0, 100% 0%, 100% 100%, 0 100%)">
+				<?php the_post_thumbnail(
+					'full',
+					array(
+						'class' => 'h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full',
+						'title' => 'Feature image',
+					)
+				); ?>
+			</div>
+		</div>
+	</div>
+	<?php else: ?>
+	<!-- Put conditional here to print page title when no featured image -->
+	<div class="alignfull !mt-0" role="banner">
+		<div class="flex bg-white lg:bg-grey-cool lg:bg-opacity-50 front-featured-image-area h-20 lg:h-40">
+			<div class="flex lg:items-center px-6 xl:ml-32">
+				<h1 class="entry-title">
+					<?php the_title(); ?>
+				</h1>
+			</div>
+		</div>
+	</div>
+	<?php endif; ?>
+	<div class="wayfinding md:mb-8 ml-4 xl:ml-0">
+		<?php get_template_part( 'template-parts/sidebar-menu' ); ?>
+		<?php
+		if ( function_exists( 'bcn_display' ) ) :
+			?>
+			<div class="breadcrumbs" typeof="BreadcrumbList" vocab="https://schema.org/">
+				<?php bcn_display(); ?>
+			</div>
+		<?php endif; ?>
+	</div>
 
 	<div class="entry-content">
 		<?php

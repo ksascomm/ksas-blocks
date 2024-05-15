@@ -5,26 +5,6 @@ const glob = require("glob-all");
 const { PurgeCSSPlugin } = require("purgecss-webpack-plugin");
 
 /* ==========================================================================
-  Config
-  ========================================================================== */
-const config = {
-  proxyUrl: "https://krieger.local/mbi",
-  injectChanges: true,
-  port: 3000,
-  openOnStart: true,
-  pathToLocalSSLCert: "",
-  pathToLocalSSLKey: "",
-  filesToWatch: [
-    "./**/*.php",
-    "./**/*.html",
-    "resources/**/*.css",
-    "resources/js/**/*.js",
-    "resources/img/*",
-    "tailwind-config.js",
-  ],
-};
-
-/* ==========================================================================
   Purge CSS Extractors
   ========================================================================== */
 const TailwindExtractor = (content) => {
@@ -36,7 +16,7 @@ const TailwindExtractor = (content) => {
   ========================================================================== */
 mix
   // handle JS files
-  .scripts(["resources/js/twentytwenty.js", "resources/js/navbar.js"], "dist/js/bundle.min.js")
+  .scripts(["resources/js/twentytwenty.js", "resources/js/navbar.js","resources/js/wai-dropdown.js"], "dist/js/bundle.min.js")
   //.disableNotifications()
 
   .postCss("./resources/css/style.css", "./dist/css/style.css", [
@@ -59,10 +39,14 @@ mix
 
   // BrowserSync
   .browserSync({
-    proxy: config.proxyUrl,
-    open: config.openOnStart,
-    port: config.port,
-    files: config.filesToWatch,
+		proxy: "https://stage.krieger.jhu.edu/humanities-institute",
+		host: "localhost",
+		injectChanges: true,
+		port: 3000,
+		openOnStart: true,
+		files: [
+		"**/*"
+		]
   });
 
 // remove unused CSS from files - only used when running npm run production
