@@ -944,6 +944,10 @@ button.menu-button:focus {
   @apply bg-blue-light text-primary
 }
 
+.wayfinding button.dropdown-toggle {
+  display: none;
+}
+
 
 /* Posts and pages
 --------------------------------------------- */
