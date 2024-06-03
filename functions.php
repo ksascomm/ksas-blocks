@@ -406,7 +406,7 @@ function get_the_top_ancestor_id() {
  *
  * @param array $args Arguments
  * @return String If $echo value is set to FALSE.
- * 
+ *
  * @link https://www.isitwp.com/wp_nav_menu-separate-submenu-output/
  */
 function internal_page_submenu( $args = array() ) {
@@ -447,3 +447,12 @@ function internal_page_submenu( $args = array() ) {
 	}
 
 }
+
+
+/**
+ * Deactivate Optimize critical images feature
+ * introduced in WP Rocket v3.16
+ *
+ * @link https://docs.wp-rocket.me/article/1816-optimize-critical-images?utm_source=wp_plugin&utm_medium=wp_rocket
+ */
+add_filter( 'rocket_above_the_fold_optimization', '__return_false' );
