@@ -134,7 +134,8 @@ label.gfield_label {
 .magazine.features h3 a,
 .widget a,
 .prose a strong {
-  @apply text-blue border-grey border-b-2 border-dashed no-underline transition-colors ease-in-out duration-200;
+  @apply text-blue border-grey border-b-2 no-underline transition-colors ease-in-out duration-200;
+  
 }
 
 .site-main a:hover,
@@ -146,6 +147,41 @@ label.gfield_label {
 .widget a:hover,
 .prose a strong:hover {
   @apply text-primary border-grey-darkest border-b-2 border-solid;
+}
+
+.entry-content p a,
+.entry-content li a,
+.people .section-content p a,
+.people .section-content li a,
+.people .contact-info li a,
+.tribe-events-single-event-description.tribe-events-content p a,
+.tribe-events-single-event-description.tribe-events-content li a
+ {
+  @apply border-none transition-shadow duration-200;
+  box-shadow: inset 0 -.125rem 0 0 #002d72;
+  transition: border-color,background-color,color;
+    transition-duration: 0s, 0s, 0s;
+    transition-timing-function: ease, ease, ease;
+  transition-duration: .25s,.25s,.25s;
+  transition-timing-function: ease-in-out,ease-in-out,ease-in-out;
+}
+
+.entry-content p a:hover,
+.entry-content li a:hover,
+.people .section-content p a:hover,
+.people .section-content li a:hover,
+.people .contact-info li a:hover,
+.tribe-events-single-event-description.tribe-events-content p a:hover,
+.tribe-events-single-event-description.tribe-events-content li a:hover {
+  @apply text-white border-none;
+  box-shadow: inset 0 -2.5rem 0 0 #002d72;
+  color: #fff;
+  outline: 0;
+}
+
+li.tribe-events-c-view-selector__list-item a.tribe-events-c-view-selector__list-item-link,
+li.tribe-events-c-top-bar__nav-list-item a.tribe-common-c-btn-icon {
+  box-shadow: none;
 }
 
 .custom-logo {
@@ -279,6 +315,10 @@ span.posted-on {
   @apply mt-0 mb-2 uppercase !important;
 }
 
+.news-section .grid {
+  max-width: 90rem;
+}
+
 .news-section a.button {
   @apply bg-blue text-white inline-flex py-2 px-3 text-base items-center border-none;
 }
@@ -289,6 +329,10 @@ span.posted-on {
 
 .news-section .prose h2 {
   @apply my-0 !important;
+}
+
+.news-section .news-thumb img {
+  object-position: 0% 20%;
 }
 
 .front-featured-image-area {
@@ -374,6 +418,39 @@ span.posted-on {
   }
 }
 
+/* Blog Meta
+--------------------------------------------- */
+.blog-excerpt {
+  @apply border-2 border-grey shadow-sm;
+}
+
+.blog-excerpt .entry-meta {
+  @apply font-semi font-semibold text-xl;
+  display: flex;
+  justify-content: space-between;
+  max-width: 70ch;
+}
+
+.blog-excerpt .entry-meta .posted-by,
+.blog-full .entry-meta .posted-by {
+  text-transform: initial;
+}
+
+.blog-full .entry-meta {
+  @apply font-semi font-semibold;
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem 0;
+  padding: 0.75rem 1rem;
+  background-color: #f4f4f4;
+  max-width: 100ch;
+  font-size: 1.25rem;
+}
+
+.blog-full .entry-content p {
+  font-size: 1.25rem;
+}
+
 /* Links
 --------------------------------------------- */
 .entry-content a[href$=".pdf"]:after,
@@ -388,6 +465,17 @@ span.posted-on {
   -webkit-font-smoothing: antialiased;
   @apply text-primary text-lg pl-1;
 }
+
+.entry-content a[href$=".pdf"]:after:hover,
+.entry-content a[href$=".doc"]:after:hover,
+.entry-content a[href$=".docx"]:after:hover,
+.entry-content a[href$=".xls"]:after:hover,
+.entry-content a[href$=".xlsx"]:after:hover,
+.entry-content a[href$=".ppt"]:after:hover,
+.entry-content a[href$=".pptx"]:after:hover {
+  @apply text-white;
+}
+
 .entry-content a[href$=".pdf"]:after {
   font: var(--fa-font-light);
   content: "\f1c1";
@@ -1022,10 +1110,13 @@ footer.entry-footer {
 /*! purgecss start ignore */
 .news-section .article-excerpt img[alt=""],
 .news-section .article-excerpt img:not([alt]),
+.news-section .prose.article-excerpt img[alt=""],
+.news-section .prose.article-excerpt img:not([alt]),
 .blog .article-excerpt img[alt=""],
 .blog .article-excerpt img:not([alt]),
 .single-post .prose .post img[alt=""], 
-.single-post .prose .post img:not([alt]) {
+.single-post .prose .post img:not([alt]),
+.news-thumb.no-alt {
   display: none;
 }
 /*! purgecss end ignore */
@@ -1424,7 +1515,8 @@ ul.page-numbers li.active a {
 .single-profile .breadcrumbs,
 .single-research-highlight .breadcrumbs,
 .single-ksasexhibits .breadcrumbs,
-.single-bulletinboard .breadcrumbs {
+.single-bulletinboard .breadcrumbs,
+.single-people .breadcrumbs {
   @apply my-6;
 }
 
@@ -1670,6 +1762,13 @@ p.tribe-events-back a,
   @apply mx-auto max-w-5xl !important;
 }
 
+@screen lg {
+  .news-section > div {
+    max-width: 1440px;
+   }
+}
+
+
 .news-section .entry-content p {
   @apply mt-2 mb-4;
   margin-left: 0px !important;
@@ -1686,7 +1785,7 @@ p.tribe-events-back a,
 }
 
 .news-section .prose.article-excerpt img {
-  @apply my-2;
+  @apply mt-0 mb-2;
 }
 
 .front.prose .wp-block-quote {
@@ -1707,7 +1806,7 @@ p.tribe-events-back a,
 
 .prose .wp-block-button .wp-block-button__link:hover,
 .prose .wp-block-button.is-style-outline .wp-block-button__link:hover {
-  @apply bg-blue-light;
+  @apply bg-blue-light text-primary;
 }
 
 .prose .wp-block-button.is-style-squared .wp-block-button__link {
@@ -1809,16 +1908,22 @@ a {
   @apply my-4;
 }
 
-.right-call-to-action.has-white-background-color,
-.left-call-to-action.has-white-background-color {
-  background: url("../images/blueInWhite_corner1.svg") no-repeat right bottom;
-  background-color: #fefefe;
-  background-size: 2.666666666666667rem auto;
-  border: 0.06667rem solid #002d72;
-  border-bottom: none;
-  box-shadow: 0 0.4rem 0 0 #002d72;
+.calls-to-action > div {
+  margin: 1em;
+  background-color: #fff;
+  padding: 0;
+  display: inline-block;
+  align-items: center;
+  box-shadow: -10px 10px 0 0 #418FDE;
 }
 
+
+.right-call-to-action.has-white-background-color,
+.left-call-to-action.has-white-background-color {
+  padding: 2rem !important;
+  box-shadow: 0px 0px 10px #00000029;
+  height: 100%;
+}
 .calls-to-action h2,
 .calls-to-action h3,
 .calls-to-action h4 {

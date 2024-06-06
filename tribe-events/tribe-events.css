@@ -48,7 +48,6 @@ span.tribe-events-c-top-bar__datepicker-desktop.tribe-common-a11y-hidden {
 a.tribe-events-calendar-latest-past__event-title-link.tribe-common-anchor-thin {
   color: #002d72 !important;
   border-bottom-width: 2px;
-  border-style: dashed;
   --tw-border-opacity: 1;
   border-color: rgba(229, 226, 224, var(--tw-border-opacity));
   --tw-text-opacity: 1;
@@ -94,7 +93,8 @@ a.tribe-events-calendar-latest-past__event-title-link.tribe-common-anchor-thin:h
 
 /* Single Event View */
 .tribe-events-single.tribe-blocks-editor h2.tribe-events-schedule__datetime,
-.tribe-events-single h2.tribe-events-schedule__datetime {
+.tribe-events-single h2.tribe-events-schedule__datetime,
+.tribe-events-calendar-latest-past__event-date-tag-daynum.tribe-common-h5.tribe-common-h4--min-medium {
   font-family: "gentona-semibold", system-ui, BlinkMacSystemFont, -apple-system,
     Segoe UI, sans-serif !important;
   font-weight: 600 !important;
@@ -117,13 +117,10 @@ span.tribe-events-schedule__separator.tribe-events-schedule__separator--date,
   color: #31261d;
 }
 
-.tribe-events-single.tribe-blocks-editor p a,
-.tribe-events-single p a,
 .tribe-events-nav-previous a,
 .tribe-events-nav-next a {
   color: #002d72;
   border-bottom-width: 2px;
-  border-style: dashed;
   --tw-border-opacity: 1;
   border-color: rgba(229, 226, 224, var(--tw-border-opacity));
   --tw-text-opacity: 1;
@@ -135,8 +132,6 @@ span.tribe-events-schedule__separator.tribe-events-schedule__separator--date,
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.tribe-events-single.tribe-blocks-editor p a:hover,
-.tribe-events-single p a:hover,
 .tribe-events-nav-previous a:hover,
 .tribe-events-nav-next a:hover {
   border-bottom-width: 2px;
@@ -175,6 +170,11 @@ a.tribe-events-calendar-list__event-featured-image-link:hover {
 a.tribe-events-calendar-list__event-title-link.tribe-common-anchor-thin,
 #tribe-events-content a, .tribe-events-event-meta a {
   color: #002d72;
+}
+
+.tribe-events-single-event-description.tribe-events-content p a:hover,
+.tribe-events-single-event-description.tribe-events-content li a:hover {
+  color: #fefefe !important;
 }
 
 a.tribe-events-calendar-list__event-title-link.tribe-common-anchor-thin:hover {
@@ -299,7 +299,6 @@ a.tribe-events-c-subscribe-dropdown__list-item-link:hover {
 .tribe-common .tribe-common-anchor-thin {
   color: #002d72;
   border-bottom-width: 2px;
-  border-style: dashed;
   --tw-border-opacity: 1;
   border-color: rgba(229, 226, 224, var(--tw-border-opacity));
   --tw-text-opacity: 1;
