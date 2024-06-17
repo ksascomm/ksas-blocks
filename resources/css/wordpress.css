@@ -1917,7 +1917,6 @@ a {
   box-shadow: -10px 10px 0 0 #418FDE;
 }
 
-
 .right-call-to-action.has-white-background-color,
 .left-call-to-action.has-white-background-color {
   padding: 2rem !important;
@@ -2085,6 +2084,14 @@ figure.wp-block-pullquote {
 
 .three-column-feature {
   @apply -mx-2;
+}
+
+.three-column-feature > div {
+  background-color: #fff;
+  display: inline-block;
+  align-items: center;
+  box-shadow: -10px 10px 0px 0px rgba(65,143,222,1),
+  0px 0px 10px 0px rgba(0,0,0,0.16);
 }
 
 .alignfull .three-column-feature {
