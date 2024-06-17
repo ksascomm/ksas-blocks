@@ -1923,6 +1923,12 @@ a {
   box-shadow: 0px 0px 10px #00000029;
   height: 100%;
 }
+
+.calls-to-action .wp-element-button,
+.three-column-feature .wp-element-button {
+  @apply py-2 px-4;
+}
+
 .calls-to-action h2,
 .calls-to-action h3,
 .calls-to-action h4 {
@@ -2119,7 +2125,7 @@ figure.wp-block-pullquote {
 .three-column-feature li,
 .four-column-feature p,
 .four-column-feature li {
-  @apply text-lg;
+  @apply text-lg leading-normal;
 }
 
 /* Block Pattern: People/Staff Listing ------------------------------ */
