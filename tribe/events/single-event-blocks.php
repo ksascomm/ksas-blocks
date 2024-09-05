@@ -22,9 +22,15 @@ if ( ! empty( $event_id ) && function_exists( 'tribe_is_recurring_event' ) ) {
 	$is_recurring = tribe_is_recurring_event( $event_id );
 }
 ?>
-<main id="site-content" class="site-main prose lg:prose-lg mx-auto">
+<main id="site-content" class="site-main prose sm:prose lg:prose-lg">
 	<div id="tribe-events-content" class="tribe-events-single tribe-blocks-editor">
-		<?php $this->template( 'single-event/back-link' ); ?>
+	<?php
+	if ( function_exists( 'bcn_display' ) ) :
+		?>
+		<div class="breadcrumbs" typeof="BreadcrumbList" vocab="https://schema.org/">
+		<?php bcn_display(); ?>
+		</div>
+	<?php endif; ?>
 		<?php $this->template( 'single-event/notices' ); ?>
 		<?php $this->template( 'single-event/title' ); ?>
 		<?php if ( $is_recurring ) { ?>

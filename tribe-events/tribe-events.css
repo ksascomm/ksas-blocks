@@ -1,7 +1,7 @@
 :root {
-  --tec-font-family-sans-serif: "gentona-light", system-ui, BlinkMacSystemFont,
-    -apple-system, Segoe UI, sans-serif;
+  --tec-font-family-sans-serif: "gentona-light", "Tahoma", sans-serif;"
   --font-family-base: var(--tec-font-family-sans-serif);
+  --tec-font-weight-regular: 300;
   --tec-color-button-primary: #002d72;
   --tec-color-button-primary-hover: #68ace5;
   --tec-font-size-2: 1.125rem;
@@ -12,13 +12,14 @@
 }
 
 /* Calendar/Listing View */
-tribe-common .tribe-common-h2,
-tribe-common .tribe-common-h3,
-tribe-common .tribe-common-h4,
-tribe-common .tribe-common-h5,
+.tribe-common .tribe-common-h2,
+.tribe-common .tribe-common-h3,
+.tribe-common .tribe-common-h4,
+.tribe-common .tribe-common-h5,
 .tribe-common .tribe-common-h6,
-.tribe-events-calendar-latest-past__heading.tribe-common-h5.tribe-common-h3--min-medium,
-span.tribe-events-c-top-bar__datepicker-desktop.tribe-common-a11y-hidden {
+h2.tribe-events-calendar-latest-past__heading.tribe-common-h5.tribe-common-h3--min-medium,
+span.tribe-events-c-top-bar__datepicker-desktop.tribe-common-a11y-hidden,
+a.tribe-events-calendar-latest-past__event-title-link {
   font-family: "gentona-semibold", system-ui, BlinkMacSystemFont, -apple-system,
     Segoe UI, sans-serif;
   font-weight: 600;
@@ -26,28 +27,31 @@ span.tribe-events-c-top-bar__datepicker-desktop.tribe-common-a11y-hidden {
 
 .tribe-events .tribe-events-calendar-latest-past__event-datetime,
 .tribe-events .tribe-events-calendar-latest-past__event-date-tag-month,
-.tribe-events .tribe-events-calendar-latest-past__event-date-tag-year {
+.tribe-events .tribe-events-calendar-latest-past__event-date-tag-year,
+.tribe-events .tribe-events-calendar-latest-past__event-date-tag-daynum {
   font-family: "gentona-semibold", system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, sans-serif;
   font-weight: 600;
   color:#31261d;
-  font-size: 1rem;
+  font-size: 1.25rem;
 }
 
 
 .tribe-event-date-start, 
 .tribe-event-date-end, 
-.tribe-event-time {
+.tribe-event-time,
+.tribe-events-calendar-list__event-venue-title.tribe-common-b2--bold,
+.tribe-events-calendar-latest-past__event-venue-title.tribe-common-b2--bold,
+.tribe-events .tribe-events-calendar-list__event-datetime
+ {
   font-family: "gentona-semibold", system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, sans-serif !important;
   font-weight: 600 !important;
 }
 
-.tribe-events-calendar-latest-past__event-venue-title.tribe-common-b2--bold {
-  font-weight: 300;
-}
-
-a.tribe-events-calendar-latest-past__event-title-link.tribe-common-anchor-thin {
+a.tribe-events-calendar-latest-past__event-title-link.tribe-common-anchor-thin,
+.tribe-events-c-breadcrumbs__list-item-link.tribe-common-anchor:visited {
   color: #002d72 !important;
   border-bottom-width: 2px;
+  border-style: dashed;
   --tw-border-opacity: 1;
   border-color: rgba(229, 226, 224, var(--tw-border-opacity));
   --tw-text-opacity: 1;
@@ -57,6 +61,7 @@ a.tribe-events-calendar-latest-past__event-title-link.tribe-common-anchor-thin {
   transition-duration: 150ms;
   transition-duration: 200ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  font-weight: 600;
 }
 
 a.tribe-events-calendar-latest-past__event-title-link.tribe-common-anchor-thin:hover {
@@ -94,7 +99,14 @@ a.tribe-events-calendar-latest-past__event-title-link.tribe-common-anchor-thin:h
 /* Single Event View */
 .tribe-events-single.tribe-blocks-editor h2.tribe-events-schedule__datetime,
 .tribe-events-single h2.tribe-events-schedule__datetime,
-.tribe-events-calendar-latest-past__event-date-tag-daynum.tribe-common-h5.tribe-common-h4--min-medium {
+.tribe-block__organizer__title,
+.tribe-block__organizer__details h3,
+.tribe-events-calendar-latest-past__event-date-tag-daynum.tribe-common-h5.tribe-common-h4--min-medium,
+.tribe-venue-tel-label,
+.tribe-events-event-categories-label, 
+.tribe-events-meta-group .tribe-events-single-section-title,
+.tribe-events-start-date-label,
+.tribe-events-start-time-label {
   font-family: "gentona-semibold", system-ui, BlinkMacSystemFont, -apple-system,
     Segoe UI, sans-serif !important;
   font-weight: 600 !important;
@@ -113,7 +125,6 @@ span.tribe-events-schedule__separator.tribe-events-schedule__separator--date,
 .tribe-events-single.tribe-blocks-editor p,
 .tribe-events-single p,
 .tribe-events-single ul {
-  font-size: 1.25rem !important;
   color: #31261d;
 }
 
@@ -145,7 +156,7 @@ span.tribe-events-schedule__separator.tribe-events-schedule__separator--date,
 .tribe-events-single .tribe-events-notices {
   background-color: #fff2d9;
   position: relative;
-  margin: 0 0 1rem;
+  margin: 1rem 0;
   padding: 1rem;
   border: 1px solid rgba(10, 10, 10, 0.25);
   border-radius: 0;
@@ -168,7 +179,9 @@ a.tribe-events-calendar-list__event-featured-image-link:hover {
 }
 
 a.tribe-events-calendar-list__event-title-link.tribe-common-anchor-thin,
-#tribe-events-content a, .tribe-events-event-meta a {
+#tribe-events-content a, 
+.tribe-events-event-meta a,
+h3.tribe-events-calendar-list__event-title a.tribe-events-calendar-list__event-title-link.tribe-common-anchor-thin:visited {
   color: #002d72;
 }
 
@@ -189,6 +202,7 @@ a.tribe-events-calendar-list__event-title-link.tribe-common-anchor-thin:hover {
 .tribe-common .tribe-common-h--alt {
   font-family: "gentona-bold", system-ui, BlinkMacSystemFont, -apple-system,
     Segoe UI, sans-serif;
+    font-wight: 700;
 }
 
 a.tribe-events-c-view-selector__list-item-link {
@@ -206,10 +220,24 @@ a.tribe-events-c-view-selector__list-item-link {
   border: 0;
 }
 
-h1.tribe-events-single-event-title {
-  font-family: Quadon, Georgia, serif;
-  font-weight: 400 !important;
-  font-size: 2.25rem !important;
+h1.tribe-events-single-event-title,
+.single-tribe_events .tribe-blocks-editor .tribe-events-single-event-title {
+  font-size: 2.5rem !important;
+  line-height: 1.2 !important;
+  margin: 2rem 0;
+}
+
+@media screen and (max-width: 1023px) {
+  h1.tribe-events-single-event-title,
+.single-tribe_events .tribe-blocks-editor .tribe-events-single-event-title {
+  font-size: 2rem !important;
+}
+}
+
+h1.tribe-events-single-event-title,
+.tribe-common--breakpoint-medium.tribe-events .tribe-events-header__title h1.tribe-events-header__title-text {
+  font-family: Quadon-Bold, Georgia, serif;
+  font-weight: 500;
 }
 
 .tribe-event-date-start,
@@ -219,31 +247,19 @@ h1.tribe-events-single-event-title {
 .tribe-events-button,
 .tribe-events-single-section > *,
 .tribe-events-content > *,
-.tribe-events-nav-pagination {
+.tribe-events-nav-pagination,
+.tribe-events-content,
+.tribe-events-event-meta {
   font-family: "gentona-light", system-ui, BlinkMacSystemFont, -apple-system,
     Segoe UI, sans-serif;
-  color: hsl(27, 26%, 15%);
-}
-
-.tribe-events-content a strong,
-.tribe-events-content a b, {
-  font-family: "gentona-bold", system-ui, BlinkMacSystemFont, -apple-system,
-    Segoe UI, sans-serif !important;
-}
-
-.tribe-events-meta-group .tribe-events-single-section-title {
-  font-size: 1.125rem !important;
+  color: #31261d;
+  font-weight: 300;
 }
 
 .tribe-events-meta-group.tribe-events-meta-group-details,
 .tribe-events-meta-group.tribe-events-meta-group-organizer,
-.tribe-events-single-section.tribe-events-event-meta.secondary.tribe-clearfix,
-.tribe-events-meta-group.tribe-events-meta-group-venue {
+.tribe-events-single-section.tribe-events-event-meta.secondary.tribe-clearfix {
   font-size: 1rem;
-}
-
-.tribe-events-single-section.tribe-events-event-meta.primary.tribe-clearfix {
-  width: 100%;
 }
 
 .tribe-events-single .tribe-events-sub-nav .tribe-events-nav-next a,
@@ -261,9 +277,9 @@ h1.tribe-events-single-event-title {
   font-size: 1.25rem !important;
 }
 
-ul.tribe-events-sub-nav li a,
+ul.tribe-events-sub-nav a,
 .tribe-events-back a {
-  font-size: 1.25rem !important;
+  font-size: 1.25rem;
 }
 
 .tribe-events-single .tribe-events-sub-nav {
@@ -284,6 +300,21 @@ ul.tribe-events-sub-nav li a,
   }
 }
 
+@media screen and (min-width:1024px) {
+  .tribe-events-tooltip-theme {
+    width: 600px !important;
+    max-width: unset !important;
+  }
+  .tribe-events-tooltip-theme .tribe-events-calendar-month__calendar-event-tooltip-featured-image-wrapper {
+    float: left;
+    margin-right: 2em;
+  }
+  .tribe-events-tooltip-theme .tribe-events-calendar-month__calendar-event-tooltip-title {
+      clear: none;
+    line-height: 1.3;
+  } 
+}
+
 a.tribe-events-c-subscribe-dropdown__list-item-link {
   border-bottom-width: 0px !important;
 }
@@ -293,34 +324,15 @@ a.tribe-events-c-subscribe-dropdown__list-item-link:hover {
 }
 
 .tribe-events .tribe-events-calendar-list__event-title-link:visited {
-  color: #002d72 !important;
-}
-
-.tribe-common .tribe-common-anchor-thin {
   color: #002d72;
-  border-bottom-width: 2px;
-  --tw-border-opacity: 1;
-  border-color: rgba(229, 226, 224, var(--tw-border-opacity));
-  --tw-text-opacity: 1;
-  text-decoration: none;
-  transition-property: background-color, border-color, color, fill, stroke;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
-  transition-duration: 200ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-.tribe-common .tribe-common-anchor-thin:hover{
-  border-bottom-width: 2px;
-  border-style: solid;
-  --tw-border-opacity: 1;
-  border-color: rgba(74, 72, 76, var(--tw-border-opacity));
-  --tw-text-opacity: 1;
-  color: rgba(49, 38, 29, var(--tw-text-opacity));
 }
 
 .tribe-events .tribe-common .tribe-common-form-control-text__input, .tribe-events .tribe-common--breakpoint-medium.tribe-common .tribe-common-form-control-text__input, .tribe-events .tribe-events-c-view-selector__list-item-text, .tribe-events .tribe-events-calendar-latest-past__event-row, .tribe-events .tribe-events-calendar-list__event-date-tag-weekday,
-.tribe-events-calendar-list__event-date-tag-daynum.tribe-common-h5.tribe-common-h4--min-medium {
+.tribe-events-calendar-list__event-date-tag-daynum.tribe-common-h5.tribe-common-h4--min-medium,
+.tribe-common .tribe-common-h5,
+.tribe-common--breakpoint-medium.tribe-events .tribe-events-calendar-list__event-datetime-featured-text {
   font-family: gentona-bold, "Helvetica Neue", Roboto, sans-serif;
+  font-weight: 700;
 }
 
 .tribe-events-calendar-list .tribe-event-categories li {
@@ -340,17 +352,16 @@ a.tribe-events-c-subscribe-dropdown__list-item-link:hover {
 border: none !important;
 font-family: "gentona-semibold", system-ui, BlinkMacSystemFont, -apple-system,
 Segoe UI, sans-serif;
+font-weight: 600;
 }
 .tribe-events-calendar-list .tribe-event-categories li:hover a {
   color: #002d72 !important;
+  box-shadow: none;
 }
 
 .tribe-block__venue {
   border: none !important;
-}
-
-.tribe-events-calendar-list__event-datetime-featured-text.tribe-common-a11y-visual-hide {
-  font-family: 'gentona-bold';
+  padding: 0 !important;
 }
 
 /* AGHI/Non-Block Editor Styles */
@@ -360,20 +371,20 @@ Segoe UI, sans-serif;
 
 .tribe-events-content h2, .tribe-events-content h3, .tribe-events-content h4, .tribe-events-content h5, .tribe-events-content h6 {
 	font-family: Gentona-SemiBold,system-ui,BlinkMacSystemFont,-apple-system,Segoe UI,sans-serif;
+  font-weight: 600;
 }
 
 .tribe-events-content a {
-	border-bottom-width: 2px;
-border-style: dashed;
---tw-border-opacity: 1;
-border-color: rgba(229, 226, 224, var(--tw-border-opacity));
---tw-text-opacity: 1;
-text-decoration: none;
-transition-property: background-color, border-color, color, fill, stroke;
-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-transition-duration: 150ms;
-transition-duration: 200ms;
-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  border-bottom-width: 2px;
+  --tw-border-opacity: 1;
+  border-color: rgba(229, 226, 224, var(--tw-border-opacity));
+  --tw-text-opacity: 1;
+  text-decoration: none;
+  transition-property: background-color, border-color, color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+  transition-duration: 200ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .tribe-events-content a:hover {
@@ -397,11 +408,7 @@ transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 	background: transparent;
 }
 
-.tribe-events-series-relationship-marker, 
-.tribe-events-series-relationship-single-marker,
-.tribe-events-event-categories-label,
-.tribe-events-meta-group .tribe-events-single-section-title,
-.tribe-events-meta-group dt {
+.tribe-events-series-relationship-marker, .tribe-events-series-relationship-single-marker {
   font-family: "gentona-semibold", system-ui, BlinkMacSystemFont, -apple-system,
   Segoe UI, sans-serif !important;
   font-weight: 600 !important;
@@ -437,6 +444,14 @@ a.tribe-events-series-relationship-single-marker__title.tribe-common-cta--alt:ho
 
 .tribe-events-series-relationship-marker, .tribe-events-series-relationship-single-marker {
 	font-family: gentona-bold,"Helvetica Neue",Roboto,sans-serif !important;
+  font-weight: 700;
+}
+
+
+.page-template.tribe-js .site-main .entry-content .tribe-common.alignwide .tribe-common-l-container {
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 2rem;
 }
 
 /* Hide Flyers or Images without alt text! */
@@ -471,6 +486,108 @@ img.tribe-events-calendar-list__event-featured-image:not([alt]) {
 }
 }
 
+.tribe-events-event-image a, .tribe-events-event-image a:hover  {
+  border: none;
+}
+
+/* Related Events Block */
+
+.tribe-events-related-events-title, .tribe-events-single ul.tribe-related-events li, .tribe-events-single ul.tribe-related-events li .tribe-related-events-title {
+  font-family: "gentona-semibold", system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, sans-serif !important;
+  font-weight: 600 !important;
+}
+
+.tribe-related-events .tribe-related-events-title a {
+  font-weight: 600;
+}
+
+.single-tribe_events ul.tribe-related-events .tribe-related-events-title,
+.tribe-events-single ul.tribe-related-events li .tribe-related-events-title .tribe-event-url {
+  font-size: 1.5rem;
+}
+
+.tribe-events-single ul.tribe-related-events li {
+  padding: 0;
+}
+
+.tribe-events-single ul.tribe-related-events li .tribe-related-event-info {
+  padding: .25rem .75rem !important;
+}
+.tribe-events-single ul.tribe-related-events li {
+  padding: 0;
+}
+
 .tribe-events-content blockquote::before {
   content: none !important;
+}
+
+/* Categories in List View */
+.tribe-events-calendar-list .tribe-event-categories li {
+  display: inline;
+  border: 1px solid #002d72;
+  background-color: #002d72;
+  padding: 3px 9px;
+  border-radius: 30px;
+  margin-right: 3px;
+  font-size: 0.8em;
+}
+.tribe-events-calendar-list .tribe-event-categories li:hover {
+  background-color: #fefefe !important;
+}
+.tribe-events-calendar-list .tribe-event-categories li a {
+  color: #fefefe !important;
+  border: none !important;
+  font-family: "gentona-semibold", system-ui, BlinkMacSystemFont, -apple-system,
+Segoe UI, sans-serif;
+}
+.tribe-events-calendar-list .tribe-event-categories li:hover a {
+  color: #002d72 !important;
+}
+
+.tribe-block__venue .tribe-block__venue__meta .tribe-block__venue__name h3,
+.tribe-events-section-category dt {
+  font-family: "gentona-semibold", system-ui, BlinkMacSystemFont, -apple-system,
+  Segoe UI, sans-serif;
+}
+
+.tribe-events-section-category dd,
+.tribe-venue-url,
+.tribe-organizer,
+.tribe-organizer-url {
+  font-family: "gentona-light", system-ui, BlinkMacSystemFont, -apple-system,
+Segoe UI, sans-serif;
+}
+
+.tribe-events-section-category dt, .tribe-events-section-category dd {
+  display: inline-block;
+}
+
+.tribe-event-categories li a {
+  color: #fefefe !important;
+}
+
+.tribe-common .tribe-common-a11y-visual-hide {
+  overflow: visible;
+}
+
+.tribe-common--breakpoint-medium.tribe-events .tribe-events-c-nav__next, .tribe-common--breakpoint-medium.tribe-events .tribe-events-c-nav__prev {
+  color: #31261d;
+}
+
+.tribe-common--breakpoint-medium.tribe-events .tribe-events-c-nav__prev:hover,
+.tribe-common--breakpoint-medium.tribe-events .tribe-events-c-nav__next:hover {
+  color: #fefefe;
+}
+
+.tribe-common--breakpoint-medium.tribe-events .tribe-events-c-nav__prev:hover .tribe-events-c-nav__prev-icon-svg path,
+.tribe-common--breakpoint-medium.tribe-events .tribe-events-c-nav__next:hover .tribe-events-c-nav__next-icon-svg path {
+  fill: #fefefe;
+}
+
+.single-tribe_events ul.tribe-related-events .tribe-related-events-title {
+	line-height:1.4;
+}
+
+.tribe-events-single ul.tribe-related-events li {
+	font-size: inherit;
 }
