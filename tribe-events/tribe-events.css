@@ -366,7 +366,7 @@ font-weight: 600;
 
 /* AGHI/Non-Block Editor Styles */
 .tribe-events-event-image img {
-	max-width: 500px;
+	max-width: 500px !important;
 }
 
 .tribe-events-content h2, .tribe-events-content h3, .tribe-events-content h4, .tribe-events-content h5, .tribe-events-content h6 {
