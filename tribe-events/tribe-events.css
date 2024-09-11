@@ -79,9 +79,12 @@ a.tribe-events-calendar-latest-past__event-title-link.tribe-common-anchor-thin:h
   padding: 1rem;
 }
 
-.tribe-events-calendar-list__event
-  .tribe-events-calendar-list__event-details.tribe-common-g-col {
+.tribe-events-calendar-list .tribe-events-calendar-list__event .tribe-events-calendar-list__event-details {
   width: 100%;
+}
+
+.tribe-events-calendar-list .tribe-events-calendar-list__event.has-post-thumbnail .tribe-events-calendar-list__event-details {
+  width: calc(var(--tec-grid-width-1-of-8)*5);
 }
 
 .tribe-events-calendar-month__day.tribe-events-calendar-month__day--past {
