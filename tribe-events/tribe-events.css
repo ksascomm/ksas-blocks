@@ -368,6 +368,9 @@ font-weight: 600;
 }
 
 /* AGHI/Non-Block Editor Styles */
+#tribe-events, #tribe-events-pg-template, .tribe-events-pg-template {
+  padding: 40px 20px 20px !important;
+}
 .tribe-events-event-image img {
 	max-width: 500px !important;
 }

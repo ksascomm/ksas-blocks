@@ -1516,7 +1516,8 @@ ul.page-numbers li.active a {
 .single-research-highlight .breadcrumbs,
 .single-ksasexhibits .breadcrumbs,
 .single-bulletinboard .breadcrumbs,
-.single-people .breadcrumbs {
+.single-people .breadcrumbs,
+.error404 .breadcrumbs {
   @apply my-6;
 }
 

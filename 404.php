@@ -17,7 +17,7 @@ get_header();
 			<?php bcn_display(); ?>
 		</div>
 		<?php endif; ?>
-		<section class="error-404 not-found prose p-6">
+		<section class="error-404 not-found prose px-6">
 			<header class="page-header">
 				<h1 class="entry-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'ksas-blocks' ); ?></h1>
 			</header><!-- .page-header -->
