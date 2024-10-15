@@ -1079,11 +1079,10 @@ button.menu-button:focus {
   .post-thumbnail {
     height: 17.1875rem;
   }
+  .front .post-thumbnail {
+	  min-height: 23.4375rem;
+  }
 }
-
-/*.front .post-thumbnail {
-	min-height: 375px;
-}*/
 
 .front .post-thumbnail img {
   @apply my-0;
