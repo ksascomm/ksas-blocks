@@ -1516,6 +1516,7 @@ ul.page-numbers li.active a {
 .single-ksasexhibits .breadcrumbs,
 .single-bulletinboard .breadcrumbs,
 .single-people .breadcrumbs,
+.single-classroom .breadcrumbs,
 .error404 .breadcrumbs {
   @apply my-6;
 }
@@ -2160,11 +2161,11 @@ figure.wp-block-pullquote {
   @apply pl-0;
 }
 
-.prose .role-title h3 {
+.prose .role-title h2 {
   @apply my-4;
 }
 
-.role-title h3:after {
+.role-title h2:after {
   @apply block w-1/2 pt-3 border-b-4 border-blue;
   content: "";
 }
