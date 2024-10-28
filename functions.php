@@ -9,7 +9,7 @@
 
 if ( ! defined( 'KSAS_BLOCKS_VERSION' ) ) {
 	// Replace the version number of the theme on each release.
-	define( 'KSAS_BLOCKS_VERSION', '6.2.2' );
+	define( 'KSAS_BLOCKS_VERSION', '6.2.3' );
 }
 
 if ( ! function_exists( 'ksas_blocks_setup' ) ) :
