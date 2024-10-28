@@ -25,10 +25,10 @@
 			</div><!-- .entry-meta -->
 		<?php endif; ?>
 		<?php if ( get_post_meta( get_the_ID(), 'ecpt_external_link', true ) ) : ?>
-			<?php the_title( '<h3 class="entry-title"><a href="' . esc_url( get_post_meta( $post->ID, 'ecpt_external_link', true ) ) . '" rel="bookmark">', ' <i class="fa-regular fa-square-arrow-up-right"></i></a></h3>' ); ?>
+			<?php the_title( '<h2 class="entry-title !text-3xl"><a href="' . esc_url( get_post_meta( $post->ID, 'ecpt_external_link', true ) ) . '" rel="bookmark">', ' <i class="fa-regular fa-square-arrow-up-right"></i></a></h2>' ); ?>
 				</a>
 			<?php else : ?>
-				<?php the_title( '<h3 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h3>' ); ?>
+				<?php the_title( '<h2 class="entry-title !text-3xl"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' ); ?>
 		<?php endif; ?>
 	</header><!-- .entry-header -->
 	<?php

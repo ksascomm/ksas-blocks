@@ -881,7 +881,7 @@ button.menu-button:focus {
 
   .no-js .main-navigation ul ul li, .main-navigation ul ul li {
     float: none;
-    width: 12rem;
+    width: 13.5rem;
     /*padding: 0;
     padding-bottom: 15px;*/
  }
@@ -898,6 +898,9 @@ button.menu-button:focus {
     position: absolute;
     right: 10px;
     top: 4px;
+ }
+ .main-navigation li.menu-item-has-children .dropdown-toggle {
+  width: 25px;
  }
   .main-navigation ul .dropdown-toggle:after {
     content: "\f078";
@@ -1775,13 +1778,13 @@ p.tribe-events-back a,
   margin-left: 0px !important;
 }
 
-.news-section .prose h3.entry-title,
-.blog .site-main.prose h3.entry-title {
+.news-section .prose h2.entry-title,
+.blog .site-main.prose h2.entry-title {
   @apply mt-0 !important;
 }
 
-.news-section .prose h3.entry-title a,
-.blog .site-main.prose h3.entry-title a {
+.news-section .prose h2.entry-title a,
+.blog .site-main.prose h2.entry-title a {
   @apply font-semibold;
 }
 
