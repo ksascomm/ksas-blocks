@@ -50,6 +50,7 @@ get_header();
 				array(
 					'post_type'      => 'post',
 					'posts_per_page' => $news_quantity,
+					'ignore_sticky_posts' => 1
 				)
 			);
 			if ( $news_query->have_posts() ) :
