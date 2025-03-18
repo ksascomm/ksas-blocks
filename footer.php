@@ -16,7 +16,7 @@
 	<?php
 	if ( is_active_sidebar( 'sidebar-footer' ) ) :
 		?>
-		bg-grey-cool bg-opacity-50 <?php endif; ?>" style="height: 80px" >
+		bg-grey-cool <?php endif; ?>" style="height: 80px" >
 		<svg
 		alt=""
 			class="absolute -bottom-px overflow-hidden"

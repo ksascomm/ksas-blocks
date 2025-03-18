@@ -597,3 +597,8 @@ Segoe UI, sans-serif;
 .tribe-events-single ul.tribe-related-events li {
 	font-size: inherit;
 }
+
+.tribe-events-series-relationship-single-marker__title.tribe-common-cta--alt:hover {
+  color: #31261d !important;
+  border: none;
+}

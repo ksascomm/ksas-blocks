@@ -10,28 +10,36 @@
 get_header();
 ?>
 
-	<main id="site-content" class="site-main front prose lg:prose-lg">
+	<main id="site-content" class="site-main front prose sm:prose lg:prose-lg">
 
 		<?php
 		while ( have_posts() ) :
 			the_post()
 			?>
 			<?php
-			get_template_part( 'template-parts/content', 'front' );
-
+			// AGHI website conditional.
+			$aghi_site_id  = get_current_blog_id();
+			$aghi_site_url = get_blog_details( '82' )->path;
+			// Double check Site ID #82 == "/humanities-institute/" slug!
+			if ( $aghi_site_url === '/humanities-institute/' && $aghi_site_id == 82 ) :
+				get_template_part( 'template-parts/content', 'front-aghi' );
+			else :
+				get_template_part( 'template-parts/content', 'front' );
+			endif;
 		endwhile; // End of the loop.
 		?>
 
 		<?php
 
 		if ( get_field( 'show_homepage_news_feed', 'option' ) ) :
-			// If ACF Conditional is YES, display news feed.
+			// If Show Homepage News Feed Conditional is YES, display news feed.
 
 			$heading       = get_field( 'homepage_news_header', 'option' );
 			$news_quantity = get_field( 'homepage_news_posts', 'option' );
 			?>
 
 		<div class="divider div-transparent div-dot"></div>
+
 		<div class="news-section mb-24 px-2 sm:px-0">
 			<div class="prose lg:prose-lg xl:prose-xl mx-auto my-4 px-4">
 				<div class="flex justify-between">
@@ -48,44 +56,22 @@ get_header();
 			<?php
 			$news_query = new WP_Query(
 				array(
-					'post_type'      => 'post',
-					'posts_per_page' => $news_quantity,
-					'ignore_sticky_posts' => 1
+					'post_type'           => 'post',
+					'posts_per_page'      => $news_quantity,
+					'ignore_sticky_posts' => 1,
 				)
 			);
+
 			if ( $news_query->have_posts() ) :
 				while ( $news_query->have_posts() ) :
 					$news_query->the_post();
 					get_template_part( 'template-parts/content', 'front-post-excerpt' );
-				endwhile;
-			endif;
+					endwhile;
+				endif;
 			?>
 			</div>
 		</div>
-		<?php else : // field_name returned false. ?>
-
-		<?php endif; // end of if field_name logic. ?>
-
-		<?php
-
-		if ( get_field( 'hub_api', 'option' ) ) :
-			// If ACF Conditional is YES, display Hub Feed.
-			?>
-	<div class="divider div-transparent div-dot"></div>
-		<div class="news-section mb-24 px-2 sm:px-0">
-				<div class="prose lg:prose-lg xl:prose-xl mx-auto">
-					<div class="flex justify-between">
-						<div>
-						<h2>Related News from <a href="https://hub.jhu.edu/" aria-label="The Hub">The Hub</a></h2>
-						</div>
-					</div>
-				</div>
-				<?php get_template_part( 'template-parts/content', 'hub-api' ); ?>
-		</div>
-		<?php else : // field_name returned false. ?>
-
-		<?php endif; // end of if field_name logic. ?>
-
+		<?php endif; // end of if  show_homepage_news_feed logic. ?>
 	</main><!-- #main -->
 
 <?php

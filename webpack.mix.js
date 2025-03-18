@@ -7,25 +7,34 @@ const { PurgeCSSPlugin } = require("purgecss-webpack-plugin");
 /* ==========================================================================
   Purge CSS Extractors
   ========================================================================== */
-const TailwindExtractor = (content) => {
-  return content.match(/[A-Za-z0-9-_:\/]+/g) || [];
-};
+  const TailwindExtractor = (content) => {
+    const defaultSelectors = content.match(/[A-Za-z0-9_-]+/g) || [];
+    const extendedSelectors = content.match(/[^<>"=\s]+/g) || [];
+    return defaultSelectors.concat(extendedSelectors);
+  };
 
 /* ==========================================================================
   Laravel Mix Config
   ========================================================================== */
 mix
-  // handle JS files
-  .scripts(["resources/js/twentytwenty.js", "resources/js/navbar.js","resources/js/wai-dropdown.js"], "dist/js/bundle.min.js")
-  //.disableNotifications()
+ // handle site-wide JS files
+ .scripts(["resources/js/twentytwenty.js", "resources/js/wai-dropdown.js" ,"resources/js/wai-accordion.js","resources/js/navbar.js"], "dist/js/bundle.min.js")
+
+ //Minify and move isotope to dist directory
+ .scripts(
+   ["resources/js/isotope.js"], "dist/js/isotope.js")
+
+//Minify and move Isotope Classrooms to dist directory
+ .scripts(
+   ["resources/js/isotope-classroom.js"], "dist/js/isotope-classroom.js")
+ 
+   //Minify and move People Tabs to dist directory
+ .scripts(
+  ["resources/js/people-tabs.js"], "dist/js/people-tabs.js")
 
   .postCss("./resources/css/style.css", "./dist/css/style.css", [
     require("tailwindcss")("./tailwind.config.js"),
   ])
-
-  //Minify and move js to dist directory
-  //.babel(
-  //  ["resources/js/app.js"], "dist/js/bundle.js")
 
   // Move images to dist directory
   .copyDirectory("resources/images", "dist/images")
@@ -36,18 +45,6 @@ mix
   .options({
     processCssUrls: false,
   })
-
-  // BrowserSync
-  .browserSync({
-		proxy: "https://stage.krieger.jhu.edu/humanities-institute",
-		host: "localhost",
-		injectChanges: true,
-		port: 3000,
-		openOnStart: true,
-		files: [
-		"**/*"
-		]
-  });
 
 // remove unused CSS from files - only used when running npm run production
 if (mix.inProduction()) {

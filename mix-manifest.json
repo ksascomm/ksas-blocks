@@ -1,6 +1,9 @@
 {
     "/dist/css/style.css": "/dist/css/style.css",
     "/dist/js/bundle.min.js": "/dist/js/bundle.min.js",
+    "/dist/js/isotope.js": "/dist/js/isotope.js",
+    "/dist/js/isotope-classroom.js": "/dist/js/isotope-classroom.js",
+    "/dist/js/people-tabs.js": "/dist/js/people-tabs.js",
     "/dist/images/blueInWhite_corner1.svg": "/dist/images/blueInWhite_corner1.svg",
     "/dist/images/campus1.jpg": "/dist/images/campus1.jpg",
     "/dist/images/campus2.jpg": "/dist/images/campus2.jpg",
