@@ -19,6 +19,7 @@ get_header();
 
 	endwhile; // End of the loop.
 	?>
+	<div class="pl-6 pr-2 lg:pr-12 xl:pl-0 xl:pr-0">
 	<?php
 	$bulletin_types = get_object_taxonomies( 'bulletinboard' );
 	foreach ( $bulletin_types as $bulletin_type ) :
@@ -66,6 +67,7 @@ get_header();
 	// Return to main loop.
 	wp_reset_postdata();
 	?>
+	</div>
 </main><!-- #main -->
 
 <?php

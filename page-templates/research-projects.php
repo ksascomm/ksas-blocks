@@ -53,9 +53,9 @@ $flagship_researchprojects_query = new WP_Query(
 		</fieldset>
 	<?php endif; ?>
 		<fieldset class="w-auto search-form my-2 px-2">
-			<legend class="mt-4 mb-2">Search by keyword:</legend>
+			<legend class="mt-4 mb-2 text-xl font-bold font-heavy px-2">Search by keyword:</legend>
 			<label class="sr-only" for="id_search">Enter term</label>
-			<input class="quicksearch ml-2 p-2 form-input w-full md:w-1/2" type="text" name="search" id="id_search" aria-label="Search Form" placeholder="Enter description keyword"/>
+			<input class="quicksearch mb-2 ml-2 p-2 form-input w-full md:w-1/2" type="text" name="search" id="id_search" aria-label="Search Form" placeholder="Enter description keyword"/>
 		</fieldset>
 	</form>
 	<?php

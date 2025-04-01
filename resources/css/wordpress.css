@@ -293,7 +293,7 @@ h5 {
 }
 
 h2.entry-title {
-  @apply mt-2 !important;
+  @apply mt-2!;
 }
 
 mark {
@@ -312,7 +312,7 @@ span.posted-on {
 }
 
 .entry-meta {
-  @apply mt-0 mb-2 uppercase !important;
+  @apply mt-0! mb-2! uppercase!;
 }
 
 .news-section .grid {
@@ -328,7 +328,7 @@ span.posted-on {
 }
 
 .news-section .prose h2 {
-  @apply my-0 !important;
+  @apply my-0!;
 }
 
 .news-section .news-thumb img {
@@ -348,14 +348,14 @@ span.posted-on {
 .alignfull.featured-image-area,
 .front-featured-image-area .front.featured-image img
  {
-  @apply !mt-0;
+  @apply mt-0!;
 }
 
 .front .post-thumbnail.alignfull {
   margin-top: 0 !important;
 }
 
-@screen lg {
+@media (width >= theme(--breakpoint-lg)) {
   .featured-image-area {
     @apply h-80;
   }
@@ -370,19 +370,19 @@ span.posted-on {
   font-weight: 500 !important;
 }
 
-@screen sm {
+@media (width >= theme(--breakpoint-sm)) {
   .featured-image-area .entry-title {
     font-size: 2.5rem;
   }
 }
 
-@screen md {
+@media (width >= theme(--breakpoint-md)) {
   .featured-image-area .entry-title {
     @apply text-4xl;
   }
 }
 
-@screen lg {
+@media (width >= theme(--breakpoint-lg)) {
   .featured-image-area .entry-title {
     font-size: 3.5rem;
   }
@@ -392,7 +392,7 @@ span.posted-on {
   height: auto;
 }
 
-@screen lg {
+@media (width >= theme(--breakpoint-lg)) {
   .front .front-featured-image-area {
     height: 26rem;
   }
@@ -421,7 +421,7 @@ span.posted-on {
 /* Blog Meta
 --------------------------------------------- */
 .blog-excerpt {
-  @apply border-2 border-grey shadow-sm;
+  @apply border-2 border-grey shadow-xs;
 }
 
 .blog-excerpt .entry-meta {
@@ -463,18 +463,10 @@ span.posted-on {
   display: inline-block;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
-  @apply text-primary text-lg pl-1;
+  @apply text-lg pl-1;
 }
 
-.entry-content a[href$=".pdf"]:after:hover,
-.entry-content a[href$=".doc"]:after:hover,
-.entry-content a[href$=".docx"]:after:hover,
-.entry-content a[href$=".xls"]:after:hover,
-.entry-content a[href$=".xlsx"]:after:hover,
-.entry-content a[href$=".ppt"]:after:hover,
-.entry-content a[href$=".pptx"]:after:hover {
-  @apply text-white;
-}
+
 
 .entry-content a[href$=".pdf"]:after {
   font: var(--fa-font-light);
@@ -519,12 +511,12 @@ span.posted-on {
 
 .wp-block-table td p,
 .wp-block-table th p {
-  @apply m-0 !important;
+  @apply m-0!;
 }
 
 tbody td:first-child,
 thead th:first-child {
-  @apply pl-3 !important;
+  @apply pl-3!;
 }
 
 .wp-block-table th {
@@ -533,7 +525,7 @@ thead th:first-child {
 
 /*! purgecss start ignore */
 .tablepress th {
-  @apply font-semi font-semibold !important;
+  @apply font-semi! font-semibold!;
 }
 /*! purgecss end ignore */
 
@@ -576,19 +568,8 @@ thead th:first-child {
 /*--------------------------------------------------------------
 # Components
 --------------------------------------------------------------*/
-.entry-content,
-.entry-header {
-  @apply pl-2 pr-1;
-}
 
-@screen lg {
-  .entry-content,
-  .entry-header {
-    @apply pl-0 pr-0;
-  }
-}
-
-@screen lg {
+@media (width >= theme(--breakpoint-lg)) {
   .flex-row .site-main {
     @apply pl-4;
   }
@@ -607,17 +588,11 @@ thead th:first-child {
   width: 300px;
 }
 
-@screen md {
+@media (width >= theme(--breakpoint-md)) {
   .shield {
     @apply w-80;
   }
 }
-
-/*ul.primary-menu .current_page_ancestor,
-ul.primary-menu .current-menu-item,
-ul.primary-menu .current_page_item {
-  @apply bg-grey-cool bg-opacity-50;
-}*/
 
 ul.primary-menu a[aria-current] {
   @apply border-b-2 border-b-old-black;
@@ -650,7 +625,7 @@ ul.primary-menu a[aria-current] {
 }
 
 .main-navigation .nav-primary ul.menu > li.menu-item:not(:last-child)::after {
- @apply relative ml-3 opacity-100 text-grey-cool h-2;
+ @apply relative ml-3 text-grey-cool h-2;
  content: "\\";
  content: "\\" / ""; 
 }
@@ -735,7 +710,7 @@ button.dropdown-toggle {
   padding: 2px;
 }
 .menu-item-has-children button.dropdown-toggle:hover {
-  @apply bg-grey bg-opacity-50;
+  @apply bg-grey;
 }
 .dropdown-toggle:after, .dropdown-toggle.toggled-on:after {
   font-size: 1rem;
@@ -964,7 +939,7 @@ button.menu-button:focus {
 
 /* Interior Page Dropdown Menu ---------------------------- */
 .menu-button-links button {
-  @apply inline-block justify-center px-4 py-2 !text-[.875rem] leading-5 font-semi font-semibold text-white lg:bg-blue lg:border lg:border-grey-cool uppercase ;
+  @apply inline-block justify-center px-4 py-2 text-[.875rem]! leading-5 font-semi font-semibold text-white lg:bg-blue lg:border lg:border-grey-cool uppercase ;
 }
 
 .menu-button-links .menu {
@@ -1051,7 +1026,7 @@ button.menu-button:focus {
 }
 
 .prose hr {
-  @apply my-5 !important;
+  @apply my-5!;
 }
 
 .updated:not(.published) {
@@ -1214,7 +1189,7 @@ footer.entry-footer {
   }
 
   .footer-widget-area .image {
-    @apply absolute right-20 block top-10 opacity-60;
+    @apply absolute right-20 block top-10;
   }
 }
 @media only screen and (max-width: 481px) {
@@ -1309,7 +1284,7 @@ footer.entry-footer {
 
 /* Images & Galleries
 --------------------------------------------- */
-@screen lg {
+@media (width >= theme(--breakpoint-lg)) {
   .page-template-default.has-post-thumbnail .page .post-thumbnail::before {
     position: absolute;
     max-width: 100%;
@@ -1536,7 +1511,7 @@ ul.page-numbers li.active a {
 
 .breadcrumbs span a.home,
 .breadcrumbs span a.main-home {
-  @apply ml-0 !important;
+  @apply ml-0!;
 }
 
 @media only screen and (max-width: 740px) {
@@ -1576,20 +1551,20 @@ ul.page-numbers li.active a {
 .tribe-events-widget-events-list__event-date-tag-daynum.tribe-common-h2.tribe-common-h4--min-medium,
 .tribe-events-widget-events-list__event-date-tag-month,
 .tribe-events-widget-events-list__header-title.tribe-common-h6.tribe-common-h--alt {
-  @apply font-heavy !important;
+  @apply font-heavy!;
 }
 
 .tribe-events-widget-events-list__event-title-link.tribe-common-anchor-thin {
-  @apply text-blue border-grey border-b-2 border-dashed no-underline transition-colors ease-in-out duration-200 !important;
+  @apply text-blue! border-grey! border-b-2! border-dashed! no-underline! transition-colors! ease-in-out! duration-200!;
 }
 
 .tribe-events-widget-events-list__event-title-link.tribe-common-anchor-thin:hover {
-  @apply text-primary border-grey-darkest border-b-2 border-solid !important;
+  @apply text-primary! border-grey-darkest! border-b-2! border-solid!;
 }
 
 .front.prose .tribe-events-widget-events-list__event-title.tribe-common-h7,
 .front.prose .tribe-events-widget-events-list__header-title.tribe-common-h6.tribe-common-h--alt {
-  @apply ml-0 mr-0 !important;
+  @apply ml-0! mr-0!;
 }
 
 .tribe-events-widget-events-list__event-datetime {
@@ -1597,16 +1572,16 @@ ul.page-numbers li.active a {
 }
 
 .tribe-events-widget-events-list__header-title.tribe-common-h6.tribe-common-h--alt {
-  @apply text-3xl !important;
+  @apply text-3xl!;
 }
 
 .tribe-events-widget-events-list__view-more-link.tribe-common-anchor-thin {
-  @apply font-sans bg-blue text-white inline-flex py-2 px-3 text-base items-center border-none !important;
+  @apply font-sans! bg-blue! text-white! inline-flex! py-2! px-3! text-base! items-center! border-none!;
   font-weight: 500;
 }
 
 .tribe-events-widget-events-list__view-more-link.tribe-common-anchor-thin:hover {
-  @apply border-none text-primary bg-blue-light !important;
+  @apply border-none! text-primary! bg-blue-light!;
 }
 
 .tribe-common-g-row.tribe-events-widget-events-list__event-row {
@@ -1614,7 +1589,7 @@ ul.page-numbers li.active a {
 }
 
 .tribe-events-widget-events-list__event-date-tag-month {
-  @apply text-primary font-semibold !important;
+  @apply text-primary! font-semibold!;
 }
 
 p.tribe-events-back a,
@@ -1623,7 +1598,7 @@ p.tribe-events-back a,
 }
 
 .tribe-common .tribe-common-c-btn-border, .tribe-common a.tribe-common-c-btn-border {
-  @apply border-blue !important
+  @apply border-blue!
 }
 
 .tribe-common button,
@@ -1633,7 +1608,7 @@ p.tribe-events-back a,
 }
 
 .single-tribe_events .tribe-events-c-subscribe-dropdown .tribe-events-c-subscribe-dropdown__button:hover {
-  @apply bg-blue !important;
+  @apply bg-blue!;
 }
 
 .single-tribe_events .tribe-events-c-subscribe-dropdown .tribe-events-c-subscribe-dropdown__button:hover > .tribe-events-c-subscribe-dropdown__button-text,
@@ -2244,12 +2219,6 @@ font-family: Gentona-SemiBold, system-ui, BlinkMacSystemFont, -apple-system, Seg
 
 /* Testimonials/Profiles
 --------------------------------------------- */
-.single-profile .profile img.wp-post-image,
-.single-testimonial .testimonial img.wp-post-image {
-  margin-right: 1.5rem;
-  margin-bottom: 1.5rem;
-}
-
 @media (min-width: 768px) {
   .single-profile .entry-content::after,
   .single-testimonial .entry-content::after,
@@ -2316,6 +2285,28 @@ font-family: Gentona-SemiBold, system-ui, BlinkMacSystemFont, -apple-system, Seg
 /*--------------------------------------------------------------
 # Prose Overrides
 --------------------------------------------------------------*/
+
+.page .entry-content p,
+.page .entry-content li,
+.single-post.missing-post-thumbnail .entry-content p,
+.single-post.missing-post-thumbnail .entry-content li,
+.single-people #section1 *,
+.single-people #section2 *,
+.single-people #section3 *,
+.single-people #section4 *,
+.single-people #section6 *,
+.single-people #section7 *
+.faculty-books *,
+.wp-block-pb-accordion-item.c-accordion__item,
+.wp-block-separator,
+.bulletin {
+  max-width: 85ch;
+}
+
+.single-post.has-post-thumbnail .entry-content p,
+.single-post.has-post-thumbnail .entry-content li {
+  max-width: 100ch;
+}
 
 .prose .entry-content ol {
   counter-reset: section;
@@ -2384,10 +2375,10 @@ font-family: Gentona-SemiBold, system-ui, BlinkMacSystemFont, -apple-system, Seg
 .front.prose .entry-content h2,
 .front.prose .entry-content h3,
 .front.prose .entry-content h4 {
-  @apply mx-auto max-w-5xl !important;
+  @apply mx-auto! max-w-5xl!;
 }
 
-@screen lg {
+@media (width >= theme(--breakpoint-lg)) {
   .news-section > div {
     max-width: 1440px;
    }
@@ -2401,7 +2392,7 @@ font-family: Gentona-SemiBold, system-ui, BlinkMacSystemFont, -apple-system, Seg
 
 .news-section .prose h3.entry-title,
 .blog .site-main.prose h3.entry-title {
-  @apply mt-0 !important;
+  @apply mt-0!;
 }
 
 .news-section .prose h3.entry-title a,
@@ -2436,6 +2427,20 @@ font-family: Gentona-SemiBold, system-ui, BlinkMacSystemFont, -apple-system, Seg
 
 .prose .wp-block-button.is-style-squared .wp-block-button__link {
   border-radius: 0;
+}
+
+.prose .wp-block-button .wp-block-button__link,
+:root :where(.wp-element-button, .wp-block-button__link) {
+  color: var(--color-white) !important;
+  background-color: var(--color-blue) !important;
+  border-radius: 0 !important;
+  padding: 8px 12px !important;
+}
+
+.prose .wp-block-button .wp-block-button__link:hover,
+:root :where(.wp-element-button:hover, .wp-block-button__link:hover) {
+  background-color: var(--color-blue-light) !important;
+  color: var(--color-primary) !important;
 }
 
 .prose .wp-block-cover__inner-container,
@@ -2505,7 +2510,7 @@ font-family: Gentona-SemiBold, system-ui, BlinkMacSystemFont, -apple-system, Seg
 .has-heritage-blue-background-color *,
 .has-black-background-color *,
 .has-primary-background-color * {
-  @apply text-white !important;
+  @apply text-white!;
 }
 
 .color-accent,
@@ -2530,7 +2535,7 @@ a {
 }
 
 .wp-block-buttons {
-  @apply my-4;
+  @apply my-8;
 }
 
 .calls-to-action > div {
@@ -2557,7 +2562,7 @@ a {
 .calls-to-action h2,
 .calls-to-action h3,
 .calls-to-action h4 {
-  @apply mt-0 mb-3 !important;
+  @apply mt-0! mb-3!;
 }
 
 .prose .calls-to-action ul > li::before {
@@ -2565,7 +2570,7 @@ a {
 }
 
 figure.wp-block-pullquote {
-  @apply my-0 mx-auto p-2 !important;
+  @apply my-0! mx-auto! p-2!;
 }
 
 .wp-block-column figure.wp-block-embed.is-type-video,
@@ -2604,7 +2609,7 @@ figure.wp-block-pullquote {
 }
 
 .wp-block-ksas-callouts-ksas-callout-block p {
-  @apply my-0 !important;
+  @apply my-0!;
 }
 
 /* Block: Accordion ------------------------------ */
@@ -2618,7 +2623,7 @@ figure.wp-block-pullquote {
 
 .wp-block-pb-accordion-item.c-accordion__item .c-accordion__title::after {
   @apply text-blue;
-  right: 1rem;
+  right: 1rem !important;
 }
 
 .wp-block-pb-accordion-item.c-accordion__item .c-accordion__content {
@@ -2732,13 +2737,13 @@ figure.wp-block-pullquote {
 .three-column-feature h2,
 .three-column-feature h3,
 .three-column-feature h4 {
-  @apply mt-0 mb-3 !important;
+  @apply mt-0! mb-3!;
 }
 
 .four-column-feature h2,
 .four-column-feature h3,
 .four-column-feature h4 {
-  @apply my-2 px-6 !important;
+  @apply my-2! px-6!;
 }
 
 .four-column-feature p,
@@ -2760,25 +2765,25 @@ figure.wp-block-pullquote {
 
 .staff-listing-heading h2,
 .staff-listing-heading p {
-  @apply mb-2 !important;
+  @apply mb-2!;
 }
 
 .staff-listing-single img {
-  @apply object-cover object-center w-full h-64 rounded-md shadow mt-0;
+  @apply object-cover object-center w-full h-64 rounded-md shadow-sm mt-0;
 }
 
 .staff-listing-single h2,
 .staff-listing-single h3,
 .staff-listing-single h4 {
-  @apply mt-0 !important;
+  @apply mt-0!;
 }
 
 .staff-listing-single figure {
-  @apply my-2 !important;
+  @apply my-2!;
 }
 
 .people h2 {
-  @apply my-1 !important;
+  @apply my-1!;
 }
 
 .people .post-thumbnail {
@@ -2801,7 +2806,7 @@ figure.wp-block-pullquote {
 /* Gutenberg Hub Block Patterns
 --------------------------------------------- */
 [class^="eplus"] {
-  @apply mt-2 !important;
+  @apply mt-2!;
 }
 
 /* Block: Heading ------------------------------ */
@@ -2813,7 +2818,7 @@ h2.alignfull,
 h3.alignfull,
 h4.alignfull,
 h5.alignfull {
-  @apply ml-0 my-2 !important;
+  @apply ml-0! my-2!;
 }
 
 /* Block: Paragraph ------------------------------ */
@@ -2891,9 +2896,9 @@ button.toggle.search-toggle.desktop-search-toggle {
 }
 
 button.toggle.search-toggle.desktop-search-toggle svg {
-  height: 1.25rem;
-  max-width: 1.15rem;
-  width: 1.15rem;
+  height: 1.15rem;
+  max-width: 1rem;
+  width: 1rem;
 }
 
 /* Hiding and Showing ------------------------ */
@@ -3161,7 +3166,7 @@ body:not(.enable-search-modal) .site-logo img {
 
 .header-inner .toggle:focus .toggle-text,
 .header-inner .toggle:hover .toggle-text {
-  text-decoration: underline;
+  /*text-decoration: underline;*/
 }
 
 .header-inner .toggle.mobile-search-toggle path,
@@ -3635,7 +3640,7 @@ button.search-untoggle {
   /* HEADER TOGGLES */
 
   .toggle-inner .toggle-text {
-    font-size: 1.2rem;
+    font-size: 1.125rem;
   }
 
   .search-toggle {

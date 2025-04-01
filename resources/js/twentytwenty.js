@@ -398,7 +398,7 @@ twentytwenty.primaryMenu = {
 		// Each time a menu link is focused or blurred, toggle focus.
 		for ( i = 0, len = links.length; i < len; i++ ) {
 			links[i].addEventListener( 'focus', toggleFocus, true );
-			links[i].addEventListener( 'blur', toggleFocus, true );
+			links[i].addEventListener( 'blur-sm', toggleFocus, true );
 		}
 
 		//Sets or removes the .focus class on an element.

@@ -29,7 +29,7 @@
 			?>
 		</div>
 	<?php endif; ?>
-	<div class="flex-grow contact-info">
+	<div class="grow contact-info">
 		<h3 class="font-heavy font-bold text-3xl leading-9">
 		<?php if ( get_post_meta( $post->ID, 'ecpt_bio', true ) ) : ?>
 			<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>'s webpage">

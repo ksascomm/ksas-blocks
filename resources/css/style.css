@@ -1,6 +1,62 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
+@plugin "@tailwindcss/typography";
+@plugin "@tailwindcss/forms";
 
-@import "wordpress.css";
-@import "fonts.css";
+@import './wordpress.css' layer(utilities);
+@import './fonts.css' layer(utilities);
+
+@config '../../tailwind.config.js';
+
+@theme {
+  --color-blue: #002d72;
+  --color-primary: #31261D;
+  --color-white: #fefefe;
+  --color-grey: #e5e2e0;
+  --color-blue-light: #68ace5;
+  --color-blue-medium: #0077d8;
+  --color-grey-lightest: #F8F8F8;
+  --color-grey-cool: #bfccd980;
+  --color-grey-darkest: #4A484C;
+  --color-old-black: #2c2c33;
+  --color-original-black: #000;
+  --font-mono: "Menlo", "Monaco", "monospace";
+  --font-sans: "gentona-light", "system-ui", "BlinkMacSystemFont", "-apple-system", "Segoe UI", "sans-serif";
+  --font-semi: "gentona-semibold", "system-ui", "BlinkMacSystemFont", "-apple-system", "Segoe UI", "sans-serif";
+  --font-heavy: "gentona-bold", "system-ui", "BlinkMacSystemFont", "-apple-system", "Segoe UI", "sans-serif";
+  --font-serif: "quadon-medium",  "Georgia", "serif";
+  --font-serifbold: "quadon-bold",  "Georgia", "serif";
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+  --text-3xl: 1.875rem;
+  --text-4xl: 2.25rem;
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --breakpoint-sm: 40rem;
+  --breakpoint-md: 48rem;
+  --breakpoint-lg: 64rem;
+  --breakpoint-xl: 80rem;
+  --breakpoint-2xl: 96rem;
+}
+
+/*
+  The default border color has changed to `currentColor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentColor);
+  }
+}

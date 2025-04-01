@@ -11,7 +11,7 @@
 
 ?>
 <?php get_template_part( 'template-parts/footer-widgets' ); ?>
-<footer class="site-footer bg-old-black text-white mt-20 border-t-1 border-grey-darkest relative">
+<footer class="site-footer bg-old-black text-white mt-20 relative">
 	<div class="bottom-auto top-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden -mt-20 
 	<?php
 	if ( is_active_sidebar( 'sidebar-footer' ) ) :
@@ -41,16 +41,18 @@
 		</div>
 		<div class="col-span-4 lg:col-span-2">
 			<ul class="flex m-4 justify-center" role="menu" aria-label="University Policies">
-				<li role="menuitem" class="ml-4"><a href="https://accessibility.jhu.edu/">Accessibility</a></li>
-				<li role="menuitem" class="ml-4"><a href="https://it.johnshopkins.edu/policies/privacystatement">Privacy Statement</a></li>
+				<li role="menuitem" class="ml-4"><a class="text-white font-sans font-light hover:text-blue-light !underline !decoration-dotted" href="https://accessibility.jhu.edu/">Accessibility</a></li>
+				<li role="menuitem" class="ml-4"><a class="text-white font-sans font-light hover:text-blue-light !underline !decoration-dotted" href="https://it.johnshopkins.edu/policies/privacystatement">Privacy Statement</a></li>
 			</ul>
 		</div>
 		<div class="social-media m-4 col-span-4 lg:col-span-1 mx-auto">
-			<a href="https://facebook.com/JHUArtsSciences"><span class="fa-brands fa-facebook fa-2x pr-2"></span><span class="sr-only">Follow us on Facebook</span></a>
-			<a href="https://www.instagram.com/JHUArtsSciences/"><span class="fa-brands fa-instagram fa-2x pr-2"></span><span class="sr-only">Follow us on Instagram</span></a>
-			<a href="https://bsky.app/profile/jhuartssciences.bsky.social"><span class="fa-brands fa-bluesky fa-2x pr-2"></span><span class="sr-only">Follow us on Bluesky</span></a>
-			<a href="https://www.youtube.com/user/jhuksas"><span class="fa-brands fa-youtube fa-2x pr-2"></span><span class="sr-only">Follow us on YouTube</span></a>
-			<a href="https://www.tiktok.com/@jhuartssciences"><span class="fa-brands fa-tiktok fa-2x"></span><span class="sr-only pr-2">Follow us on TikTok</span></a>
+			<ul class="lg:flex lg:flex-wrap lg:justify-between text-lg" aria-label="Social Media Accounts">
+				<li><a class="text-white hover:text-blue-light" href="https://facebook.com/JHUArtsSciences"><span class="fa-brands fa-facebook fa-2x pr-2"></span><span class="sr-only">Follow us on Facebook</span></a></li>
+				<li><a class="text-white hover:text-blue-light" href="https://www.instagram.com/JHUArtsSciences/"><span class="fa-brands fa-instagram fa-2x pr-2"></span><span class="sr-only">Follow us on Instagram</span></a></li>
+				<li><a class="text-white hover:text-blue-light" href="https://bsky.app/profile/jhuartssciences.bsky.social"><span class="fa-brands fa-bluesky fa-2x pr-2"></span><span class="sr-only">Follow us on Bluesky</span></a></li>
+				<li><a class="text-white hover:text-blue-light" href="https://www.youtube.com/user/jhuksas"><span class="fa-brands fa-youtube fa-2x pr-2"></span><span class="sr-only">Follow us on YouTube</span></a></li>
+				<li><a class="text-white hover:text-blue-light" href="https://www.tiktok.com/@jhuartssciences"><span class="fa-brands fa-tiktok fa-2x"></span><span class="sr-only pr-2">Follow us on TikTok</span></a></li>
+			</ul>
 		</div>
 		<div class="col-span-4 my-2">
 			<?php if ( get_field( 'custom_address', 'option' ) ) : ?>

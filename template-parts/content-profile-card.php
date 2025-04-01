@@ -11,7 +11,7 @@
 
 <div class="profile-card p-2 w-full md:w-1/3">
 	<div class="h-full mb-4 px-6 py-4">
-		<div class="h-80 bg-cover rounded" style="background-image: url(<?php the_post_thumbnail_url( 'large' ); ?>)">
+		<div class="h-80 bg-cover rounded-sm" style="background-image: url(<?php the_post_thumbnail_url( 'large' ); ?>)">
 		</div>
 		<h3>
 			<a href="<?php echo esc_url( get_permalink() ); ?>"><?php the_title(); ?></a>

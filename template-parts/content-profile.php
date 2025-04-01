@@ -10,16 +10,13 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-	</header><!-- .entry-header -->
-
-	<div class="entry-content">
+	<div class="entry-header pl-4 pr-2 xl:pl-0 xl:pr-0 flex flex-wrap flex-col md:flex-row my-4">
+		<div class="flex-initial">
 		<?php
 			the_post_thumbnail(
-				'large',
+				'medium',
 				array(
-					'class' => 'md:float-left max-w-sm',
+					'class' => 'mr-6',
 					'alt'   => the_title_attribute(
 						array(
 							'echo' => false,
@@ -28,27 +25,30 @@
 				)
 			);
 			?>
+			</div>
+			<div class="flex-1">
+			<?php the_title( '<h1 class="entry-title mt-0! pb-4">', '</h1>' ); ?>
 		<?php if ( have_rows( 'custom_profile_fields' ) ) : ?>
 			<?php
 			while ( have_rows( 'custom_profile_fields' ) ) :
 				the_row();
 				?>
-			<h4><span class="custom-title"><?php the_sub_field( 'custom_title' ); ?></span>&nbsp;<span class="custom-content"><?php the_sub_field( 'custom_content' ); ?></span></h4>
+			<h2>
+				<span class="custom-title text-2xl">
+					<?php echo get_sub_field( 'custom_title' ); ?>
+				</span>
+				<span class="custom-content text-2xl">
+					<?php echo get_sub_field( 'custom_content' ); ?>
+				</span>
+			</h2>
 			<?php endwhile; ?>
-		<?php else : ?>
-			<?php // No rows found! ?>
+
 		<?php endif; ?>
+			</div>
+		</div><!-- .entry-header -->
 
-		<?php
-		the_content();
-
-		wp_link_pages(
-			array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'ksas-blocks' ),
-				'after'  => '</div>',
-			)
-		);
-		?>
+	<div class="entry-content py-2 pl-4 pr-2 lg:pr-12 xl:pl-0 xl:pr-0 xl:max-w-[85ch]">
+		<?php the_content(); ?>
 	</div><!-- .entry-content -->
 
 	<?php if ( get_edit_post_link() ) : ?>
@@ -58,7 +58,7 @@
 				sprintf(
 					wp_kses(
 						/* translators: %s: Name of current post. Only visible to screen readers */
-						__( 'Edit <span class="sr-only">%s</span>', 'ksas-blocks' ),
+						__( 'Edit <span class="sr-only">%s</span>', 'ksas-department-tailwind' ),
 						array(
 							'span' => array(
 								'class' => array(),

@@ -28,8 +28,8 @@
 				?>
 			</div>
 		<?php endif; ?>
-		<div class="flex-grow contact-info">
-			<h3 class="font-heavy font-bold !text-3xl leading-9">
+		<div class="grow contact-info">
+			<h3 class="font-heavy font-bold text-3xl! leading-9">
 			<?php if ( is_singular( 'people' ) ) : ?> 
 				<?php the_title(); ?> 
 				<?php if ( get_post_meta( $post->ID, 'ecpt_pronoun', true ) ) : ?>
@@ -86,10 +86,10 @@
 			</ul>
 
 			<?php if ( get_post_meta( $post->ID, 'ecpt_expertise', true ) ) : ?>
-				<p class="leading-normal pr-2 text-xl my-3!"><strong>Research Interests:&nbsp;</strong><?php echo esc_html( get_post_meta( $post->ID, 'ecpt_expertise', true ) ); ?></p>
+				<p class="leading-normal pr-2 text-xl my-3!"><strong class="font-heavy font-bold">Research Interests:&nbsp;</strong><?php echo esc_html( get_post_meta( $post->ID, 'ecpt_expertise', true ) ); ?></p>
 			<?php endif; ?>
 			<?php if ( get_post_meta( $post->ID, 'ecpt_degrees', true ) ) : ?>
-				<p class="leading-normal pr-2 text-xl my-3!"><strong>Education:&nbsp;</strong><?php echo wp_kses_post( get_post_meta( $post->ID, 'ecpt_degrees', true ) ); ?></p>
+				<p class="leading-normal pr-2 text-xl my-3!"><strong class="font-heavy font-bold">Education:&nbsp;</strong><?php echo wp_kses_post( get_post_meta( $post->ID, 'ecpt_degrees', true ) ); ?></p>
 			<?php endif; ?>
 		</div>
 	</div>

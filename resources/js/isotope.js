@@ -152,7 +152,7 @@ jQuery(document).ready(function ($) {
     
     if (searchField !== null) {
       searchField.addEventListener('keydown', startTimer, true);
-      searchField.addEventListener('blur', function() {
+      searchField.addEventListener('blur-sm', function() {
       if (textEntered) {
         window.clearTimeout(timer);
         handleInput();

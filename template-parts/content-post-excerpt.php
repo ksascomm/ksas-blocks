@@ -25,10 +25,10 @@
 			</div><!-- .entry-meta -->
 		<?php endif; ?>
 		<?php if ( get_post_meta( get_the_ID(), 'ecpt_external_link', true ) ) : ?>
-			<?php the_title( '<h2 class="entry-title !text-3xl"><a href="' . esc_url( get_post_meta( $post->ID, 'ecpt_external_link', true ) ) . '" rel="bookmark">', ' <i class="fa-regular fa-square-arrow-up-right"></i></a></h2>' ); ?>
+			<?php the_title( '<h2 class="entry-title text-3xl!"><a href="' . esc_url( get_post_meta( $post->ID, 'ecpt_external_link', true ) ) . '" rel="bookmark">', ' <i class="fa-regular fa-square-arrow-up-right"></i></a></h2>' ); ?>
 				</a>
 			<?php else : ?>
-				<?php the_title( '<h2 class="entry-title !text-3xl"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' ); ?>
+				<?php the_title( '<h2 class="entry-title text-3xl!"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' ); ?>
 		<?php endif; ?>
 	</header><!-- .entry-header -->
 	<?php
@@ -44,17 +44,17 @@
 				the_post_thumbnail(
 					'medium',
 					array(
-						'class' => 'shrink object-cover object-top !sm:mb-0 !mb-4 !mt-0 sm:mr-8 mr-0',
+						'class' => 'shrink object-cover object-top !sm:mb-0 mb-4! mt-0! sm:mr-8 mr-0',
 					)
 				);
 			?>
-			<div class="entry-content flex-grow">
+			<div class="entry-content grow">
 				<p><?php echo esc_html( wp_trim_words( get_the_excerpt(), 55, '...' ) ); ?></p>
 			</div><!-- .entry-content -->
 		</div>
 	<?php else : ?>
 
-			<div class="entry-content">
+			<div class="entry-content pl-4 pr-2 lg:pr-12 xl:pl-0 xl:pr-0">
 				<p><?php echo esc_html( wp_trim_words( get_the_excerpt(), 55, '...' ) ); ?></p>
 			</div><!-- .entry-content -->
 

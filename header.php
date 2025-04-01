@@ -41,24 +41,24 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 <a class="skip-link screen-reader-text" href="#site-content"><?php esc_html_e( 'Skip to content', 'ksas-blocks' ); ?></a>
 <?php wp_body_open(); ?>
-	<header id="site-header" class="header-footer-group sm:justify-between shadow sm:items-baseline w-full bg-blue" role="banner">
+	<header id="site-header" class="header-footer-group sm:justify-between shadow-sm sm:items-baseline w-full bg-blue" role="banner">
 		<div class="header-titles-wrapper">
 			<div class="header-inner section-inner">
 				<div class="header-titles grid grid-cols-1 lg:grid-cols-3 gap-x-12">
 					<div class="h-auto shield mx-auto -mt-4">
 					<?php if ( get_field( 'shield', 'option' ) == 'jhu' ) : ?>
 						<a href="https://www.jhu.edu/" title="Johns Hopkins University">
-							<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/dist/images/university.shield.svg" class="h-auto w-full p-2" alt="JHU Shield, to the JHU homepage" role="img">
+							<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/dist/images/university.shield.svg" class="h-auto w-full p-2 hover:opacity-75" alt="JHU Shield, to the JHU homepage" role="img">
 						</a>
 					<?php else : ?>
 						<a href="https://krieger.jhu.edu" rel="home">
-							<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/dist/images/krieger.shield.svg" class="h-auto w-full p-2" alt="KSAS Shield, to the KSAS homepage" role="img">
+							<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/dist/images/krieger.shield.svg" class="h-auto w-full p-2 hover:opacity-75" alt="KSAS Shield, to the KSAS homepage" role="img">
 						</a>	
 					<?php endif; ?>
 					</div>
 					<div class="lg:col-span-2">
 						<h1 class="site-title text-2xl sm:text-xl md:text-2xl lg:text-4xl mt-4 lg:mt-0 mb-12 md:mb-0">
-						<a class=" text-white" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+						<a class=" text-white hover:text-grey no-underline hover:underline! hover:underline-offset-2!" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
 							<?php
 								$ksas_blocks_description = get_bloginfo( 'description', 'display' );
 							if (
@@ -116,7 +116,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 						<button class="toggle search-toggle desktop-search-toggle" data-toggle-target=".search-modal" data-toggle-body-class="showing-search-modal" data-set-focus=".search-modal .search-field" aria-expanded="false" type="button">
 							<span class="toggle-inner">
 							<?php twentytwenty_the_theme_svg( 'search' ); ?>
-								<span class="toggle-text"><?php _ex( 'Search', 'toggle text', 'ksas-blocks' ); ?></span>
+								<span class="toggle-text hover:underline hover:decoration-blue hover:decoration-2 hover:underline-offset-4"><?php _ex( 'Search', 'toggle text', 'ksas-blocks' ); ?></span>
 							</span>
 						</button><!-- .search-toggle -->
 

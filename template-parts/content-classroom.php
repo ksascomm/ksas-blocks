@@ -14,7 +14,7 @@
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 	</header><!-- .entry-header -->
 
-	<div class="entry-content">
+	<div class="entry-content pl-4 pr-2 lg:pr-12 xl:pl-0 xl:pr-0">
 		<div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
 			<div>
 				<div class="flex mt-4">
@@ -76,7 +76,7 @@
 			<h3>Supported Built-in Equipment</h3>
 			<figure class="wp-block-table classroom-table">
 				<table class="table-auto">
-					<thead class="bg-grey-cool bg-opacity-50">
+					<thead class="bg-grey-cool">
 						<tr>
 							<th class="font-heavy">Equipment & Features</th>
 							<th class="font-heavy">Available/Specifications</th>
@@ -251,7 +251,7 @@
 
 			<figure class="wp-block-table classroom-table">
 				<table class="table-auto">
-					<thead class="bg-grey-cool bg-opacity-50">
+					<thead class="bg-grey-cool">
 						<tr>
 							<th class="font-heavy">Equipment & Features</th>
 						</tr>

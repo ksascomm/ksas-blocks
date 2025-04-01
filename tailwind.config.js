@@ -1,99 +1,9 @@
 const { NoEmitOnErrorsPlugin } = require("webpack");
-
+/** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [
-    "./404.php",
-    "./archive.php",
-    "./comments.php",
-    "./footer.php",
-    "./front-page.php",
-    "./header.php",
-    "./home.php",
-    "./index.php",
-    "./page.php",
-    "./search.php",
-    "./searchform.php",
-    "./sidebar.php",
-    "./single.php",
-    "./inc/*.php",
-    "./page-templates/*.php",
-    "./resources/js/*.js",
-    "./resources/css/wordpress.css",
-    "./template-parts/*.php",
-    "./template-parts/*/*.php",
-    "./template-parts/*/*/*.php",
-  ],
   theme: {
-    screens: {
-      sm: "36rem",
-      md: "48rem",
-      lg: "62rem",
-      xl: "80rem",
-      "2xl": "100rem",
-    },
-    colors: {
-      primary: "#31261D",
-      "old-black": "#2c2c33",
-      "grey-darkest": "#4A484C",
-      grey: "#e5e2e0",
-      "grey-lightest": "#F8F8F8",
-      "grey-cool": "#bfccd980",
-      white: "#fefefe",
-      blue: "#002d72",
-      "blue-light": "#68ace5",
-    },
-    fontSize: {
-      base: "1rem",
-      lg: "1.125rem",
-      xl: "1.25rem",
-      "2xl": "1.5rem",
-      "3xl": "1.875rem",
-      "4xl": "2.25rem",
-    },
-    fontWeight: {
-      light: "300",
-      normal: "400",
-      medium: "500",
-      semibold: "600",
-      bold: "700",
-    },
-    fontFamily: {
-      sans: [
-        "Gentona-Light",
-        "system-ui",
-        "BlinkMacSystemFont",
-        "-apple-system",
-        "Segoe UI",
-        "sans-serif",
-      ],
-      serif: ["Quadon", "Georgia", "serif"],
-      mono: [
-        "Menlo",
-        "Monaco",
-        "Consolas",
-        "Liberation Mono",
-        "Courier New",
-        "monospace",
-      ],
-      heavy: [
-        "Gentona-Bold",
-        "system-ui",
-        "BlinkMacSystemFont",
-        "-apple-system",
-        "Segoe UI",
-        "sans-serif",
-      ],
-      semi: [
-        "Gentona-SemiBold",
-        "system-ui",
-        "BlinkMacSystemFont",
-        "-apple-system",
-        "Segoe UI",
-        "sans-serif",
-      ],
-    },
     extend: {
-      typography: {
+      typography: ({ theme }) => ({
         DEFAULT: {
           css: [
             {
@@ -101,7 +11,6 @@ module.exports = {
               lineHeight: "1.6",
               fontSize: "1.25rem",
               maxWidth: "100ch",
-              fontWeight: "300",
               '--tw-prose-body': "#31261D",
               '--tw-prose-bullets': "#31261D",
               '--tw-prose-headings': "#31261D",
@@ -129,7 +38,8 @@ module.exports = {
               h1: {
                 marginBottom: "0rem",
                 fontSize: "2.25rem",
-                fontWeight: "400",
+                fontWeight: "500",
+                fontFamily: "quadon-bold, Georgia, serif",
               },
               h2: {
                 marginTop: "0.5rem",
@@ -137,38 +47,48 @@ module.exports = {
                 maxWidth: "90ch",
                 fontSize: "2rem",
                 fontWeight: "600",
+                fontFamily: "gentona-semibold, system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, sans-serif",
               },
               h3: {
                 marginTop: "0.5rem",
                 marginBottom: "0.5rem",
                 fontSize: "1.6rem",
                 fontWeight: "600",
+                fontFamily: "gentona-semibold, system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, sans-serif",
               },
               h4: {
                 marginTop: "0.5rem",
                 marginBottom: "0.5rem",
                 fontSize: "1.25rem",
                 fontWeight: "600",
+                fontFamily: "gentona-semibold, system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, sans-serif",
+              },
+              h5 : {
+                fontWeight: "600",
+                fontFamily: "gentona-semibold, system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, sans-serif",
               },
               p: {
                 marginTop: "1rem",
                 marginBottom: "1rem",
-                fontWeight: "300",
+                fontWeight: 300,
               },
               li: {
                 maxWidth: "90ch",
                 marginTop: "0rem",
                 marginBottom: ".25rem",
-                fontWeight: "300",
+                fontWeight: 300,
               },
               a: {
                 textDecoration: "none",
                 transition: "none",
-                fontWeight: "300",
+                fontWeight: 300,
               },
               strong: {
                 fontFamily: "Gentona-Bold, system-ui",
-                fontWeight: "700",
+                fontWeight: 700,
+              },
+              "a strong": {
+                color: "inherit"
               },
               table: {
                 fontSize: "1rem",
@@ -206,6 +126,8 @@ module.exports = {
         },
         lg: {
           css: {
+            fontSize: "1.25rem",
+            maxWidth: "110ch",
             h2: {
               marginTop: "0.5rem",
               marginBottom: "0.5rem",
@@ -218,14 +140,12 @@ module.exports = {
               marginTop: "0rem",
               marginBottom: "0rem",
             },
+            li: {
+              lineHeight:"1.6",
+            },
           },
         },
-      },
+      }),
     },
-  },
-  plugins: [
-    require("@tailwindcss/typography")({
-      modifiers: ["lg"],
-    }),
-  ]
+  }
 };

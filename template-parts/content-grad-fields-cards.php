@@ -34,7 +34,7 @@
 			<?php if ( get_post_meta( $post->ID, 'ecpt_supplementalmaterials', true ) ) : ?>
 				<dl>
 					<dt class="font-heavy font-bold">Supplemental Materials</dt>
-					<dd class="leading-6 !pl-0"><?php echo esc_html( get_post_meta( $post->ID, 'ecpt_supplementalmaterials', true ) ); ?></dd>
+					<dd class="leading-6 pl-0!"><?php echo esc_html( get_post_meta( $post->ID, 'ecpt_supplementalmaterials', true ) ); ?></dd>
 				</dl>
 			<?php endif; ?>
 		</div>

@@ -43,8 +43,8 @@
         },
         "custom": {},
         "layout": {
-            "contentSize": "800px",
-            "wideSize": "1000px"
+            "contentSize": "960px",
+            "wideSize": "1280px"
         },
         "spacing": {
             "margin": false,
@@ -83,6 +83,13 @@
     "styles": {
 		"color": {
 			"text": "var(--wp--preset--color--black)"
-		}
+		},
+        "elements": {
+            "link": {
+              "typography": {
+                "textDecoration": "none"
+              }
+            }
+          }
 	}
 }

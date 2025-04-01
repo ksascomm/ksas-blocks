@@ -8,7 +8,7 @@
  */
 
 ?>
-<div class="mx-auto max-w-screen-xl" id="post-<?php the_ID(); ?>">
+<div class="mx-auto max-w-(--breakpoint-xl)" id="post-<?php the_ID(); ?>">
 	<div class="container md:container md:mx-auto pb-2">
 		<div class="flex flex-col w-full">
 			<div class="text-xl font-medium text-primary">
@@ -23,13 +23,13 @@
 					$random_img_title   = $random_images[0]['homepage_hero_image']['title'];
 					$random_img_caption = $random_images[0]['homepage_hero_caption'];
 					?>
-					<img class="!mt-0 h-56 w-full object-cover sm:h-72 lg:w-full lg:h-full" src="<?php echo esc_url( $random_img_url ); ?>" alt="<?php echo esc_html( $random_img_alt ); ?>" />
+					<img class="mt-0! h-56 w-full object-cover sm:h-72 lg:w-full lg:h-full" src="<?php echo esc_url( $random_img_url ); ?>" alt="<?php echo esc_html( $random_img_alt ); ?>" />
 					<div class="caption not-prose">
 						<p><?php echo wp_kses_post( $random_img_caption ); ?></p>
 					</div>
 				</div><!-- .post-thumbnail -->
 				<?php endif; ?>
-				<div class="entry-content">
+				<div class="entry-content pl-4 pr-2 lg:pr-12 xl:pl-0 xl:pr-0">
 					<?php
 					the_content();
 

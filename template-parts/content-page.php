@@ -35,7 +35,7 @@ if ( has_post_thumbnail() ) :
 	</div>
 	<?php else : ?>
 	<!-- Put conditional here to print page title when no featured image -->
-	<div class="alignfull !mt-0" role="banner">
+	<div class="alignfull mt-0!" role="banner">
 		<div class="flex bg-white lg:bg-grey-cool front-featured-image-area h-auto lg:h-40">
 			<div class="flex lg:items-center px-6 xl:ml-32">
 				<h1 class="entry-title">
@@ -56,7 +56,7 @@ if ( has_post_thumbnail() ) :
 		<?php endif; ?>
 	</div>
 
-	<div class="entry-content">
+	<div class="entry-content pl-4 pr-2 lg:pr-12 xl:pl-0 xl:pr-0">
 		<?php
 		the_content();
 

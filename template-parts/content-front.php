@@ -9,12 +9,12 @@
 
 ?>
 
-<div class="mx-auto max-w-screen-xl" id="post-<?php the_ID(); ?>">
+<div class="mx-auto max-w-(--breakpoint-xl)" id="post-<?php the_ID(); ?>">
 	<div class="container md:container md:mx-auto pb-2">
 		<div class="flex flex-col w-full">
 			<div class="text-xl font-medium text-primary">
 			<?php ksas_blocks_post_thumbnail(); ?>
-			<div class="entry-content">
+			<div class="entry-content pl-4 pr-2 lg:pr-12 xl:pl-0 xl:pr-0 leading-normal">
 				<?php
 				the_content();
 

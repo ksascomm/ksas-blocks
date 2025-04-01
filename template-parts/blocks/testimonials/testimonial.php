@@ -49,7 +49,7 @@ if ( $the_query->have_posts() ) : ?>
 			the_post_thumbnail(
 				'large',
 				array(
-					'class' => 'inline max-w-full w-64 md:w-96 rounded z-20',
+					'class' => 'inline max-w-full w-64 md:w-96 rounded-sm z-20',
 					'alt'   => esc_html( get_the_title() ),
 				)
 			);
@@ -69,7 +69,7 @@ if ( $the_query->have_posts() ) : ?>
 					<?php the_excerpt(); ?>
 				<?php endif; ?>
 			</div>
-			<p class="text-xl font-semi"><a href="<?php echo esc_url( get_permalink() ); ?>"><?php the_title(); ?></a></p>
+			<p class="text-xl font-semi"><a class="text-blue hover:text-white" href="<?php echo esc_url( get_permalink() ); ?>"><?php the_title(); ?></a></p>
 			<p class="text-lg font-semi">
 			<?php
 			global $post;
