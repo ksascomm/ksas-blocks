@@ -6,6 +6,7 @@
  *
  * @package KSAS_Blocks
  */
+
 ?>
 
 
@@ -14,7 +15,7 @@
 $custom_sidebar_widget = get_field( 'custom_sidebar', false, false );
 if ( is_active_sidebar( $custom_sidebar_widget ) ) :
 	?>
-	<aside id="secondary" class="sidebar widget-area w-full lg:w-1/4 mt-4 lg:mt-8">
+	<aside id="secondary" class="w-full mt-4 sidebar widget-area lg:w-1/4 lg:mt-8">
 		<?php dynamic_sidebar( $custom_sidebar_widget ); ?>
 	</aside><!-- #secondary -->
 <?php endif; ?>

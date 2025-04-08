@@ -77,7 +77,7 @@
 	<?php endif; ?>"
 		id="<?php the_title(); ?>">
 
-	<div class="h-full rounded-lg overflow-hidden field mb-4 overflow-hidden bg-white classroom-field-card-outline">
+	<div class="h-full rounded-lg overflow-hidden field mb-4 bg-white classroom-field-card-outline">
 		<?php
 			the_post_thumbnail(
 				'medium',

@@ -35,8 +35,8 @@ $flagship_researchprojects_query = new WP_Query(
 	<form class="isotope-to-sort bg-grey-lightest border-solid border-grey border-2 p-4 mb-4" role="region" aria-label="Filters">
 		<?php
 			$projects = get_terms(
-				'project_type',
 				array(
+					'taxonomy'   => 'project_type',
 					'orderby'    => 'ID',
 					'order'      => 'ASC',
 					'hide_empty' => true,

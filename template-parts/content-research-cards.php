@@ -28,7 +28,7 @@ if ( ! empty( $program_types ) ) {
 }
 ?>
 ">
-	<div class="h-full rounded-lg overflow-hidden field mb-4 px-6 py-4 bg-white research-project-card-outline">
+	<div class="h-full px-6 py-4 mb-4 overflow-hidden bg-white rounded-lg field research-project-card-outline">
 		
 		<?php if ( has_post_thumbnail() ) : ?>
 			<div class="h-64">
@@ -44,21 +44,21 @@ if ( ! empty( $program_types ) ) {
 						),
 					)
 				);
-				?>
+			?>
 			</div>
 		<?php endif; ?>
 
-		<h3 class="font-heavy font-bold my-2 text-2xl">
+		<h3 class="my-2 text-2xl font-bold font-heavy">
 			<a href="<?php echo esc_url( get_permalink() ); ?>"><?php the_title(); ?></a>
 		</h3>
-		<div class="flex items-center flex-wrap ">
+		<div class="flex flex-wrap items-center ">
 		<?php if ( ! empty( get_post_meta( $post->ID, 'ecpt_associate_name', true ) ) ) : ?>
 			<ul>
 			<?php if ( get_post_meta( $post->ID, 'ecpt_associate_name', true ) ) : ?>
-				<li><strong><?php echo esc_html( get_post_meta( $post->ID, 'ecpt_associate_name', true ) ); ?></strong></li>
+				<li><strong class="font-bold font-heavy"><?php echo esc_html( get_post_meta( $post->ID, 'ecpt_associate_name', true ) ); ?></strong></li>
 			<?php endif; ?>
 			<?php if ( get_post_meta( $post->ID, 'ecpt_dates', true ) ) : ?>
-				<li><strong><?php echo esc_html( get_post_meta( $post->ID, 'ecpt_dates', true ) ); ?></strong></li>
+				<li><strong class="font-bold font-heavy"><?php echo esc_html( get_post_meta( $post->ID, 'ecpt_dates', true ) ); ?></strong></li>
 			<?php endif; ?>
 			</ul>
 		<?php endif; ?>

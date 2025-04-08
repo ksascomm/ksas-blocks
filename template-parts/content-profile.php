@@ -35,10 +35,10 @@
 				?>
 			<h2>
 				<span class="custom-title text-2xl">
-					<?php echo get_sub_field( 'custom_title' ); ?>
+					<?php the_sub_field( 'custom_title' ); ?>
 				</span>
 				<span class="custom-content text-2xl">
-					<?php echo get_sub_field( 'custom_content' ); ?>
+					<?php the_sub_field( 'custom_content' ); ?>
 				</span>
 			</h2>
 			<?php endwhile; ?>

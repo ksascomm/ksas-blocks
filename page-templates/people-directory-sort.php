@@ -67,8 +67,8 @@ get_header();
 			<div class="flex flex-wrap">
 		<?php
 			$positions = get_terms(
-				'role',
 				array(
+					'taxonomy'   => 'role',
 					'orderby'    => 'slug',
 					'order'      => 'ASC',
 					'hide_empty' => true,

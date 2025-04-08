@@ -19,10 +19,15 @@
 	 */
 if ( has_post_thumbnail() ) :
 	?>
-	<?php 
+	<?php
 	$thumbnail_id = get_post_meta( $post->ID, '_thumbnail_id', true );
-	$img_alt = get_post_meta ( $thumbnail_id, '_wp_attachment_image_alt', true ); ?>
-		<div class="news-thumb h-0 lg:h-[21rem] <?php if(! $img_alt){ echo 'no-alt'; }?>
+	$img_alt      = get_post_meta( $thumbnail_id, '_wp_attachment_image_alt', true );
+	?>
+		<div class="news-thumb h-0 lg:h-[21rem] 
+		<?php
+		if ( ! $img_alt ) {
+			echo 'no-alt'; }
+		?>
 		">
 		<?php
 			the_post_thumbnail(

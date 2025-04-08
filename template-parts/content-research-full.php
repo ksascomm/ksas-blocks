@@ -14,8 +14,8 @@
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 	</header><!-- .entry-header -->
 
-	<div class="entry-content pl-4 pr-2 lg:pr-12 xl:pl-0 xl:pr-0">
-		<div class="toolkit-meta grid lg:grid-cols-3 gap-8 mb-6">
+	<div class="pl-4 pr-2 entry-content lg:pr-12 xl:pl-0 xl:pr-0">
+		<div class="grid gap-8 mb-6 toolkit-meta lg:grid-cols-3">
 			<?php if ( has_post_thumbnail() ) : ?>
 			<div>
 				<?php
@@ -26,30 +26,30 @@
 			</div>
 			<?php endif; ?>
 			<div class="lg:col-span-2">
-				<dl class="not-prose pt-2">
+				<dl class="pt-2 not-prose">
 					<?php
 					if ( get_field( 'author' ) ) :
 						?>
 						<dt class="text-base lg:-mb-2">Author</dt>
-						<dd class="text-lg font-heavy font-bold pb-6"><?php the_field( 'author' ); ?></dd>
+						<dd class="pb-6 text-lg font-bold font-heavy"><?php the_field( 'author' ); ?></dd>
 					<?php endif; ?>
 				
 					<dt class="text-base lg:-mb-2">Published</dt>
-					<dd class="text-lg font-heavy font-bold pb-6"><?php echo get_the_date(); ?></dd>
+					<dd class="pb-6 text-lg font-bold font-heavy"><?php echo get_the_date(); ?></dd>
 					
 					<dt class="text-base lg:-mb-2">Category</dt>
-					<dd class="text-lg font-heavy font-bold pb-6">
+					<dd class="pb-6 text-lg font-bold font-heavy">
 					<?php
 						$terms = get_the_terms( get_the_ID(), 'project_type' );
-						if ( $terms && ! is_wp_error( $terms ) ) :
-							$term_links = array();
-							foreach ( $terms as $term ) {
-								$term_links[] = '<a href="' . esc_attr( get_term_link( $term->slug, 'project_type' ) ) . '">' . __( $term->name ) . '</a>';
-							}
-							$all_terms = join( ', ', $term_links );
-							echo '<span class="terms-' . esc_attr( $term->slug ) . '">' . __( $all_terms ) . '</span>';
+					if ( $terms && ! is_wp_error( $terms ) ) :
+						$term_links = array();
+						foreach ( $terms as $term ) {
+							$term_links[] = '<a href="' . esc_attr( get_term_link( $term->slug, 'project_type' ) ) . '">' . __( $term->name ) . '</a>';
+						}
+						$all_terms = join( ', ', $term_links );
+						echo '<span class="terms-' . esc_attr( $term->slug ) . '">' . __( $all_terms ) . '</span>';
 						endif;
-						?>
+					?>
 					</dd>
 				</dl>
 				<?php if ( ! empty( get_post_meta( $post->ID, 'ecpt_associate_name', true ) ) ) : ?>

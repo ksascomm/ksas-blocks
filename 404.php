@@ -10,14 +10,15 @@
 get_header();
 ?>
 
-	<main id="site-content" class="site-main prose lg:prose-lg mx-auto">
+	<main id="site-content" class="mx-auto prose site-main lg:prose-lg">
 		<?php
-		if ( function_exists( 'bcn_display' ) ) :?>
+		if ( function_exists( 'bcn_display' ) ) :
+			?>
 		<div class="breadcrumbs" typeof="BreadcrumbList" vocab="https://schema.org/">
 			<?php bcn_display(); ?>
 		</div>
 		<?php endif; ?>
-		<section class="error-404 not-found prose px-6">
+		<section class="px-6 prose error-404 not-found">
 			<header class="page-header">
 				<h1 class="entry-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'ksas-blocks' ); ?></h1>
 			</header><!-- .page-header -->

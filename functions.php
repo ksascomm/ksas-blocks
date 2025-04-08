@@ -228,15 +228,6 @@ if ( function_exists( 'acf_add_options_page' ) ) {
 }
 
 /**
- * Include a skip to content link at the top of the page so that users can bypass the menu.
- */
-function twentytwenty_skip_link() {
-	echo '<div role="navigation" aria-label="Skip to main content"><a class="skip-link sr-only" href="#site-content">' . __( 'Skip to the content', 'ksas-blocks' ) . '</a></div>';
-}
-
-add_action( 'wp_body_open', 'twentytwenty_skip_link', 5 );
-
-/**
  * Enqueue scripts and styles.
  */
 function ksas_blocks_scripts() {
@@ -253,7 +244,6 @@ function ksas_blocks_scripts() {
 
 	wp_enqueue_script( 'font-awesome', 'https://kit.fontawesome.com/72c92fef89.js', array(), '6.4.2', false );
 	wp_script_add_data( 'fontawesome', array( 'crossorigin' ), array( 'anonymous' ) );
-
 }
 add_action( 'wp_enqueue_scripts', 'ksas_blocks_scripts' );
 
@@ -288,13 +278,12 @@ function add_async_attribute( $tag, $handle ) {
 add_filter( 'script_loader_tag', 'add_async_attribute', 10, 2 );
 
 
+
+add_action( 'acf/init', 'my_register_blocks' );
 /**
  * Register a custom slider block using ACF Pro.
  */
-add_action( 'acf/init', 'my_register_blocks' );
-
 function my_register_blocks() {
-
 	// check function exists.
 	if ( function_exists( 'acf_register_block_type' ) ) {
 
@@ -428,7 +417,6 @@ function internal_page_submenu( $args = array() ) {
 	} else {
 		return implode( '', $output );
 	}
-
 }
 
 
@@ -618,7 +606,7 @@ function redirect_empty_bios() {
 		$link = get_post_meta( $post->ID, 'ecpt_website', true );
 		if ( has_term( array( 'faculty', 'tenured-and-tenure-track-faculty', 'joint-faculty', 'advisory-board' ), 'role' ) ) {
 			if ( empty( $bio ) && isset( $link ) ) {
-				wp_redirect( esc_url( $link ), 301 );
+				wp_safe_redirect( esc_url( $link ), 301 );
 				exit;
 			}
 		}

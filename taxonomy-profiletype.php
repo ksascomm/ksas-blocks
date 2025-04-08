@@ -10,16 +10,17 @@
 get_header();
 ?>
 
-	<main id="site-content" class="site-main prose sm:prose lg:prose-lg mx-auto">
+	<main id="site-content" class="mx-auto prose site-main sm:prose lg:prose-lg">
 		<?php
-		if ( function_exists( 'bcn_display' ) ) :?>
+		if ( function_exists( 'bcn_display' ) ) :
+			?>
 		<div class="breadcrumbs" typeof="BreadcrumbList" vocab="https://schema.org/">
 			<?php bcn_display(); ?>
 		</div>
 		<?php endif; ?>
 		<?php if ( have_posts() ) : ?>
 
-			<header class="page-header prose px-2 py-6">
+			<header class="px-2 py-6 prose page-header">
 				<?php
 				the_archive_title( '<h1 class="entry-title">', '</h1>' );
 				the_archive_description( '<div class="archive-description">', '</div>' );
