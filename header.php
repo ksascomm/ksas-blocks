@@ -41,30 +41,30 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 <a class="skip-link screen-reader-text" href="#site-content"><?php esc_html_e( 'Skip to content', 'ksas-blocks' ); ?></a>
 <?php wp_body_open(); ?>
-	<header id="site-header" class="header-footer-group sm:justify-between shadow-sm sm:items-baseline w-full bg-blue" role="banner">
+	<header id="site-header" class="w-full shadow-sm header-footer-group sm:justify-between sm:items-baseline bg-blue" role="banner">
 		<div class="header-titles-wrapper">
 			<div class="header-inner section-inner">
-				<div class="header-titles grid grid-cols-1 lg:grid-cols-3 gap-x-12">
-					<div class="h-auto shield mx-auto -mt-4">
+				<div class="grid grid-cols-1 header-titles lg:grid-cols-3 gap-x-12">
+					<div class="h-auto mx-auto shield">
 					<?php if ( get_field( 'shield', 'option' ) == 'jhu' ) : ?>
 						<a href="https://www.jhu.edu/" title="Johns Hopkins University">
-							<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/dist/images/university.shield.svg" class="h-auto w-full p-2 hover:opacity-75" alt="JHU Shield, to the JHU homepage" role="img">
+							<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/dist/images/university.shield.svg" class="w-full h-auto p-2 hover:opacity-75" alt="JHU Shield, to the JHU homepage" role="img">
 						</a>
 					<?php else : ?>
 						<a href="https://krieger.jhu.edu" rel="home">
-							<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/dist/images/krieger.shield.svg" class="h-auto w-full p-2 hover:opacity-75" alt="KSAS Shield, to the KSAS homepage" role="img">
+							<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/dist/images/krieger.shield.svg" class="w-full h-auto p-2 hover:opacity-75" alt="KSAS Shield, to the KSAS homepage" role="img">
 						</a>	
 					<?php endif; ?>
 					</div>
 					<div class="lg:col-span-2">
-						<h1 class="site-title text-2xl sm:text-xl md:text-2xl lg:text-4xl mt-4 lg:mt-0 mb-12 md:mb-0">
+						<h1 class="mt-4 mb-12 text-2xl site-title sm:text-xl md:text-2xl lg:text-4xl lg:mt-0 md:mb-0">
 						<a class=" text-white hover:text-grey no-underline hover:underline! hover:underline-offset-2!" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
 							<?php
 								$ksas_blocks_description = get_bloginfo( 'description', 'display' );
 							if (
 								$ksas_blocks_description || is_customize_preview() ) :
 								$ksas_blocks_description = get_bloginfo( 'description', 'display' );
-								echo '<span class="block font-normal pt-1 text-xl">' . $ksas_blocks_description . '</span>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped 
+								echo '<span class="block pt-2 text-xl font-normal">' . $ksas_blocks_description . '</span>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped 
 								?>
 								<?php endif; ?>
 							<?php bloginfo( 'name' ); ?>
@@ -90,8 +90,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 				</button><!-- .nav-toggle -->
 			</div><!-- .header-inner -->
 		</div><!-- .header-titles-wrapper -->
-		<div class="header-navigation-wrapper bg-white">
-			<div class="header-inner section-inner flex justify-between">
+		<div class="bg-white header-navigation-wrapper">
+			<div class="flex justify-between header-inner section-inner">
 				<div class="menu-container">
 					<button class="menu-button" aria-controls="site-header-menu" type="button"><span class="screen-reader-text"><?php esc_html_e( 'Menu', 'rwc' ); ?></span></button>
 					<div id="site-header-menu" class="site-header-menu text-primary">
