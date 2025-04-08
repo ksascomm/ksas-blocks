@@ -13,7 +13,7 @@
 
 <div class="flex flex-wrap lg:flex-nowrap">
 	<?php if ( has_post_thumbnail() ) : ?>
-		<div class="pr-4 flex-none headshot">
+		<div class="flex-none pr-4 headshot">
 			<?php
 				the_post_thumbnail(
 					'medium',
@@ -29,7 +29,7 @@
 		</div>
 	<?php endif; ?>
 	<div class="grow contact-info">
-		<h3 class="font-heavy font-bold text-3xl leading-9">
+		<h3 class="text-3xl font-bold leading-9 font-heavy">
 		<?php if ( get_post_meta( $post->ID, 'ecpt_website', true ) ) : ?>
 			<a href="<?php echo esc_url( get_post_meta( $post->ID, 'ecpt_website', true ) ); ?>" title="<?php the_title(); ?>'s webpage" target="_blank">
 				<?php the_title(); ?>
@@ -46,7 +46,7 @@
 		</h3>
 
 		<?php if ( get_post_meta( $post->ID, 'ecpt_position', true ) ) : ?>
-				<div class="position"><p class="text-xl leading-normal pr-2 "><?php echo wp_kses_post( get_post_meta( $post->ID, 'ecpt_position', true ) ); ?></p></div>
+				<div class="position"><p class="pr-2 text-xl leading-normal "><?php echo wp_kses_post( get_post_meta( $post->ID, 'ecpt_position', true ) ); ?></p></div>
 			<?php endif; ?>
 
 			<h4 class="sr-only">Contact Information</h4>
@@ -77,10 +77,10 @@
 			</ul>
 
 			<?php if ( get_post_meta( $post->ID, 'ecpt_expertise', true ) ) : ?>
-				<p class="leading-normal pr-2"><strong>Research Interests:&nbsp;</strong><?php echo esc_html( get_post_meta( $post->ID, 'ecpt_expertise', true ) ); ?></p>
+				<p class="pr-2 leading-normal"><strong class="font-bold font-heavy">Research Interests:&nbsp;</strong><?php echo esc_html( get_post_meta( $post->ID, 'ecpt_expertise', true ) ); ?></p>
 			<?php endif; ?>
 			<?php if ( get_post_meta( $post->ID, 'ecpt_degrees', true ) ) : ?>
-				<p class="leading-normal pr-2"><strong>Education:&nbsp;</strong><?php echo wp_kses_post( get_post_meta( $post->ID, 'ecpt_degrees', true ) ); ?></p>
+				<p class="pr-2 leading-normal"><strong class="font-bold font-heavy">Education:&nbsp;</strong><?php echo wp_kses_post( get_post_meta( $post->ID, 'ecpt_degrees', true ) ); ?></p>
 			<?php endif; ?>
 	</div>
 </div>
