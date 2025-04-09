@@ -13,7 +13,7 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class( 'people py-4 ml-4' ); ?>>
 	<div class="flex flex-wrap lg:flex-nowrap">
 		<?php if ( has_post_thumbnail() ) : ?>
-			<div class="pr-4 flex-none headshot">
+			<div class="flex-none pr-4 headshot">
 				<?php
 					the_post_thumbnail(
 						'medium',
@@ -46,7 +46,7 @@
 			</h3>
 
 			<?php if ( get_post_meta( $post->ID, 'ecpt_position', true ) ) : ?>
-				<div class="position"><p class="text-xl leading-normal pr-2"><?php echo wp_kses_post( get_post_meta( $post->ID, 'ecpt_position', true ) ); ?></p></div>
+				<div class="position"><p class="pr-2 text-xl leading-normal"><?php echo wp_kses_post( get_post_meta( $post->ID, 'ecpt_position', true ) ); ?></p></div>
 			<?php endif; ?>
 
 			<h3 class="sr-only">Contact Information</h3>
@@ -86,10 +86,10 @@
 			</ul>
 
 			<?php if ( get_post_meta( $post->ID, 'ecpt_expertise', true ) ) : ?>
-				<p class="leading-normal pr-2 text-xl my-3!"><strong class="font-heavy font-bold">Research Interests:&nbsp;</strong><?php echo esc_html( get_post_meta( $post->ID, 'ecpt_expertise', true ) ); ?></p>
+				<p class="leading-normal pr-2 text-xl my-3!"><strong class="font-bold font-heavy">Research Interests:&nbsp;</strong><?php echo esc_html( get_post_meta( $post->ID, 'ecpt_expertise', true ) ); ?></p>
 			<?php endif; ?>
 			<?php if ( get_post_meta( $post->ID, 'ecpt_degrees', true ) ) : ?>
-				<p class="leading-normal pr-2 text-xl my-3!"><strong class="font-heavy font-bold">Education:&nbsp;</strong><?php echo wp_kses_post( get_post_meta( $post->ID, 'ecpt_degrees', true ) ); ?></p>
+				<p class="leading-normal pr-2 text-xl my-3!"><strong class="font-bold font-heavy">Education:&nbsp;</strong><?php echo wp_kses_post( get_post_meta( $post->ID, 'ecpt_degrees', true ) ); ?></p>
 			<?php endif; ?>
 		</div>
 	</div>
@@ -97,7 +97,7 @@
 	if ( is_singular( 'people' ) ) :
 		?>
 		<?php if ( get_post_meta( $post->ID, 'ecpt_bio', true ) ) : ?>
-		<div class="tabbed my-4">
+		<div class="my-4 tabbed">
 			<ul>
 			<?php if ( get_post_meta( $post->ID, 'ecpt_bio', true ) ) : ?>
 				<li>

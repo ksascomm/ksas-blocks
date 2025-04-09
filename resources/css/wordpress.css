@@ -22,7 +22,6 @@
 # Plugins
 	- Reusable Patterns
 	- Breadcrumbs
-	- Yoast
 # Utilities
 	- Accessibility
 	- Alignments
@@ -106,7 +105,7 @@ mark {
 --------------------------------------------------------------*/
 
 form.post-password-form input {
-  @apply bg-grey-lightest p-2;
+  @apply p-2 bg-grey-lightest;
 }
 
 .ginput_container input,
@@ -116,7 +115,7 @@ form.post-password-form input {
 }
 
 .gform_footer [type="submit"] {
-  @apply bg-blue text-white p-2 hover:bg-blue-light;
+  @apply p-2 text-white bg-blue hover:bg-blue-light;
 }
 
 label.gfield_label {
@@ -134,7 +133,7 @@ label.gfield_label {
 .magazine.features h3 a,
 .widget a,
 .prose a strong {
-  @apply text-blue border-grey border-b-2 no-underline transition-colors ease-in-out duration-200;
+  @apply no-underline transition-colors duration-200 ease-in-out border-b-2 text-blue border-grey;
   
 }
 
@@ -146,7 +145,7 @@ label.gfield_label {
 .magazine.features h3 a:hover,
 .widget a:hover,
 .prose a strong:hover {
-  @apply text-primary border-grey-darkest border-b-2 border-solid;
+  @apply border-b-2 border-solid text-primary border-grey-darkest;
 }
 
 .entry-content p a,
@@ -157,7 +156,7 @@ label.gfield_label {
 .tribe-events-single-event-description.tribe-events-content p a,
 .tribe-events-single-event-description.tribe-events-content li a
  {
-  @apply border-none transition-shadow duration-200;
+  @apply transition-shadow duration-200 border-none;
   box-shadow: inset 0 -.125rem 0 0 #002d72;
   transition: border-color,background-color,color;
     transition-duration: 0s, 0s, 0s;
@@ -185,15 +184,15 @@ li.tribe-events-c-top-bar__nav-list-item a.tribe-common-c-btn-icon {
 }
 
 .custom-logo {
-  @apply object-left object-scale-down h-16 m-6;
+  @apply object-scale-down object-left h-16 m-6;
 }
 
 .site-footer {
-  @apply font-light font-sans;
+  @apply font-sans font-light;
 }
 
 .site-footer .text-center p a {
-  @apply font-heavy font-bold;
+  @apply font-bold font-heavy;
 }
 
 footer a:hover {
@@ -308,7 +307,7 @@ u {
 /* Elements
 --------------------------------------------- */
 span.posted-on {
-  @apply font-semi font-semibold text-base md:text-lg -my-2;
+  @apply -my-2 text-base font-semibold font-semi md:text-lg;
 }
 
 .entry-meta {
@@ -320,7 +319,7 @@ span.posted-on {
 }
 
 .news-section a.button {
-  @apply bg-blue text-white inline-flex py-2 px-3 text-base items-center border-none;
+  @apply inline-flex items-center px-3 py-2 text-base text-white border-none bg-blue;
 }
 
 .news-section a.button:hover {
@@ -388,10 +387,6 @@ span.posted-on {
   }
 }
 
-.front-featured-image-area {
-  height: auto;
-}
-
 @media (width >= theme(--breakpoint-lg)) {
   .front .front-featured-image-area {
     height: 26rem;
@@ -421,11 +416,11 @@ span.posted-on {
 /* Blog Meta
 --------------------------------------------- */
 .blog-excerpt {
-  @apply border-2 border-grey shadow-xs;
+  @apply border-2 shadow-xs border-grey;
 }
 
 .blog-excerpt .entry-meta {
-  @apply font-semi font-semibold text-xl;
+  @apply text-xl font-semibold font-semi;
   display: flex;
   justify-content: space-between;
   max-width: 70ch;
@@ -437,7 +432,7 @@ span.posted-on {
 }
 
 .blog-full .entry-meta {
-  @apply font-semi font-semibold;
+  @apply font-semibold font-semi;
   display: flex;
   justify-content: space-between;
   margin: 1rem 0;
@@ -463,7 +458,7 @@ span.posted-on {
   display: inline-block;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
-  @apply text-lg pl-1;
+  @apply pl-1 text-lg;
 }
 
 
@@ -493,7 +488,7 @@ span.posted-on {
   display: inline-block;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
-  @apply text-lg pl-1;
+  @apply pl-1 text-lg;
   font: var(--fa-font-light);
   content: "\f360";
 }
@@ -506,7 +501,7 @@ span.posted-on {
 --------------------------------------------- */
 .wp-block-table td,
 .wp-block-table th {
-  @apply p-2 border border-solid border-grey-cool break-normal;
+  @apply p-2 break-normal border border-solid border-grey-cool;
 }
 
 .wp-block-table td p,
@@ -520,7 +515,7 @@ thead th:first-child {
 }
 
 .wp-block-table th {
-  @apply border-b-0 bg-grey-lightest font-semi font-semibold p-2 text-center;
+  @apply p-2 font-semibold text-center border-b-0 bg-grey-lightest font-semi;
 }
 
 /*! purgecss start ignore */
@@ -534,7 +529,7 @@ thead th:first-child {
 --------------------------------------------------------------*/
 
 .divider {
-  @apply relative my-2 h-1 pb-4;
+  @apply relative h-1 pb-4 my-2;
 }
 
 .div-transparent:before {
@@ -552,7 +547,7 @@ thead th:first-child {
   );
 }
 .div-dot:after {
-  @apply absolute bg-grey border-primary border-solid;
+  @apply absolute border-solid bg-grey border-primary;
   content: "";
   position: absolute;
   z-index: 1;
@@ -579,6 +574,12 @@ thead th:first-child {
   .sidebar {
     @apply pl-4;
   }
+}
+
+@media (min-width:1280px) and (max-width:1400px) {
+	.site-main {
+		padding-left: 2rem;
+	}
 }
 
 /* Navigation
@@ -621,11 +622,11 @@ ul.primary-menu a[aria-current] {
   min-height: 30px;
 }
 .main-navigation ul a {
-  @apply font-sans text-lg relative font-light;
+  @apply relative font-sans text-lg font-light;
 }
 
 .main-navigation .nav-primary ul.menu > li.menu-item:not(:last-child)::after {
- @apply relative ml-3 text-grey-cool h-2;
+ @apply relative h-2 ml-3 text-grey-cool;
  content: "\\";
  content: "\\" / ""; 
 }
@@ -668,7 +669,7 @@ ul.primary-menu a[aria-current] {
  border-left: 4px solid transparent;
 }
 .main-navigation ul ul li a:hover {
- @apply bg-grey-lightest border-l-4 border-blue;
+ @apply border-l-4 bg-grey-lightest border-blue;
  transition: border-color .5s ease-in-out;
  border-bottom-width: 0 !important;
 }
@@ -732,7 +733,7 @@ button.menu-button:focus {
 .main-navigation .sub-menu a:focus {
   /*outline: 1px solid black;
   outline-offset: 2px;*/
-  @apply bg-grey-lightest border-l-4 border-blue;
+  @apply border-l-4 bg-grey-lightest border-blue;
 }
 .no-js .menu-button {
   display: none;
@@ -930,11 +931,11 @@ button.menu-button:focus {
 }
 
 .dropdown.sidebar-menu a {
-  @apply font-semi font-semibold;
+  @apply font-semibold font-semi;
 }
 
 .dropdown ul.nav ul.children {
-  @apply ml-4 leading-5 -mt-1;
+  @apply ml-4 -mt-1 leading-5;
 }
 
 /* Interior Page Dropdown Menu ---------------------------- */
@@ -943,7 +944,7 @@ button.menu-button:focus {
 }
 
 .menu-button-links .menu {
-  @apply lg:bg-white w-72 z-10;
+  @apply z-10 lg:bg-white w-72;
   margin: 0;
   padding: 7px 4px;
   list-style: none;
@@ -963,7 +964,7 @@ button.menu-button:focus {
 }
 
 .menu-button-links .menu a {
-  @apply font-semi font-semibold text-base;
+  @apply text-base font-semibold font-semi;
   border-bottom: none;
 }
 
@@ -979,7 +980,7 @@ button.menu-button:focus {
 
 
 .menu-button-links ul.nav ul.children {
-  @apply ml-4 leading-5 -mt-1;
+  @apply ml-4 -mt-1 leading-5;
 }
 
 .menu-button-links button svg.down {
@@ -1018,7 +1019,7 @@ button.menu-button:focus {
 /* Posts and pages
 --------------------------------------------- */
 .wp-sticky {
-  @apply bg-grey-lightest border-2 border-solid border-grey m-4 block p-4;
+  @apply block p-4 m-4 border-2 border-solid bg-grey-lightest border-grey;
 }
 
 .wp-sticky hr {
@@ -1037,44 +1038,6 @@ button.menu-button:focus {
   @apply clear-both mx-0 mt-0 mb-6;
 }
 
-.post-thumbnail {
-  @apply relative bg-cover bg-center w-full flex justify-center items-center p-4 box-border;
-  height: 6.25rem;
-}
-
-.post-thumbnail img {
-  @apply absolute top-0 left-0 right-0 bottom-0 m-0 p-0 w-full h-full max-w-none object-cover;
-  outline: none;
-}
-
-@media print, screen and (min-width: 40em) {
-  .post-thumbnail {
-    height: 12.5rem;
-  }
-}
-
-@media screen and (min-width: 75em) {
-  .post-thumbnail {
-    height: 17.1875rem;
-  }
-  .front .post-thumbnail {
-	  min-height: 23.4375rem;
-  }
-}
-
-.front .post-thumbnail img {
-  @apply my-0;
-}
-
-a.post-thumbnail,
-a.post-thumbnail:hover {
-  border: none !important;
-  @apply p-0;
-}
-
-a.post-thumbnail img {
-  @apply my-0;
-}
 
 footer.entry-footer {
   @apply px-6;
@@ -1106,7 +1069,7 @@ footer.entry-footer {
 /* Widgets
 --------------------------------------------- */
 .widget {
-  @apply mt-0 mx-0 mb-6 bg-white p-3;
+  @apply p-3 mx-0 mt-0 mb-6 bg-white;
   background: url("../images/blueInWhite_corner1.svg") no-repeat right bottom;
   background-size: 2.666666666666667rem auto;
   border: 0.06667rem solid #002d72;
@@ -1123,7 +1086,7 @@ footer.entry-footer {
 }
 
 .widget h2 {
-  @apply text-xl font-heavy font-bold mb-2;
+  @apply mb-2 text-xl font-bold font-heavy;
 }
 
 .widget-title.text-base {
@@ -1135,16 +1098,16 @@ footer.entry-footer {
 }
 
 .widget p {
-  @apply text-base pb-4;
+  @apply pb-4 text-base;
 }
 
 .widget p strong,
 .widget strong {
-  @apply font-heavy font-bold;
+  @apply font-bold font-heavy;
 }
 
 .widget .textwidget.custom-html-widget a.button {
-  @apply bg-blue text-white border-0 py-3 px-4 hover:bg-blue-light;
+  @apply px-4 py-3 text-white border-0 bg-blue hover:bg-blue-light;
 }
 
 :root {
@@ -1159,7 +1122,7 @@ footer.entry-footer {
 
 .footer-widget-area .widget,
 .footer-widget-area .tribe-compatibility-container {
-  @apply bg-none border-none shadow-none lg:px-12;
+  @apply border-none shadow-none bg-none lg:px-12;
 }
 
 .footer-widget-area .image,
@@ -1189,7 +1152,7 @@ footer.entry-footer {
   }
 
   .footer-widget-area .image {
-    @apply absolute right-20 block top-10;
+    @apply absolute block right-20 top-10;
   }
 }
 @media only screen and (max-width: 481px) {
@@ -1209,7 +1172,7 @@ footer.entry-footer {
 }
 
 .footer-widget-area ul li {
-  @apply relative pl-7 flow-root;
+  @apply relative flow-root pl-7;
 }
 
 .footer-widget-area ul li:before {
@@ -1223,7 +1186,28 @@ footer.entry-footer {
   left: 0.25em;
 }
 
-/* Events Calendar Widget Styes Must Go Here, Not in Tribe-Events Directory */
+/* Events Calendar Widget Styes Must Go Here, 
+Not in Tribe-Events Directory */
+@media (width >= theme(--breakpoint-lg)) {
+	.front .tribe-events-widget-events-list .tribe-events-widget-events-list__events {
+		display: grid;
+		grid-auto-flow: column;
+		grid-auto-rows: 1fr;
+		grid-template-columns: repeat(3,minmax(0,1fr));
+	}
+}
+/* Front Page Events List Widget */
+.front .tribe-events-widget-events-list__event-row {
+	border: 2px solid var(--color-grey) !important;
+	padding: calc(var(--spacing)*4) !important;
+	margin-right: 1rem !important;
+	padding-right: 1rem !important;
+	margin-bottom: var(--tec-spacer-4) !important;
+}
+
+
+
+
 .footer-widget-area
   .tribe-events-widget
   h2.tribe-events-widget-events-list__header-title.tribe-common-h6.tribe-common-h--alt {
@@ -1238,7 +1222,7 @@ footer.entry-footer {
   .tribe-events-widget
   .tribe-events-widget-events-list__event-title
   a {
-  @apply text-blue font-heavy text-lg;
+  @apply text-lg text-blue font-heavy;
 }
 
 .footer-widget-area .tribe-events-widget span.tribe-event-date-start,
@@ -1254,20 +1238,20 @@ footer.entry-footer {
 .footer-widget-area
   .tribe-events-widget
   .tribe-events-widget-events-list__view-more.tribe-common-b1.tribe-common-b2--min-medium {
-  @apply bg-blue text-white py-3 px-4 m-4 inline-block font-semi;
+  @apply inline-block px-4 py-3 m-4 text-white bg-blue font-semi;
 }
 
 .footer-widget-area
   .tribe-events-widget
   .tribe-events-widget-events-list__view-more.tribe-common-b1.tribe-common-b2--min-medium
   a {
-  @apply uppercase font-semi p-4 mx-auto;
+  @apply p-4 mx-auto uppercase font-semi;
 }
 
 /* Captions
 --------------------------------------------- */
 .wp-caption {
-  @apply mb-6 max-w-full;
+  @apply max-w-full mb-6;
 }
 
 .wp-caption img[class*="wp-image-"] {
@@ -1284,28 +1268,69 @@ footer.entry-footer {
 
 /* Images & Galleries
 --------------------------------------------- */
+
+.post-thumbnail {
+	@apply box-border relative flex items-center justify-center w-full p-4 bg-center bg-cover;
+	height: 6.25rem;
+  }
+  
+  .post-thumbnail img {
+	@apply absolute top-0 bottom-0 left-0 right-0 object-cover w-full h-full p-0 m-0 max-w-none;
+	outline: none;
+  }
+  
+  @media print, screen and (min-width: 40em) {
+	.post-thumbnail {
+	  height: 12.5rem;
+	}
+  }
+  
+  @media screen and (min-width: 75em) {
+	.post-thumbnail {
+		height: 17.1875rem;
+	}
+	.front .post-thumbnail {
+		min-height: 23.4375rem;
+	}
+  }
+  
+  .front .post-thumbnail img {
+	@apply my-0;
+  }
+  
+  a.post-thumbnail,
+  a.post-thumbnail:hover {
+	border: none !important;
+	@apply p-0;
+  }
+  
+  a.post-thumbnail img {
+	@apply my-0;
+  }
+  
+
 @media (width >= theme(--breakpoint-lg)) {
+	.page-template-default.has-post-thumbnail .page .post-thumbnail img {
+		z-index: 1;
+		max-width: 90%;
+		margin-top: .5rem;
+	}
+	
   .page-template-default.has-post-thumbnail .page .post-thumbnail::before {
     position: absolute;
-    max-width: 100%;
+    max-width: 90%;
     content: '';
     z-index: 1;
     border: 2px solid #0072CE;
     bottom: -15px;
-    right: -10px;
-    width: 100%;
+    left: 20px;
+    width: 90%;
     height: 100%;
   }
   
   .page-template-default.has-post-thumbnail .page .post-thumbnail{
     margin-bottom: 1.75rem;
   }
-}
-  
-.page-template-default.has-post-thumbnail .page .post-thumbnail img {
-  z-index: 1;
-  max-width: 100%;
-  margin-top: .5rem;
 }
 
 .gallery {
@@ -1359,11 +1384,11 @@ footer.entry-footer {
 /* Pagination
 --------------------------------------------- */
 .navigation ul.page-numbers {
-  @apply flex flex-row py-1 px-2 justify-center;
+  @apply flex flex-row justify-center px-2 py-1;
 }
 
 .navigation ul.page-numbers li {
-  @apply m-4 inline-block;
+  @apply inline-block m-4;
 }
 
 .navigation ul.page-numbers li:before {
@@ -1371,7 +1396,7 @@ footer.entry-footer {
 }
 
 .navigation ul.page-numbers li a {
-  @apply p-2 border-0 font-sans font-light;
+  @apply p-2 font-sans font-light border-0;
 }
 
 ul.page-numbers li a:hover {
@@ -1379,7 +1404,7 @@ ul.page-numbers li a:hover {
 }
 
 ul.page-numbers li.active a {
-  @apply bg-blue text-white p-2;
+  @apply p-2 text-white bg-blue;
 }
 
 	/* Accordion Tabs
@@ -1472,14 +1497,14 @@ ul.page-numbers li.active a {
 /* Breadcrumbs
 --------------------------------------------- */
 .breadcrumbs {
-  @apply block lg:inline-block -mb-4 pl-2 text-grey-darkest lg:border lg:border-grey-cool;
+  @apply block pl-2 -mb-4 lg:inline-block text-grey-darkest lg:border lg:border-grey-cool;
   background-color: rgba(191, 204, 217, 0);
   padding-top:.125rem;
   padding-bottom: 0.25rem
 }
 
 .breadcrumbs span {
-  @apply font-semi font-semibold;
+  @apply font-semibold font-semi;
 }
 
 @media screen and (max-width: 1536px) {
@@ -1501,7 +1526,7 @@ ul.page-numbers li.active a {
 
 .breadcrumbs span.current-item,
 .breadcrumbs span a {
-  @apply uppercase border-none mx-4 tracking-wide;
+  @apply mx-4 tracking-wide uppercase border-none;
   font-size: 0.875rem;
 }
 
@@ -1516,7 +1541,7 @@ ul.page-numbers li.active a {
 
 @media only screen and (max-width: 740px) {
   .breadcrumbs {
-    @apply overflow-hidden absolute w-px h-px;
+    @apply absolute w-px h-px overflow-hidden;
     clip: rect(1px 1px 1px 1px);
     clip: rect(1px, 1px, 1px, 1px);
   }
@@ -1530,19 +1555,6 @@ ul.page-numbers li.active a {
     font: var(--fa-font-solid);
   content: "\f015";
   padding-right: .25rem;
-}
-
-/* Yoast
---------------------------------------------- */
-.prose p.schema-how-to-step-text,
-.prose p.schema-faq-answer,
-.prose p.schema-how-to-description {
-  @apply my-2;
-}
-
-.wp-block-yoast-how-to-block,
-.wp-block-yoast-faq-block {
-  @apply bg-grey-lightest border-2 border-solid border-grey m-4 block p-4;
 }
 
 /* Events Calendar Blocks
@@ -1568,7 +1580,7 @@ ul.page-numbers li.active a {
 }
 
 .tribe-events-widget-events-list__event-datetime {
-  @apply text-lg font-sans;
+  @apply font-sans text-lg;
 }
 
 .tribe-events-widget-events-list__header-title.tribe-common-h6.tribe-common-h--alt {
@@ -1585,7 +1597,7 @@ ul.page-numbers li.active a {
 }
 
 .tribe-common-g-row.tribe-events-widget-events-list__event-row {
-  @apply p-4 border-grey border-solid border-2;
+  @apply p-4 border-2 border-solid border-grey;
 }
 
 .tribe-events-widget-events-list__event-date-tag-month {
@@ -2275,7 +2287,7 @@ font-family: Gentona-SemiBold, system-ui, BlinkMacSystemFont, -apple-system, Seg
 }
 
 .aligncenter {
-  @apply clear-both block my-auto mb-6;
+  @apply block clear-both my-auto mb-6;
 }
 
 .wp-block-button.aligncenter {
@@ -2335,11 +2347,11 @@ font-family: Gentona-SemiBold, system-ui, BlinkMacSystemFont, -apple-system, Seg
 }
 
 .prose a {
-  @apply transition-colors ease-in-out duration-200;
+  @apply transition-colors duration-200 ease-in-out;
 }
 
 .prose a:hover {
-  @apply text-primary border-primary border-b-2 border-solid;
+  @apply border-b-2 border-solid text-primary border-primary;
 }
 
 .prose blockquote {
@@ -2409,15 +2421,15 @@ font-family: Gentona-SemiBold, system-ui, BlinkMacSystemFont, -apple-system, Seg
 }
 
 .prose *[class^="wp-block-"] ul {
-  @apply my-2 max-w-full;
+  @apply max-w-full my-2;
 }
 
 .prose .wp-block-button .wp-block-button__link {
-  @apply text-white bg-blue border-0;
+  @apply text-white border-0 bg-blue;
 }
 
 .prose .wp-block-button.is-style-outline .wp-block-button__link {
-  @apply bg-white text-blue border-grey border-2;
+  @apply bg-white border-2 text-blue border-grey;
 }
 
 .prose .wp-block-button .wp-block-button__link:hover,
@@ -2503,9 +2515,9 @@ font-family: Gentona-SemiBold, system-ui, BlinkMacSystemFont, -apple-system, Seg
   @apply bg-primary;
 }
 
-.has-text-align-center {
-  @apply text-left;
-}
+.entry-content p.has-text-align-center {
+	@apply text-left!;
+  }
 
 .has-heritage-blue-background-color *,
 .has-black-background-color *,
@@ -2527,7 +2539,7 @@ a {
   --tw-text-opacity: 1;
   color: rgba(254, 254, 254, var(--tw-text-opacity));
   border-radius: 0;
-  @apply bg-blue text-white text-base items-center border-none;
+  @apply items-center text-base text-white border-none bg-blue;
 }
 
 .wp-block-buttons > .wp-block-button.wp-block-button__width-50 {
@@ -2556,7 +2568,7 @@ a {
 
 .calls-to-action .wp-element-button,
 .three-column-feature .wp-element-button {
-  @apply py-2 px-4;
+  @apply px-4 py-2;
 }
 
 .calls-to-action h2,
@@ -2590,7 +2602,7 @@ figure.wp-block-pullquote {
 
 /* Block: KSAS Callouts ------------------------------ */
 .wp-block-ksas-callouts-ksas-callout-block {
-  @apply relative p-4 border border-primary text-primary my-4;
+  @apply relative p-4 my-4 border border-primary text-primary;
 }
 
 .wp-block-ksas-callouts-ksas-callout-block.callout {
@@ -2605,7 +2617,7 @@ figure.wp-block-pullquote {
 
 .wp-block-ksas-callouts-ksas-callout-block.is-style-default,
 .wp-block-ksas-callouts-ksas-callout-block.is-style-grey {
-  @apply border-solid border border-grey-cool;
+  @apply border border-solid border-grey-cool;
 }
 
 .wp-block-ksas-callouts-ksas-callout-block p {
@@ -2614,11 +2626,11 @@ figure.wp-block-pullquote {
 
 /* Block: Accordion ------------------------------ */
 .wp-block-pb-accordion-item.c-accordion__item {
-  @apply my-2 pb-2;
+  @apply pb-2 my-2;
 }
 
 .wp-block-pb-accordion-item.c-accordion__item .c-accordion__title {
-  @apply text-blue font-heavy font-bold text-lg p-4 border-grey-cool border my-0 max-w-full;
+  @apply max-w-full p-4 my-0 text-lg font-bold border text-blue font-heavy border-grey-cool;
 }
 
 .wp-block-pb-accordion-item.c-accordion__item .c-accordion__title::after {
@@ -2627,7 +2639,7 @@ figure.wp-block-pullquote {
 }
 
 .wp-block-pb-accordion-item.c-accordion__item .c-accordion__content {
-  @apply p-4 border-grey-cool border text-primary;
+  @apply p-4 border border-grey-cool text-primary;
 }
 
 .prose .c-accordion__content p {
@@ -2659,7 +2671,7 @@ figure.wp-block-pullquote {
 /* Block: Group ------------------------------ */
 
 .wp-block-group.has-background {
-  @apply my-0 py-4 px-8;
+  @apply px-8 py-4 my-0;
 }
 
 .wp-block-group.has-background .wp-block-columns {
@@ -2682,7 +2694,7 @@ figure.wp-block-pullquote {
 }
 
 .wp-block-gallery {
-  @apply my-0 px-4;
+  @apply px-4 my-0;
 }
 
 .wp-block-image.alignfull img,
@@ -2731,7 +2743,7 @@ figure.wp-block-pullquote {
 }
 
 .alignfull .three-column-feature {
-  @apply mx-0 py-2 px-20;
+  @apply px-20 py-2 mx-0;
 }
 
 .three-column-feature h2,
@@ -2769,7 +2781,7 @@ figure.wp-block-pullquote {
 }
 
 .staff-listing-single img {
-  @apply object-cover object-center w-full h-64 rounded-md shadow-sm mt-0;
+  @apply object-cover object-center w-full h-64 mt-0 rounded-md shadow-sm;
 }
 
 .staff-listing-single h2,
@@ -2800,7 +2812,7 @@ figure.wp-block-pullquote {
 }
 
 .people .headshot img {
-  @apply my-4 mr-4 ml-0 h-auto w-56;
+  @apply w-56 h-auto my-4 ml-0 mr-4;
 }
 
 /* Gutenberg Hub Block Patterns
@@ -3313,7 +3325,7 @@ button.close-nav-toggle .toggle-text {
 
 .modal-menu > li > a,
 .modal-menu > li > .ancestor-wrapper > a {
-  @apply font-semi font-semibold;
+  @apply font-semibold font-semi;
   font-size: 1.5rem;
   letter-spacing: -0.0375em;
 }

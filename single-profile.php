@@ -10,7 +10,7 @@ get_header();
 
 ?>
 
-<main id="site-content" class="mx-auto prose site-main sm:prose lg:prose-lg">
+<main id="site-content" class="mx-auto prose site-main lg:prose-lg">
 	<?php
 	if ( function_exists( 'bcn_display' ) ) :
 		?>

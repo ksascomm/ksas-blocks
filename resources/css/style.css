@@ -8,12 +8,19 @@
 @config '../../tailwind.config.js';
 
 @theme {
+  --color-*: initial;
   --color-blue: #002d72;
   --color-primary: #31261D;
   --color-white: #fefefe;
   --color-grey: #e5e2e0;
   --color-blue-light: #68ace5;
   --color-blue-medium: #0077d8;
+  --color-blue-dark: #162b48;
+  --color-blue-harbor: #4e97e0;
+  --color-homewood-green: #008767;
+  --color-lavender-purple: #A45c98;
+  --color-plum: #51284f;
+  --color-maroon: #6a202b;
   --color-grey-lightest: #F8F8F8;
   --color-grey-cool: #bfccd980;
   --color-grey-darkest: #4A484C;
@@ -57,6 +64,6 @@
   ::before,
   ::backdrop,
   ::file-selector-button {
-    border-color: var(--color-gray-200, currentColor);
+    border-color: var(--color-grey, currentColor);
   }
 }

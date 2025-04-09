@@ -10,7 +10,7 @@
 get_header();
 ?>
 
-	<main id="site-content" class="mx-auto prose site-main sm:prose lg:prose-lg">
+	<main id="site-content" class="mx-auto prose site-main lg:prose-lg">
 	
 		<?php
 		while ( have_posts() ) :
@@ -53,7 +53,7 @@ get_header();
 
 			if ( $people_query->have_posts() ) :
 				?>
-				<div class="pt-2 role-title <?php echo esc_html( $position->slug ); ?>">
+				<div class="pt-2 pl-4 lg:pl-0 role-title <?php echo esc_html( $position->slug ); ?>">
 					<h2 class="uppercase"><?php echo esc_html( $position_name ); ?></h2>
 				</div>
 
@@ -61,7 +61,7 @@ get_header();
 				while ( $people_query->have_posts() ) :
 					$people_query->the_post();
 					if ( get_post_meta( $post->ID, 'ecpt_bio', true ) ) :
-						get_template_part( 'template-parts/content-people-full' );
+						get_template_part( 'template-parts/content-people-sort' );
 					else :
 						get_template_part( 'template-parts/content-people-excerpt' );
 					endif;

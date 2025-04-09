@@ -10,7 +10,7 @@
 get_header();
 ?>
 
-	<main id="site-content" class="site-main prose sm:prose lg:prose-lg mx-auto mb-12">
+	<main id="site-content" class="mx-auto mb-12 prose site-main lg:prose-lg">
 	
 		<?php
 		while ( have_posts() ) :
@@ -20,8 +20,8 @@ get_header();
 
 		endwhile; // End of the loop.
 		?>
-		<form class="isotope-to-sort bg-grey-lightest border-solid border-grey border-2 p-4 mx-2 lg:mx-0 my-4" id="filters">
-			<fieldset class="flex-col lg:flex-row justify-start">
+		<form class="p-4 mx-2 my-4 border-2 border-solid isotope-to-sort bg-grey-lightest border-grey lg:mx-0" id="filters">
+			<fieldset class="flex-col justify-start lg:flex-row">
 				<legend class="mb-2">Filter by Position or Title:</legend>
 				<?php
 				$positions = get_terms(
@@ -34,7 +34,7 @@ get_header();
 				);
 				?>
 				<?php foreach ( $positions as $position ) : ?>
-					<button class="all button bg-blue text-white text-lg hover:bg-blue-light hover:text-primary p-2" href="javascript:void(0)" data-filter=".<?php echo esc_html( $position->slug ); ?>">
+					<button class="p-2 text-lg text-white all button bg-blue hover:bg-blue-light hover:text-primary" href="javascript:void(0)" data-filter=".<?php echo esc_html( $position->slug ); ?>">
 						<?php echo esc_html( $position->name ); ?>
 					</button>
 				<?php endforeach; ?>
@@ -50,20 +50,20 @@ get_header();
 			);
 			if ( ! empty( $filters ) && ! is_wp_error( $filters ) ) :
 				?>
-				<fieldset class="flex flex-col md:flex-row flex-wrap justify-start">
+				<fieldset class="flex flex-col flex-wrap justify-start md:flex-row">
 					<legend class="mt-6 mb-2">Filter by Area of Expertise:</legend>
 					<?php foreach ( $filters as $filter ) : ?>
-						<button class="all button bg-blue text-white text-lg hover:bg-blue-light hover:text-primary p-2" href="javascript:void(0)" data-filter=".<?php echo esc_html( $filter->slug ); ?>"><?php echo esc_html( $filter->name ); ?></button>
+						<button class="p-2 text-lg text-white all button bg-blue hover:bg-blue-light hover:text-primary" href="javascript:void(0)" data-filter=".<?php echo esc_html( $filter->slug ); ?>"><?php echo esc_html( $filter->name ); ?></button>
 					<?php endforeach; ?>
 				</fieldset>
 			<?php endif; ?>
-			<fieldset class="w-auto search-form my-2 px-2">
-				<legend class="mt-4 mb-2 text-xl font-bold font-heavy px-2">Search by name, title, or research interests:</legend>
+			<fieldset class="w-auto px-2 my-2 search-form">
+				<legend class="px-2 mt-4 mb-2 text-xl font-bold font-heavy">Search by name, title, or research interests:</legend>
 				<label class="sr-only" for="id_search">Enter term</label>
-				<input class="quicksearch mb-2 ml-2 p-2 form-input w-full md:w-1/2" type="text" name="search" id="id_search" aria-label="Search Form" placeholder="Enter description keyword"/>
+				<input class="w-full p-2 mb-2 ml-2 quicksearch form-input md:w-1/2" type="text" name="search" id="id_search" aria-label="Search Form" placeholder="Enter description keyword"/>
 			</fieldset>
 		</form>
-		<div class="mt-8" id="isotope-list" >
+		<div class="mt-8 ml-4 mr-2" id="isotope-list" >
 			<div class="flex flex-wrap">
 		<?php
 			$positions = get_terms(
@@ -94,7 +94,7 @@ get_header();
 
 				if ( $people_query->have_posts() ) :
 					?>
-					<div class="item pt-2 w-full role-title quicksearch-match <?php echo esc_html( $position->slug ); ?>">
+					<div class="item pt-2 pl-4 lg:pl-0 w-full role-title quicksearch-match <?php echo esc_html( $position->slug ); ?>">
 						<h2 class="uppercase">
 							<?php echo esc_html( $position_name ); ?>
 						</h2>

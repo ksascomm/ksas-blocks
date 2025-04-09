@@ -22,7 +22,7 @@ if ( ! empty( $event_id ) && function_exists( 'tribe_is_recurring_event' ) ) {
 	$is_recurring = tribe_is_recurring_event( $event_id );
 }
 ?>
-<main id="site-content" class="site-main prose sm:prose lg:prose-lg">
+<main id="site-content" class="site-main prose lg:prose-lg">
 	<div id="tribe-events-content" class="tribe-events-single tribe-blocks-editor">
 	<?php
 	if ( function_exists( 'bcn_display' ) ) :

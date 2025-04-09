@@ -9,7 +9,7 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class( 'people py-4 ml-4 not-prose' ); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class( 'people py-4 ml-4 not-prose border-grey border-solid border lg:border-none' ); ?>>
 
 <div class="flex flex-wrap lg:flex-nowrap">
 	<?php if ( has_post_thumbnail() ) : ?>

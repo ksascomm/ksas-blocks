@@ -10,7 +10,7 @@
 get_header();
 ?>
 
-	<main id="site-content" class="site-main front prose sm:prose lg:prose-lg">
+	<main id="site-content" class="prose site-main front lg:prose-lg">
 
 		<?php
 		while ( have_posts() ) :
@@ -40,8 +40,8 @@ get_header();
 
 		<div class="divider div-transparent div-dot"></div>
 
-		<div class="news-section mb-24 px-2 sm:px-0">
-			<div class="prose lg:prose-lg xl:prose-xl mx-auto my-4 px-4">
+		<div class="px-2 mb-24 news-section sm:px-0">
+			<div class="px-4 mx-auto my-4 prose lg:prose-lg xl:prose-xl">
 				<div class="flex justify-between">
 					<div>
 						<h2><?php echo esc_html( $heading ); ?>
@@ -52,7 +52,7 @@ get_header();
 					</div>
 				</div>
 			</div>
-			<div class="grid grid-cols-1 lg:grid-cols-3 gap-4 p-4 mx-auto">
+			<div class="grid grid-cols-1 gap-4 p-4 mx-auto lg:grid-cols-3">
 			<?php
 			$news_query = new WP_Query(
 				array(

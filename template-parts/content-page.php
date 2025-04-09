@@ -14,8 +14,8 @@
 if ( has_post_thumbnail() ) :
 	?>
 	<div class="alignfull featured-image-area front-featured-image-area" role="banner">
-		<div class="flex bg-white h-auto lg:h-80">
-			<div class="flex lg:items-center lg:justify-start xl:justify-center text-left px-6 sm:w-full lg:w-2/5">
+		<div class="flex h-auto bg-white lg:h-80">
+			<div class="flex px-6 text-left lg:items-center lg:justify-start xl:justify-center sm:w-full lg:w-2/5 ml-[3%]">
 				<h1 class="entry-title">
 					<?php the_title(); ?>
 				</h1>
@@ -36,16 +36,16 @@ if ( has_post_thumbnail() ) :
 	<?php else : ?>
 	<!-- Put conditional here to print page title when no featured image -->
 	<div class="alignfull mt-0!" role="banner">
-		<div class="flex bg-white lg:bg-grey-cool front-featured-image-area h-auto lg:h-40">
-			<div class="flex lg:items-center px-6 xl:ml-32">
-				<h1 class="entry-title">
+		<div class="flex h-auto bg-white lg:bg-grey-cool front-featured-image-area lg:h-40">
+			<div class="flex px-6 lg:items-center md:ml-[4%] 2xl:ml-32">
+				<h1 class="entry-title tracking-tight leading-10 sm:leading-none lg:text-4xl xl:text-[44px] lg:pl-2 xl:pl-0 py-8 mb-0!">
 					<?php the_title(); ?>
 				</h1>
 			</div>
 		</div>
 	</div>
 	<?php endif; ?>
-	<div class="wayfinding md:mb-8 ml-4 xl:ml-0">
+	<div class="ml-4 wayfinding md:mb-8 xl:ml-0">
 		<?php get_template_part( 'template-parts/sidebar-menu' ); ?>
 		<?php
 		if ( function_exists( 'bcn_display' ) ) :
@@ -56,7 +56,7 @@ if ( has_post_thumbnail() ) :
 		<?php endif; ?>
 	</div>
 
-	<div class="entry-content pl-4 pr-2 lg:pr-12 xl:pl-0 xl:pr-0">
+	<div class="pl-4 pr-2 entry-content lg:pr-12 xl:pl-0 xl:pr-0">
 		<?php
 		the_content();
 

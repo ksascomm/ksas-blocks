@@ -22,7 +22,7 @@ $gradstudyfields_query = new WP_Query(
 );
 ?>
 
-<main id="site-content" class="site-main prose sm:prose lg:prose-lg mx-auto pb-2">
+<main id="site-content" class="site-main prose lg:prose-lg mx-auto pb-2">
 
 	<?php
 	while ( have_posts() ) :
