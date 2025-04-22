@@ -33,7 +33,7 @@
 
 	<?php ksas_blocks_post_thumbnail(); ?>
 
-	<div class="entry-content pl-4 pr-2 lg:pr-12 xl:pl-0 xl:pr-0">
+	<div class="entry-content pl-4 pr-4 lg:pr-12 xl:pl-0 xl:pr-0">
 	<?php
 	if ( is_singular() ) :
 			the_content(

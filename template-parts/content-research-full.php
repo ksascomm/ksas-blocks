@@ -14,7 +14,7 @@
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 	</header><!-- .entry-header -->
 
-	<div class="pl-4 pr-2 entry-content lg:pr-12 xl:pl-0 xl:pr-0">
+	<div class="pl-4 pr-4 entry-content lg:pr-12 xl:pl-0 xl:pr-0">
 		<div class="grid gap-8 mb-6 toolkit-meta lg:grid-cols-3">
 			<?php if ( has_post_thumbnail() ) : ?>
 			<div>

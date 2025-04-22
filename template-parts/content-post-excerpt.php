@@ -54,7 +54,7 @@
 		</div>
 	<?php else : ?>
 
-			<div class="entry-content pl-4 pr-2 lg:pr-12 xl:pl-0 xl:pr-0">
+			<div class="entry-content pl-4 pr-4 lg:pr-12 xl:pl-0 xl:pr-0">
 				<p><?php echo esc_html( wp_trim_words( get_the_excerpt(), 55, '...' ) ); ?></p>
 			</div><!-- .entry-content -->
 

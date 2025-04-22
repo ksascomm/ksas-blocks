@@ -14,7 +14,7 @@
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 	</header><!-- .entry-header -->
 
-	<div class="entry-content pl-4 pr-2 lg:pr-12 xl:pl-0 xl:pr-0">
+	<div class="entry-content pl-4 pr-4 lg:pr-12 xl:pl-0 xl:pr-0">
 		<div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
 			<div>
 				<div class="flex mt-4">

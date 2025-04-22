@@ -29,7 +29,7 @@
 					</div>
 				</div><!-- .post-thumbnail -->
 				<?php endif; ?>
-				<div class="entry-content pl-4 pr-2 lg:pr-12 xl:pl-0 xl:pr-0">
+				<div class="entry-content pl-4 pr-4 lg:pr-12 xl:pl-0 xl:pr-0">
 					<?php
 					the_content();
 
