@@ -56,19 +56,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 						</a>	
 					<?php endif; ?>
 					</div>
-					<div class="lg:col-span-2">
-						<h1 class="mt-4 mb-12 text-2xl site-title sm:text-xl md:text-2xl lg:text-4xl lg:mt-0 md:mb-0">
-						<a class=" text-white hover:text-grey no-underline hover:underline! hover:underline-offset-2!" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-							<?php
-								$ksas_blocks_description = get_bloginfo( 'description', 'display' );
-							if (
-								$ksas_blocks_description || is_customize_preview() ) :
-								$ksas_blocks_description = get_bloginfo( 'description', 'display' );
-								echo '<span class="block pt-2 text-xl font-normal">' . $ksas_blocks_description . '</span>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped 
-								?>
+					<div class="content-center mt-4 mb-12 lg:col-span-2 lg:mt-0 md:mb-0">
+						<h1 class="text-2xl site-title sm:text-xl md:text-2xl lg:text-4xl ">
+							<a class="text-white hover:text-grey no-underline hover:underline! hover:underline-offset-2!" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+								<?php
+									$ksas_blocks_description = get_bloginfo( 'description', 'display' );
+								if (
+									$ksas_blocks_description || is_customize_preview() ) :
+									echo '<span class="block pt-2 text-xl font-normal">' . $ksas_blocks_description . '</span>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped 
+									?>
 								<?php endif; ?>
-							<?php bloginfo( 'name' ); ?>
-						</a>
+									<?php bloginfo( 'name' ); ?>
+							</a>
 						</h1>
 					</div>
 				</div><!-- .header-titles -->
