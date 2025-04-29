@@ -154,6 +154,7 @@ if (mix.inProduction()) {
 					"gfield_label",
 					"blog",
 					"wp-post-image",
+					/[alt=""]/,
 					/^!/,
 					/^has-/,
 					/(^wp-block-)\w+/,
