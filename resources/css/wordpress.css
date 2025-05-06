@@ -2831,7 +2831,8 @@ figure.wp-block-pullquote {
   content: "";
 }
 
-.people .headshot img {
+.page-template-people-directory .people .headshot img,
+.page-template-people-directory-sort .people .headshot img{
   @apply w-56 h-auto my-4 ml-0 mr-4;
 }
 

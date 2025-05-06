@@ -21,7 +21,7 @@ $classrooms_query = new WP_Query(
 );
 ?>
 
-<main id="site-content" class="site-main prose mx-auto pb-2">
+<main id="site-content" class="pb-2 mx-auto prose site-main">
 	<?php
 	while ( have_posts() ) :
 		the_post();
@@ -31,9 +31,9 @@ $classrooms_query = new WP_Query(
 	endwhile; // End of the loop.
 	?>
 
-		<form class="isotope-to-sort bg-grey-lightest border-solid border-grey border-2 p-4 mb-4" role="region" aria-label="Filters" id="filters">
+		<form class="p-4 mb-4 border-2 border-solid isotope-to-sort bg-grey-lightest border-grey" role="region" aria-label="Filters" id="filters">
 			
-			<fieldset class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 button-group js-radio-button-group" id="classroom-checkboxes">
+			<fieldset class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4 button-group js-radio-button-group" id="classroom-checkboxes">
 				<legend>Filter by Built-in Equipment:</legend>
 				<div>
 					<input type="checkbox" id="Built-In-Camera" name="Built-In-Camera" value=".Built-In-Camera" />
@@ -96,7 +96,7 @@ $classrooms_query = new WP_Query(
 			if ( ! empty( $filters ) && ! is_wp_error( $filters ) ) :
 				?>
 				
-				<fieldset class="flex flex-col md:flex-row justify-start button-group js-radio-button-group" id="classroom-radio-buttons">
+				<fieldset class="flex flex-col justify-start md:flex-row button-group js-radio-button-group" id="classroom-radio-buttons">
 				<legend class="mt-4">Filter by Classroom Type:</legend>
 				<?php foreach ( $filters as $filter ) : ?>
 				<div class="classroom-type <?php echo esc_html( $filter->slug ); ?>">
@@ -106,10 +106,10 @@ $classrooms_query = new WP_Query(
 				<?php endforeach; ?>
 				</fieldset>
 			<?php endif; ?>
-			<fieldset class="w-auto search-form my-2 px-2">
-				<legend class="mt-4 mb-2 text-xl font-bold font-heavy px-2">Search by Building, Classroom Number, or Equipment:</legend>
+			<fieldset class="w-auto px-2 my-2 search-form">
+				<legend class="px-2 mt-4 mb-2 text-xl font-bold font-heavy">Search by Building, Classroom Number, or Equipment:</legend>
 				<label class="sr-only" for="id_search">Enter term</label>
-				<input class="quicksearch mb-2 ml-2 p-2 form-input w-full md:w-1/2" type="text" name="search" id="id_search" aria-label="Search Form" placeholder="Enter description keyword"/>
+				<input class="w-full p-2 mb-2 ml-2 quicksearch form-input md:w-1/2" type="text" name="search" id="id_search" aria-label="Search Form" placeholder="Enter description keyword"/>
 			</fieldset>
 		</form>
 

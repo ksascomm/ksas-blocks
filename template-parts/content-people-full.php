@@ -16,8 +16,9 @@
 			<div class="flex-none pr-4 headshot">
 				<?php
 					the_post_thumbnail(
-						'medium',
+						'large',
 						array(
+							'class' => 'w-2xs h-auto my-4 ml-0 mr-4',
 							'alt' => the_title_attribute(
 								array(
 									'echo' => false,
@@ -29,7 +30,7 @@
 			</div>
 		<?php endif; ?>
 		<div class="grow contact-info">
-			<h3 class="font-heavy font-bold text-3xl! leading-9">
+			<h1 class="font-heavy font-bold text-3xl! leading-9">
 			<?php if ( is_singular( 'people' ) ) : ?> 
 				<?php the_title(); ?> 
 				<?php if ( get_post_meta( $post->ID, 'ecpt_pronoun', true ) ) : ?>
@@ -43,11 +44,17 @@
 					<small>(<?php echo wp_kses_post( get_post_meta( $post->ID, 'ecpt_pronoun', true ) ); ?>)</small>
 				<?php endif; ?>
 			<?php endif; ?>
-			</h3>
+			</h1>
 
-			<?php if ( get_post_meta( $post->ID, 'ecpt_position', true ) ) : ?>
-				<div class="position"><p class="pr-2 text-xl leading-normal"><?php echo wp_kses_post( get_post_meta( $post->ID, 'ecpt_position', true ) ); ?></p></div>
-			<?php endif; ?>
+			<div class="position not-prose">
+				<h2 class="pr-2 my-4 font-sans text-2xl font-light leading-normal">
+				<?php if ( get_post_meta( $post->ID, 'ecpt_position', true ) ) : ?>
+					<?php echo wp_kses_post( get_post_meta( $post->ID, 'ecpt_position', true ) ); ?>
+				<?php else : ?>
+					<span class="capitalize"><?php echo wp_strip_all_tags( get_the_term_list( $post->ID, 'role', '', ', ' ) ); ?></span>
+				<?php endif; ?>	
+				</h2>
+			</div>
 
 			<h3 class="sr-only">Contact Information</h3>
 
