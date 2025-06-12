@@ -9,16 +9,18 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class( 'people py-4 ml-4 not-prose border-grey border-solid border lg:border-none' ); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class( 'people p-4 lg:px-0 lg:py-4 my-2 lg:my-0 lg:ml-4 w-11/12 lg:w-full border-grey border-solid border lg:border-none' ); ?>>
 
 <div class="flex flex-wrap lg:flex-nowrap">
 	<?php if ( has_post_thumbnail() ) : ?>
-		<div class="flex-none pr-4 headshot">
+		<div class="flex-none hidden pl-4 lg:pl-0 lg:pr-4 headshot lg:my-4 lg:mr-4 lg:ml-0 lg:relative lg:inline-block">
+			<div class="h-[225px] w-[187px]">
 			<?php
 				the_post_thumbnail(
-					'medium',
+					'large',
 					array(
-						'alt' => the_title_attribute(
+						'class' => 'w-full h-0 lg:h-full object-cover pr-0 mt-0! mb-2',
+						'alt'   => the_title_attribute(
 							array(
 								'echo' => false,
 							)
@@ -26,7 +28,9 @@
 					)
 				);
 			?>
+			</div>
 		</div>
+	<div class="break"></div> <!-- break -->
 	<?php endif; ?>
 	<div class="grow contact-info">
 		<h3 class="text-3xl font-bold leading-9 font-heavy">

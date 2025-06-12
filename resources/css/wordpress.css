@@ -1056,6 +1056,8 @@ footer.entry-footer {
 .blog .article-excerpt img:not([alt]),
 .single-post .prose .post img[alt=""], 
 .single-post .prose .post img:not([alt]),
+.wp-block-image img[alt=""], 
+.wp-block-image img:not([alt]),
 .news-thumb.no-alt {
   display: none;
 }
@@ -2831,10 +2833,21 @@ figure.wp-block-pullquote {
   content: "";
 }
 
-.page-template-people-directory .people .headshot img,
+@media (width >= theme(--breakpoint-lg)) {
+  .headshot {
+    height: 15rem;
+  }
+
+  .break {
+    flex-basis: inherit;
+    height: inherit;
+  }
+}
+
+/*.page-template-people-directory .people .headshot img,
 .page-template-people-directory-sort .people .headshot img{
   @apply w-56 h-auto my-4 ml-0 mr-4;
-}
+}*/
 
 /* Gutenberg Hub Block Patterns
 --------------------------------------------- */

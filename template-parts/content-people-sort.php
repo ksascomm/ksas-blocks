@@ -10,26 +10,30 @@
 ?>
 
 
-<article id="post-<?php the_ID(); ?>" class="people not-prose item p-4 lg:px-0 lg:py-4 my-2 lg:my-0 ml-4 w-11/12 lg:w-full border-grey border-solid border lg:border-none <?php echo esc_html( get_the_roles( $post ) ); ?> <?php echo esc_html( get_the_filters( $post ) ); ?>">
+<article id="post-<?php the_ID(); ?>" class="people not-prose item p-4 lg:px-0 lg:py-4 my-2 lg:my-0 lg:ml-4 w-11/12 lg:w-full <?php echo esc_html( get_the_roles( $post ) ); ?> <?php echo esc_html( get_the_filters( $post ) ); ?> border-grey border-solid border lg:border-none">
 
 <div class="flex flex-wrap lg:flex-nowrap">
 	<?php if ( has_post_thumbnail() ) : ?>
-		<div class="flex-none pr-4 headshot">
-			<?php
-				the_post_thumbnail(
-					'medium',
-					array(
-						'alt' => the_title_attribute(
-							array(
-								'echo' => false,
-							)
-						),
-					)
-				);
-			?>
+		<div class="flex-none hidden pl-4 lg:pl-0 lg:pr-4 headshot lg:my-4 lg:mr-4 lg:ml-0 lg:relative lg:inline-block">
+			<div class="h-[225px] w-[187px]">
+				<?php
+					the_post_thumbnail(
+						'large',
+						array(
+							'class' => 'w-full h-0 lg:h-full object-cover pr-0 mt-0! mb-2',
+							'alt'   => the_title_attribute(
+								array(
+									'echo' => false,
+								)
+							),
+						)
+					);
+				?>
+			</div>
 		</div>
+	<div class="break"></div> <!-- break -->
 	<?php endif; ?>
-	<div class="grow contact-info">
+	<div class="flex-grow contact-info">
 		<h3 class="text-3xl font-bold leading-9 font-heavy">
 		<?php if ( get_post_meta( $post->ID, 'ecpt_bio', true ) ) : ?>
 			<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>'s webpage">

@@ -20,6 +20,7 @@ get_header();
 
 		endwhile; // End of the loop.
 		?>
+		<div class="mt-8 ml-4 mr-2">
 		<?php
 		$positions      = get_terms(
 			array(
@@ -70,7 +71,7 @@ get_header();
 		endforeach;
 		wp_reset_postdata();
 		?>
-
+	</div>
 	</main><!-- #main -->
 
 <?php
