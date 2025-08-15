@@ -15,8 +15,8 @@ if ( has_post_thumbnail() ) :
 	?>
 	<div class="alignfull featured-image-area front-featured-image-area" role="banner">
 		<div class="flex h-auto bg-white lg:h-80">
-			<div class="flex px-6 text-left lg:items-center lg:justify-start xl:justify-center sm:w-full lg:w-2/5 ml-[3%]">
-				<h1 class="entry-title">
+			<div class="flex lg:pr-6 text-left pl-6 md:pl-[4%] lg:pl-[6%] xl:pl-[8%] lg:items-center lg:justify-start sm:w-full lg:w-2/5">
+				<h1 class="entry-title tracking-tight leading-10 sm:leading-none lg:text-4xl xl:text-[44px] mb-0">
 					<?php the_title(); ?>
 				</h1>
 			</div>
@@ -37,7 +37,7 @@ if ( has_post_thumbnail() ) :
 	<!-- Put conditional here to print page title when no featured image -->
 	<div class="alignfull mt-0!" role="banner">
 		<div class="flex h-auto bg-white lg:bg-grey-cool front-featured-image-area lg:h-40">
-			<div class="flex px-6 lg:items-center md:ml-[4%] 2xl:ml-32">
+			<div class="flex px-6 lg:items-center pl-6 md:pl-[4%] lg:pl-[6%] xl:pl-[8%]">
 				<h1 class="entry-title tracking-tight leading-10 sm:leading-none lg:text-4xl xl:text-[44px] lg:pl-2 xl:pl-0 py-8 mb-0!">
 					<?php the_title(); ?>
 				</h1>

@@ -11,6 +11,17 @@
   --tec-color-accent-primary: #002d72;
 }
 
+
+@media screen and (min-width:1280px) {
+	#tribe-events-pg-template, .tribe-events-pg-template {
+		max-width: 1400px !important;
+	}
+
+	.tribe-events-pg-template #site-content {
+		max-width: 78%;
+	}
+}
+
 /* Calendar/Listing View */
 .tribe-common .tribe-common-h2,
 .tribe-common .tribe-common-h3,
@@ -386,6 +397,8 @@ font-weight: 600;
   border: none !important;
   padding: 0 !important;
 }
+
+
 
 /* AGHI/Non-Block Editor Styles */
 #tribe-events, #tribe-events-pg-template, .tribe-events-pg-template {

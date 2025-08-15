@@ -9,7 +9,7 @@
 
 if ( ! defined( 'KSAS_BLOCKS_VERSION' ) ) {
 	// Replace the version number of the theme on each release.
-	define( 'KSAS_BLOCKS_VERSION', '8.4.0' );
+	define( 'KSAS_BLOCKS_VERSION', '8.4.1' );
 }
 
 if ( ! function_exists( 'ksas_blocks_setup' ) ) :
@@ -27,7 +27,7 @@ if ( ! function_exists( 'ksas_blocks_setup' ) ) :
 		 * If you're building a theme based on KSAS_Blocks, use a find and replace
 		 * to change 'ksas-blocks' to the name of your theme in all the template files.
 		 */
-		//load_theme_textdomain( 'ksas-blocks', get_template_directory() . '/languages' );
+		// load_theme_textdomain( 'ksas-blocks', get_template_directory() . '/languages' );
 
 		// Add default posts and comments RSS feed links to head.
 		add_theme_support( 'automatic-feed-links' );
