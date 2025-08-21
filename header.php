@@ -39,8 +39,10 @@
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PDL5K37"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
-<a class="skip-link screen-reader-text" href="#site-content"><?php esc_html_e( 'Skip to content', 'ksas-blocks' ); ?></a>
+<a class="skip-link screen-reader-text" href="#site-content"><?php esc_html_e( 'Skip to content', 'ksas-office' ); ?></a>
+
 <?php wp_body_open(); ?>
+<?php //get_template_part( 'template-parts/jhu-150th-bar' ); ?>
 	<header id="site-header" class="w-full shadow-sm header-footer-group sm:justify-between sm:items-baseline bg-blue" role="banner">
 		<div class="header-titles-wrapper">
 			<div class="header-inner section-inner">
@@ -76,7 +78,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 						<span class="toggle-icon">
 							<?php twentytwenty_the_theme_svg( 'search' ); ?>
 						</span>
-						<span class="toggle-text"><?php _ex( 'Search', 'toggle text', 'ksas-blocks' ); ?></span>
+						<span class="toggle-text"><?php _ex( 'Search', 'toggle text', 'ksas-office' ); ?></span>
 					</span>
 				</button><!-- .search-toggle -->
 				<button class="toggle nav-toggle mobile-nav-toggle" data-toggle-target=".menu-modal"  data-toggle-body-class="showing-menu-modal" aria-expanded="false" data-set-focus=".close-nav-toggle" type="button">
@@ -84,7 +86,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 						<span class="toggle-icon">
 							<?php twentytwenty_the_theme_svg( 'ellipsis' ); ?>
 						</span>
-						<span class="toggle-text"><?php _e( 'Menu', 'ksas-blocks' ); ?></span>
+						<span class="toggle-text"><?php _e( 'Menu', 'ksas-office' ); ?></span>
 					</span>
 				</button><!-- .nav-toggle -->
 			</div><!-- .header-inner -->
@@ -115,7 +117,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 						<button class="toggle search-toggle desktop-search-toggle" data-toggle-target=".search-modal" data-toggle-body-class="showing-search-modal" data-set-focus=".search-modal .search-field" aria-expanded="false" type="button">
 							<span class="toggle-inner">
 							<?php twentytwenty_the_theme_svg( 'search' ); ?>
-								<span class="toggle-text hover:underline hover:decoration-blue hover:decoration-2 hover:underline-offset-4"><?php _ex( 'Search', 'toggle text', 'ksas-blocks' ); ?></span>
+								<span class="toggle-text hover:underline hover:decoration-blue hover:decoration-2 hover:underline-offset-4"><?php _ex( 'Search', 'toggle text', 'ksas-office' ); ?></span>
 							</span>
 						</button><!-- .search-toggle -->
 

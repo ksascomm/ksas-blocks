@@ -25,9 +25,9 @@ if ( ! function_exists( 'ksas_blocks_setup' ) ) :
 		 * Make theme available for translation.
 		 * Translations can be filed in the /languages/ directory.
 		 * If you're building a theme based on KSAS_Blocks, use a find and replace
-		 * to change 'ksas-blocks' to the name of your theme in all the template files.
+		 * to change 'ksas-office' to the name of your theme in all the template files.
 		 */
-		// load_theme_textdomain( 'ksas-blocks', get_template_directory() . '/languages' );
+		// load_theme_textdomain( 'ksas-office', get_template_directory() . '/languages' );
 
 		// Add default posts and comments RSS feed links to head.
 		add_theme_support( 'automatic-feed-links' );
@@ -50,7 +50,7 @@ if ( ! function_exists( 'ksas_blocks_setup' ) ) :
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus(
 			array(
-				'main-nav' => esc_html__( 'The Main Menu', 'ksas-blocks' ),
+				'main-nav' => esc_html__( 'The Main Menu', 'ksas-office' ),
 			)
 		);
 
@@ -113,9 +113,9 @@ add_action( 'after_setup_theme', 'ksas_blocks_setup' );
 function ksas_blocks_widgets_init() {
 	register_sidebar(
 		array(
-			'name'          => esc_html__( 'Sidebar 1', 'ksas-blocks' ),
+			'name'          => esc_html__( 'Sidebar 1', 'ksas-office' ),
 			'id'            => 'sidebar-1',
-			'description'   => esc_html__( 'Add widgets here.', 'ksas-blocks' ),
+			'description'   => esc_html__( 'Add widgets here.', 'ksas-office' ),
 			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</aside>',
 			'before_title'  => '<h2 class="widget-title">',
@@ -124,9 +124,9 @@ function ksas_blocks_widgets_init() {
 	);
 	register_sidebar(
 		array(
-			'name'          => esc_html__( 'Sidebar 2', 'ksas-blocks' ),
+			'name'          => esc_html__( 'Sidebar 2', 'ksas-office' ),
 			'id'            => 'sidebar-2',
-			'description'   => esc_html__( 'Add widgets here.', 'ksas-blocks' ),
+			'description'   => esc_html__( 'Add widgets here.', 'ksas-office' ),
 			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</aside>',
 			'before_title'  => '<h2 class="widget-title">',
@@ -135,9 +135,9 @@ function ksas_blocks_widgets_init() {
 	);
 	register_sidebar(
 		array(
-			'name'          => esc_html__( 'Sidebar 3', 'ksas-blocks' ),
+			'name'          => esc_html__( 'Sidebar 3', 'ksas-office' ),
 			'id'            => 'sidebar-3',
-			'description'   => esc_html__( 'Add widgets here.', 'ksas-blocks' ),
+			'description'   => esc_html__( 'Add widgets here.', 'ksas-office' ),
 			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</aside>',
 			'before_title'  => '<h2 class="widget-title">',
@@ -146,9 +146,9 @@ function ksas_blocks_widgets_init() {
 	);
 	register_sidebar(
 		array(
-			'name'          => esc_html__( 'Sidebar 4', 'ksas-blocks' ),
+			'name'          => esc_html__( 'Sidebar 4', 'ksas-office' ),
 			'id'            => 'sidebar-4',
-			'description'   => esc_html__( 'Add widgets here.', 'ksas-blocks' ),
+			'description'   => esc_html__( 'Add widgets here.', 'ksas-office' ),
 			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</aside>',
 			'before_title'  => '<h2 class="widget-title">',
@@ -157,9 +157,9 @@ function ksas_blocks_widgets_init() {
 	);
 	register_sidebar(
 		array(
-			'name'          => esc_html__( 'Footer', 'ksas-blocks' ),
+			'name'          => esc_html__( 'Footer', 'ksas-office' ),
 			'id'            => 'sidebar-footer',
-			'description'   => esc_html__( 'Add widgets here to appear in your footer.', 'ksas-blocks' ),
+			'description'   => esc_html__( 'Add widgets here to appear in your footer.', 'ksas-office' ),
 			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</aside>',
 			'before_title'  => '<h2 class="widget-title">',

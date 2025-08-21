@@ -61,7 +61,7 @@
 					<?php
 					echo date_i18n(
 						/* translators: Copyright date format, see https://www.php.net/manual/datetime.format.php */
-						_x( 'Y', 'copyright date format', 'ksas-blocks' )
+						_x( 'Y', 'copyright date format', 'ksas-office' )
 					);
 					?>
 					Johns Hopkins University, <br>Zanvyl Krieger School of Arts & Sciences,

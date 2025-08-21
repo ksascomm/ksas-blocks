@@ -17,13 +17,13 @@
 			<?php
 			get_search_form(
 				array(
-					'label' => __( 'Search for:', 'ksas-blocks' ),
+					'label' => __( 'Search for:', 'ksas-office' ),
 				)
 			);
 			?>
 
 			<button class="toggle search-untoggle close-search-toggle fill-children-current-color" data-toggle-target=".search-modal" data-toggle-body-class="showing-search-modal" data-set-focus=".search-modal .search-field">
-				<span class="sr-only"><?php _e( 'Close search', 'ksas-blocks' ); ?></span>
+				<span class="sr-only"><?php _e( 'Close search', 'ksas-office' ); ?></span>
 				<?php twentytwenty_the_theme_svg( 'cross' ); ?>
 			</button><!-- .search-toggle -->
 

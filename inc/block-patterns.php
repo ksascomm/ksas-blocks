@@ -16,8 +16,8 @@
 if ( function_exists( 'register_block_pattern_category' ) ) {
 
 	register_block_pattern_category(
-		'ksas-blocks',
-		array( 'label' => esc_html__( 'KSAS Blocks', 'ksas-blocks' ) )
+		'ksas-office',
+		array( 'label' => esc_html__( 'KSAS Blocks', 'ksas-office' ) )
 	);
 }
 
@@ -29,8 +29,8 @@ if ( function_exists( 'register_block_pattern' ) ) {
 	register_block_pattern(
 		'ksasblocks/simple-hero',
 		array(
-			'title'         => esc_html__( 'Simple Hero', 'ksas-blocks' ),
-			'categories'    => array( 'ksas-blocks' ),
+			'title'         => esc_html__( 'Simple Hero', 'ksas-office' ),
+			'categories'    => array( 'ksas-office' ),
 			'viewportWidth' => 1400,
 			'content'       => '
 			<!-- wp:columns {"verticalAlignment":"center"} -->
@@ -60,14 +60,14 @@ if ( function_exists( 'register_block_pattern' ) ) {
 	register_block_pattern(
 		'ksasblocks/staff-listing',
 		array(
-			'title'         => esc_html__( 'Staff Listing Vertical', 'ksas-blocks' ),
-			'categories'    => array( 'ksas-blocks' ),
+			'title'         => esc_html__( 'Staff Listing Vertical', 'ksas-office' ),
+			'categories'    => array( 'ksas-office' ),
 			'viewportWidth' => 1400,
 			'content'       => '
 			<!-- wp:group {"className":"staff-listing"} --><div class="wp-block-group staff-listing"><div class="wp-block-group__inner-container"><!-- wp:columns -->
 			<div class="wp-block-columns"><!-- wp:column {"width":"33.33%"} -->
 			<div class="wp-block-column" style="flex-basis:33.33%"><!-- wp:image {"sizeSlug":"medium","linkDestination":"none"} -->
-			<figure class="wp-block-image size-full"><img src="' . esc_url( get_template_directory_uri() ) . '/resources/images/johns_hopkins.jpg" alt="' . esc_attr__( 'Abstract Rectangles', 'ksas-blocks' ) . '"/></figure>
+			<figure class="wp-block-image size-full"><img src="' . esc_url( get_template_directory_uri() ) . '/resources/images/johns_hopkins.jpg" alt="' . esc_attr__( 'Abstract Rectangles', 'ksas-office' ) . '"/></figure>
 			<!-- /wp:image --></div>
 			<!-- /wp:column -->
 			<!-- wp:column {"width":"66.66%"} -->
@@ -87,7 +87,7 @@ if ( function_exists( 'register_block_pattern' ) ) {
 			<div class="wp-block-group staff-listing"><div class="wp-block-group__inner-container"><!-- wp:columns -->
 			<div class="wp-block-columns"><!-- wp:column {"width":"33.33%"} -->
 			<div class="wp-block-column" style="flex-basis:33.33%"><!-- wp:image {"sizeSlug":"medium","linkDestination":"none"} -->
-			<figure class="wp-block-image size-full"><img src="' . esc_url( get_template_directory_uri() ) . '/resources/images/johns_hopkins.jpg" alt="' . esc_attr__( 'Abstract Rectangles', 'ksas-blocks' ) . '"/></figure>
+			<figure class="wp-block-image size-full"><img src="' . esc_url( get_template_directory_uri() ) . '/resources/images/johns_hopkins.jpg" alt="' . esc_attr__( 'Abstract Rectangles', 'ksas-office' ) . '"/></figure>
 			<!-- /wp:image --></div>
 			<!-- /wp:column -->
 			<!-- wp:column {"width":"66.66%"} -->
@@ -108,8 +108,8 @@ if ( function_exists( 'register_block_pattern' ) ) {
 	register_block_pattern(
 		'ksasblocks/staff-listing-horizontal',
 		array(
-			'title'         => esc_html__( 'Staff Listing Horizontal', 'ksas-blocks' ),
-			'categories'    => array( 'ksas-blocks' ),
+			'title'         => esc_html__( 'Staff Listing Horizontal', 'ksas-office' ),
+			'categories'    => array( 'ksas-office' ),
 			'viewportWidth' => 1400,
 			'content'       => '<!-- wp:columns -->
 			<div class="wp-block-columns staff-listing-horizontal"><!-- wp:column -->
@@ -128,7 +128,7 @@ if ( function_exists( 'register_block_pattern' ) ) {
 			<div class="wp-block-column"><!-- wp:columns -->
 			<div class="wp-block-columns"><!-- wp:column -->
 			<div class="wp-block-column staff-listing-single"><!-- wp:image {"id":54,"sizeSlug":"large","linkDestination":"none"} -->
-			<figure class="wp-block-image size-large"><img src="' . esc_url( get_template_directory_uri() ) . '/resources/images/johns_hopkins.jpg" alt="' . esc_attr__( 'Abstract Rectangles', 'ksas-blocks' ) . '"/></figure>
+			<figure class="wp-block-image size-large"><img src="' . esc_url( get_template_directory_uri() ) . '/resources/images/johns_hopkins.jpg" alt="' . esc_attr__( 'Abstract Rectangles', 'ksas-office' ) . '"/></figure>
 			<!-- /wp:image -->
 
 			<!-- wp:heading {"level":4} -->
@@ -142,7 +142,7 @@ if ( function_exists( 'register_block_pattern' ) ) {
 
 			<!-- wp:column -->
 			<div class="wp-block-column staff-listing-single"><!-- wp:image {"id":54,"sizeSlug":"large","linkDestination":"none"} -->
-			<figure class="wp-block-image size-large"><img src="' . esc_url( get_template_directory_uri() ) . '/resources/images/johns_hopkins.jpg" alt="' . esc_attr__( 'Abstract Rectangles', 'ksas-blocks' ) . '"/></figure>
+			<figure class="wp-block-image size-large"><img src="' . esc_url( get_template_directory_uri() ) . '/resources/images/johns_hopkins.jpg" alt="' . esc_attr__( 'Abstract Rectangles', 'ksas-office' ) . '"/></figure>
 			<!-- /wp:image -->
 
 			<!-- wp:heading {"level":4} -->
@@ -160,7 +160,7 @@ if ( function_exists( 'register_block_pattern' ) ) {
 			<div class="wp-block-column"><!-- wp:columns -->
 			<div class="wp-block-columns"><!-- wp:column -->
 			<div class="wp-block-column staff-listing-single"><!-- wp:image {"id":54,"sizeSlug":"large","linkDestination":"none"} -->
-			<figure class="wp-block-image size-large"><img src="' . esc_url( get_template_directory_uri() ) . '/resources/images/johns_hopkins.jpg" alt="' . esc_attr__( 'Abstract Rectangles', 'ksas-blocks' ) . '"/></figure>
+			<figure class="wp-block-image size-large"><img src="' . esc_url( get_template_directory_uri() ) . '/resources/images/johns_hopkins.jpg" alt="' . esc_attr__( 'Abstract Rectangles', 'ksas-office' ) . '"/></figure>
 			<!-- /wp:image -->
 
 			<!-- wp:heading {"level":4} -->
@@ -174,7 +174,7 @@ if ( function_exists( 'register_block_pattern' ) ) {
 
 			<!-- wp:column -->
 			<div class="wp-block-column staff-listing-single"><!-- wp:image {"id":54,"sizeSlug":"large","linkDestination":"none"} -->
-			<figure class="wp-block-image size-large"><img src="' . esc_url( get_template_directory_uri() ) . '/resources/images/johns_hopkins.jpg" alt="' . esc_attr__( 'Abstract Rectangles', 'ksas-blocks' ) . '"/></figure>
+			<figure class="wp-block-image size-large"><img src="' . esc_url( get_template_directory_uri() ) . '/resources/images/johns_hopkins.jpg" alt="' . esc_attr__( 'Abstract Rectangles', 'ksas-office' ) . '"/></figure>
 			<!-- /wp:image -->
 
 			<!-- wp:heading {"level":4} -->
@@ -195,17 +195,17 @@ if ( function_exists( 'register_block_pattern' ) ) {
 	register_block_pattern(
 		'ksasblocks/introduction',
 		array(
-			'title'         => esc_html__( 'Introduction', 'ksas-blocks' ),
-			'categories'    => array( 'ksas-blocks' ),
+			'title'         => esc_html__( 'Introduction', 'ksas-office' ),
+			'categories'    => array( 'ksas-office' ),
 			'viewportWidth' => 1400,
 			'content'       => implode(
 				'',
 				array(
 					'<!-- wp:heading {"align":"center"} -->',
-					'<h2 class="has-text-align-center">' . esc_html__( 'The Premier Destination for Modern Art in Sweden', 'ksas-blocks' ) . '</h2>',
+					'<h2 class="has-text-align-center">' . esc_html__( 'The Premier Destination for Modern Art in Sweden', 'ksas-office' ) . '</h2>',
 					'<!-- /wp:heading -->',
 					'<!-- wp:paragraph {"dropCap":true} -->',
-					'<p class="has-drop-cap">' . esc_html__( 'With seven floors of striking architecture, UMoMA shows exhibitions of international contemporary art, sometimes along with art historical retrospectives. Existential, political, and philosophical issues are intrinsic to our program. As visitor, you are invited to guided tours artist talks, lectures, film screenings, and other events with free admission.', 'ksas-blocks' ) . '</p>',
+					'<p class="has-drop-cap">' . esc_html__( 'With seven floors of striking architecture, UMoMA shows exhibitions of international contemporary art, sometimes along with art historical retrospectives. Existential, political, and philosophical issues are intrinsic to our program. As visitor, you are invited to guided tours artist talks, lectures, film screenings, and other events with free admission.', 'ksas-office' ) . '</p>',
 					'<!-- /wp:paragraph -->',
 				)
 			),
@@ -216,8 +216,8 @@ if ( function_exists( 'register_block_pattern' ) ) {
 	register_block_pattern(
 		'ksasblocks/three-column-feature',
 		array(
-			'title'         => esc_html__( 'Thee Column Feature', 'ksas-blocks' ),
-			'categories'    => array( 'ksas-blocks' ),
+			'title'         => esc_html__( 'Thee Column Feature', 'ksas-office' ),
+			'categories'    => array( 'ksas-office' ),
 			'viewportWidth' => 1400,
 			'content'       => '<!-- wp:columns -->
 			<div class="wp-block-columns three-column-feature"><!-- wp:column {"width":"66.66%"} -->
