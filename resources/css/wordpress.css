@@ -2511,8 +2511,14 @@ font-family: Gentona-SemiBold, system-ui, BlinkMacSystemFont, -apple-system, Seg
 }
 
 .prose h1.entry-title {
-  @apply my-8 text-4xl lg:text-[2.75rem] font-medium;
-  font-family: "quadon-bold", Georgia, serif;
+  font-size: 2rem;
+  @apply my-4;
+}
+
+@media (width >= theme(--breakpoint-lg)) {
+  .prose h1.entry-title {
+    font-size: 2.5rem;
+  }
 }
 
 /*--------------------------------------------------------------
