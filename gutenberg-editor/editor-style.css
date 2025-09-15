@@ -214,8 +214,8 @@ h6 {
 }
 
 .tribe-editor__venue__address, .tribe-editor__venue__phone, .tribe-editor__venue__website, .tribe-editor__event-website__label-text input, .tribe-editor__events-link .tribe-editor__btn--link input, .block-editor-url-input__input[type=text] {
-  font-family: "worksans-light", "Helvetica Neue", Roboto, sans-serif;
-  font-weight: 300;
+  font-family: "worksans-regular", "Helvetica Neue", Roboto, sans-serif;
+  font-weight: 400;
 }
 
 .tribe-editor__organizer__details p, .tribe-editor__events-link .tribe-editor__btn--link input, .tribe-editor__venue__address a {
@@ -260,8 +260,8 @@ h2.tribe-editor__subtitle__headline {
 }
 
 .tribe-editor__featured-image .components-placeholder__instructions {
-  font-family: "worksans-light", "Helvetica Neue", Roboto, sans-serif;
-  font-weight: 300;
+  font-family: "worksans-regular", "Helvetica Neue", Roboto, sans-serif;
+  font-weight: 400;
   color: #4A484C;
 }
 
@@ -274,8 +274,8 @@ h2.tribe-editor__subtitle__headline {
 }
 
 .tribe-editor__block, .tribe-editor__block p, .block-editor .block-editor-plain-text, .tribe-editor__btn--label, .tribe-editor__soc__input {
-  font-family: "worksans-light", "Helvetica Neue", Roboto, sans-serif;
-  font-weight: 300;
+  font-family: "worksans-regular", "Helvetica Neue", Roboto, sans-serif;
+  font-weight: 400;
 }
 
 .tribe-editor__subtitle__headline-date, .tribe-editor__separator, .tribe-editor__subtitle .tribe-editor__event-cost span {
