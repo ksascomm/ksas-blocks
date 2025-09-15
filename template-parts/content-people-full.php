@@ -19,11 +19,6 @@
 						'large',
 						array(
 							'class' => 'w-2xs h-auto my-4 ml-0 mr-4',
-							'alt' => the_title_attribute(
-								array(
-									'echo' => false,
-								)
-							),
 						)
 					);
 				?>

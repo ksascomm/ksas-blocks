@@ -7,6 +7,7 @@ module.exports = {
         DEFAULT: {
           css: [
             {
+			  letterSpacing:"-0.03rem",
               color: "#31261D",
               lineHeight: "1.6",
               fontSize: "1.25rem",
@@ -38,8 +39,8 @@ module.exports = {
               h1: {
                 marginBottom: "0rem",
                 fontSize: "2.25rem",
-                fontWeight: "500",
-                fontFamily: "quadon-bold, Georgia, serif",
+                fontWeight: "700",
+                fontFamily: "robotoslab-bold, Georgia, serif",
               },
               h2: {
                 marginTop: "0.5rem",
@@ -47,44 +48,44 @@ module.exports = {
                 maxWidth: "90ch",
                 fontSize: "2rem",
                 fontWeight: "600",
-                fontFamily: "gentona-semibold, system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, sans-serif",
+                fontFamily: "worksans-semibold, system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, sans-serif",
               },
               h3: {
                 marginTop: "0.5rem",
                 marginBottom: "0.5rem",
                 fontSize: "1.6rem",
                 fontWeight: "600",
-                fontFamily: "gentona-semibold, system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, sans-serif",
+                fontFamily: "worksans-semibold, system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, sans-serif",
               },
               h4: {
                 marginTop: "0.5rem",
                 marginBottom: "0.5rem",
                 fontSize: "1.25rem",
                 fontWeight: "600",
-                fontFamily: "gentona-semibold, system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, sans-serif",
+                fontFamily: "worksans-semibold, system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, sans-serif",
               },
               h5 : {
                 fontWeight: "600",
-                fontFamily: "gentona-semibold, system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, sans-serif",
+                fontFamily: "worksans-semibold, system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, sans-serif",
               },
               p: {
                 marginTop: "1rem",
                 marginBottom: "1rem",
-                fontWeight: 300,
+                fontWeight: 400,
               },
               li: {
                 maxWidth: "90ch",
                 marginTop: "0rem",
                 marginBottom: ".25rem",
-                fontWeight: 300,
+                fontWeight: 400,
               },
               a: {
                 textDecoration: "none",
                 transition: "none",
-                fontWeight: 300,
+                fontWeight: 400,
               },
               strong: {
-                fontFamily: "Gentona-Bold, system-ui",
+                fontFamily: "worksans-bold, system-ui",
                 fontWeight: 700,
               },
               "a strong": {

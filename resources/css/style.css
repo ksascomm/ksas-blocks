@@ -27,11 +27,18 @@
   --color-old-black: #2c2c33;
   --color-original-black: #000;
   --font-mono: "Menlo", "Monaco", "monospace";
+  /*
   --font-sans: "gentona-light", "system-ui", "BlinkMacSystemFont", "-apple-system", "Segoe UI", "sans-serif";
   --font-semi: "gentona-semibold", "system-ui", "BlinkMacSystemFont", "-apple-system", "Segoe UI", "sans-serif";
   --font-heavy: "gentona-bold", "system-ui", "BlinkMacSystemFont", "-apple-system", "Segoe UI", "sans-serif";
   --font-serif: "quadon-medium",  "Georgia", "serif";
   --font-serifbold: "quadon-bold",  "Georgia", "serif";
+  */
+  	--font-sans-light: "worksans-light", "system-ui", "BlinkMacSystemFont", "-apple-system", "Segoe UI", "sans-serif";
+	--font-sans: "worksans-regular", "system-ui", "BlinkMacSystemFont", "-apple-system", "Segoe UI", "sans-serif";
+	--font-sans-medium: "worksans-medium", "system-ui", "BlinkMacSystemFont", "-apple-system", "Segoe UI", "sans-serif";
+	--font-semi: "worksans-semibold", "system-ui", "BlinkMacSystemFont", "-apple-system", "Segoe UI", "sans-serif";
+	--font-heavy: "worksans-bold", "system-ui", "BlinkMacSystemFont", "-apple-system", "Segoe UI", "sans-serif";
   --text-base: 1rem;
   --text-lg: 1.125rem;
   --text-xl: 1.25rem;
@@ -66,4 +73,102 @@
   ::file-selector-button {
     border-color: var(--color-grey, currentColor);
   }
+}
+
+:root {
+  --space-default: 1rem;
+  --space-l1-lg: 4rem;
+  --space-l2-lg: 3rem;
+  --space-l3-lg: 2.5rem;
+  --space-l4-lg: 2rem;
+  --space-l5-lg: 1.5rem;
+  --space-l6-lg: 1rem;
+  --space-l1-sm: calc(var(--space-l1-lg) / 4);
+  --space-l2-sm: calc(var(--space-l2-lg) / 4);
+  --space-l3-sm: calc(var(--space-l3-lg) / 4);
+  --space-l4-sm: calc(var(--space-l4-lg) / 4);
+  --space-l5-sm: calc(var(--space-l5-lg) / 4);
+  --space-l6-sm: calc(var(--space-l6-lg) / 4);
+  --space-list-items: 0.5rem;
+}
+
+
+:where(.page-template-default, .post-template-default) .entry-content :is(p, ul, ol) {
+  margin-bottom: var(--space-default);
+}
+
+:where(.page-template-default, .post-template-default) .entry-content h1 {
+  margin-bottom: var(--space-l1-sm);
+}
+
+:where(.page-template-default, .post-template-default) .entry-content h2 {
+  margin-bottom: var(--space-l2-sm);
+}
+
+:where(.page-template-default, .post-template-default) .entry-content h3 {
+  margin-bottom: var(--space-l3-sm);
+}
+
+:where(.page-template-default, .post-template-default) .entry-content h4 {
+  margin-bottom: var(--space-l4-sm);
+}
+
+:where(.page-template-default, .post-template-default) .entry-content h5 {
+  margin-bottom: var(--space-l5-sm);
+}
+
+:where(.page-template-default, .post-template-default) .entry-content h6 {
+  margin-bottom: var(--space-l6-sm);
+}
+
+:where(.page-template-default, .post-template-default) .entry-content *:has(+ h2) {
+  margin-bottom: var(--space-l2-lg);
+}
+
+:where(.page-template-default, .post-template-default) .entry-content *:has(+ h3) {
+  margin-bottom: var(--space-l3-lg);
+}
+
+:where(.page-template-default, .post-template-default) .entry-content *:has(+ h4) {
+  margin-bottom: var(--space-l4-lg);
+}
+
+:where(.page-template-default, .post-template-default) .entry-content *:has(+ h5) {
+  margin-bottom: var(--space-l5-lg);
+}
+
+:where(.page-template-default, .post-template-default) .entry-content *:has(+ h6) {
+  margin-bottom: var(--space-l6-lg);
+}
+
+:where(.page-template-default, .post-template-default) .entry-content :where(h1):has(+ h2) {
+  margin-bottom: var(--space-l1-sm);
+}
+
+:where(.page-template-default, .post-template-default) .entry-content :where(h2):has(+ h3) {
+  margin-bottom: var(--space-l2-sm);
+}
+
+:where(.page-template-default, .post-template-default) .entry-content :where(h3):has(+ h4) {
+  margin-bottom: var(--space-l3-sm);
+}
+
+:where(.page-template-default, .post-template-default) .entry-content :where(h4):has(+ h5) {
+  margin-bottom: var(--space-l4-sm);
+}
+
+:where(.page-template-default, .post-template-default) .entry-content :where(h5):has(+ h6) {
+  margin-bottom: var(--space-l5-sm);
+}
+
+:where(.page-template-default, .post-template-default) .entry-content :where(li):has(+ li) {
+  margin-bottom: var(--space-list-items);
+}
+
+:where(.page-template-default, .post-template-default) .entry-content :where(li) :is(ul, ol) {
+  margin-top: var(--space-list-items);
+}
+
+:where(.page-template-default, .post-template-default) .entry-content :is(p, ul, ol, h1, h2, h3, h4, h5, h6):not(:has(+ *)) {
+  margin-bottom: 0;
 }

@@ -304,6 +304,13 @@ u {
 }
 
 
+.menu-button-links button,
+.breadcrumbs,
+.menu-button-links .menu a {
+	letter-spacing: -0.03rem;
+}
+
+
 /* Elements
 --------------------------------------------- */
 span.posted-on {
@@ -365,8 +372,8 @@ span.posted-on {
 
 .featured-image-area .entry-title {
   @apply text-4xl lg:text-[2.75rem];
-  font-family: "quadon-bold", Georgia, serif !important;
-  font-weight: 500 !important;
+  font-family: "robotoslab-bold", Georgia, serif !important;
+  font-weight: 700 !important;
 }
 
 @media (width >= theme(--breakpoint-sm)) {
@@ -521,6 +528,9 @@ thead th:first-child {
 /*! purgecss start ignore */
 .tablepress th {
   @apply font-semi! font-semibold!;
+}
+.dt-container .dt-input {
+	padding-right: 2.25rem !important;
 }
 /*! purgecss end ignore */
 
@@ -1238,7 +1248,7 @@ Not in Tribe-Events Directory */
   h2.tribe-events-widget-events-list__header-title.tribe-common-h6.tribe-common-h--alt {
   font-size: 1.875rem;
   margin-bottom: 0.5rem;
-  font-family: Gentona-Bold, system-ui, BlinkMacSystemFont, -apple-system,
+  font-family: worksans-bold, system-ui, BlinkMacSystemFont, -apple-system,
     Segoe UI, sans-serif;
   font-weight: 700;
 }
@@ -1551,7 +1561,7 @@ ul.page-numbers li.active a {
 
 .breadcrumbs span.current-item,
 .breadcrumbs span a {
-  @apply mx-4 tracking-wide uppercase border-none;
+  @apply mx-4 uppercase border-none;
   font-size: 0.875rem;
 }
 
@@ -1935,7 +1945,7 @@ background-color: #f8fafc;
   cursor: pointer;
   border-style: none;
   padding: 1.25rem;
-  font-family: Gentona-SemiBold, system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, sans-serif;
+  font-family: worksans-SemiBold, system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, sans-serif;
   font-weight: 600;
   line-height: 1.5;
 }
@@ -2011,7 +2021,7 @@ background-color: #f8fafc;
 .single-bulletinboard .bulletinboard .deadline {
   margin-top: -0.5rem;
 margin-bottom: -0.5rem;
-font-family: Gentona-SemiBold, system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, sans-serif;
+font-family: worksans-SemiBold, system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, sans-serif;
 }
 
 .bulletin ul.entry-meta {
@@ -2140,7 +2150,7 @@ font-family: Gentona-SemiBold, system-ui, BlinkMacSystemFont, -apple-system, Seg
 .isotope-to-sort button {
   margin: 0 0.25rem;
   text-align: center;
-  font-family: Gentona-SemiBold, system-ui, BlinkMacSystemFont, -apple-system,
+  font-family: worksans-SemiBold, system-ui, BlinkMacSystemFont, -apple-system,
     Segoe UI, sans-serif;
   vertical-align: text-bottom;
   line-height: 1.2;
@@ -2172,7 +2182,7 @@ font-family: Gentona-SemiBold, system-ui, BlinkMacSystemFont, -apple-system, Seg
 }
 
 .isotope-to-sort legend {
-  font-family: gentona-bold,system-ui,BlinkMacSystemFont,-apple-system,Segoe UI,sans-serif;
+  font-family: worksans-bold,system-ui,BlinkMacSystemFont,-apple-system,Segoe UI,sans-serif;
   font-size: 1.25rem;
   font-weight: 700;
   padding-left: .5rem;
@@ -3080,7 +3090,7 @@ body:not(.enable-search-modal) .header-titles-wrapper {
 }
 
 .site-title {
-  font-family: "quadon-bold", Georgia, serif;
+  font-family: "robotoslab-bold", Georgia, serif;
   line-height: 1;
   font-weight: 500;
 }

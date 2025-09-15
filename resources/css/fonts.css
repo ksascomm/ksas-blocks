@@ -1,43 +1,65 @@
 /*--------------------------------------------------------------
 # Custom Fonts
 --------------------------------------------------------------*/
-
 @font-face {
-	font-family: "quadon";
-	src: url("../fonts/quadon/Quadon-Medium.woff") format("woff");
-    font-weight: 400;
-	font-style: normal;
-	font-display: swap;
-}
-
-@font-face {
-	font-family: "quadon-bold";
-	src: url("../fonts/quadon/Quadon-Bold.woff") format("woff");
+	font-family: "robotoslab-medium";
+	src: url("../fonts/roboto_slab/RobotoSlab-Medium.woff") format("woff");
     font-weight: 500;
 	font-style: normal;
 	font-display: swap;
+	font-optical-sizing: auto;
 }
 
 @font-face {
-	font-family: "gentona-light";
-	src: url("../fonts/gentona/Gentona-Light.woff") format("woff");
+	font-family: "robotoslab-bold";
+	src: url("../fonts/roboto_slab/RobotoSlab-Bold.woff") format("woff");
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+	font-optical-sizing: auto;
+  }
+
+@font-face {
+	font-family: "worksans-light";
+	src: url("../fonts/work_sans/WorkSans-Light.woff") format("woff");
 	font-weight: 300;
 	font-style: normal;
 	font-display: fallback;
+	font-optical-sizing: auto;
 }
 
 @font-face {
-	font-family: "gentona-semibold";
-	src: url("../fonts/gentona/Gentona-SemiBold.woff") format("woff");
+	font-family: "worksans-regular";
+	src: url("../fonts/work_sans/WorkSans-Regular.woff") format("woff");
+	font-weight: 400;
+	font-style: normal;
+	font-display: fallback;
+	font-optical-sizing: auto;
+}
+
+@font-face {
+	font-family: "worksans-medium";
+	src: url("../fonts/work_sans/WorkSans-Medium.woff") format("woff");
+	font-weight: 500;
+	font-style: normal;
+	font-display: fallback;
+	font-optical-sizing: auto;
+}
+
+@font-face {
+	font-family: "worksans-semibold";
+	src: url("../fonts/work_sans/WorkSans-SemiBold.woff") format("woff");
 	font-weight: 600;
 	font-style: normal;
 	font-display: fallback;
+	font-optical-sizing: auto;
 }
 
 @font-face {
-	font-family: "gentona-bold";
-	src: url("../fonts/gentona/Gentona-Bold.woff") format("woff");
+	font-family: "worksans-bold";
+	src: url("../fonts/work_sans/WorkSans-Bold.woff") format("woff");
 	font-weight: 700;
 	font-style: normal;
 	font-display: fallback;
+	font-optical-sizing: auto;
 }

@@ -1,5 +1,5 @@
 :root {
-  --tec-font-family-sans-serif: "gentona-light", "Tahoma", sans-serif;"
+  --tec-font-family-sans-serif: "worksans-regular", "Tahoma", sans-serif;"
   --font-family-base: var(--tec-font-family-sans-serif);
   --tec-font-weight-regular: 300;
   --tec-color-button-primary: #002d72;
@@ -31,7 +31,7 @@
 h2.tribe-events-calendar-latest-past__heading.tribe-common-h5.tribe-common-h3--min-medium,
 span.tribe-events-c-top-bar__datepicker-desktop.tribe-common-a11y-hidden,
 a.tribe-events-calendar-latest-past__event-title-link {
-  font-family: "gentona-semibold", system-ui, BlinkMacSystemFont, -apple-system,
+  font-family: "worksans-semibold", system-ui, BlinkMacSystemFont, -apple-system,
     Segoe UI, sans-serif;
   font-weight: 600;
 }
@@ -40,7 +40,7 @@ a.tribe-events-calendar-latest-past__event-title-link {
 .tribe-events .tribe-events-calendar-latest-past__event-date-tag-month,
 .tribe-events .tribe-events-calendar-latest-past__event-date-tag-year,
 .tribe-events .tribe-events-calendar-latest-past__event-date-tag-daynum {
-  font-family: "gentona-semibold", system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, sans-serif;
+  font-family: "worksans-semibold", system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, sans-serif;
   font-weight: 600;
   color:#31261d;
   font-size: 1.25rem;
@@ -54,7 +54,7 @@ a.tribe-events-calendar-latest-past__event-title-link {
 .tribe-events-calendar-latest-past__event-venue-title.tribe-common-b2--bold,
 .tribe-events .tribe-events-calendar-list__event-datetime
  {
-  font-family: "gentona-semibold", system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, sans-serif !important;
+  font-family: "worksans-semibold", system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, sans-serif !important;
   font-weight: 600 !important;
 }
 
@@ -121,7 +121,7 @@ a.tribe-events-calendar-latest-past__event-title-link.tribe-common-anchor-thin:h
 .tribe-events-meta-group .tribe-events-single-section-title,
 .tribe-events-start-date-label,
 .tribe-events-start-time-label {
-  font-family: "gentona-semibold", system-ui, BlinkMacSystemFont, -apple-system,
+  font-family: "worksans-semibold", system-ui, BlinkMacSystemFont, -apple-system,
     Segoe UI, sans-serif !important;
   font-weight: 600 !important;
 }
@@ -234,7 +234,7 @@ a.tribe-events-calendar-list__event-title-link.tribe-common-anchor-thin:hover {
 }
 
 .tribe-common .tribe-common-h--alt {
-  font-family: "gentona-bold", system-ui, BlinkMacSystemFont, -apple-system,
+  font-family: "worksans-bold", system-ui, BlinkMacSystemFont, -apple-system,
     Segoe UI, sans-serif;
     font-weight: 700;
 }
@@ -270,8 +270,8 @@ h1.tribe-events-single-event-title,
 
 h1.tribe-events-single-event-title,
 .tribe-common--breakpoint-medium.tribe-events .tribe-events-header__title h1.tribe-events-header__title-text {
-  font-family: Quadon-Bold, Georgia, serif;
-  font-weight: 500;
+  font-family: robotoslab-bold, Georgia, serif;
+  font-weight: 700;
 }
 
 .tribe-event-date-start,
@@ -284,7 +284,7 @@ h1.tribe-events-single-event-title,
 .tribe-events-nav-pagination,
 .tribe-events-content,
 .tribe-events-event-meta {
-  font-family: "gentona-light", system-ui, BlinkMacSystemFont, -apple-system,
+  font-family: "worksans-regular", system-ui, BlinkMacSystemFont, -apple-system,
     Segoe UI, sans-serif;
   color: #31261d;
   font-weight: 300;
@@ -298,7 +298,7 @@ h1.tribe-events-single-event-title,
 
 .tribe-events-single .tribe-events-sub-nav .tribe-events-nav-next a,
 .tribe-events-single .tribe-events-sub-nav .tribe-events-nav-previous a {
-  font-family: "gentona-light", system-ui, BlinkMacSystemFont, -apple-system,
+  font-family: "worksans-regular", system-ui, BlinkMacSystemFont, -apple-system,
     Segoe UI, sans-serif;
   color: #002d72 !important;
   font-weight: 300 !important;
@@ -365,7 +365,7 @@ a.tribe-events-c-subscribe-dropdown__list-item-link:hover {
 .tribe-events-calendar-list__event-date-tag-daynum.tribe-common-h5.tribe-common-h4--min-medium,
 .tribe-common .tribe-common-h5,
 .tribe-common--breakpoint-medium.tribe-events .tribe-events-calendar-list__event-datetime-featured-text {
-  font-family: gentona-bold, "Helvetica Neue", Roboto, sans-serif;
+  font-family: worksans-bold, "Helvetica Neue", Roboto, sans-serif;
   font-weight: 700;
 }
 
@@ -384,7 +384,7 @@ a.tribe-events-c-subscribe-dropdown__list-item-link:hover {
 .tribe-events-calendar-list .tribe-event-categories li a {
   color: #fefefe !important;
 border: none !important;
-font-family: "gentona-semibold", system-ui, BlinkMacSystemFont, -apple-system,
+font-family: "worksans-semibold", system-ui, BlinkMacSystemFont, -apple-system,
 Segoe UI, sans-serif;
 font-weight: 600;
 }
@@ -409,7 +409,7 @@ font-weight: 600;
 }
 
 .tribe-events-content h2, .tribe-events-content h3, .tribe-events-content h4, .tribe-events-content h5, .tribe-events-content h6 {
-	font-family: Gentona-SemiBold,system-ui,BlinkMacSystemFont,-apple-system,Segoe UI,sans-serif;
+	font-family: worksans-SemiBold,system-ui,BlinkMacSystemFont,-apple-system,Segoe UI,sans-serif;
   font-weight: 600;
 }
 
@@ -448,13 +448,13 @@ font-weight: 600;
 }
 
 .tribe-events-series-relationship-marker, .tribe-events-series-relationship-single-marker {
-  font-family: "gentona-semibold", system-ui, BlinkMacSystemFont, -apple-system,
+  font-family: "worksans-semibold", system-ui, BlinkMacSystemFont, -apple-system,
   Segoe UI, sans-serif !important;
   font-weight: 600 !important;
 }
 
 .tribe-events-pro-summary__event-datetime {
-  font-family: "gentona-semibold", system-ui, BlinkMacSystemFont, -apple-system,
+  font-family: "worksans-semibold", system-ui, BlinkMacSystemFont, -apple-system,
   Segoe UI, sans-serif !important;
   font-weight: 600 !important;
   font-size: 1rem;
@@ -482,7 +482,7 @@ a.tribe-events-series-relationship-single-marker__title.tribe-common-cta--alt:ho
 }
 
 .tribe-events-series-relationship-marker, .tribe-events-series-relationship-single-marker {
-	font-family: gentona-bold,"Helvetica Neue",Roboto,sans-serif !important;
+	font-family: "worksans-bold","Helvetica Neue",Roboto,sans-serif !important;
   font-weight: 700;
 }
 
@@ -532,7 +532,7 @@ img.tribe-events-calendar-list__event-featured-image:not([alt]) {
 /* Related Events Block */
 
 .tribe-events-related-events-title, .tribe-events-single ul.tribe-related-events li, .tribe-events-single ul.tribe-related-events li .tribe-related-events-title {
-  font-family: "gentona-semibold", system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, sans-serif !important;
+  font-family: "worksans-semibold", system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, sans-serif !important;
   font-weight: 600 !important;
 }
 
@@ -576,7 +576,7 @@ img.tribe-events-calendar-list__event-featured-image:not([alt]) {
 .tribe-events-calendar-list .tribe-event-categories li a {
   color: #fefefe !important;
   border: none !important;
-  font-family: "gentona-semibold", system-ui, BlinkMacSystemFont, -apple-system,
+  font-family: "worksans-semibold", system-ui, BlinkMacSystemFont, -apple-system,
 Segoe UI, sans-serif;
 }
 .tribe-events-calendar-list .tribe-event-categories li:hover a {
@@ -585,7 +585,7 @@ Segoe UI, sans-serif;
 
 .tribe-block__venue .tribe-block__venue__meta .tribe-block__venue__name h3,
 .tribe-events-section-category dt {
-  font-family: "gentona-semibold", system-ui, BlinkMacSystemFont, -apple-system,
+  font-family: "worksans-semibold", system-ui, BlinkMacSystemFont, -apple-system,
   Segoe UI, sans-serif;
 }
 
@@ -593,7 +593,7 @@ Segoe UI, sans-serif;
 .tribe-venue-url,
 .tribe-organizer,
 .tribe-organizer-url {
-  font-family: "gentona-light", system-ui, BlinkMacSystemFont, -apple-system,
+  font-family: "worksans-regular", system-ui, BlinkMacSystemFont, -apple-system,
 Segoe UI, sans-serif;
 }
 

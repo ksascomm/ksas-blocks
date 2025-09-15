@@ -3,31 +3,31 @@ Description: Used to style the content editor in posts and pages
 */
 
 @font-face {
-  font-family: "quadon-medium";
-  src: url("../dist/fonts/quadon/Quadon-Medium.woff") format("woff");
+  font-family: "robotoslab-medium";
+  src: url("../dist/fonts/roboto_slab/RobotoSlab-Medium.woff") format("woff");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "gentona-light";
-  src: url("../dist/fonts/gentona/Gentona-Light.woff") format("woff");
-  font-weight: 300;
+  font-family: "worksans-regular";
+  src: url("../dist/fonts/work_sans/WorkSans-Regular.woff") format("woff");
+  font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "gentona-semibold";
-  src: url("../dist/fonts/gentona/Gentona-SemiBold.woff") format("woff");
+  font-family: "worksans-semibold";
+  src: url("../dist/fonts/work_sans/WorkSans-SemiBold.woff") format("woff");
   font-weight: 600;
   font-style: normal;
   font-display: swap;
 }
 
 :root {
-  --tec-font-family-sans-serif: "gentona-light", "Helvetica Neue", Roboto, sans-serif;
+  --tec-font-family-sans-serif: "worksans-regular", "Helvetica Neue", Roboto, sans-serif;
   --tec-color-text-primary: #31261d;
   --tec-color-link-primary: #002d72;
 }
@@ -54,7 +54,7 @@ a:where(:not(.wp-element-button)) {
 
 
 body {
-  font-family: "gentona-light", "Helvetica Neue", Roboto, sans-serif;
+  font-family: "worksans-light", "Helvetica Neue", Roboto, sans-serif;
   font-weight: 300;
   font-size: 18px;
   color: #31261d;
@@ -63,7 +63,7 @@ body {
 /* TinyMCE Editor */
 .editor-styles-wrapper p strong,
 .editor-rich-text p strong {
-  font-family: "gentona-semibold", "Helvetica Neue", Roboto, sans-serif;
+  font-family: "worksans-semibold", "Helvetica Neue", Roboto, sans-serif;
   font-weight: 600;
 }
 
@@ -71,7 +71,7 @@ p b,
 p strong,
 li b,
 li strong {
-  font-family: "gentona-semibold", "Helvetica Neue", Roboto, sans-serif;
+  font-family: "worksans-semibold", "Helvetica Neue", Roboto, sans-serif;
   font-weight: 600;
 }
 
@@ -151,13 +151,13 @@ a.acf-button.button.button-primary {
 
 /* The Post Title */
 .editor-post-title__block .editor-post-title__input {
-  font-family: "quadon-medium", "Helvetica Neue", Roboto, sans-serif;
+  font-family: "robotoslab-medium", "Helvetica Neue", Roboto, sans-serif;
   font-weight: 500;
 }
 
 /* Headings */
 .editor-writing-flow .wp-block h1 {
-  font-family: "quadon-medium", "Helvetica Neue", Roboto, sans-serif;
+  font-family: "robotoslab-medium", "Helvetica Neue", Roboto, sans-serif;
   font-weight: 500;
 }
 .editor-writing-flow .wp-block h2,
@@ -165,12 +165,12 @@ a.acf-button.button.button-primary {
 .editor-writing-flow .wp-block h4,
 .editor-writing-flow .wp-block h5,
 .editor-writing-flow .wp-block h6 {
-  font-family: "gentona-semibold", "Helvetica Neue", Roboto, sans-serif;
+  font-family: "worksans-semibold", "Helvetica Neue", Roboto, sans-serif;
   font-weight: 600;
 }
 
 h1 {
-  font-family: "quadon-medium", "Helvetica Neue", Roboto, sans-serif;
+  font-family: "robotoslab-medium", "Helvetica Neue", Roboto, sans-serif;
   font-weight: 500;
 }
 
@@ -179,14 +179,14 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "gentona-semibold", "Helvetica Neue", Roboto, sans-serif;
+  font-family: "worksans-semibold", "Helvetica Neue", Roboto, sans-serif;
   font-weight: 600;
 }
 
 /* Blockquote styles */
 .wp-block-quote__citation {
   font-size: 1rem;
-  font-family: "gentona-semibold", "Helvetica Neue", Roboto, sans-serif;
+  font-family: "worksans-semibold", "Helvetica Neue", Roboto, sans-serif;
   font-weight: 600;
   color: #31261d;
 }
@@ -209,12 +209,12 @@ h6 {
 
 /* Event Calendar Plugin */
 .tribe-editor__subtitle .tribe-editor__btn--label, .tribe-editor__event-price__price, .tribe-editor__venue .tribe-editor__venue__name h3.tribe-editor__venue__name-heading, .tribe-editor__organizer__details p {
-  font-family: "gentona-semibold", "Helvetica Neue", Roboto, sans-serif;
+  font-family: "worksans-semibold", "Helvetica Neue", Roboto, sans-serif;
   font-weight: 600;
 }
 
 .tribe-editor__venue__address, .tribe-editor__venue__phone, .tribe-editor__venue__website, .tribe-editor__event-website__label-text input, .tribe-editor__events-link .tribe-editor__btn--link input, .block-editor-url-input__input[type=text] {
-  font-family: "gentona-light", "Helvetica Neue", Roboto, sans-serif;
+  font-family: "worksans-light", "Helvetica Neue", Roboto, sans-serif;
   font-weight: 300;
 }
 
@@ -229,7 +229,7 @@ h6 {
 
 .tribe-editor__event-website__url .block-editor-url-input__input[type=text] {
   font-size: 1.25rem;
-  font-family: "gentona-semibold", "Helvetica Neue", Roboto, sans-serif;
+  font-family: "worksans-semibold", "Helvetica Neue", Roboto, sans-serif;
   font-weight: 600;
   color: #002d72;
 }
@@ -260,7 +260,7 @@ h2.tribe-editor__subtitle__headline {
 }
 
 .tribe-editor__featured-image .components-placeholder__instructions {
-  font-family: "gentona-light", "Helvetica Neue", Roboto, sans-serif;
+  font-family: "worksans-light", "Helvetica Neue", Roboto, sans-serif;
   font-weight: 300;
   color: #4A484C;
 }
@@ -269,12 +269,12 @@ h2.tribe-editor__subtitle__headline {
 /* Fields converted from Classic to Block Editor */
 .tribe-editor__btn--label strong, .tribe-editor__event-details .tribe-editor__meta-group .tribe-editor__events-section__headline input, .tribe-editor__block strong, .tribe-editor__block p strong {
   color: #31261d;
-  font-family: "gentona-semibold", "Helvetica Neue", Roboto, sans-serif;
+  font-family: "worksans-semibold", "Helvetica Neue", Roboto, sans-serif;
   font-weight: 600;
 }
 
 .tribe-editor__block, .tribe-editor__block p, .block-editor .block-editor-plain-text, .tribe-editor__btn--label, .tribe-editor__soc__input {
-  font-family: "gentona-light", "Helvetica Neue", Roboto, sans-serif;
+  font-family: "worksans-light", "Helvetica Neue", Roboto, sans-serif;
   font-weight: 300;
 }
 
@@ -289,7 +289,7 @@ h2.tribe-editor__subtitle__headline {
 .block-editor-block-list__block.wp-block.is-selected input.tribe-editor__date-input {
   font-size: 1.25rem;
   color: #31261d;
-  font-family: "gentona-semibold", "Helvetica Neue", Roboto, sans-serif;
+  font-family: "worksans-semibold", "Helvetica Neue", Roboto, sans-serif;
   font-weight: 600;
 }
 
