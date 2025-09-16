@@ -47,22 +47,22 @@ module.exports = {
                 marginBottom: "0.5rem",
                 maxWidth: "90ch",
                 fontSize: "2rem",
-                fontWeight: "600",
-                fontFamily: "worksans-semibold, system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, sans-serif",
+                fontWeight: "700",
+                fontFamily: "worksans-bold, system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, sans-serif",
               },
               h3: {
                 marginTop: "0.5rem",
                 marginBottom: "0.5rem",
                 fontSize: "1.6rem",
-                fontWeight: "600",
-                fontFamily: "worksans-semibold, system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, sans-serif",
+                fontWeight: "700",
+                fontFamily: "worksans-bold, system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, sans-serif",
               },
               h4: {
                 marginTop: "0.5rem",
                 marginBottom: "0.5rem",
                 fontSize: "1.25rem",
-                fontWeight: "600",
-                fontFamily: "worksans-semibold, system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, sans-serif",
+                fontWeight: "700",
+                fontFamily: "worksans-bold, system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, sans-serif",
               },
               h5 : {
                 fontWeight: "600",
@@ -85,7 +85,7 @@ module.exports = {
                 fontWeight: 400,
               },
               strong: {
-                fontFamily: "worksans-bold, system-ui",
+                fontFamily: "worksans-bold, system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, sans-serif",
                 fontWeight: 700,
               },
               "a strong": {
