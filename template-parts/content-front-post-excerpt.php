@@ -39,7 +39,7 @@ if ( has_post_thumbnail() ) :
 		?>
 		</div>
 	<?php endif; ?>
-		<header class="entry-header px-4 pt-4">
+		<header class="px-4 pt-4 entry-header">
 			<?php
 			ksas_blocks_posted_on();
 			?>
@@ -49,7 +49,7 @@ if ( has_post_thumbnail() ) :
 			<?php the_title( '<h3 class="entry-title text-2xl!"><a class="front-post" href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h3>' ); ?>
 		<?php endif; ?>
 		</header><!-- .entry-header -->
-		<div class="entry-content px-4 leading-normal text-lg">
+		<div class="px-4 pb-4 text-lg leading-normal entry-content">
 			<p><?php echo esc_html( wp_trim_words( get_the_excerpt(), 40, '...' ) ); ?></p>
 		</div><!-- .entry-content -->
 	</article><!-- #post-<?php the_ID(); ?> -->

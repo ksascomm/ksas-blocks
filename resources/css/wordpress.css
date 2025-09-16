@@ -93,11 +93,12 @@ mark {
   background: transparent;
 }
 
+/*
 .site-main .entry-content p,
 .site-main .people-content p,
 .tribe-events-widget-events-list__event-details p {
   -webkit-text-stroke: 0.025rem rgba(49,38,29,0.50);
-}
+}*/
 
 
 /*--------------------------------------------------------------
@@ -2444,7 +2445,8 @@ font-family: worksans-SemiBold, system-ui, BlinkMacSystemFont, -apple-system, Se
 
 .news-section .prose h3.entry-title a,
 .blog .site-main.prose h3.entry-title a {
-  @apply font-semibold;
+  font-weight: var(--font-weight-bold);
+  font-family: var(--font-heavy);
 }
 
 .news-section .prose.article-excerpt img {
