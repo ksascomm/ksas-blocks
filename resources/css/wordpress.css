@@ -133,9 +133,8 @@ label.gfield_label {
 .magazine-heading h1 a,
 .magazine.features h3 a,
 .widget a,
-.prose a strong {
+.prose strong a {
   @apply no-underline transition-colors duration-200 ease-in-out border-b-2 text-blue border-grey;
-  
 }
 
 .site-main a:hover,
@@ -145,8 +144,17 @@ label.gfield_label {
 .magazine-heading h1 a:hover,
 .magazine.features h3 a:hover,
 .widget a:hover,
-.prose a strong:hover {
+.prose strong a:hover {
   @apply border-b-2 border-solid text-primary border-grey-darkest;
+}
+
+/* Fix issue were links are bolded, instead of links added to bold text*/
+.prose a strong {
+	border: 0px;
+}
+
+.prose a strong:hover {
+	color: var(--color-white);
 }
 
 .entry-content p a,
@@ -1541,13 +1549,20 @@ ul.page-numbers li.active a {
 /* Breadcrumbs
 --------------------------------------------- */
 .breadcrumbs {
-  @apply block pl-2 -mb-4 lg:inline-block text-grey-darkest lg:border lg:border-grey-cool;
+  display: block;
+  padding-left: 0.5rem; /* pl-2 */
+  margin-bottom: -1rem; /* -mb-4 */
+  color: #3d4852; /* text-grey-darkest */
   background-color: rgba(191, 204, 217, 0);
   padding-top:.125rem;
-  padding-bottom: 0.25rem
+  padding-bottom: 0.25rem;
+  font-size: var(--text-base);
+  @apply lg:inline-block lg:border lg:border-grey-cool;
 }
 
 .breadcrumbs span {
+	font-family: var(--font-heavy);
+	font-weight: var(--font-weight-bold);
   @apply font-semibold font-semi;
 }
 
