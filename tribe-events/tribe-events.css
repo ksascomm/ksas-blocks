@@ -635,3 +635,7 @@ Segoe UI, sans-serif;
   color: #31261d !important;
   border: none;
 }
+
+.tribe-events-widget-events-list__event-date-tag-daynum.tribe-common-h2.tribe-common-h4--min-medium {
+	color: #31261d !important;
+}

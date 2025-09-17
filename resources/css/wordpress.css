@@ -533,6 +533,10 @@ thead th:first-child {
 .dt-container .dt-input {
 	padding-right: 2.25rem !important;
 }
+
+.tablepress > :where(thead, tfoot) > tr > * {
+	color: var(--color-primary) !important;
+}
 /*! purgecss end ignore */
 
 /*--------------------------------------------------------------
@@ -636,7 +640,11 @@ ul.primary-menu a[aria-current] {
   min-height: 30px;
 }
 .main-navigation ul a {
-  @apply relative font-sans text-lg font-light;
+	position: relative;
+	font-family: var(--font-sans);
+	font-weight: var(--font-weight-normal);
+	font-size: var(--text-lg);
+	letter-spacing: -0.03rem;
 }
 
 .main-navigation .nav-primary ul.menu > li.menu-item:not(:last-child)::after {
