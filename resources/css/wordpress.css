@@ -197,7 +197,7 @@ li.tribe-events-c-top-bar__nav-list-item a.tribe-common-c-btn-icon {
 }
 
 .site-footer {
-  @apply font-sans font-light;
+  @apply font-sans font-normal;
 }
 
 .site-footer .text-center p a {
@@ -1114,7 +1114,7 @@ footer.entry-footer {
 }
 
 .widget .textwidget {
-  @apply font-sans font-light;
+  @apply font-sans font-normal;
 }
 
 .widget .textwidget a {
@@ -1448,7 +1448,7 @@ Not in Tribe-Events Directory */
 }
 
 .navigation ul.page-numbers li a {
-  @apply p-2 font-sans font-light border-0;
+  @apply p-2 font-sans font-normal border-0;
 }
 
 ul.page-numbers li a:hover {

@@ -96,47 +96,47 @@
 }
 
 
-:where(.page-template-default, .post-template-default, .front) .entry-content :is(p, ul, ol) {
+:where(.page-template-default, .post-template-default, .front, .single-ksasresearchprojects) .entry-content :is(p, ul, ol) {
 	margin-bottom: var(--space-default);
 }
 
-:where(.page-template-default, .post-template-default, .front) .entry-content h1 {
+:where(.page-template-default, .post-template-default, .front, .single-ksasresearchprojects) .entry-content h1 {
 	margin-bottom: var(--space-l1-sm);
 }
 
-:where(.page-template-default, .post-template-default, .front) .entry-content h2 {
+:where(.page-template-default, .post-template-default, .front, .single-ksasresearchprojects) .entry-content h2 {
 	margin-bottom: var(--space-l2-sm);
 }
 
-:where(.page-template-default, .post-template-default, .front) .entry-content h3 {
+:where(.page-template-default, .post-template-default, .front, .single-ksasresearchprojects) .entry-content h3 {
 	margin-bottom: var(--space-l3-sm);
 }
 
-:where(.page-template-default, .post-template-default, .front) .entry-content h4 {
+:where(.page-template-default, .post-template-default, .front, .single-ksasresearchprojects) .entry-content h4 {
 	margin-bottom: var(--space-l4-sm);
 }
 
-:where(.page-template-default, .post-template-default, .front) .entry-content h5 {
+:where(.page-template-default, .post-template-default, .front, .single-ksasresearchprojects) .entry-content h5 {
 	margin-bottom: var(--space-l5-sm);
 }
 
-:where(.page-template-default, .post-template-default, .front) .entry-content h6 {
+:where(.page-template-default, .post-template-default, .front, .single-ksasresearchprojects) .entry-content h6 {
 	margin-bottom: var(--space-l6-sm);
 }
 
-:where(.page-template-default, .post-template-default, .front) .entry-content *:has(+ h2) {
+:where(.page-template-default, .post-template-default, .front, .single-ksasresearchprojects) .entry-content *:has(+ h2) {
 	margin-bottom: var(--space-l2-lg);
 }
 
-:where(.page-template-default, .post-template-default, .front) .entry-content *:has(+ h3) {
+:where(.page-template-default, .post-template-default, .front, .single-ksasresearchprojects) .entry-content *:has(+ h3) {
 	margin-bottom: var(--space-l3-lg);
 }
 
-:where(.page-template-default, .post-template-default, .front) .entry-content *:has(+ h4) {
+:where(.page-template-default, .post-template-default, .front, .single-ksasresearchprojects) .entry-content *:has(+ h4) {
 	margin-bottom: var(--space-l4-lg);
 }
 
-:where(.page-template-default, .post-template-default, .front) .entry-content *:has(+ h5) {
+:where(.page-template-default, .post-template-default, .front, .single-ksasresearchprojects) .entry-content *:has(+ h5) {
 	margin-bottom: var(--space-l5-lg);
 }
 
@@ -144,34 +144,34 @@
 	margin-bottom: var(--space-l6-lg);
 }
 
-:where(.page-template-default, .post-template-default, .front) .entry-content :where(h1):has(+ h2) {
+:where(.page-template-default, .post-template-default, .front, .single-ksasresearchprojects) .entry-content :where(h1):has(+ h2) {
 	margin-bottom: var(--space-l1-sm);
 }
 
-:where(.page-template-default, .post-template-default, .front) .entry-content :where(h2):has(+ h3) {
+:where(.page-template-default, .post-template-default, .front, .single-ksasresearchprojects) .entry-content :where(h2):has(+ h3) {
 	margin-bottom: var(--space-l2-sm);
 }
 
-:where(.page-template-default, .post-template-default, .front) .entry-content :where(h3):has(+ h4) {
+:where(.page-template-default, .post-template-default, .front, .single-ksasresearchprojects) .entry-content :where(h3):has(+ h4) {
 	margin-bottom: var(--space-l3-sm);
 }
 
-:where(.page-template-default, .post-template-default, .front) .entry-content :where(h4):has(+ h5) {
+:where(.page-template-default, .post-template-default, .front, .single-ksasresearchprojects) .entry-content :where(h4):has(+ h5) {
 	margin-bottom: var(--space-l4-sm);
 }
 
-:where(.page-template-default, .post-template-default, .front) .entry-content :where(h5):has(+ h6) {
+:where(.page-template-default, .post-template-default, .front, .single-ksasresearchprojects) .entry-content :where(h5):has(+ h6) {
 	margin-bottom: var(--space-l5-sm);
 }
 
-:where(.page-template-default, .post-template-default, .front) .entry-content :where(li):has(+ li) {
+:where(.page-template-default, .post-template-default, .front, .single-ksasresearchprojects) .entry-content :where(li):has(+ li) {
 	margin-bottom: var(--space-list-items);
 }
 
-:where(.page-template-default, .post-template-default, .front) .entry-content :where(li) :is(ul, ol) {
+:where(.page-template-default, .post-template-default, .front, .single-ksasresearchprojects) .entry-content :where(li) :is(ul, ol) {
 	margin-top: var(--space-list-items);
 }
 
-:where(.page-template-default, .post-template-default, .front) .entry-content :is(p, ul, ol, h1, h2, h3, h4, h5, h6):not(:has(+ *)) {
+:where(.page-template-default, .post-template-default, .front, .single-ksasresearchprojects) .entry-content :is(p, ul, ol, h1, h2, h3, h4, h5, h6):not(:has(+ *)) {
 	margin-bottom: 0;
 }

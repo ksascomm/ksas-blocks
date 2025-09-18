@@ -14,8 +14,8 @@
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 	</header><!-- .entry-header -->
 
-	<div class="entry-content pl-4 pr-4 lg:pr-12 xl:pl-0 xl:pr-0">
-		<div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+	<div class="pl-4 pr-4 entry-content lg:pr-12 xl:pl-0 xl:pr-0">
+		<div class="grid grid-cols-1 gap-4 lg:grid-cols-2">
 			<div>
 				<div class="flex mt-4">
 				<?php
@@ -37,12 +37,12 @@
 				<?php
 				if ( get_field( 'capacity' ) ) :
 					?>
-					<div class="w-1/2 overflow-hidden rounded-xl text-primary border-primary border-solid border-2 bg-white font-heavy font-bold text-lg px-2 m-4 text-center">
-						<h3 class="uppercase">Capacity</h3> 
-						<div class="font-bold"><?php the_field( 'capacity' ); ?></div>
+					<div class="w-1/2 p-1 m-4 mt-8 overflow-hidden text-lg font-bold text-center bg-white border-2 border-solid rounded-xl text-primary border-primary font-heavy">
+						<h3>Capacity</h3> 
+						<div class="text-3xl font-bold"><?php the_field( 'capacity' ); ?></div>
 					</div>
 				<?php endif; ?>
-					<div class="w-1/2 overflow-hidden rounded-xl m-4 text-center classroom-type 
+					<div class="w-1/2 overflow-hidden rounded-xl m-4 mt-8 text-center classroom-type 
 						<?php
 						$classroom_types = get_the_terms( $post->ID, 'classroom_type' );
 						if ( $classroom_types && ! is_wp_error( $classroom_types ) ) :
@@ -52,7 +52,7 @@
 						endif;
 						?>
 					">
-					<h3 class="uppercase text-white">Classroom Type</h3>
+					<h3 class="text-white">Classroom Type</h3>
 						<?php
 						if ( $classroom_types && ! is_wp_error( $classroom_types ) ) :
 							foreach ( $classroom_types as $classroom_type ) :
@@ -78,8 +78,8 @@
 				<table class="table-auto">
 					<thead class="bg-grey-cool">
 						<tr>
-							<th class="font-heavy">Equipment & Features</th>
-							<th class="font-heavy">Available/Specifications</th>
+							<th>Equipment & Features</th>
+							<th>Available/Specifications</th>
 						</tr>
 					</thead>
 					<tbody>
@@ -253,7 +253,7 @@
 				<table class="table-auto">
 					<thead class="bg-grey-cool">
 						<tr>
-							<th class="font-heavy">Equipment & Features</th>
+							<th>Equipment & Features</th>
 						</tr>
 					</thead>
 					<tbody>
@@ -374,4 +374,3 @@
 		</footer><!-- .entry-footer -->
 	<?php endif; ?>
 </article><!-- #post-<?php the_ID(); ?> -->
-
