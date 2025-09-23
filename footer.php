@@ -36,7 +36,7 @@
 	<div class="grid grid-cols-1 p-4 site-info sm:grid-cols-2 md:grid-cols-4">
 		<div class="col-span-4 m-2 lg:col-span-1">
 			<a href="https://www.jhu.edu/">
-			<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/dist/images/university.shield.svg" class="w-full h-auto p-5 sm:w-1/2 sm:mx-auto lg:w-full" alt="JHU shield in the footer">
+			<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/dist/images/university.shield.svg" class="w-full h-auto p-5 sm:w-1/2 sm:mx-auto lg:w-full max-w-[350px] mx-auto" alt="JHU shield in the footer">
 			</a>
 		</div>
 		<div class="col-span-4 lg:col-span-2">

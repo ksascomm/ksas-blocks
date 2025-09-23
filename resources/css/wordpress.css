@@ -289,17 +289,6 @@ footer a:hover {
 /* Typography
 --------------------------------------------- */
 
-h1 {
-  @apply font-serif;
-}
-
-h2,
-h3,
-h4,
-h5 {
-  @apply font-semi;
-}
-
 h2.entry-title {
   @apply mt-2!;
 }
@@ -536,7 +525,7 @@ thead th:first-child {
 
 /*! purgecss start ignore */
 .tablepress th {
-  @apply font-semi! font-semibold!;
+  @apply font-heavy font-bold!;
 }
 .dt-container .dt-input {
 	padding-right: 2.25rem !important;
@@ -961,7 +950,7 @@ button.menu-button:focus {
 }
 
 .dropdown.sidebar-menu a {
-  @apply font-semibold font-semi;
+  @apply font-bold font-heavy;
 }
 
 .dropdown ul.nav ul.children {
@@ -970,7 +959,7 @@ button.menu-button:focus {
 
 /* Interior Page Dropdown Menu ---------------------------- */
 .menu-button-links button {
-  @apply inline-block justify-center px-4 py-2 text-[.875rem]! leading-5 font-semi font-semibold text-white lg:bg-blue lg:border lg:border-grey-cool uppercase ;
+  @apply inline-block justify-center px-4 py-2 text-[.875rem]! leading-5 font-heavy font-bold text-white lg:bg-blue lg:border lg:border-grey-cool uppercase ;
 }
 
 .menu-button-links .menu {
@@ -994,7 +983,7 @@ button.menu-button:focus {
 }
 
 .menu-button-links .menu a {
-  @apply text-base font-semibold font-semi;
+  @apply text-base font-bold font-heavy;
   border-bottom: none;
 }
 
@@ -1563,7 +1552,6 @@ ul.page-numbers li.active a {
 .breadcrumbs span {
 	font-family: var(--font-heavy);
 	font-weight: var(--font-weight-bold);
-  @apply font-semibold font-semi;
 }
 
 @media screen and (max-width: 1536px) {
