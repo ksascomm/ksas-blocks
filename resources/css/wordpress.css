@@ -668,7 +668,7 @@ ul.primary-menu a[aria-current] {
 }
 
 .main-navigation ul#primary-menu > li > a {
- letter-spacing: -0.05rem;;
+ letter-spacing: -0.02rem;;
 }
 
 .main-navigation ul ul {
@@ -689,7 +689,7 @@ ul.primary-menu a[aria-current] {
  display: inline-block;
  border-bottom-width: 0;
  border-left: 4px solid transparent;
- letter-spacing: -0.03rem;
+ /*letter-spacing: -0.03rem;*/
 }
 .main-navigation ul ul li a:hover {
  @apply border-l-4;
