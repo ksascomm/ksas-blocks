@@ -641,7 +641,6 @@ ul.primary-menu a[aria-current] {
 	font-family: var(--font-sans);
 	font-weight: var(--font-weight-normal);
 	font-size: var(--text-lg);
-	letter-spacing: -0.03rem;
 }
 
 .main-navigation .nav-primary ul.menu > li.menu-item:not(:last-child)::after {
@@ -668,6 +667,10 @@ ul.primary-menu a[aria-current] {
  @apply border-b-2 border-blue;
 }
 
+.main-navigation ul#primary-menu > li > a {
+ letter-spacing: -0.05rem;;
+}
+
 .main-navigation ul ul {
   display: none;
   margin-top: 0px;
@@ -686,9 +689,12 @@ ul.primary-menu a[aria-current] {
  display: inline-block;
  border-bottom-width: 0;
  border-left: 4px solid transparent;
+ letter-spacing: -0.03rem;
 }
 .main-navigation ul ul li a:hover {
- @apply border-l-4 bg-grey-lightest border-blue;
+ @apply border-l-4;
+  border-color: var(--color-blue);
+ background-color: var(--color-grey-lightest);
  transition: border-color .5s ease-in-out;
  border-bottom-width: 0 !important;
 }
@@ -730,7 +736,7 @@ button.dropdown-toggle {
   padding: 2px;
 }
 .menu-item-has-children button.dropdown-toggle:hover {
-  @apply bg-grey;
+  background-color: var(--color-grey);
 }
 .dropdown-toggle:after, .dropdown-toggle.toggled-on:after {
   font-size: 1rem;
@@ -840,7 +846,7 @@ button.menu-button:focus {
 }
  .main-navigation li > a {
    display: inline-block;
-   padding: 0.275rem;
+   padding: 0.1375rem;
  }
   .no-js .main-navigation ul ul, .main-navigation ul ul {
     position: absolute;
@@ -2966,7 +2972,7 @@ button.toggle.search-toggle.desktop-search-toggle {
 }
 
 button.toggle.search-toggle.desktop-search-toggle svg {
-  height: 1.15rem;
+  height: 1rem;
   max-width: 1rem;
   width: 1rem;
 }
@@ -3714,10 +3720,6 @@ button.search-untoggle {
   }
 
   /* HEADER TOGGLES */
-
-  .toggle-inner .toggle-text {
-    font-size: 1.125rem;
-  }
 
   .search-toggle {
     left: 2rem;

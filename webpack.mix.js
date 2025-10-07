@@ -124,6 +124,7 @@ if (mix.inProduction()) {
 					"ul li",
 					"em",
 					"b",
+					"u",
 					"strong",
 					"blockquote",
 					"cite",
