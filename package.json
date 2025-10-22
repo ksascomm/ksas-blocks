@@ -18,15 +18,15 @@
   },
   "devDependencies": {
     "@tailwindcss/forms": "^0.5.10",
-    "@tailwindcss/typography": "^0.5.16",
+    "@tailwindcss/typography": "^0.5.19",
     "autoprefixer": "^10.4.21",
     "browser-sync": "^3.0.4",
     "glob-all": "^3.3.1",
     "postcss": "^8.5.6",
     "postcss-loader": "^8.2.0",
     "purgecss-webpack-plugin": "^7.0.2",
-    "tailwindcss": "^4.1.13",
-    "webpack": "^5.101.3",
+    "tailwindcss": "^4.1.15",
+    "webpack": "^5.102.1",
     "webpack-cli": "^6.0.1"
   }
 }

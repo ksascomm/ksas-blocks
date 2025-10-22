@@ -641,3 +641,11 @@ Segoe UI, sans-serif;
 .tribe-events-widget-events-list__event-date-tag-daynum.tribe-common-h2.tribe-common-h4--min-medium {
 	color: #31261d !important;
 }
+
+.single-tribe_events .tribe-blocks-editor .tribe-events-schedule .tribe-events-schedule__datetime,
+.tribe-events-schedule__datetime {
+  font-size: 1.25rem !important;
+  color: var(--tw-prose-bold) !important;
+  font-family: worksans-bold,system-ui,BlinkMacSystemFont,-apple-system,Segoe UI,sans-serif !important;
+  font-weight: 700 !important;
+}
