@@ -9,9 +9,9 @@
 
 ?>
 <?php if ( is_sticky() ) : ?>
-	<article id="post-<?php the_ID(); ?>" <?php post_class( 'article-excerpt prose lg:prose-lg xl:prose-xl mx-auto pt-4 mb-4 wp-sticky' ); ?> aria-label="<?php the_title(); ?>">
+	<article id="post-<?php the_ID(); ?>" <?php post_class( 'article-excerpt prose lg:prose-lg xl:prose-xl mx-auto p-4 mb-4 wp-sticky' ); ?> aria-label="<?php the_title(); ?>">
 	<?php else : ?>
-<article id="post-<?php the_ID(); ?>" <?php post_class( 'article-excerpt prose lg:prose-lg xl:prose-xl mx-auto border-b border-solid border-grey pt-4 mb-4' ); ?> aria-label="<?php the_title(); ?>">
+<article id="post-<?php the_ID(); ?>" <?php post_class( 'article-excerpt prose lg:prose-lg xl:prose-xl mx-auto border-b border-solid border-grey p-4 mb-4' ); ?> aria-label="<?php the_title(); ?>">
 	<?php endif; ?>
 	<header class="entry-header">
 		<?php
@@ -39,7 +39,7 @@
 	 */
 	if ( has_post_thumbnail() ) :
 		?>
-		<div class="h-full flex sm:flex-row flex-col items-start sm:justify-start justify-center text-left">
+		<div class="flex flex-col items-start justify-center h-full text-left sm:flex-row sm:justify-start">
 			<?php
 				the_post_thumbnail(
 					'medium',
@@ -54,7 +54,7 @@
 		</div>
 	<?php else : ?>
 
-			<div class="entry-content pl-4 pr-4 lg:pr-12 xl:pl-0 xl:pr-0">
+			<div class="entry-content lg:pr-12 xl:pl-0">
 				<p><?php echo esc_html( wp_trim_words( get_the_excerpt(), 55, '...' ) ); ?></p>
 			</div><!-- .entry-content -->
 

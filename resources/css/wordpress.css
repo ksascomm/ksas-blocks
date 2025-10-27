@@ -946,8 +946,10 @@ button.menu-button:focus {
 	.no-js .main-navigation ul ul li {
 	float: none;
 	width: auto;           /* allow content to define width */
-	min-width: 13.5rem;    /* optional: don't get too narrow */
-	white-space: nowrap;   /* prevent wrapping of long text */
+	min-width: 13.5rem;     /* optional: don't get too narrow */
+	max-width: 20rem;       /* ✅ set a reasonable max width */
+	white-space: normal;    /* ✅ allow text to wrap */
+	word-break: break-word; /* ✅ wrap long words if needed */
 	}
 
 	/* 2. Arrange link text and caret side-by-side */
@@ -1272,7 +1274,7 @@ footer.entry-footer {
 
 .footer-widget-area .widget,
 .footer-widget-area .tribe-compatibility-container {
-  @apply border-none shadow-none bg-none lg:px-12;
+  @apply px-8 border-none shadow-none bg-none lg:px-12;
 }
 
 .footer-widget-area .image,
@@ -2702,15 +2704,22 @@ a {
   --tw-text-opacity: 1;
   color: rgba(254, 254, 254, var(--tw-text-opacity));
   border-radius: 0;
-  @apply items-center text-base text-white border-none bg-blue;
+   color: var(--color-white);
+    background-color: var(--color-blue);
+	border-style: none;
+	align-items: center;
 }
 
 .wp-block-buttons > .wp-block-button.wp-block-button__width-50 {
   width: calc(50% - 0.5em);
 }
 
+.wp-block-button {
+	font-size: var(--text-lg);
+}
+
 .wp-block-buttons {
-  @apply my-8;
+  margin-block: calc(var(--spacing) * 8)
 }
 
 .calls-to-action > div {
