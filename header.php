@@ -42,7 +42,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <a class="skip-link screen-reader-text" href="#site-content"><?php esc_html_e( 'Skip to content', 'ksas-office' ); ?></a>
 
 <?php wp_body_open(); ?>
-<?php //get_template_part( 'template-parts/jhu-150th-bar' ); ?>
+<?php // get_template_part( 'template-parts/jhu-150th-bar' ); ?>
 	<header id="site-header" class="w-full shadow-sm header-footer-group sm:justify-between sm:items-baseline bg-blue" role="banner">
 		<div class="header-titles-wrapper">
 			<div class="header-inner section-inner">
@@ -60,11 +60,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 					</div>
 					<div class="content-center mt-4 mb-12 lg:col-span-2 lg:mt-0 md:mb-0">
 						<h1 class="text-2xl site-title sm:text-xl md:text-2xl lg:text-4xl ">
-							<a class="text-white hover:text-grey no-underline hover:underline! hover:underline-offset-2!" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+							<a class="text-white hover:text-grey no-underline hover:underline! hover:underline-offset-2!" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" aria-label="<?php echo esc_attr( get_bloginfo( 'name' ) . ' homepage' ); ?>">
 								<?php
 									$ksas_blocks_description = get_bloginfo( 'description', 'display' );
 								if (
-									$ksas_blocks_description || is_customize_preview() ) :
+									$ksas_blocks_description || is_customize_preview()
+								) :
 									echo '<span class="block pt-2 text-xl font-normal">' . $ksas_blocks_description . '</span>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped 
 									?>
 								<?php endif; ?>
