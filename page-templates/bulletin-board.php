@@ -10,7 +10,7 @@
 get_header();
 ?>
 
-<main id="site-content" class="site-main prose lg:prose-lg mx-auto pb-2">
+<main id="site-content" class="pb-2 mx-auto prose site-main lg:prose-lg">
 	<?php
 	while ( have_posts() ) :
 		the_post();
@@ -44,7 +44,7 @@ get_header();
 					?>
 			<div class="bulletin">
 				<details>
-					<summary class="block p-5 leading-normal cursor-pointer font-semi font-semibold"><?php the_title(); ?></summary>
+					<summary class="block p-5 font-bold leading-normal cursor-pointer font-heavy"><?php the_title(); ?></summary>
 					<ul class="entry-meta">
 						<li>Posted: <?php the_time( 'F j, Y' ); ?></li>
 						<?php if ( get_field( 'bulletin_deadline' ) ) : ?>

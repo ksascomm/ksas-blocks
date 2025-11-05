@@ -122,7 +122,7 @@ form.post-password-form input {
 }
 
 label.gfield_label {
-  @apply font-semi;
+  @apply font-heavy;
 }
 
 /* Link Overrides
@@ -314,7 +314,7 @@ u {
 /* Elements
 --------------------------------------------- */
 span.posted-on {
-  @apply -my-2 text-base font-semibold font-semi md:text-lg;
+  @apply -my-2 text-base font-bold font-heavy md:text-lg;
 }
 
 .entry-meta {
@@ -427,7 +427,7 @@ span.posted-on {
 }
 
 .blog-excerpt .entry-meta {
-  @apply text-xl font-semibold font-semi;
+  @apply text-xl font-bold font-heavy;
   display: flex;
   justify-content: space-between;
   max-width: 70ch;
@@ -439,7 +439,7 @@ span.posted-on {
 }
 
 .blog-full .entry-meta {
-  @apply font-semibold font-semi;
+  @apply font-bold font-heavy;
   display: flex;
   justify-content: space-between;
   margin: 1rem 0;
@@ -522,7 +522,7 @@ thead th:first-child {
 }
 
 .wp-block-table th {
-  @apply p-2 font-semibold text-center border-b-0 bg-grey-lightest font-semi;
+  @apply p-2 font-bold text-center border-b-0 bg-grey-lightest font-heavy;
 }
 
 /*! purgecss start ignore */
@@ -1392,14 +1392,14 @@ Not in Tribe-Events Directory */
 .footer-widget-area
   .tribe-events-widget
   .tribe-events-widget-events-list__view-more.tribe-common-b1.tribe-common-b2--min-medium {
-  @apply inline-block px-4 py-3 m-4 text-white bg-blue font-semi;
+  @apply inline-block px-4 py-3 m-4 text-white bg-blue font-heavy;
 }
 
 .footer-widget-area
   .tribe-events-widget
   .tribe-events-widget-events-list__view-more.tribe-common-b1.tribe-common-b2--min-medium
   a {
-  @apply p-4 mx-auto uppercase font-semi;
+  @apply p-4 mx-auto uppercase font-heavy;
 }
 
 /* Captions
@@ -1761,12 +1761,12 @@ ul.page-numbers li.active a {
 }
 
 .tribe-events-widget-events-list__event-date-tag-month {
-  @apply text-primary! font-semibold!;
+  @apply text-primary! font-bold!;
 }
 
 p.tribe-events-back a,
 .tribe-events-c-subscribe-dropdown__list-item-link {
-  @apply font-semi;
+  @apply font-heavy;
 }
 
 .tribe-common .tribe-common-c-btn-border, .tribe-common a.tribe-common-c-btn-border {
@@ -2780,7 +2780,7 @@ figure.wp-block-pullquote {
 }
 
 .wp-block-ksas-callouts-ksas-callout-block.callout {
-  @apply font-semi;
+  @apply font-heavy;
   font-style: normal;
   font-display: swap;
 }
@@ -3509,7 +3509,7 @@ button.close-nav-toggle .toggle-text {
 
 .modal-menu > li > a,
 .modal-menu > li > .ancestor-wrapper > a {
-  @apply font-semibold font-semi;
+  @apply font-bold font-heavy;
   font-size: 1.5rem;
   letter-spacing: -0.0375em;
 }
