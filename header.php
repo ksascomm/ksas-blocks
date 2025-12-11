@@ -50,16 +50,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 					<div class="h-auto mx-auto shield">
 					<?php if ( get_field( 'shield', 'option' ) == 'jhu' ) : ?>
 						<a href="https://www.jhu.edu/" title="Johns Hopkins University">
-							<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/dist/images/university.shield.svg" class="w-full h-auto p-2 hover:opacity-75" alt="JHU Shield, to the JHU homepage" role="img">
+							<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/dist/images/university.shield.svg" class="w-full h-auto p-2 -ml-4 lg:ml-0 hover:opacity-75" alt="JHU Shield, to the JHU homepage" role="img">
 						</a>
 					<?php else : ?>
 						<a href="https://krieger.jhu.edu" rel="home">
-							<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/dist/images/krieger.shield.svg" class="w-full h-auto p-2 hover:opacity-75" alt="KSAS Shield, to the KSAS homepage" role="img">
+							<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/dist/images/krieger.shield.svg" class="w-full h-auto p-2 -ml-4 lg:ml-0 hover:opacity-75" alt="KSAS Shield, to the KSAS homepage" role="img">
 						</a>	
 					<?php endif; ?>
 					</div>
 					<div class="content-center mt-4 mb-12 lg:col-span-2 lg:mt-0 md:mb-0">
-						<h1 class="text-2xl site-title sm:text-xl md:text-2xl lg:text-4xl ">
+						<h1 class="text-2xl site-title md:text-2xl lg:text-4xl ">
 							<a class="text-white hover:text-grey no-underline hover:underline! hover:underline-offset-2!" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" aria-label="<?php echo esc_attr( get_bloginfo( 'name' ) . ' homepage' ); ?>">
 								<?php
 									$ksas_blocks_description = get_bloginfo( 'description', 'display' );

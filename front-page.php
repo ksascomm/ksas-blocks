@@ -42,12 +42,12 @@ get_header();
 
 		<div class="px-2 mb-24 news-section sm:px-0">
 			<div class="px-4 mx-auto my-4 prose lg:prose-lg xl:prose-xl">
-				<div class="flex justify-between">
+				<div class="flex flex-wrap justify-between">
 					<div>
-						<h2><?php echo esc_html( $heading ); ?>
+						<h2 class="pb-4 md:pb-0 my-0!"><?php echo esc_html( $heading ); ?>
 					</div>
 					<div>
-						<a class="button" href="<?php echo esc_url( get_permalink( get_option( 'page_for_posts' ) ) ); ?>">
+						<a class="inline-flex button" href="<?php echo esc_url( get_permalink( get_option( 'page_for_posts' ) ) ); ?>">
 							View All Posts&nbsp;<span class="fa-solid fa-circle-chevron-right" aria-hidden="true"></span></a>
 					</div>
 				</div>

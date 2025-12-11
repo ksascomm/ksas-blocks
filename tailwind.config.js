@@ -65,8 +65,8 @@ module.exports = {
                 fontFamily: "worksans-bold, system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, sans-serif",
               },
               h5 : {
-                fontWeight: "600",
-                fontFamily: "worksans-semibold, system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, sans-serif",
+                fontWeight: "700",
+                fontFamily: "worksans-bold, system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, sans-serif",
               },
               p: {
                 marginTop: "1rem",

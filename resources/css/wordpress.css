@@ -67,9 +67,7 @@ body {
 main {
   flex-grow: 1;
   width: 100%;
-
--moz-osx-font-smoothing: grayscale;
- }
+}
 
 /**
  * Prevent `sub` and `sup` elements from affecting the line height in
@@ -2070,7 +2068,7 @@ background-color: #f8fafc;
   cursor: pointer;
   border-style: none;
   padding: 1.25rem;
-  font-family: worksans-SemiBold, system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, sans-serif;
+  font-family: "worksans-bold", system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, sans-serif;
   font-weight: 600;
   line-height: 1.5;
 }
@@ -2146,7 +2144,7 @@ background-color: #f8fafc;
 .single-bulletinboard .bulletinboard .deadline {
   margin-top: -0.5rem;
 margin-bottom: -0.5rem;
-font-family: worksans-SemiBold, system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, sans-serif;
+font-family: "worksans-bold", system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, sans-serif;
 }
 
 .bulletin ul.entry-meta {
@@ -2275,7 +2273,7 @@ font-family: worksans-SemiBold, system-ui, BlinkMacSystemFont, -apple-system, Se
 .isotope-to-sort button {
   margin: 0 0.25rem;
   text-align: center;
-  font-family: worksans-SemiBold, system-ui, BlinkMacSystemFont, -apple-system,
+  font-family: "worksans-bold", system-ui, BlinkMacSystemFont, -apple-system,
     Segoe UI, sans-serif;
   vertical-align: text-bottom;
   line-height: 1.2;
@@ -2647,13 +2645,20 @@ font-family: worksans-SemiBold, system-ui, BlinkMacSystemFont, -apple-system, Se
 }
 
 .prose h1.entry-title {
-  font-size: 2rem;
+  font-size: 2.125rem;
   @apply my-4;
+}
+
+.prose h2.wp-block-heading {
+	font-size: 1.65rem;
 }
 
 @media (width >= theme(--breakpoint-lg)) {
   .prose h1.entry-title {
     font-size: 2.5rem;
+  }
+  .prose h2.wp-block-heading {
+	font-size: 1.875rem;
   }
 }
 

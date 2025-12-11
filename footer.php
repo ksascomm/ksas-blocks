@@ -40,7 +40,7 @@
 			</a>
 		</div>
 		<div class="col-span-4 lg:col-span-2">
-			<ul class="flex justify-center m-4" role="menu" aria-label="University Policies">
+			<ul class="justify-center m-4 text-center md:text-left md:flex" role="menu" aria-label="University Policies">
 				<li role="menuitem" class="ml-4"><a class="text-white font-sans font-light hover:text-blue-light !underline !decoration-dotted" href="https://accessibility.jhu.edu/">Accessibility</a></li>
 				<li role="menuitem" class="ml-4"><a class="text-white font-sans font-light hover:text-blue-light !underline !decoration-dotted" href="https://it.johnshopkins.edu/policies/privacystatement">Privacy Statement</a></li>
 				<li role="menuitem" class="ml-4"><a class="text-white font-sans font-light hover:text-blue-light !underline !decoration-dotted" href="https://policies.jhu.edu/">University Policy & Document Library</a></li>
