@@ -53,6 +53,7 @@
         },
         "typography": {
             "customFontSize": false,
+			"defaultFontSizes": false,
             "lineHeight": false,
             "dropCap": false,
             "fontWeight": false,
