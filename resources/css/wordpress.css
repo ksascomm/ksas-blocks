@@ -2804,24 +2804,37 @@ figure.wp-block-pullquote {
 }
 
 /* Block: Accordion ------------------------------ */
-.wp-block-pb-accordion-item.c-accordion__item {
+.wp-block-pb-accordion-item.c-accordion__item,
+.wp-block-accordion {
   @apply pb-2 my-2;
+  max-width: 90ch;
 }
 
-.wp-block-pb-accordion-item.c-accordion__item .c-accordion__title {
-  @apply max-w-full p-4 my-0 text-lg font-bold border text-blue font-heavy border-grey-cool;
+.wp-block-pb-accordion-item.c-accordion__item .c-accordion__title,
+h3.wp-block-accordion-heading {
+  @apply max-w-full p-4 my-0 text-xl font-bold border text-blue font-heavy border-grey-cool;
+}
+
+.wp-block-accordion-heading__toggle:hover .wp-block-accordion-heading__toggle-title {
+	text-decoration: none !important;
+}
+
+.wp-block-accordion-heading__toggle {
+	padding: 0 !important;
 }
 
 .wp-block-pb-accordion-item.c-accordion__item .c-accordion__title::after {
-  @apply text-blue;
+  color: var(--color-blue) !important;
   right: 1rem !important;
 }
 
-.wp-block-pb-accordion-item.c-accordion__item .c-accordion__content {
+.wp-block-pb-accordion-item.c-accordion__item .c-accordion__content,
+.wp-block-accordion-panel {
   @apply p-4 border border-grey-cool text-primary;
 }
 
-.prose .c-accordion__content p {
+.prose .c-accordion__content p,
+.prose .wp-block-accordion p {
   @apply my-2;
 }
 
