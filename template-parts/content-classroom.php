@@ -174,9 +174,16 @@
 
 							foreach ( $text_features as $t_slug => $t_label ) :
 								$t_val = get_field( $t_slug );
+
 								if ( $t_val ) :
+									// If the value is an array, join it with commas. Otherwise, use the string.
+									$display_val = is_array( $t_val ) ? implode( ', ', $t_val ) : $t_val;
 									?>
-									<tr><td class="px-4 py-2 border-t"><?php echo esc_html( $t_label . ': ' . $t_val ); ?></td></tr>
+									<tr>
+										<td class="px-4 py-2 border-t">
+											<?php echo esc_html( $t_label . ': ' . $display_val ); ?>
+										</td>
+									</tr>
 									<?php
 								endif;
 							endforeach;
