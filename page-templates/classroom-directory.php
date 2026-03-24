@@ -8,15 +8,14 @@
  */
 
 get_header();
-?>
-<?php
-// Set Research Projects Query Parameters.
-$classrooms_query = new WP_Query(
+
+// Fetch Classrooms - using a unique variable name.
+$classrooms_list_query = new WP_Query(
 	array(
 		'post_type'      => 'classroom',
 		'orderby'        => 'title',
 		'order'          => 'ASC',
-		'posts_per_page' => 100,
+		'posts_per_page' => -1, // Use -1 to ensure Isotope has all data points.
 	)
 );
 ?>
@@ -25,120 +24,93 @@ $classrooms_query = new WP_Query(
 	<?php
 	while ( have_posts() ) :
 		the_post();
-
 		get_template_part( 'template-parts/content', 'page' );
-
-	endwhile; // End of the loop.
+	endwhile;
 	?>
 
-		<form class="p-4 mb-4 border-2 border-solid isotope-to-sort bg-grey-lightest border-grey" role="region" aria-label="Filters" id="filters">
-			
-			<fieldset class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4 button-group js-radio-button-group" id="classroom-checkboxes">
-				<legend>Filter by Built-in Equipment:</legend>
-				<div>
-					<input type="checkbox" id="Built-In-Camera" name="Built-In-Camera" value=".Built-In-Camera" />
-					<label for="Built-In-Camera">Built-In Camera</label>
-				</div>
-				<div>
-					<input type="checkbox" id="Built-In-Computer" name="Built-In-Computer" value=".Built-In-Computer" />
-					<label for="Built-In-Computer">Built-In Computer</label>
-				</div>
-				<div>
-					<input type="checkbox" id="Document-Camera" name="Document-Camera" value=".Document-Camera" />
-					<label for="Document-Camera">Document Camera</label>
-				</div>
-				<div>
-					<input type="checkbox" id="Epiphan-Pearl" name="Epiphan-Pearl" value=".Epiphan-Pearl" />
-					<label for="Epiphan-Pearl">Epiphan Pearl</label>
-				</div>
-				<div>
-					<input type="checkbox" id="Laptop-HDMI" name="Laptop-HDMI" value=".Laptop-HDMI" />
-					<label for="Laptop-HDMI">Laptop Connection - HDMI</label>
-				</div>
-				<div>
-					<input type="checkbox" id="Laptop-Wireless" name="Laptop-Wireless" value=".Laptop-Wireless" />
-					<label for="Laptop-Wireless">Laptop Connection - Wireless</label>
-				</div>
-				<div>
-					<input type="checkbox" id="Ceiling-Microphones" name="Ceiling-Microphones" value=".Ceiling-Microphones" />
-					<label for="Ceiling-Microphones">Microphones - Ceiling</label>
-				</div>
-				<div>
-					<input type="checkbox" id="Wireless-Microphone" name="Wireless-Microphone" value=".Wireless-Microphone" />
-					<label for="Wireless-Microphone">Microphones - Wireless</label>
-				</div>
-				<div>
-					<input type="checkbox" id="Projector" name="Projector" value=".Projector" />
-					<label for="Projector">Projector</label>
-				</div>
-				<div>
-					<input type="checkbox" id="Projection-Screen" name="Projection-Screen" value=".Projection-Screen" />
-					<label for="Projection-Screen">Projection Screen</label>
-				</div>
-				<div>
-					<input type="checkbox" id="Conf-Ready" name="Conf-Ready" value=".Conf-Ready" />
-					<label for="Conf-Ready">Recording/Conference Ready</label>
-				</div>
-				<div>
-					<input type="checkbox" id="Zoom-Cart" name="Zoom-Cart" value=".Zoom-Cart" />
-					<label for="Zoom-Cart">Zoom Cart</label>
-				</div>
-			</fieldset>
+	<form class="p-4 mb-4 border-2 border-solid isotope-to-sort bg-grey-lightest border-grey" role="region" aria-label="Filters" id="filters">
+		
+		<fieldset class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4 button-group js-radio-button-group" id="classroom-checkboxes">
+			<legend class="font-bold">Filter by Built-in Equipment:</legend>
 			<?php
-			$filters = get_terms(
-				array(
-					'taxonomy'   => 'classroom_type',
-					'orderby'    => 'slug',
-					'order'      => 'ASC',
-					'hide_empty' => true,
-				)
+			// Defining these in an array makes it easier to maintain and loop securely.
+			$equipment_list = array(
+				'Built-In-Camera'     => 'Built-In Camera',
+				'Built-In-Computer'   => 'Built-In Computer',
+				'Document-Camera'     => 'Document Camera',
+				'Epiphan-Pearl'       => 'Epiphan Pearl',
+				'Laptop-HDMI'         => 'Laptop Connection - HDMI',
+				'Laptop-Wireless'     => 'Laptop Connection - Wireless',
+				'Ceiling-Microphones' => 'Microphones - Ceiling',
+				'Wireless-Microphone' => 'Microphones - Wireless',
+				'Projector'           => 'Projector',
+				'Projection-Screen'   => 'Projection Screen',
+				'Conf-Ready'          => 'Recording/Conference Ready',
+				'Zoom-Cart'           => 'Zoom Cart',
 			);
-			if ( ! empty( $filters ) && ! is_wp_error( $filters ) ) :
+
+			foreach ( $equipment_list as $equip_id => $equip_label ) :
 				?>
-				
-				<fieldset class="flex flex-col justify-start md:flex-row button-group js-radio-button-group" id="classroom-radio-buttons">
-				<legend class="mt-4">Filter by Classroom Type:</legend>
-				<?php foreach ( $filters as $filter ) : ?>
-				<div class="classroom-type <?php echo esc_html( $filter->slug ); ?>">
-					<input type="radio" id="<?php echo esc_html( $filter->slug ); ?>" name="classroom_type" value=".<?php echo esc_html( $filter->slug ); ?>" />
-					<label for="<?php echo esc_html( $filter->slug ); ?>"><?php echo esc_html( $filter->name ); ?></label>
+				<div>
+					<input type="checkbox" id="<?php echo esc_attr( $equip_id ); ?>" name="<?php echo esc_attr( $equip_id ); ?>" value=".<?php echo esc_attr( $equip_id ); ?>" />
+					<label for="<?php echo esc_attr( $equip_id ); ?>"><?php echo esc_html( $equip_label ); ?></label>
+				</div>
+			<?php endforeach; ?>
+		</fieldset>
+
+		<?php
+		$classroom_types = get_terms(
+			array(
+				'taxonomy'   => 'classroom_type',
+				'orderby'    => 'slug',
+				'order'      => 'ASC',
+				'hide_empty' => true,
+			)
+		);
+
+		if ( ! empty( $classroom_types ) && ! is_wp_error( $classroom_types ) ) :
+			?>
+			<fieldset class="flex flex-col justify-start md:flex-row button-group js-radio-button-group" id="classroom-radio-buttons">
+				<legend class="mt-4 font-bold">Filter by Classroom Type:</legend>
+				<div class="mr-4" style="background-color:var(--color-primary);">
+					<input type="radio" id="all-types" name="classroom_type" value="*" checked />
+					<label for="all-types">Show All</label>
+				</div>
+				<?php foreach ( $classroom_types as $c_type ) : ?>
+				<div class="mr-4 classroom-type <?php echo esc_attr( $c_type->slug ); ?>">
+					<input type="radio" id="<?php echo esc_attr( $c_type->slug ); ?>" name="classroom_type" value=".<?php echo esc_attr( $c_type->slug ); ?>" />
+					<label for="<?php echo esc_attr( $c_type->slug ); ?>"><?php echo esc_html( $c_type->name ); ?></label>
 				</div>
 				<?php endforeach; ?>
-				</fieldset>
-			<?php endif; ?>
-			<fieldset class="w-auto px-2 my-2 search-form">
-				<legend class="px-2 mt-4 mb-2 text-xl font-bold font-heavy">Search by Building, Classroom Number, or Equipment:</legend>
-				<label class="sr-only" for="id_search">Enter term</label>
-				<input class="w-full p-2 mb-2 ml-2 quicksearch form-input md:w-1/2" type="text" name="search" id="id_search" aria-label="Search Form" placeholder="Enter description keyword"/>
 			</fieldset>
-		</form>
+		<?php endif; ?>
 
+		<fieldset class="w-auto px-2 my-2 search-form">
+			<legend class="px-2 mt-4 mb-2 text-xl font-bold font-heavy">Search by Building, Classroom Number, or Equipment:</legend>
+			<label class="sr-only" for="id_search">Enter term</label>
+			<input class="w-full p-2 mb-2 ml-2 quicksearch form-input md:w-1/2" type="text" name="search" id="id_search" placeholder="Enter description keyword"/>
+		</fieldset>
+	</form>
 
-		<!--<div class="output">*</div>-->
-	<?php
-	if ( $classrooms_query->have_posts() ) :
-		?>
-	<div class="mt-8" id="isotope-list">
-		<div class="flex flex-wrap">
-			<?php
-			while ( $classrooms_query->have_posts() ) :
-				$classrooms_query->the_post();
-				?>
-				<?php get_template_part( 'template-parts/content', 'classroom-cards' ); ?>
+	<?php if ( $classrooms_list_query->have_posts() ) : ?>
+		<div class="mt-8" id="isotope-list">
+			<div class="flex flex-wrap">
 				<?php
+				while ( $classrooms_list_query->have_posts() ) :
+					$classrooms_list_query->the_post();
+					get_template_part( 'template-parts/content', 'classroom-cards' );
 				endwhile;
-			?>
+				?>
+			</div>
 		</div>
-	</div>
 	<?php endif; ?>
-	<div id="noResult">
-		<h2>No matching results</h2>
+
+	<div id="noResult" class="hidden">
+		<h2 class="text-center text-grey-dark">No matching results</h2>
 	</div>
-	<?php
-	// Return to main loop.
-	wp_reset_postdata();
-	?>
-</main><!-- #main -->
+
+	<?php wp_reset_postdata(); ?>
+</main>
 
 <?php
 get_footer();

@@ -10,367 +10,181 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class( 'classroom mt-8' ); ?>>
-	<header class="entry-header">
+	<header class="mb-6 entry-header">
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-	</header><!-- .entry-header -->
+	</header>
 
 	<div class="pl-4 pr-4 entry-content lg:pr-12 xl:pl-0 xl:pr-0">
-		<div class="grid grid-cols-1 gap-4 lg:grid-cols-2">
+		<div class="grid grid-cols-1 gap-8 lg:grid-cols-2">
 			<div>
 				<div class="flex mt-4">
 				<?php
 				the_post_thumbnail(
 					'full',
 					array(
-						'class' => 'w-full rounded-md',
-						'alt'   => the_title_attribute(
-							array(
-								'echo' => false,
-							)
-						),
+						'class' => 'w-full rounded-md shadow-sm',
+						'alt'   => the_title_attribute( array( 'echo' => false ) ),
 					)
 				);
 				?>
 				</div>
+				
 				<h2 class="sr-only">Classroom Overview</h2>
+				
 				<div class="flex classroom-callouts">
-				<?php
-				if ( get_field( 'capacity' ) ) :
-					?>
+				<?php if ( get_field( 'capacity' ) ) : ?>
 					<div class="w-1/2 p-1 m-4 mt-8 overflow-hidden text-lg font-bold text-center bg-white border-2 border-solid rounded-xl text-primary border-primary font-heavy">
 						<h3>Capacity</h3> 
-						<div class="text-3xl font-bold"><?php the_field( 'capacity' ); ?></div>
+						<div class="text-3xl font-bold"><?php echo esc_html( get_field( 'capacity' ) ); ?></div>
 					</div>
 				<?php endif; ?>
-					<div class="w-1/2 overflow-hidden rounded-xl m-4 mt-8 text-center classroom-type 
-						<?php
-						$classroom_types = get_the_terms( $post->ID, 'classroom_type' );
-						if ( $classroom_types && ! is_wp_error( $classroom_types ) ) :
-							foreach ( $classroom_types as $classroom_type ) {
-								echo esc_html( $classroom_type->slug );
-							}
-						endif;
-						?>
-					">
-					<h3 class="text-white">Classroom Type</h3>
-						<?php
-						if ( $classroom_types && ! is_wp_error( $classroom_types ) ) :
-							foreach ( $classroom_types as $classroom_type ) :
-								?>
-								<div class="text-white"><?php echo esc_html( $classroom_type->name ); ?> </div>
-								<?php
-							endforeach;
-						endif;
-						?>
-					</h3>
-					</div>
-				</div>
+
 				<?php
-				if ( get_field( 'comments' ) ) :
+				$room_single_terms = get_the_terms( get_the_ID(), 'classroom_type' );
+				if ( ! is_wp_error( $room_single_terms ) && ! empty( $room_single_terms ) ) :
+					$slugs = wp_list_pluck( $room_single_terms, 'slug' );
 					?>
-				<h3>Classroom Notes</h3>
-					<?php the_field( 'comments' ); ?>
+					<div class="w-1/2 overflow-hidden rounded-xl m-4 mt-8 text-center classroom-type <?php echo esc_attr( implode( ' ', $slugs ) ); ?>">
+						<h3 class="text-white">Classroom Type</h3>
+						<?php foreach ( $room_single_terms as $room_term ) : ?>
+							<div class="text-white"><?php echo esc_html( $room_term->name ); ?></div>
+						<?php endforeach; ?>
+					</div>
+				<?php endif; ?>
+				</div>
+
+				<?php if ( get_field( 'comments' ) ) : ?>
+					<h3 class="mt-8 text-xl font-bold">Classroom Notes</h3>
+					<div class="prose max-w-none">
+						<?php the_field( 'comments' ); ?>
+					</div>
 				<?php endif; ?>
 			</div>
+
 			<div>
-			<h3>Supported Built-in Equipment</h3>
-			<figure class="wp-block-table classroom-table">
-				<table class="table-auto">
-					<thead class="bg-grey-cool">
-						<tr>
-							<th>Equipment & Features</th>
-							<th>Available/Specifications</th>
-						</tr>
-					</thead>
-					<tbody>
-
-					<?php
-					if ( get_field( 'built_in_camera' ) ) :
-						?>
-					<tr>
-						<td>Built-In Camera</td>
-						<td><?php the_field( 'built_in_camera' ); ?></td>
-					</tr>
-					<?php endif; ?>
-
-					<?php
-					if ( get_field( 'built_in_computer' ) ) :
-						?>
-					<tr>
-						<td>Built-in Computer</td>
-						<td><?php the_field( 'built_in_computer' ); ?></td>
-					</tr>
-					<?php endif; ?>
-
-					<?php
-					if ( get_field( 'document_camera' ) ) :
-						?>
-					<tr>
-						<td>Document Camera</td>
-						<td><?php the_field( 'document_camera' ); ?></td>
-					</tr>
-					<?php endif; ?>
-
-					<?php
-					if ( get_field( 'epiphan_pearl' ) ) :
-						?>
-					<tr>
-						<td>Epiphan Pearl</td>
-						<td><?php the_field( 'epiphan_pearl' ); ?></td>
-					</tr>
-					<?php endif; ?>
-
-					<?php
-					if ( get_field( 'laptop_connection_hdmi' ) ) :
-						?>
-					<tr>
-						<td>Laptop Connection - HDMI</td>
-						<td><?php the_field( 'laptop_connection_hdmi' ); ?></td>
-					</tr>
-					<?php endif; ?>
-
-					<?php
-					if ( get_field( 'laptop_connection_wireless' ) ) :
-						?>
-					<tr>
-						<td>Laptop Connection - Wireless</td>
-						<td><?php the_field( 'laptop_connection_wireless' ); ?></td>
-					</tr>
-					<?php endif; ?>
-
-					<?php
-					if ( get_field( 'ceiling_microphones' ) ) :
-						?>
-					<tr>
-						<td>Microphones - Ceiling</td>
-						<td><?php the_field( 'ceiling_microphones' ); ?></td>
-					</tr>
-					<?php endif; ?>
-
-					<?php
-					if ( get_field( 'wireless_microphone' ) ) :
-						?>
-					<tr>
-						<td>Microphone - Wireless</td>
-						<td><?php the_field( 'wireless_microphone' ); ?></td>
-					</tr>
-					<?php endif; ?>
-
-					<?php
-					if ( get_field( 'projection_screen' ) ) :
-						?>
-						<tr>
-							<td>Projection Screen</td>
-							<td><?php the_field( 'projection_screen' ); ?></td>
-						</tr>
-					<?php endif; ?>
-
-					<?php
-					if ( get_field( 'projector' ) ) :
-						?>
-						<tr>
-							<td>Projector</td>
-							<td><?php the_field( 'projector' ); ?></td>
-						</tr>
-					<?php endif; ?>	
-
-					<?php
-					if ( get_field( 'record_conf_ready' ) ) :
-						?>
-					<tr>
-						<td>Recording/Conference Ready</td>
-						<td><?php the_field( 'record_conf_ready' ); ?></td>
-					</tr>
-					<?php endif; ?>
-
-					<?php
-					if ( get_field( 'screen_size' ) ) :
-						?>
-					<tr>
-						<td>Screen Size</td>
-						<td><?php the_field( 'screen_size' ); ?></td>
-					</tr>
-					<?php endif; ?>
-
-					<?php
-					if ( get_field( 'student_computers' ) ) :
-						?>
-					<tr>
-						<td>Student Computers</td>
-						<td><?php the_field( 'student_computers' ); ?></td>
-					</tr>
-					<?php endif; ?>
-
-					<?php
-					if ( get_field( 'supported_resolution' ) ) :
-						?>
-					<tr>
-						<td>Supported Resolution</td>
-						<td><?php the_field( 'supported_resolution' ); ?></td>
-					</tr>
-					<?php endif; ?>
-
-					<?php
-					if ( get_field( 'zoom_cart' ) ) :
-						?>
-					<tr>
-						<td>Zoom Cart</td>
-						<td><?php the_field( 'zoom_cart' ); ?></td>
-					</tr>
-					<?php endif; ?>
-
-					<?php if ( have_rows( 'instruction_sheets' ) ) : ?>
-						<tr>
-							<td>Instruction Sheet(s)</td>
-							<td>
+				<h3 class="mb-4 text-xl font-bold">Supported Built-in Equipment</h3>
+				<figure class="wp-block-table classroom-table">
+					<table class="w-full table-auto">
+						<thead class="bg-grey-cool">
+							<tr>
+								<th class="px-4 py-2 text-left">Equipment & Features</th>
+								<th class="px-4 py-2 text-left">Available/Specifications</th>
+							</tr>
+						</thead>
+						<tbody>
 							<?php
-							while ( have_rows( 'instruction_sheets' ) ) :
-								the_row();
-								?>
-								<?php $in_room_system_operation_guide = get_sub_field( 'in_room_system_operation_guide' ); ?>
-								<?php if ( $in_room_system_operation_guide ) : ?>
-									<a href="<?php echo esc_url( $in_room_system_operation_guide['url'] ); ?>">In-room System Operation Guide</a><br>
-								<?php endif; ?>
-								<?php $zoom_rooms_cart_guide = get_sub_field( 'zoom_rooms_cart_guide' ); ?>
-								<?php if ( $zoom_rooms_cart_guide ) : ?>
-									<a href="<?php echo esc_url( $zoom_rooms_cart_guide['url'] ); ?>">Zoom Rooms Cart Guide</a><br>
-								<?php endif; ?>
-								<?php $room_specific_guide = get_sub_field( 'room_specific_guide' ); ?>
-								<?php if ( $room_specific_guide ) : ?>
-									<a href="<?php echo esc_url( $room_specific_guide['url'] ); ?>">Room Specific Guide</a>
-								<?php endif; ?>
-							<?php endwhile; ?>
-							</td>
-						</tr>
-					<?php endif; ?>
-					</tbody>
-				</table>
-			</figure>
+							// Array map to loop through ACF fields to reduce code repetition and ensure escaping.
+							$equipment_fields = array(
+								'built_in_camera'        => 'Built-In Camera',
+								'built_in_computer'      => 'Built-in Computer',
+								'document_camera'        => 'Document Camera',
+								'epiphan_pearl'          => 'Epiphan Pearl',
+								'laptop_connection_hdmi' => 'Laptop Connection - HDMI',
+								'laptop_connection_wireless' => 'Laptop Connection - Wireless',
+								'ceiling_microphones'    => 'Microphones - Ceiling',
+								'wireless_microphone'    => 'Microphone - Wireless',
+								'projection_screen'      => 'Projection Screen',
+								'projector'              => 'Projector',
+								'record_conf_ready'      => 'Recording/Conference Ready',
+								'screen_size'            => 'Screen Size',
+								'student_computers'      => 'Student Computers',
+								'supported_resolution'   => 'Supported Resolution',
+								'zoom_cart'              => 'Zoom Cart',
+							);
 
-			<h3>Additional Equipment/Features</h3>
+							foreach ( $equipment_fields as $field_slug => $label ) :
+								$val = get_field( $field_slug );
+								if ( $val ) :
+									?>
+									<tr>
+										<td class="px-4 py-2 border-t"><?php echo esc_html( $label ); ?></td>
+										<td class="px-4 py-2 border-t"><?php echo esc_html( $val ); ?></td>
+									</tr>
+									<?php
+								endif;
+							endforeach;
+							?>
 
-			<figure class="wp-block-table classroom-table">
-				<table class="table-auto">
-					<thead class="bg-grey-cool">
-						<tr>
-							<th>Equipment & Features</th>
-						</tr>
-					</thead>
-					<tbody>
-
-					<?php if ( get_field( 'blackout_light_dampening_shades' ) == 1 ) : ?>
-						<tr>
-							<td>Blackout/Light Dampening Shades</td>
-						</tr>
-					<?php else : ?>
-						<?php // echo 'false'; ?>
-					<?php endif; ?>
-
-					<?php if ( get_field( 'chair_type' ) ) : ?>
-					<tr>
-						<td>Chair Type: <?php the_field( 'chair_type' ); ?></td>
-					</tr>
-					<?php endif; ?>
-
-					<?php if ( get_field( 'chalkboards' ) == 1 ) : ?>
-						<tr>
-							<td>Chalkboard</td>
-						</tr>
-					<?php else : ?>
-						<?php // echo 'false'; ?>
-					<?php endif; ?>
-
-					<?php if ( get_field( 'instructor_table' ) == 1 ) : ?>
-						<tr>
-							<td>Instructor Table</td>
-						</tr>
-					<?php else : ?>
-						<?php // echo 'false'; ?>
-					<?php endif; ?>
-
-					<?php if ( get_field( 'lectern_type' ) ) : ?>
-					<tr>
-						<td>Lectern Type: <?php the_field( 'lectern_type' ); ?></td>
-					</tr>
-					<?php endif; ?>
-
-					<?php if ( get_field( 'piano' ) == 1 ) : ?>
-						<tr>
-							<td>Piano</td>
-						</tr>
-					<?php else : ?>
-						<?php // echo 'false'; ?>
-					<?php endif; ?>
-
-					<?php if ( get_field( 'power_source' ) ) : ?>
-					<tr>
-						<td>Power Source: <?php the_field( 'power_source' ); ?></td>
-					</tr>
-					<?php endif; ?>
-
-					<?php if ( get_field( 'table_type' ) ) : ?>
-					<tr>
-						<td>Table Type: <?php the_field( 'table_type' ); ?></td>
-					</tr>
-					<?php endif; ?>
-
-					<?php if ( get_field( 'tablet_chair' ) ) : ?>
-					<tr>
-						<td>Tablet Chair: <?php the_field( 'tablet_chair' ); ?></td>
-					</tr>
-					<?php endif; ?>
-
-					<?php if ( get_field( 'tiered_seating' ) == 1 ) : ?>
-						<tr>
-							<td>Tiered Seating</td>
-						</tr>
-					<?php else : ?>
-						<?php // echo 'false'; ?>
-					<?php endif; ?>
-
-					<?php if ( get_field( 'whiteboards' ) == 1 ) : ?>
-						<tr>
-									<td>Whiteboard</td>
+							<?php if ( have_rows( 'instruction_sheets' ) ) : ?>
+								<tr>
+									<td class="px-4 py-2 border-t">Instruction Sheet(s)</td>
+									<td class="px-4 py-2 border-t">
+									<?php
+									while ( have_rows( 'instruction_sheets' ) ) :
+										the_row();
+										?>
+										<?php
+										$guides = array(
+											'in_room_system_operation_guide' => 'In-room System Operation Guide',
+											'zoom_rooms_cart_guide'          => 'Zoom Rooms Cart Guide',
+											'room_specific_guide'            => 'Room Specific Guide',
+										);
+										foreach ( $guides as $sub_slug => $sub_label ) :
+											$guide = get_sub_field( $sub_slug );
+											if ( $guide ) :
+												?>
+												<a href="<?php echo esc_url( $guide['url'] ); ?>" class="text-blue hover:underline"><?php echo esc_html( $sub_label ); ?></a><br>
+												<?php
+											endif;
+										endforeach;
+									endwhile;
+									?>
+									</td>
 								</tr>
-					<?php else : ?>
-						<?php // echo 'false'; ?>
-					<?php endif; ?>
+							<?php endif; ?>
+						</tbody>
+					</table>
+				</figure>
 
-					<?php if ( get_field( 'windows' ) == 1 ) : ?>
-						<tr>
-									<td>Windows</td>
-								</tr>
-					<?php else : ?>
-						<?php // echo 'false'; ?>
-					<?php endif; ?>
+				<h3 class="mt-8 mb-4 text-xl font-bold">Additional Equipment/Features</h3>
+				<figure class="wp-block-table classroom-table">
+					<table class="w-full table-auto">
+						<thead class="text-white bg-grey-cool">
+							<tr>
+								<th class="px-4 py-2 text-left">Feature</th>
+							</tr>
+						</thead>
+						<tbody>
+							<?php
+							$binary_features = array(
+								'blackout_light_dampening_shades' => 'Blackout/Light Dampening Shades',
+								'chalkboards'      => 'Chalkboard',
+								'instructor_table' => 'Instructor Table',
+								'piano'            => 'Piano',
+								'tiered_seating'   => 'Tiered Seating',
+								'whiteboards'      => 'Whiteboard',
+								'windows'          => 'Windows',
+							);
 
-					</tbody>
-				</table>
-			</figure>
+							foreach ( $binary_features as $f_slug => $f_label ) :
+								if ( get_field( $f_slug ) == 1 ) :
+									?>
+									<tr><td class="px-4 py-2 border-t"><?php echo esc_html( $f_label ); ?></td></tr>
+									<?php
+								endif;
+							endforeach;
+
+							$text_features = array(
+								'chair_type'   => 'Chair Type',
+								'lectern_type' => 'Lectern Type',
+								'power_source' => 'Power Source',
+								'table_type'   => 'Table Type',
+								'tablet_chair' => 'Tablet Chair',
+							);
+
+							foreach ( $text_features as $t_slug => $t_label ) :
+								$t_val = get_field( $t_slug );
+								if ( $t_val ) :
+									?>
+									<tr><td class="px-4 py-2 border-t"><?php echo esc_html( $t_label . ': ' . $t_val ); ?></td></tr>
+									<?php
+								endif;
+							endforeach;
+							?>
+						</tbody>
+					</table>
+				</figure>
+			</div>
 		</div>
-
-	</div><!-- .entry-content -->
-
-	<?php if ( get_edit_post_link() ) : ?>
-		<footer class="entry-footer">
-			<?php
-			edit_post_link(
-				sprintf(
-					wp_kses(
-						/* translators: %s: Name of current post. Only visible to screen readers */
-						__( 'Edit <span class="sr-only">%s</span>', 'ksas-office' ),
-						array(
-							'span' => array(
-								'class' => array(),
-							),
-						)
-					),
-					wp_kses_post( get_the_title() )
-				),
-				'<span class="edit-link">',
-				'</span>'
-			);
-			?>
-		</footer><!-- .entry-footer -->
-	<?php endif; ?>
-</article><!-- #post-<?php the_ID(); ?> -->
+	</div>
+</article>
