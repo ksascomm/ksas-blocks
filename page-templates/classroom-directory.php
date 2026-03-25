@@ -72,7 +72,7 @@ $classrooms_list_query = new WP_Query(
 			?>
 			<fieldset class="flex flex-col justify-start md:flex-row button-group js-radio-button-group" id="classroom-radio-buttons">
 				<legend class="mt-4 font-bold">Filter by Classroom Type:</legend>
-				<div class="mr-4" style="background-color:var(--color-primary);">
+				<div class="mr-4 classroom-type" style="background-color:var(--color-primary);">
 					<input type="radio" id="all-types" name="classroom_type" value="*" checked />
 					<label for="all-types">Show All</label>
 				</div>
