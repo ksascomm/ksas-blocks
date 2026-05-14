@@ -10,13 +10,15 @@
 get_header();
 ?>
 
-	<main id="site-content" class="site-main prose lg:prose-lg mx-auto">
+	<main id="site-content" class="mx-auto prose site-main lg:prose-lg">
 		<?php
 		if ( function_exists( 'bcn_display' ) ) :
 			?>
-		<div class="breadcrumbs" typeof="BreadcrumbList" vocab="https://schema.org/">
-			<?php bcn_display(); ?>
-		</div>
+			<nav class="ml-6 wayfinding mb-8 xl:pl-0 lg:ml-16 2xl:ml-[2%]" aria-label="Breadcrumb Navigation">
+				<div class="breadcrumbs" typeof="BreadcrumbList" vocab="https://schema.org/">
+					<?php bcn_display(); ?>
+				</div>
+			</nav>
 		<?php endif; ?>
 		<?php
 		while ( have_posts() ) :

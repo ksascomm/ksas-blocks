@@ -504,6 +504,10 @@ span.posted-on {
 
 /* Tables
 --------------------------------------------- */
+.wp-block-table {
+  max-width: 90ch;
+}
+
 .wp-block-table td,
 .wp-block-table th {
   @apply p-2 break-normal border border-solid border-grey-cool;
@@ -588,6 +592,7 @@ thead th:first-child {
   }
 }
 
+/*
 @media (min-width:1280px) and (max-width:1400px) {
 	.site-main {
 		padding-left: 2rem;
@@ -595,7 +600,7 @@ thead th:first-child {
 	.site-main .alignfull.featured-image-area {
 		margin-left: -2rem;
 	}
-}
+}*/
 
 /* Navigation
 --------------------------------------------- */
@@ -1191,6 +1196,10 @@ footer.entry-footer {
 .news-thumb.no-alt {
   display: none;
 }
+.wp-block-image.alignleft img {
+	margin-right: 1rem;
+}
+
 /*! purgecss end ignore */
 
 .single-post .prose .entry-content p:first-of-type {
@@ -2469,7 +2478,8 @@ font-family: "worksans-bold", system-ui, BlinkMacSystemFont, -apple-system, Sego
 .faculty-books *,
 .wp-block-pb-accordion-item.c-accordion__item,
 .wp-block-separator,
-.bulletin {
+.bulletin,
+.tribe-events-single {
   max-width: 85ch;
 }
 
@@ -2655,13 +2665,19 @@ font-family: "worksans-bold", system-ui, BlinkMacSystemFont, -apple-system, Sego
 
 @media (width >= theme(--breakpoint-lg)) {
   .prose h1.entry-title {
-    font-size: 2.5rem;
+    font-size: 2.875rem;
+	@apply my-0;
   }
   .prose h2.wp-block-heading {
-	font-size: 1.875rem;
+	font-size: 2.075rem;
+  }
+  .prose h3.wp-block-heading {
+	font-size: 1.65rem;
+  }
+  .prose h4.wp-block-heading {
+	font-size: 1.375rem;
   }
 }
-
 /*--------------------------------------------------------------
 # Block Overrides
 --------------------------------------------------------------*/
@@ -2887,6 +2903,7 @@ h3.wp-block-accordion-heading {
 
 .wp-block-gallery {
   @apply px-4 my-0;
+  max-width: 100ch;
 }
 
 .wp-block-image.alignfull img,
@@ -2959,7 +2976,7 @@ h3.wp-block-accordion-heading {
 .three-column-feature li,
 .four-column-feature p,
 .four-column-feature li {
-  @apply text-lg leading-normal;
+  @apply text-lg leading-relaxed;
 }
 
 /* Block Pattern: People/Staff Listing ------------------------------ */
@@ -3257,6 +3274,13 @@ body:not(.enable-search-modal) .header-titles-wrapper {
 	}
 }
 
+/*
+@media screen and (min-width:1536px) {
+	.site-title {
+		max-width: 45ch;
+	}
+
+}*/
 .site-description {
   margin-top: 1rem;
   color: #6d6d6d;
@@ -4257,6 +4281,35 @@ body > .is-root-container > .wp-block-template-part > .wp-block-cover,
 	.section-inner {
 		margin-left: auto;
 		margin-right: auto;
-		max-width: 85rem;
+		max-width: 95rem;
 	}
+}
+
+.header-inner.section-inner.container {
+  width: 100%;
+
+  /* Small tablets / Large phones */
+  @media (width >= 640px) {
+    max-width: 640px;
+  }
+
+  /* Tablets */
+  @media (width >= 768px) {
+    max-width: 768px;
+  }
+
+  /* Laptops / Small Desktops */
+  @media (width >= 1024px) {
+    max-width: 1024px;
+  }
+
+  /* Desktops */
+  @media (width >= 1280px) {
+    max-width: 1280px;
+  }
+
+  /* Large Screens */
+  @media (width >= 1536px) {
+    max-width: 1536px;
+  }
 }

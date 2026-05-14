@@ -9,11 +9,11 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class('p-4'); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class( 'pl-6 pr-5 md:pl-10 md:pr-4 lg:pl-14 lg:pr-12 2xl:pl-[2%] 2xl:pr-0' ); ?>>
 	<header class="entry-header">
 		<?php
 		if ( is_singular() ) :
-			the_title( '<h1 class="entry-title">', '</h1>' );
+			the_title( '<h1 class="entry-title lg:text-4xl! xl:max-w-[55ch] pb-4">', '</h1>' );
 		else :
 			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 		endif;
@@ -33,7 +33,7 @@
 
 	<?php ksas_blocks_post_thumbnail(); ?>
 
-	<div class="entry-content lg:pr-12 xl:pl-0">
+	<div class="entry-content xl:max-w-[85ch]">
 	<?php
 	if ( is_singular() ) :
 			the_content(

@@ -14,9 +14,11 @@ get_header();
 		<?php
 		if ( function_exists( 'bcn_display' ) ) :
 			?>
-		<div class="breadcrumbs" typeof="BreadcrumbList" vocab="https://schema.org/">
-			<?php bcn_display(); ?>
-		</div>
+		<nav class="ml-6 wayfinding mb-8 xl:pl-0 lg:ml-16 2xl:ml-[2%]" aria-label="Breadcrumb Navigation">
+			<div class="breadcrumbs" typeof="BreadcrumbList" vocab="https://schema.org/">
+				<?php bcn_display(); ?>
+			</div>
+		</nav>
 	<?php endif; ?>
 		<?php if ( have_posts() ) : ?>
 

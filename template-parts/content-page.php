@@ -15,8 +15,8 @@ if ( has_post_thumbnail() ) :
 	?>
 	<div class="alignfull featured-image-area front-featured-image-area">
 		<div class="flex h-auto bg-white lg:h-80">
-			<div class="flex lg:pr-6 text-left pl-6 md:pl-[4%] lg:pl-[6%] xl:pl-[8%] lg:items-center lg:justify-start sm:w-full lg:w-2/5">
-				<h1 class="entry-title tracking-tight leading-10 sm:leading-none lg:text-4xl xl:text-[44px] mb-0">
+			<div class="flex lg:pr-6 text-left pl-8 md:pl-[4%] 2xl:pl-[6%] 3xl:pl-[8%] 4xl:pl-[12%] 5xl:pl-[16%] lg:items-center lg:justify-start sm:w-full lg:w-2/5">
+				<h1 class="entry-title tracking-tight leading-10 sm:leading-none text-4xl xl:text-[44px] py-8 mb-0 not-prose">
 					<?php the_title(); ?>
 				</h1>
 			</div>
@@ -25,7 +25,7 @@ if ( has_post_thumbnail() ) :
 				the_post_thumbnail(
 					'full',
 					array(
-						'class' => 'h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full',
+						'class' => 'not-prose h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full',
 						'title' => 'Feature image',
 					)
 				);
@@ -37,15 +37,15 @@ if ( has_post_thumbnail() ) :
 	<!-- Put conditional here to print page title when no featured image -->
 	<div class="alignfull mt-0!">
 		<div class="flex h-auto bg-white lg:bg-grey-cool front-featured-image-area lg:h-40">
-			<div class="flex px-6 lg:items-center pl-6 md:pl-[4%] lg:pl-[6%] xl:pl-[8%]">
-				<h1 class="entry-title tracking-tight leading-10 sm:leading-none lg:text-4xl xl:text-[44px] lg:pl-2 xl:pl-0 py-8 mb-0!">
+			<div class="flex w-full px-4 mx-auto prose lg:prose-lg lg:items-center">
+				<h1 class="entry-title tracking-tight leading-10 sm:leading-none lg:text-4xl xl:text-[44px] py-8 mb-0! pl-6 pr-5 md:pl-10 md:pr-4 2xl:pl-4">
 					<?php the_title(); ?>
 				</h1>
 			</div>
 		</div>
 	</div>
 	<?php endif; ?>
-	<div class="ml-4 wayfinding md:mb-8 xl:ml-0">
+	<nav class="ml-6 wayfinding mb-16 xl:pl-0 lg:ml-16 2xl:ml-[2%]" aria-label="Secondary Navigation">
 		<?php get_template_part( 'template-parts/sidebar-menu' ); ?>
 		<?php
 		if ( function_exists( 'bcn_display' ) ) :
@@ -54,9 +54,9 @@ if ( has_post_thumbnail() ) :
 				<?php bcn_display(); ?>
 			</div>
 		<?php endif; ?>
-	</div>
+	</nav>
 
-	<div class="pl-4 pr-4 entry-content lg:pr-12 xl:pl-0 xl:pr-0">
+	<div class="entry-content pl-6 pr-5 md:pl-10 md:pr-4 lg:pl-14 lg:pr-12 2xl:pl-[2%] 2xl:pr-0">
 		<?php
 		the_content();
 

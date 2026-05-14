@@ -7,21 +7,21 @@ module.exports = {
         DEFAULT: {
           css: [
             {
-			  letterSpacing:"-0.03rem",
+              letterSpacing: "-0.03rem",
               color: "#31261D",
               lineHeight: "1.6",
               fontSize: "1.25rem",
               maxWidth: "100ch",
-              '--tw-prose-body': "#31261D",
-              '--tw-prose-bullets': "#31261D",
-              '--tw-prose-headings': "#31261D",
-              '--tw-prose-links': "#002d72",
-              '--tw-prose-bold': "#31261D",
-              '--tw-prose-code': "#31261D",
-              '--tw-prose-pre-code': "#31261D",
-              '--tw-prose-pre-bg': "#f8f8f8",
-              '--tw-prose-quotes': "#31261D",
-              '--tw-prose-counters': "31261D",
+              "--tw-prose-body": "#31261D",
+              "--tw-prose-bullets": "#31261D",
+              "--tw-prose-headings": "#31261D",
+              "--tw-prose-links": "#002d72",
+              "--tw-prose-bold": "#31261D",
+              "--tw-prose-code": "#31261D",
+              "--tw-prose-pre-code": "#31261D",
+              "--tw-prose-pre-bg": "#f8f8f8",
+              "--tw-prose-quotes": "#31261D",
+              "--tw-prose-counters": "31261D",
               "ul > li::before": {
                 backgroundColor: "#31261D",
               },
@@ -43,30 +43,21 @@ module.exports = {
                 fontFamily: "robotoslab-bold, Georgia, serif",
               },
               h2: {
-                marginTop: "0.5rem",
-                marginBottom: "0.5rem",
-                maxWidth: "90ch",
                 fontSize: "2rem",
-                fontWeight: "700",
-                fontFamily: "worksans-bold, system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, sans-serif",
               },
               h3: {
-                marginTop: "0.5rem",
-                marginBottom: "0.5rem",
-                fontSize: "1.6rem",
-                fontWeight: "700",
-                fontFamily: "worksans-bold, system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, sans-serif",
+                fontSize: "1.75rem",
               },
               h4: {
+                fontSize: "1.5rem",
+              },
+              "h2, h3, h4, h5": {
                 marginTop: "0.5rem",
                 marginBottom: "0.5rem",
-                fontSize: "1.25rem",
+                maxWidth: "66ch",
                 fontWeight: "700",
-                fontFamily: "worksans-bold, system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, sans-serif",
-              },
-              h5 : {
-                fontWeight: "700",
-                fontFamily: "worksans-bold, system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, sans-serif",
+                fontFamily:
+                  "worksans-bold, system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, sans-serif",
               },
               p: {
                 marginTop: "1rem",
@@ -85,11 +76,17 @@ module.exports = {
                 fontWeight: 400,
               },
               strong: {
-                fontFamily: "worksans-bold, system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, sans-serif",
+                fontFamily:
+                  "worksans-bold, system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, sans-serif",
+                fontWeight: 700,
+              },
+              b: {
+                fontFamily:
+                  "worksans-bold, system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, sans-serif",
                 fontWeight: 700,
               },
               "a strong": {
-                color: "inherit"
+                color: "inherit",
               },
               table: {
                 fontSize: "1rem",
@@ -128,7 +125,7 @@ module.exports = {
         lg: {
           css: {
             fontSize: "1.25rem",
-            maxWidth: "110ch",
+            maxWidth: "123ch",
             h2: {
               marginTop: "0.5rem",
               marginBottom: "0.5rem",
@@ -142,11 +139,11 @@ module.exports = {
               marginBottom: "0rem",
             },
             li: {
-              lineHeight:"1.6",
+              lineHeight: "1.6",
             },
           },
         },
       }),
     },
-  }
+  },
 };

@@ -9,8 +9,8 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<div class="entry-header pl-4 pr-4 xl:pl-0 xl:pr-0 flex flex-wrap flex-col md:flex-row my-4">
+<article id="post-<?php the_ID(); ?>" <?php post_class( 'pl-6 pr-5 md:pl-10 md:pr-4 lg:pl-14 lg:pr-12 2xl:pl-[2%] 2xl:pr-0' ); ?>>
+	<div class="flex flex-col flex-wrap my-4 entry-header md:flex-row">
 		<div class="flex-initial">
 		<?php
 			the_post_thumbnail(
@@ -34,10 +34,10 @@
 				the_row();
 				?>
 			<h2>
-				<span class="custom-title text-2xl">
+				<span class="text-2xl custom-title">
 					<?php the_sub_field( 'custom_title' ); ?>
 				</span>
-				<span class="custom-content text-2xl">
+				<span class="text-2xl custom-content">
 					<?php the_sub_field( 'custom_content' ); ?>
 				</span>
 			</h2>
@@ -47,7 +47,7 @@
 			</div>
 		</div><!-- .entry-header -->
 
-	<div class="entry-content py-2 pl-4 pr-4 lg:pr-12 xl:pl-0 xl:pr-0 xl:max-w-[85ch]">
+	<div class="entry-content xl:max-w-[85ch]">
 		<?php the_content(); ?>
 	</div><!-- .entry-content -->
 

@@ -1,32 +1,32 @@
 {
-  "name": "ksas-blocks",
-  "version": "9.1.0",
-  "private": true,
-  "scripts": {
-    "development": "mix",
-    "watch": "mix watch",
-    "watch-poll": "mix watch -- --watch-options-poll=1000",
-    "hot": "mix watch --hot",
-    "production": "mix --production",
-    "browser": "browser-sync start --proxy \"https://krieger.local/mbi\" --files \"**/*\"",
-    "watch-browser": "npm run watch & npm run browser"
-  },
-  "dependencies": {
-    "@tailwindcss/postcss": "^4.2.2",
-    "cross-env": "^10.1.0",
-    "laravel-mix": "^6.0.49"
-  },
-  "devDependencies": {
-    "@tailwindcss/forms": "^0.5.11",
-    "@tailwindcss/typography": "^0.5.19",
-    "autoprefixer": "^10.4.27",
-    "browser-sync": "^3.0.4",
-    "glob-all": "^3.3.1",
-    "postcss": "^8.5.8",
-    "postcss-loader": "^8.2.1",
-    "purgecss-webpack-plugin": "^8.0.0",
-    "tailwindcss": "^4.2.2",
-    "webpack": "^5.105.4",
-    "webpack-cli": "^7.0.2"
-  }
+	"name": "ksas-blocks",
+	"version": "9.3.0",
+	"private": true,
+	"scripts": {
+		"development": "mix",
+		"watch": "mix watch",
+		"watch-poll": "mix watch -- --watch-options-poll=1000",
+		"hot": "mix watch --hot",
+		"production": "mix --production",
+		"browser": "browser-sync start --proxy \"https://krieger.local/mbi\" --files \"**/*\"",
+		"watch-browser": "npm run watch & npm run browser"
+	},
+	"dependencies": {
+		"@tailwindcss/postcss": "^4.3.0",
+		"cross-env": "^10.1.0",
+		"laravel-mix": "^6.0.49"
+	},
+	"devDependencies": {
+		"@tailwindcss/forms": "^0.5.11",
+		"@tailwindcss/typography": "^0.5.19",
+		"autoprefixer": "^10.5.0",
+		"browser-sync": "^3.0.4",
+		"glob-all": "^3.3.1",
+		"postcss": "^8.5.14",
+		"postcss-loader": "^8.2.1",
+		"purgecss-webpack-plugin": "^8.0.0",
+		"tailwindcss": "^4.3.0",
+		"webpack": "^5.105.4",
+		"webpack-cli": "^7.0.2"
+	}
 }

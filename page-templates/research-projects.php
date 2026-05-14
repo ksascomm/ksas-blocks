@@ -22,7 +22,7 @@ $flagship_researchprojects_query = new WP_Query(
 );
 ?>
 
-<main id="site-content" class="pb-2 mx-auto mb-12 prose site-main">
+<main id="site-content" class="pb-2 mx-auto mb-12 prose lg:prose-lg site-main">
 	<?php
 	while ( have_posts() ) :
 		the_post();
@@ -30,7 +30,7 @@ $flagship_researchprojects_query = new WP_Query(
 	endwhile;
 	?>
 
-	<form class="p-4 mb-4 border-2 border-solid isotope-to-sort bg-grey-lightest border-grey" role="region" aria-label="Filters">
+	<form class="p-4 mx-6 mt-12 mb-4 border-2 border-solid isotope-to-sort bg-grey-lightest border-grey max-w-[85ch]" role="region" aria-label="Filters">
 		<?php
 		$project_terms = get_terms(
 			array(

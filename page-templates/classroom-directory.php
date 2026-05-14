@@ -20,7 +20,7 @@ $classrooms_list_query = new WP_Query(
 );
 ?>
 
-<main id="site-content" class="pb-2 mx-auto prose site-main">
+<main id="site-content" class="pb-2 mx-auto prose lg:prose-lg site-main">
 	<?php
 	while ( have_posts() ) :
 		the_post();

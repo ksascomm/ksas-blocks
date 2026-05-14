@@ -1,43 +1,44 @@
 <?php
 /**
- * Single Event Template
- *
- * A single event complete template, divided in smaller template parts.
+ * Single Event Template (Block Editor Enabled)
  *
  * Override this template in your own theme by creating a file at:
- * [your-theme]/tribe/events/single-event-blocks.php
+ * [your-theme]/tribe/events/v2/single-event-blocks.php
  *
- * See more documentation about our Blocks Editor templating system.
- *
- * @link http://evnt.is/1aiy
- *
- * @version 4.7
+ * @package KSAS_Blocks
+ * @version 7.7.14
  */
 
-$event_id = $this->get( 'post_id' );
-
-$is_recurring = '';
-
-if ( ! empty( $event_id ) && function_exists( 'tribe_is_recurring_event' ) ) {
-	$is_recurring = tribe_is_recurring_event( $event_id );
+if ( ! defined( 'ABSPATH' ) ) {
+	die( '-1' );
 }
+
+$event_id     = get_the_ID();
+$is_recurring = ( function_exists( 'tribe_is_recurring_event' ) && tribe_is_recurring_event( $event_id ) );
 ?>
-<main id="site-content" class="site-main prose lg:prose-lg">
-	<div id="tribe-events-content" class="tribe-events-single tribe-blocks-editor">
-	<?php
-	if ( function_exists( 'bcn_display' ) ) :
-		?>
-		<div class="breadcrumbs" typeof="BreadcrumbList" vocab="https://schema.org/">
-		<?php bcn_display(); ?>
+
+
+<div id="tribe-events-content" class="tribe-events-single tribe-blocks-editor px-6 pb-12 lg:px-14 2xl:px-[2%]">
+	
+	<?php $this->template( 'single-event/notices' ); ?>
+	
+	<header class="block! mb-8! mt-6! entry-header">
+		<?php $this->template( 'single-event/title' ); ?>
+	</header>
+
+	<?php if ( $is_recurring ) : ?>
+		<div class="mb-4 italic tribe-events-recurring-description text-grey-darker">
+			<?php $this->template( 'single-event/recurring-description' ); ?>
 		</div>
 	<?php endif; ?>
-		<?php $this->template( 'single-event/notices' ); ?>
-		<?php $this->template( 'single-event/title' ); ?>
-		<?php if ( $is_recurring ) { ?>
-			<?php $this->template( 'single-event/recurring-description' ); ?>
-		<?php } ?>
+
+	<div class="prose entry-content lg:prose-lg max-w-none">
 		<?php $this->template( 'single-event/content' ); ?>
+	</div>
+
+	<footer class="pt-6 mt-12 border-t entry-footer border-grey">
 		<?php $this->template( 'single-event/comments' ); ?>
 		<?php $this->template( 'single-event/footer' ); ?>
-	</div>
-</main>
+	</footer>
+
+</div>
