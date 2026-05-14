@@ -28,7 +28,7 @@ $classrooms_list_query = new WP_Query(
 	endwhile;
 	?>
 
-	<form class="p-4 mb-4 border-2 border-solid isotope-to-sort bg-grey-lightest border-grey" role="region" aria-label="Filters" id="filters">
+	<form class="p-4 mx-8 mb-4 border-2 border-solid isotope-to-sort bg-grey-lightest border-grey" role="region" aria-label="Filters" id="filters">
 		
 		<fieldset class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4 button-group js-radio-button-group" id="classroom-checkboxes">
 			<legend class="font-bold">Filter by Built-in Equipment:</legend>
@@ -93,7 +93,7 @@ $classrooms_list_query = new WP_Query(
 	</form>
 
 	<?php if ( $classrooms_list_query->have_posts() ) : ?>
-		<div class="mt-8" id="isotope-list">
+		<div class="mx-8 mt-8" id="isotope-list">
 			<div class="flex flex-wrap">
 				<?php
 				while ( $classrooms_list_query->have_posts() ) :

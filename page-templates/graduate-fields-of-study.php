@@ -22,7 +22,7 @@ $gradstudyfields_query = new WP_Query(
 );
 ?>
 
-<main id="site-content" class="site-main prose lg:prose-lg mx-auto pb-2">
+<main id="site-content" class="pb-2 mx-auto prose site-main lg:prose-lg">
 
 	<?php
 	while ( have_posts() ) :
@@ -35,7 +35,7 @@ $gradstudyfields_query = new WP_Query(
 	<?php
 	if ( $gradstudyfields_query->have_posts() ) :
 		?>
-	<div class="mt-8">
+	<div class="px-6 mt-8">
 		<div class="flex flex-wrap">
 			<?php
 			while ( $gradstudyfields_query->have_posts() ) :
