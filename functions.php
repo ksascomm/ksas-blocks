@@ -9,7 +9,7 @@
 
 if ( ! defined( 'KSAS_BLOCKS_VERSION' ) ) {
 	// Replace the version number of the theme on each release.
-	define( 'KSAS_BLOCKS_VERSION', '9.3.0' );
+	define( 'KSAS_BLOCKS_VERSION', '9.3.1' );
 }
 
 if ( ! function_exists( 'ksas_blocks_setup' ) ) :
@@ -252,6 +252,23 @@ function ksas_blocks_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'ksas_blocks_scripts' );
 
+/**
+ * Enqueue Siteimprove Analytics script.
+ */
+function ksas_enqueue_siteimprove() {
+	// Only enqueue if the ACF option is set.
+	if ( get_field( 'siteimprove', 'option' ) ) {
+		wp_enqueue_script(
+			'siteimprove-analytics',
+			'https://siteimproveanalytics.com/js/siteanalyze_11464.js',
+			array(),
+			null,
+			array( 'strategy' => 'async' )
+		);
+	}
+}
+add_action( 'wp_enqueue_scripts', 'ksas_enqueue_siteimprove' );
+
 /** Add defer attribute to specific scripts */
 function add_defer_attribute( $tag, $handle ) {
 	// Add script handles to the array below.
@@ -381,7 +398,7 @@ function get_the_top_ancestor_id() {
  * string after - Optional. Text after the menu tree.
  * bool echo - Optional, default is TRUE. Whether to echo the menu or return it.
  *
- * @param array $args Arguments
+ * @param array $args Arguments.
  * @return String If $echo value is set to FALSE.
  *
  * @link https://www.isitwp.com/wp_nav_menu-separate-submenu-output/

@@ -21,7 +21,7 @@ get_header();
 			$aghi_site_id  = get_current_blog_id();
 			$aghi_site_url = get_blog_details( '82' )->path;
 			// Double check Site ID #82 == "/humanities-institute/" slug!
-			if ( $aghi_site_url === '/humanities-institute/' && $aghi_site_id == 82 ) :
+			if ( '/humanities-institute/' === $aghi_site_url && 82 === $aghi_site_id ) :
 				get_template_part( 'template-parts/content', 'front-aghi' );
 			else :
 				get_template_part( 'template-parts/content', 'front' );
@@ -40,38 +40,41 @@ get_header();
 
 		<div class="divider div-transparent div-dot"></div>
 
-		<div class="px-2 mb-24 news-section sm:px-0">
-			<div class="px-4 mx-auto my-4 prose lg:prose-lg xl:prose-xl">
-				<div class="flex flex-wrap justify-between">
-					<div>
-						<h2 class="pb-4 md:pb-0 my-0!"><?php echo esc_html( $heading ); ?>
-					</div>
-					<div>
-						<a class="inline-flex button" href="<?php echo esc_url( get_permalink( get_option( 'page_for_posts' ) ) ); ?>">
-							View All Posts&nbsp;<span class="fa-solid fa-circle-chevron-right" aria-hidden="true"></span></a>
-					</div>
+		<div class="container px-2 py-12 news-section section-inner sm:px-0">
+			<div class="flex flex-wrap justify-between px-4 pb-4 lg:px-0 2xl:max-w-450 2xl:mx-auto">
+				<div>
+					<h2 class="pb-4 md:pb-0 my-0!"><?php echo esc_html( $heading ); ?>
+				</div>
+				<div>
+					<a class="inline-flex items-center text-base button" href="<?php echo esc_url( get_permalink( get_option( 'page_for_posts' ) ) ); ?>">
+						View All Posts&nbsp;<span class="fa-solid fa-circle-chevron-right" aria-hidden="true"></span></a>
 				</div>
 			</div>
-			<div class="grid grid-cols-1 gap-4 p-4 mx-auto lg:grid-cols-3">
+			
 			<?php
 			$news_query = new WP_Query(
 				array(
 					'post_type'           => 'post',
-					'posts_per_page'      => $news_quantity,
+					'posts_per_page'      => (int) $news_quantity,
 					'ignore_sticky_posts' => 1,
 				)
 			);
-
 			if ( $news_query->have_posts() ) :
+				?>
+			<div class="grid grid-cols-1 gap-8 lg:grid-cols-2 xl:grid-cols-3 2xl:max-w-450 2xl:mx-auto ">
+				<?php
 				while ( $news_query->have_posts() ) :
 					$news_query->the_post();
 					get_template_part( 'template-parts/content', 'front-post-excerpt' );
 					endwhile;
-				endif;
-			?>
+				?>
 			</div>
+				<?php
+				wp_reset_postdata(); // Reset the loop.
+			endif;
+			?>
 		</div>
-		<?php endif; // end of if  show_homepage_news_feed logic. ?>
+	<?php endif; // end of if  show_homepage_news_feed logic. ?>
 	</main><!-- #main -->
 
 <?php

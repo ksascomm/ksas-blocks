@@ -54,6 +54,11 @@
 /*--------------------------------------------------------------
 # Generic
 --------------------------------------------------------------*/
+:root {
+  --footer-widget----spacing-horizontal: 1rem;
+  --footer-widget----spacing-vertical: 1rem;
+}
+
 html,
 body {
   overflow-x: hidden;
@@ -1271,10 +1276,7 @@ footer.entry-footer {
   @apply px-4 py-3 text-white border-0 bg-blue hover:bg-blue-light;
 }
 
-:root {
-  --footer-widget----spacing-horizontal: 1rem;
-  --footer-widget----spacing-vertical: 1rem;
-}
+
 .footer-widget-area {
   margin-top: calc(3 * var(--footer-widget----spacing-vertical));
   position: relative;
@@ -1294,7 +1296,7 @@ footer.entry-footer {
 @media only screen and (min-width: 652px) {
   .footer-widget-area {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
     column-gap: calc(2 * var(--footer-widget----spacing-horizontal));
   }
 }

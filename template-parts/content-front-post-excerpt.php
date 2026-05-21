@@ -10,7 +10,7 @@
 ?>
 
 
-<article id="post-<?php the_ID(); ?>" <?php post_class( 'article-excerpt blog-excerpt prose lg:prose-lg xl:prose-xl mx-auto mb-4' ); ?> aria-label="<?php the_title(); ?>">
+<article id="post-<?php the_ID(); ?>" <?php post_class( 'article-excerpt blog-excerpt prose lg:prose-lg xl:prose-xl mx-auto mb-4 w-full' ); ?> aria-label="<?php the_title(); ?>">
 <?php
 	/**
 	 * This differs from theme's post_thumbnail()
@@ -23,7 +23,7 @@ if ( has_post_thumbnail() ) :
 	$thumbnail_id = get_post_meta( $post->ID, '_thumbnail_id', true );
 	$img_alt      = get_post_meta( $thumbnail_id, '_wp_attachment_image_alt', true );
 	?>
-		<div class="news-thumb h-0 lg:h-[21rem] 
+		<div class="news-thumb h-0 lg:h-84 
 		<?php
 		if ( ! $img_alt ) {
 			echo 'no-alt'; }

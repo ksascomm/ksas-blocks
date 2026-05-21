@@ -25,13 +25,6 @@
 	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 	})(window,document,'script','dataLayer','GTM-PDL5K37');</script>
 	<!-- End Google Tag Manager -->
-	<?php
-	if ( get_field( 'siteimprove', 'option' ) ) :
-		?>
-	<!-- Siteimprove Analytics -->
-	<script async src="https://siteimproveanalytics.com/js/siteanalyze_11464.js"></script>
-	<!-- End Siteimprove Analytics -->
-	<?php endif; ?>
 </head>
 
 <body <?php body_class(); ?>>
@@ -42,7 +35,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <a class="skip-link screen-reader-text" href="#site-content"><?php esc_html_e( 'Skip to content', 'ksas-office' ); ?></a>
 
 <?php wp_body_open(); ?>
-<?php // get_template_part( 'template-parts/jhu-150th-bar' ); ?>
 	<header id="site-header" class="w-full shadow-sm header-footer-group sm:justify-between sm:items-baseline bg-blue" role="banner">
 		<div class="header-titles-wrapper">
 			<div class="container header-inner section-inner">
@@ -73,7 +65,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 						<span class="toggle-icon">
 							<?php twentytwenty_the_theme_svg( 'search' ); ?>
 						</span>
-						<span class="toggle-text"><?php _ex( 'Search', 'toggle text', 'ksas-office' ); ?></span>
+						<span class="toggle-text"><?php esc_html_e( 'Search', 'ksas-office' ); ?></span>
 					</span>
 				</button><!-- .search-toggle -->
 				<button class="toggle nav-toggle mobile-nav-toggle" data-toggle-target=".menu-modal"  data-toggle-body-class="showing-menu-modal" aria-expanded="false" data-set-focus=".close-nav-toggle" type="button">
@@ -81,7 +73,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 						<span class="toggle-icon">
 							<?php twentytwenty_the_theme_svg( 'ellipsis' ); ?>
 						</span>
-						<span class="toggle-text"><?php _e( 'Menu', 'ksas-office' ); ?></span>
+						<span class="toggle-text"><?php esc_html_e( 'Menu', 'ksas-office' ); ?></span>
 					</span>
 				</button><!-- .nav-toggle -->
 			</div><!-- .header-inner -->
@@ -112,7 +104,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 						<button class="toggle search-toggle desktop-search-toggle" data-toggle-target=".search-modal" data-toggle-body-class="showing-search-modal" data-set-focus=".search-modal .search-field" aria-expanded="false" type="button">
 							<span class="toggle-inner">
 							<?php twentytwenty_the_theme_svg( 'search' ); ?>
-								<span class="toggle-text hover:underline hover:decoration-blue hover:decoration-2 hover:underline-offset-4"><?php _ex( 'Search', 'toggle text', 'ksas-office' ); ?></span>
+								<span class="toggle-text hover:underline hover:decoration-blue hover:decoration-2 hover:underline-offset-4"><?php esc_html_e( 'Search', 'ksas-office' ); ?></span>
 							</span>
 						</button><!-- .search-toggle -->
 

@@ -9,10 +9,10 @@
 
 if ( is_active_sidebar( 'sidebar-footer' ) ) : ?>
 
-	<div class="footer-widget-area w-full bg-grey-cool">
+	<div class="w-full px-6 py-10 footer-widget-area bg-grey-cool">
 		<?php dynamic_sidebar( 'sidebar-footer' ); ?>
 		<div class="image <?php ksas_blocks_sidebar_class( 'sidebar-footer' ); ?>">
-			<div class="h-40 w-40">
+			<div class="w-40 h-40">
 				<!-- Generator: Adobe Illustrator 23.0.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 				<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 					viewBox="0 0 43 46" style="enable-background:new 0 0 43 46;" xml:space="preserve">

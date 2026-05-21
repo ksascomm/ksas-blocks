@@ -19,7 +19,6 @@ if ( ! function_exists( 'ksas_blocks_start_cleanup' ) ) :
 
 		// Clean up comment styles in the head.
 		add_action( 'wp_head', 'ksas_blocks_remove_recent_comments_style', 1 );
-
 	}
 	add_action( 'after_setup_theme', 'ksas_blocks_start_cleanup' );
 endif;
@@ -153,3 +152,21 @@ function clean_post_content( $content ) {
 	return $content;
 }
 add_filter( 'the_content', 'clean_post_content' );
+
+/**  Minify the customizer css output */
+add_action( 'wp_head', 'tn_minify_customizer_css_head' );
+function tn_minify_customizer_css_head() {
+
+	remove_action( 'wp_head', 'wp_custom_css_cb', 101 );
+	// remove the default customizer css output.
+
+	$buffer = wp_get_custom_css(); // get the customizer css.
+
+	// search and replace strings.
+	$buffer = preg_replace( '!/\*[^*]*\*+([^/][^*]*\*+)*/!', '', $buffer );
+	$buffer = str_replace( ': ', ':', $buffer );
+	$buffer = str_replace( array( "\r\n", "\r", "\n", "\t", '  ', '    ', '    ' ), '', $buffer );
+
+	// add the minified css in wp_head.
+	echo '<style id="wp-custom-css">' . $buffer . '</style>';
+}
