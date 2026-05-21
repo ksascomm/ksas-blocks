@@ -10,11 +10,11 @@
 get_header();
 ?>
 
-	<main id="site-content" class="mx-auto prose site-main lg:prose-lg">
+	<main id="site-content" class="mx-auto prose site-main md:prose-md lg:prose-lg">
 	<?php
 	if ( function_exists( 'bcn_display' ) ) :
 		?>
-	<div class="ml-4 breadcrumbs" typeof="BreadcrumbList" vocab="https://schema.org/">
+	<div class="ml-8! breadcrumbs" typeof="BreadcrumbList" vocab="https://schema.org/">
 		<?php bcn_display(); ?>
 	</div>
 	<?php endif; ?>

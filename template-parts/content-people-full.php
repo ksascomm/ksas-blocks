@@ -11,9 +11,9 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class( 'people py-4 ml-4' ); ?>>
-	<div class="flex flex-wrap lg:flex-nowrap">
+	<div class="flex flex-wrap px-4 lg:flex-nowrap">
 		<?php if ( has_post_thumbnail() ) : ?>
-			<div class="flex-none pr-4 headshot">
+			<div class="flex-none headshot">
 				<?php
 					the_post_thumbnail(
 						'large',
@@ -46,7 +46,7 @@
 				<?php if ( get_post_meta( $post->ID, 'ecpt_position', true ) ) : ?>
 					<?php echo wp_kses_post( get_post_meta( $post->ID, 'ecpt_position', true ) ); ?>
 				<?php else : ?>
-					<span class="capitalize"><?php echo wp_strip_all_tags( get_the_term_list( $post->ID, 'role', '', ', ' ) ); ?></span>
+					<span class="capitalize"><?php echo esc_html( wp_strip_all_tags( get_the_term_list( $post->ID, 'role', '', ', ' ) ) ); ?></span>
 				<?php endif; ?>	
 				</h2>
 			</div>
@@ -99,7 +99,7 @@
 	if ( is_singular( 'people' ) ) :
 		?>
 		<?php if ( get_post_meta( $post->ID, 'ecpt_bio', true ) ) : ?>
-		<div class="my-4 tabbed">
+		<div class="pl-2 my-4 tabbed">
 			<ul>
 			<?php if ( get_post_meta( $post->ID, 'ecpt_bio', true ) ) : ?>
 				<li>
@@ -121,13 +121,7 @@
 				<a href="#section4">Publications</a>
 				</li>
 			<?php endif; ?>
-			<?php
-			if ( get_post_meta( $post->ID, 'ecpt_books_cond', true ) == 'on' ) :
-				?>
-				<li>
-				<a href="#section5">Faculty Books</a>
-				</li>
-			<?php endif; ?>
+	
 			<?php if ( get_post_meta( $post->ID, 'ecpt_extra_tab_title', true ) ) : ?>
 				<li><a href="#section6"><?php echo wp_kses_post( get_post_meta( $post->ID, 'ecpt_extra_tab_title', true ) ); ?></a></li>
 			<?php endif; ?>

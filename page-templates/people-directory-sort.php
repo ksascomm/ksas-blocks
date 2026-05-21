@@ -20,7 +20,7 @@ get_header();
 
 		endwhile; // End of the loop.
 		?>
-		<form class="p-4 mx-2 my-4 border-2 border-solid isotope-to-sort bg-grey-lightest border-grey lg:mx-0" id="filters">
+		<form class="p-4 m-4 border-2 border-solid isotope-to-sort bg-grey-lightest border-grey max-w-8/12" id="filters">
 			<fieldset class="flex-col justify-start lg:flex-row">
 				<legend class="mb-2">Filter by Position or Title:</legend>
 				<?php
