@@ -46,7 +46,7 @@ if ( has_post_thumbnail() ) :
 			<?php the_title( '<h3 class="entry-title text-2xl!"><a class="front-post" href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h3>' ); ?>
 		<?php endif; ?>
 		</header><!-- .entry-header -->
-		<div class="px-4 pb-4 text-lg leading-normal entry-content">
+		<div class="px-4 pb-4 text-lg leading-normal xl:px-6 entry-content">
 			<p><?php echo esc_html( wp_trim_words( get_the_excerpt(), 40, '...' ) ); ?></p>
 		</div><!-- .entry-content -->
 	</article><!-- #post-<?php the_ID(); ?> -->
