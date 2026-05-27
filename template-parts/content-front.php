@@ -9,46 +9,44 @@
 
 ?>
 
-<div class="mx-auto max-w-(--breakpoint-xl)" id="post-<?php the_ID(); ?>">
-	<div class="container md:container md:mx-auto pb-2">
-		<div class="flex flex-col w-full">
+<div class="mx-auto max-w-[120ch]" id="post-<?php the_ID(); ?>">
 			<div class="text-xl font-medium text-primary">
-			<?php ksas_blocks_post_thumbnail(); ?>
-			<div class="entry-content pl-4 pr-4 lg:pr-12 xl:pl-0 xl:pr-0 leading-normal">
-				<?php
-				the_content();
-
-				wp_link_pages(
-					array(
-						'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'ksas-office' ),
-						'after'  => '</div>',
-					)
-				);
-				?>
-			</div>
-			<?php if ( get_edit_post_link() ) : ?>
-				<footer class="entry-footer">
+				<?php if ( has_post_thumbnail() ) : ?>
+					<?php ksas_blocks_post_thumbnail(); ?>
+				<?php endif; ?>
+				<div class="pl-4 pr-4 leading-normal entry-content lg:pr-12 xl:pl-0 xl:pr-0">
 					<?php
-					edit_post_link(
-						sprintf(
-							wp_kses(
-								/* translators: %s: Name of current post. Only visible to screen readers */
-								__( 'Edit <span class="sr-only">%s</span>', 'ksas-office' ),
-								array(
-									'span' => array(
-										'class' => array(),
-									),
-								)
-							),
-							wp_kses_post( get_the_title() )
-						),
-						'<span class="edit-link">',
-						'</span>'
+					the_content();
+
+					wp_link_pages(
+						array(
+							'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'ksas-office' ),
+							'after'  => '</div>',
+						)
 					);
 					?>
-				</footer><!-- .entry-footer -->
-			<?php endif; ?>
+				</div>
+				<?php if ( get_edit_post_link() ) : ?>
+					<footer class="entry-footer">
+						<?php
+						edit_post_link(
+							sprintf(
+								wp_kses(
+									/* translators: %s: Name of current post. Only visible to screen readers */
+									__( 'Edit <span class="sr-only">%s</span>', 'ksas-office' ),
+									array(
+										'span' => array(
+											'class' => array(),
+										),
+									)
+								),
+								wp_kses_post( get_the_title() )
+							),
+							'<span class="edit-link">',
+							'</span>'
+						);
+						?>
+					</footer><!-- .entry-footer -->
+				<?php endif; ?>
 			</div>
-		</div>
-	</div>
 </div>

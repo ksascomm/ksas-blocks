@@ -40,7 +40,7 @@ get_header();
 
 		<div class="divider div-transparent div-dot"></div>
 
-		<div class="container px-2 py-12 news-section section-inner sm:px-0">
+		<div class="container px-2 py-12 news-section section-inner md:px-0">
 			<div class="flex flex-wrap justify-between px-4 pb-4 lg:px-0 2xl:max-w-450 2xl:mx-auto">
 				<div>
 					<h2 class="pb-4 md:pb-0 my-0!"><?php echo esc_html( $heading ); ?>

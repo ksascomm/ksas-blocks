@@ -358,8 +358,10 @@ h1.tribe-events-single-event-title,
 
 .tribe-events-schedule__date,
 .tribe-events-schedule__all-day, .tribe-events-schedule__separator, .tribe-events-schedule__timezone,
-.tribe-events-schedule__time {
+.tribe-events-schedule__time,
+.single-tribe_events .tribe-blocks-editor .tribe-events-schedule .tribe-events-schedule__datetime {
   font-size: 1.25rem !important;
+  color: #31261d !important;
 }
 
 .tribe-events-schedule__all-day, .tribe-events-schedule__separator, .tribe-events-schedule__timezone {
