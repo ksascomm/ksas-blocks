@@ -42,22 +42,28 @@ module.exports = {
                 fontWeight: "700",
                 fontFamily: "robotoslab-bold, Georgia, serif",
               },
-              h2: {
-                fontSize: "2rem",
-              },
-              h3: {
-                fontSize: "1.75rem",
-              },
-              h4: {
-                fontSize: "1.5rem",
-              },
-              "h2, h3, h4, h5": {
+              "h3, h4, h5": {
                 marginTop: "0.5rem",
                 marginBottom: "0.5rem",
                 maxWidth: "66ch",
                 fontWeight: "700",
                 fontFamily:
                   "worksans-bold, system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, sans-serif",
+              },
+              h2: {
+                fontSize: "2rem",
+                maxWidth: "55ch",
+                marginTop: "0.5rem",
+                marginBottom: "0.5rem",
+                fontWeight: "700",
+                fontFamily:
+                  "worksans-bold, system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, sans-serif",
+              },
+              h3: {
+                fontSize: "1.75rem",
+              },
+              h4: {
+                fontSize: "1.5rem",
               },
               p: {
                 marginTop: "1rem",

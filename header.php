@@ -45,7 +45,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 						</a>
 					</div>
 					<div class="content-center mt-4 mb-12 lg:col-span-2 2xl:col-span-3 lg:mt-0 md:mb-0">
-						<h1 class="text-2xl site-title md:text-2xl lg:text-4xl ">
+						<h1 class="text-[2rem] site-title md:text-2xl lg:text-4xl ">
 							<a class="text-white hover:text-grey no-underline hover:underline! hover:underline-offset-2!" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
 								<?php
 									$ksas_blocks_description = get_bloginfo( 'description', 'display' );

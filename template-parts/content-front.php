@@ -14,7 +14,7 @@
 				<?php if ( has_post_thumbnail() ) : ?>
 					<?php ksas_blocks_post_thumbnail(); ?>
 				<?php endif; ?>
-				<div class="pl-4 pr-4 leading-normal entry-content lg:pr-12 xl:pl-0 xl:pr-0">
+				<div class="px-6 leading-normal entry-content lg:pr-12 xl:px-4">
 					<?php
 					the_content();
 

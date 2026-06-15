@@ -13,8 +13,8 @@
 <?php
 if ( has_post_thumbnail() ) :
 	?>
-	<div class="alignfull featured-image-area front-featured-image-area">
-		<div class="flex h-auto bg-white lg:h-80">
+	<div class="alignfull featured-image-area front-featured-image-area h-auto mt-0! bg-white lg:bg-grey-lightest">
+		<div class="flex h-auto lg:h-80">
 			<div class="flex lg:pr-6 text-left pl-8 md:pl-[4%] 2xl:pl-[6%] 3xl:pl-[8%] 4xl:pl-[12%] 5xl:pl-[16%] lg:items-center lg:justify-start sm:w-full lg:w-2/5">
 				<h1 class="entry-title tracking-tight leading-10 sm:leading-none text-4xl xl:text-[44px] py-8 mb-0 not-prose">
 					<?php the_title(); ?>

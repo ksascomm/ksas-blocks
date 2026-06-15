@@ -349,11 +349,6 @@ span.posted-on {
   background-position: left;
 }
 
-.featured-image-area {
-  @apply h-20;
-  background-position: left;
-}
-
 .alignfull.featured-image-area,
 .front-featured-image-area .front.featured-image img
  {
