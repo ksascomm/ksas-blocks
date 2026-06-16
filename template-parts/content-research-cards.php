@@ -21,7 +21,7 @@ if ( ! empty( $project_card_terms ) && ! is_wp_error( $project_card_terms ) ) {
 }
 ?>
 
-<div class="research-project-card xl:max-w-96 p-2 mx-4 lg:mx-0 w-11/12 not-prose lg:w-1/3 item <?php echo esc_attr( $project_slug_list ); ?>">
+<div class="research-project-card xl:max-w-96 p-2 mx-4 lg:mx-0 w-full not-prose lg:w-1/3 item <?php echo esc_attr( $project_slug_list ); ?>">
 	<div class="h-full px-6 py-4 mb-4 overflow-hidden bg-white border rounded-lg shadow-sm border-grey-light">
 		
 		<?php if ( has_post_thumbnail() ) : ?>
