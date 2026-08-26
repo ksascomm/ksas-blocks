@@ -22,7 +22,7 @@ $events_label_plural   = tribe_get_event_label_plural();
 	<?php tribe_the_notices(); ?>
 
 	<header class="block! entry-header mb-8">
-		<h1 class="mt-6! mb-8! lg:text-4xl! font-bold! entry-title"><?php the_title(); ?></h1>
+		<h1 class="mt-6! mb-8! lg:text-4xl! font-weight-bold font-serif-bold entry-title"><?php the_title(); ?></h1>
 		<div class="my-4! text-xl font-bold tribe-events-schedule text-grey-darkest font-heavy">
 			<?php
 			/**

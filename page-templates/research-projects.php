@@ -47,11 +47,11 @@ $flagship_researchprojects_query = new WP_Query(
 				<fieldset class="flex flex-col justify-start gap-2 md:flex-row" id="filters">
 					<legend class="mb-2 -mt-2 text-2xl font-bold">Filter by type or area:</legend>
 					
-					<button type="button" class="px-4 py-1 text-lg text-white button bg-blue hover:bg-blue-800" data-filter="*">Show All</button>
+					<button type="button" class="px-4 py-1 text-lg text-white button bg-blue hover:bg-blue-light" data-filter="*">Show All</button>
 
 					<?php foreach ( $project_terms as $project_item ) : ?>
 						<button type="button" 
-								class="px-4 py-1 text-lg text-white button bg-blue hover:bg-blue-800" 
+								class="px-4 py-1 text-lg text-white button bg-blue hover:bg-blue-light" 
 								data-filter=".<?php echo esc_attr( $project_item->slug ); ?>">
 							<?php echo esc_html( $project_item->name ); ?>
 						</button>

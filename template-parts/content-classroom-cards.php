@@ -61,7 +61,7 @@ $filter_class_string = implode( ' ', $classroom_filters );
 		<?php endif; ?>
 
 		<div class="px-6 py-4">
-			<h2 class="mb-2 lg:text-3xl! font-bold font-heavy">
+			<h2 class="mb-2 lg:text-3xl! font-weight-bold font-serif-bold">
 				<a href="<?php echo esc_url( get_permalink() ); ?>" class="text-blue hover:underline"><?php the_title(); ?></a>
 			</h2>
 

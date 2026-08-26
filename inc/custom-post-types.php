@@ -174,3 +174,16 @@ add_filter(
 		return 'list';
 	}
 );
+
+/**
+ * Unhook TEC legacy container wrapper HTML before and after single event views.
+ */
+add_action(
+	'wp',
+	function () {
+		if ( is_singular( 'tribe_events' ) && class_exists( 'Tribe__Events__Templates' ) ) {
+			remove_action( 'tribe_events_before_html', array( 'Tribe__Events__Templates', 'template_before_html' ) );
+			remove_action( 'tribe_events_after_html', array( 'Tribe__Events__Templates', 'template_after_html' ) );
+		}
+	}
+);

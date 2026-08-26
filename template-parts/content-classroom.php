@@ -33,7 +33,7 @@
 				
 				<div class="flex classroom-callouts">
 				<?php if ( get_field( 'capacity' ) ) : ?>
-					<div class="w-1/2 p-1 m-4 mt-8 overflow-hidden text-lg font-bold text-center bg-white border-2 border-solid rounded-xl text-primary border-primary font-heavy">
+					<div class="w-1/2 p-1 m-4 mt-8 overflow-hidden text-lg text-center bg-white border-2 border-solid rounded-xl text-primary border-primary font-weight-bold font-serif-bold">
 						<h3>Capacity</h3> 
 						<div class="text-3xl font-bold"><?php echo esc_html( get_field( 'capacity' ) ); ?></div>
 					</div>

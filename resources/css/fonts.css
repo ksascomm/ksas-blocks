@@ -2,8 +2,17 @@
 # Custom Fonts
 --------------------------------------------------------------*/
 @font-face {
-	font-family: "robotoslab-medium";
-	src: url("../fonts/roboto_slab/RobotoSlab-Medium.woff") format("woff");
+	font-family: "hopkinsslab-regular";
+	src: url("../fonts/hopkins_slab/HopkinsSlab-Regular.woff") format("woff");
+    font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+	font-optical-sizing: auto;
+}
+
+@font-face {
+	font-family: "hopkinsslab-medium";
+	src: url("../fonts/hopkins_slab/HopkinsSlab-Medium.woff") format("woff");
     font-weight: 500;
 	font-style: normal;
 	font-display: swap;
@@ -11,8 +20,17 @@
 }
 
 @font-face {
-	font-family: "robotoslab-bold";
-	src: url("../fonts/roboto_slab/RobotoSlab-Bold.woff") format("woff");
+	font-family: "hopkinsslab-semibold";
+	src: url("../fonts/hopkins_slab/HopkinsSlab-Semibold.woff") format("woff");
+	font-weight: 600;
+	font-style: normal;
+	font-display: swap;
+	font-optical-sizing: auto;
+}
+
+@font-face {
+	font-family: "hopkinsslab-bold";
+	src: url("../fonts/hopkins_slab/HopkinsSlab-Bold.woff") format("woff");
 	font-weight: 700;
 	font-style: normal;
 	font-display: swap;

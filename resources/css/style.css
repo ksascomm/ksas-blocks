@@ -32,8 +32,10 @@
 	--font-sans-medium: "worksans-medium", "system-ui", "BlinkMacSystemFont", "-apple-system", "Segoe UI", "sans-serif";
 	--font-semi: "worksans-semibold", "system-ui", "BlinkMacSystemFont", "-apple-system", "Segoe UI", "sans-serif";
 	--font-heavy: "worksans-bold", "system-ui", "BlinkMacSystemFont", "-apple-system", "Segoe UI", "sans-serif";
-	--font-serif: "robotoslab-medium", "Georgia", "serif";
-	--font-serif-bold: "robotoslab-bold", "Georgia", "serif";
+	--font-serif: "hopkinsslab-regular", "Georgia", "serif";
+	--font-serif-medium: "hopkinsslab-medium", "Georgia", "serif";
+	--font-serif-semibold: "hopkinsslab-semibold", "Georgia", "serif";
+	--font-serif-bold: "hopkinsslab-bold", "Georgia", "serif";
 	--text-base: 1rem;
 	--text-lg: 1.125rem;
 	--text-xl: 1.25rem;

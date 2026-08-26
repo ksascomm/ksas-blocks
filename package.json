@@ -1,6 +1,6 @@
 {
 	"name": "ksas-blocks",
-	"version": "9.3.2",
+	"version": "9.4.0",
 	"private": true,
 	"scripts": {
 		"development": "mix",
@@ -12,20 +12,20 @@
 		"watch-browser": "npm run watch & npm run browser"
 	},
 	"dependencies": {
-		"@tailwindcss/postcss": "^4.3.0",
+		"@tailwindcss/postcss": "^4.3.3",
 		"cross-env": "^10.1.0",
 		"laravel-mix": "^6.0.49"
 	},
 	"devDependencies": {
 		"@tailwindcss/forms": "^0.5.11",
-		"@tailwindcss/typography": "^0.5.19",
-		"autoprefixer": "^10.5.0",
+		"@tailwindcss/typography": "^0.5.20",
+		"autoprefixer": "^10.5.4",
 		"browser-sync": "^3.0.4",
 		"glob-all": "^3.3.1",
-		"postcss": "^8.5.14",
+		"postcss": "^8.5.26",
 		"postcss-loader": "^8.2.1",
 		"purgecss-webpack-plugin": "^8.0.0",
-		"tailwindcss": "^4.3.0",
+		"tailwindcss": "^4.3.3",
 		"webpack": "^5.105.4",
 		"webpack-cli": "^7.0.2"
 	}

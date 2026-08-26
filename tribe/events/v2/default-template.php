@@ -6,6 +6,8 @@
  * @version 7.7.14
  */
 
+use Tribe\Events\Views\V2\Template_Bootstrap;
+
 if ( ! defined( 'ABSPATH' ) ) {
 	die( '-1' );
 }
@@ -24,10 +26,9 @@ get_header();
 	
 	<div id="tribe-events" class="tribe-common px-6! pb-12! lg:px-14! 2xl:px-[2%]! pt-4!">
 		<?php
-		// Use the official hook to output the view content.
-		// This is safer than trying to instantiate the Bootstrap class manually.
-		if ( function_exists( 'tribe_get_view' ) ) {
-			echo wp_kses_post( tribe_get_view() );
+		if ( class_exists( Template_Bootstrap::class ) ) {
+			// Replaces deprecated tribe_get_view()
+			echo tribe( Template_Bootstrap::class )->get_view_html(); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 		}
 		?>
 	</div>

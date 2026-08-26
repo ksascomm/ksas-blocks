@@ -14,7 +14,7 @@ $field_title   = get_the_title();
 
 <div class="w-full p-2 my-4 graduate-field-card not-prose 2xl:mx-0 md:w-1/2 xl:w-1/3 item" id="field-<?php echo esc_attr( sanitize_title( $field_title ) ); ?>">
 	<div class="h-full px-6 py-4 mb-4 overflow-hidden bg-white field graduate-field-card-outline">
-		<h3 class="text-2xl font-bold leading-snug font-heavy">
+		<h3 class="text-2xl leading-snug font-weight-bold font-serif-bold">
 			<?php echo esc_html( $field_title ); ?>
 		</h3>
 		<div class="flex flex-wrap items-center">

@@ -34,7 +34,7 @@ if ( function_exists( 'register_block_pattern' ) ) {
 			'viewportWidth' => 1400,
 			'content'       => '
 			<!-- wp:columns {"verticalAlignment":"center"} -->
-			<div class="wp-block-columns are-vertically-aligned-center px-2"><!-- wp:column {"verticalAlignment":"center"} -->
+			<div class="px-2 wp-block-columns are-vertically-aligned-center"><!-- wp:column {"verticalAlignment":"center"} -->
 			<div class="wp-block-column is-vertically-aligned-center"><!-- wp:heading {"className":"mt-0"} -->
 			<h2 class="mt-0">Study Living Systems from Unique Perspectives</h2>
 			<!-- /wp:heading -->
@@ -49,11 +49,12 @@ if ( function_exists( 'register_block_pattern' ) ) {
 			<!-- /wp:column -->
 			
 			<!-- wp:column {"verticalAlignment":"center"} -->
-			<div class="wp-block-column is-vertically-aligned-center"><!-- wp:cover {"url":"http://sites.krieger.jhu.edu/wp-content/themes/ksas-blocks/resources/images/campus3.jpg","id":1869,"dimRatio":0,"minHeight":500,"style":{"color":{}}} -->
-			<div class="wp-block-cover" style="min-height:500px"><img class="wp-block-cover__image-background wp-image-1869" alt="" src="http://sites.krieger.jhu.edu/wp-content/themes/ksas-blocks/resources/images/campus3.jpg" data-object-fit="cover"/><div class="wp-block-cover__inner-container"></div></div>
+			<div class="wp-block-column is-vertically-aligned-center"><!-- wp:cover {"url":"' . esc_url( get_template_directory_uri() ) . '/resources/images/campus3.jpg","id":1869,"dimRatio":0,"minHeight":500,"style":{"color":{}}} -->
+			<div class="wp-block-cover" style="min-height:500px"><img class="wp-block-cover__image-background wp-image-1869" alt="" src="' . esc_url( get_template_directory_uri() ) . '/resources/images/campus3.jpg" data-object-fit="cover"/><div class="wp-block-cover__inner-container"></div></div>
 			<!-- /wp:cover --></div>
 			<!-- /wp:column --></div>
-			<!-- /wp:columns -->',
+			<!-- /wp:columns -->
+			',
 		)
 	);
 	// Staff Listing Vertical.
@@ -235,7 +236,7 @@ if ( function_exists( 'register_block_pattern' ) ) {
 
 			<!-- wp:columns -->
 			<div class="wp-block-columns three-column-feature"><!-- wp:column -->
-			<div class="wp-block-column mb-4 px-6 py-8 overflow-hidden bg-white rounded-md shadow-md"><!-- wp:heading -->
+			<div class="px-6 py-8 mb-4 overflow-hidden bg-white rounded-md shadow-md wp-block-column"><!-- wp:heading -->
 			<h2>Explore</h2>
 			<!-- /wp:heading -->
 
@@ -245,7 +246,7 @@ if ( function_exists( 'register_block_pattern' ) ) {
 			<!-- /wp:column -->
 
 			<!-- wp:column -->
-			<div class="wp-block-column mb-4 px-6 py-8 overflow-hidden bg-white rounded-md shadow-md"><!-- wp:heading -->
+			<div class="px-6 py-8 mb-4 overflow-hidden bg-white rounded-md shadow-md wp-block-column"><!-- wp:heading -->
 			<h2>Learn</h2>
 			<!-- /wp:heading -->
 
@@ -255,7 +256,7 @@ if ( function_exists( 'register_block_pattern' ) ) {
 			<!-- /wp:column -->
 
 			<!-- wp:column -->
-			<div class="wp-block-column mb-4 px-6 py-8 overflow-hidden bg-white rounded-md shadow-md"><!-- wp:heading -->
+			<div class="px-6 py-8 mb-4 overflow-hidden bg-white rounded-md shadow-md wp-block-column"><!-- wp:heading -->
 			<h2>Discover</h2>
 			<!-- /wp:heading -->
 

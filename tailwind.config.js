@@ -40,7 +40,7 @@ module.exports = {
                 marginBottom: "0rem",
                 fontSize: "2.25rem",
                 fontWeight: "700",
-                fontFamily: "robotoslab-bold, Georgia, serif",
+                fontFamily: "hopkinsslab-bold, Georgia, serif",
               },
               "h3, h4, h5": {
                 marginTop: "0.5rem",
@@ -56,8 +56,7 @@ module.exports = {
                 marginTop: "0.5rem",
                 marginBottom: "0.5rem",
                 fontWeight: "700",
-                fontFamily:
-                  "worksans-bold, system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, sans-serif",
+                fontFamily: "hopkinsslab-bold, Georgia, serif",
               },
               h3: {
                 fontSize: "1.75rem",

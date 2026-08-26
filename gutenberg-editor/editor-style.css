@@ -3,8 +3,8 @@ Description: Used to style the content editor in posts and pages
 */
 
 @font-face {
-  font-family: "robotoslab-bold";
-  src: url("../dist/fonts/roboto_slab/RobotoSlab-Bold.woff") format("woff");
+  font-family: "hopkinsslab-bold";
+  src: url("../dist/fonts/roboto_slab/hopkinsslab-bold.woff") format("woff");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -151,13 +151,13 @@ a.acf-button.button.button-primary {
 
 /* The Post Title */
 .editor-post-title__block .editor-post-title__input {
-  font-family: "robotoslab-bold", "Helvetica Neue", Roboto, sans-serif;
+  font-family: "hopkinsslab-bold", "Helvetica Neue", Roboto, sans-serif;
   font-weight: 700;
 }
 
 /* Headings */
 .editor-writing-flow .wp-block h1 {
-  font-family: "robotoslab-bold", "Helvetica Neue", Roboto, sans-serif;
+  font-family: "hopkinsslab-bold", "Helvetica Neue", Roboto, sans-serif;
   font-weight: 700;
 }
 .editor-writing-flow .wp-block h2,
@@ -170,7 +170,7 @@ a.acf-button.button.button-primary {
 }
 
 h1 {
-  font-family: "robotoslab-bold", "Helvetica Neue", Roboto, sans-serif;
+  font-family: "hopkinsslab-bold", "Helvetica Neue", Roboto, sans-serif;
   font-weight: 700;
 }
 

@@ -55,7 +55,9 @@
 * 2. Layout & Containers
 */
 #tribe-events, #tribe-events-pg-template, .tribe-events-pg-template {
-  padding: 40px 20px 20px !important;
+  padding: 0px !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
 }
 
 .page .tribe-common-l-container.tribe-events-l-container {
@@ -378,7 +380,7 @@ h1.tribe-events-single-event-title,
 .tribe-events-single .tribe-events-notices {
   background-color: #fff2d9;
   position: relative;
-  margin: 1rem 0;
+  margin: 1rem 0 2rem;
   padding: 1rem;
   border: 1px solid rgba(10, 10, 10, 0.25);
   border-radius: 0;

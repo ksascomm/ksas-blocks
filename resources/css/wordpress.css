@@ -370,7 +370,7 @@ span.posted-on {
 
 .featured-image-area .entry-title {
   @apply text-4xl lg:text-[2.75rem];
-  font-family: "robotoslab-bold", Georgia, serif !important;
+  font-family: "hopkinsslab-bold", Georgia, serif !important;
   font-weight: 700 !important;
 }
 
@@ -1208,7 +1208,7 @@ footer.entry-footer {
 
 
 /* Widgets
---------------------------------------------- */
+--------------------------------------------- 
 .widget {
   @apply p-3 mx-0 mt-0 mb-6 bg-white;
   background: url("../images/blueInWhite_corner1.svg") no-repeat right bottom;
@@ -1269,8 +1269,25 @@ footer.entry-footer {
 
 .widget .textwidget.custom-html-widget a.button {
   @apply px-4 py-3 text-white border-0 bg-blue hover:bg-blue-light;
+}*/
+
+.widget.widget_block {
+	@apply mx-auto max-w-[120ch];
 }
 
+
+.widget.widget_block .wp-block-column  {
+	@apply px-6 py-8 mb-4 overflow-hidden bg-white rounded-md shadow-md; 
+	background-color: #fff;
+    display: inline-block;
+    align-items: center;
+    box-shadow: -10px 10px 0px 0px rgba(65,143,222,1), 0px 0px 10px 0px rgba(0,0,0,0.16);
+}
+
+.widget h3.wp-block-heading {
+	font-family: var(--font-serif-bold);
+	font-weight: var(--font-weight-bold);
+}
 
 .footer-widget-area {
   margin-top: calc(3 * var(--footer-widget----spacing-vertical));
@@ -2555,6 +2572,15 @@ font-family: "worksans-bold", system-ui, BlinkMacSystemFont, -apple-system, Sego
   @apply mx-auto! max-w-5xl!;
 }
 
+.front.prose .entry-content h2,
+.front.prose .entry-content h2 strong,
+.front.prose .entry-content h3,
+.front.prose .entry-content h3 strong,
+.entry-content h2.wp-block-heading strong {
+	font-family: var(--font-serif-bold);
+	font-weight: var(--font-weight-bold);
+}
+
 @media (width >= theme(--breakpoint-lg)) {
   .news-section > div {
     max-width: 1440px;
@@ -2568,14 +2594,14 @@ font-family: "worksans-bold", system-ui, BlinkMacSystemFont, -apple-system, Sego
 }
 
 .news-section .prose h3.entry-title,
-.blog .site-main.prose h3.entry-title {
+.blog .site-main.prose h2.entry-title {
   @apply mt-0!;
 }
 
 .news-section .prose h3.entry-title a,
-.blog .site-main.prose h3.entry-title a {
-  font-weight: var(--font-weight-bold);
-  font-family: var(--font-heavy);
+.blog .site-main.prose h2.entry-title a {
+  font-weight: var(--font-weight-semibold) !important;
+  font-family: var(--font-serif-semibold) !important;
 }
 
 .news-section .prose.article-excerpt img {
@@ -3255,9 +3281,9 @@ body:not(.enable-search-modal) .header-titles-wrapper {
 }
 
 .site-title {
-  font-family: "robotoslab-bold", Georgia, serif;
+  font-family: "hopkinsslab-semibold", Georgia, serif;
   line-height: 1;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .site-title a {

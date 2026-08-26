@@ -25,7 +25,7 @@
 			</div>
 		<?php endif; ?>
 		<div class="grow contact-info">
-			<h1 class="font-heavy font-bold text-3xl! leading-9">
+			<h1 class="font-weight-bold font-serif-bold text-3xl! leading-9">
 			<?php if ( is_singular( 'people' ) ) : ?> 
 				<?php the_title(); ?> 
 				<?php if ( get_post_meta( $post->ID, 'ecpt_pronoun', true ) ) : ?>
