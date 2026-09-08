@@ -58,5 +58,27 @@ function my_register_blocks() {
 				'enqueue_style'   => get_template_directory_uri() . '/template-parts/blocks/testimonials/testimonials.css',
 			)
 		);
+		acf_register_block_type(
+			array(
+				'name'            => 'horizontal-card',
+				'title'           => __( 'Horizontal Card', 'ksas-office' ),
+				'description'     => __( 'A custom horizontal card with image overlay.', 'ksas-office' ),
+				'render_template' => '/template-parts/blocks/horizontal-card/horizontal-card.php',
+				'category'        => 'ksas-office',
+				'supports'        => array(
+					'align' => false, // Disables alignment toolbar and classes.
+				),
+				'icon'            => 'businessperson',
+				'keywords'        => array( 'horizontal', 'card', 'ksas' ),
+				'mode'            => 'edit',
+				'enqueue_style'   => get_template_directory_uri() . '/template-parts/blocks/horizontal-card/horizontal-card.css',
+			)
+		);
 	}
 }
+
+function ksas_blocks_editor_styles() {
+	// Tells Gutenberg to inject this CSS file into the editor iframe canvas.
+	add_editor_style( '/template-parts/blocks/horizontal-card/horizontal-card.css' );
+}
+add_action( 'admin_init', 'ksas_blocks_editor_styles' );

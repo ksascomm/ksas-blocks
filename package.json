@@ -1,6 +1,6 @@
 {
 	"name": "ksas-blocks",
-	"version": "9.4.0",
+	"version": "9.4.1",
 	"private": true,
 	"scripts": {
 		"development": "mix",
@@ -28,5 +28,8 @@
 		"tailwindcss": "^4.3.3",
 		"webpack": "^5.105.4",
 		"webpack-cli": "^7.0.2"
+	},
+	"optionalDependencies": {
+		"lightningcss-darwin-arm64": "^1.33.0"
 	}
 }

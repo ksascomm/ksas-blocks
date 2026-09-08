@@ -55,8 +55,8 @@ module.exports = {
                 maxWidth: "55ch",
                 marginTop: "0.5rem",
                 marginBottom: "0.5rem",
-                fontWeight: "700",
-                fontFamily: "hopkinsslab-bold, Georgia, serif",
+                fontWeight: "600",
+                fontFamily: "hopkinsslab-semibold, Georgia, serif",
               },
               h3: {
                 fontSize: "1.75rem",

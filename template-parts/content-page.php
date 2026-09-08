@@ -16,7 +16,7 @@ if ( has_post_thumbnail() ) :
 	<div class="alignfull featured-image-area front-featured-image-area h-auto mt-0! bg-white lg:bg-grey-lightest">
 		<div class="flex h-auto lg:h-80">
 			<div class="flex lg:pr-6 text-left pl-8 md:pl-[4%] 2xl:pl-[6%] 3xl:pl-[8%] 4xl:pl-[12%] 5xl:pl-[16%] lg:items-center lg:justify-start sm:w-full lg:w-2/5">
-				<h1 class="entry-title tracking-tight leading-10 sm:leading-none text-4xl xl:text-[44px] py-8 mb-0 not-prose">
+				<h1 class="py-8 mb-0 text-4xl leading-10 entry-title sm:leading-none not-prose">
 					<?php the_title(); ?>
 				</h1>
 			</div>
@@ -38,7 +38,7 @@ if ( has_post_thumbnail() ) :
 	<div class="alignfull mt-0!">
 		<div class="flex h-auto bg-white lg:bg-grey-cool front-featured-image-area lg:h-40">
 			<div class="flex w-full px-4 mx-auto prose lg:prose-lg lg:items-center">
-				<h1 class="entry-title tracking-tight leading-10 sm:leading-none lg:text-4xl xl:text-[44px] py-8 mb-0! pl-6 pr-5 md:pl-10 md:pr-4 2xl:pl-4">
+				<h1 class="entry-title leading-10 sm:leading-none lg:text-4xl py-8 mb-0! pl-6 pr-5 md:pl-10 md:pr-4 2xl:pl-4">
 					<?php the_title(); ?>
 				</h1>
 			</div>

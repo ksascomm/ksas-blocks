@@ -14,7 +14,7 @@ $ksas_current_id = get_the_ID(); // Cached ID for better readability and perform
 	<div class="alignfull mt-0!">
 		<div class="flex h-auto bg-white lg:bg-grey-cool front-featured-image-area lg:h-40">
 			<div class="flex w-full px-4 mx-auto prose lg:prose-lg lg:items-center">
-				<h1 class="tracking-tight leading-10 sm:leading-none text-4xl! py-8 mb-0! pl-6 pr-5 md:pl-10 md:pr-4 2xl:pl-4 max-w-[65ch]">
+				<h1 class=" leading-10 sm:leading-none text-4xl! py-8 mb-0! pl-6 pr-5 md:pl-10 md:pr-4 2xl:pl-4 max-w-[65ch]">
 					<?php the_title(); ?>
 				</h1>
 			</div>

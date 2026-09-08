@@ -100,8 +100,8 @@ a.tribe-events-calendar-latest-past__event-title-link,
 .tribe-block__venue .tribe-block__venue__meta .tribe-block__venue__name h3,
 .tribe-events-section-category dt,
 .tribe-events-content h2, .tribe-events-content h3, .tribe-events-content h4, .tribe-events-content h5, .tribe-events-content h6 {
-  font-family: "worksans-bold", system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, sans-serif !important;
-  font-weight: 700 !important;
+	font-family: var(--font-serif-semibold);
+	font-weight: var(--font-weight-semibold);
 }
 
 /* Secondary Bold / Dates / Specific Labels */

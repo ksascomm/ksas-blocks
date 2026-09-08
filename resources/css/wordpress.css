@@ -110,6 +110,11 @@ mark {
 # Forms
 --------------------------------------------------------------*/
 
+h2.gform_title {
+	font-family: var(--font-serif-semibold);
+	font-weight: var(--font-weight-semibold);
+}
+
 form.post-password-form input {
   @apply p-2 bg-grey-lightest;
 }
@@ -317,7 +322,9 @@ u {
 /* Elements
 --------------------------------------------- */
 span.posted-on {
-  @apply -my-2 text-base font-bold font-heavy md:text-lg;
+  @apply -my-2 text-base md:text-lg;
+  	font-family: var(--font-serif-semibold);
+	font-weight: var(--font-weight-semibold)
 }
 
 .entry-meta {
@@ -1388,9 +1395,8 @@ Not in Tribe-Events Directory */
   h2.tribe-events-widget-events-list__header-title.tribe-common-h6.tribe-common-h--alt {
   font-size: 1.875rem;
   margin-bottom: 0.5rem;
-  font-family: worksans-bold, system-ui, BlinkMacSystemFont, -apple-system,
-    Segoe UI, sans-serif;
-  font-weight: 700;
+	font-family: var(--font-serif-semibold);
+	font-weight: var(--font-weight-semibold);
 }
 
 .footer-widget-area
@@ -2577,8 +2583,14 @@ font-family: "worksans-bold", system-ui, BlinkMacSystemFont, -apple-system, Sego
 .front.prose .entry-content h3,
 .front.prose .entry-content h3 strong,
 .entry-content h2.wp-block-heading strong {
-	font-family: var(--font-serif-bold);
-	font-weight: var(--font-weight-bold);
+	font-family: var(--font-serif-semibold);
+	font-weight: var(--font-weight-semibold);
+}
+
+.front.prose .entry-content .tribe-events-widget-events-list .tribe-events-widget-events-list__header-title,
+.front.prose .entry-content .tribe-events-widget-events-list__event-title .tribe-events-widget-events-list__event-title-link.tribe-common-anchor-thin {
+	font-family: var(--font-serif-semibold) !important;
+	font-weight: var(--font-weight-semibold) !important;
 }
 
 @media (width >= theme(--breakpoint-lg)) {
