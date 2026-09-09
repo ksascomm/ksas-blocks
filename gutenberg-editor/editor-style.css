@@ -4,7 +4,7 @@ Description: Used to style the content editor in posts and pages
 
 @font-face {
   font-family: "hopkinsslab-bold";
-  src: url("../dist/fonts/roboto_slab/hopkinsslab-bold.woff") format("woff");
+  src: url("../dist/fonts/hopkins_slab/HopkinsSlab-Bold.woff") format("woff");
   font-weight: 700;
   font-style: normal;
   font-display: swap;

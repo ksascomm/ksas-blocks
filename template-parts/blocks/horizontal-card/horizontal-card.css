@@ -12,6 +12,7 @@
    -------------------------------------------------------------------------- */
 .ksas-card-container {
   max-width: 100ch;
+  margin: 2.5rem 0;
 }
 
 .ksas-horizontal-card {

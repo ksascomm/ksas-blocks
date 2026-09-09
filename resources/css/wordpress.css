@@ -3081,7 +3081,115 @@ h5.alignfull {
   @apply ml-0! my-2!;
 }
 
-/* Block: Paragraph ------------------------------ */
+/* Block: Media Text ------------------------------ */
+
+.wp-block-media-text {
+  max-width: 100ch;
+}
+
+.wp-block-media-text > .wp-block-media-text__content {
+  padding: 0 4% !important;
+}
+
+.wp-block-media-text.is-stacked-on-mobile {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+/* Shared Base Styles */
+.wp-block-media-text .wp-block-media-text__media {
+  position: relative;
+  overflow: visible !important;
+  display: block;
+  width: 100%;
+}
+
+.wp-block-media-text .wp-block-media-text__media img {
+  position: relative;
+  z-index: 2;
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* === 1. DESKTOP STYLES (Screen widths >= 1025px)=== */
+@media (min-width: 1025px) {
+  /* Image on RIGHT (Bottom-Right Offset Border) */
+  .wp-block-media-text.has-media-on-the-right .wp-block-media-text__media::after {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: translate(20px, 20px);
+    border: 2px solid #0072ce;
+    pointer-events: none;
+  }
+
+  .wp-block-media-text.has-media-on-the-right .wp-block-media-text__media {
+    margin-right: 20px;
+    margin-bottom: 20px;
+    width: calc(100% - 20px);
+  }
+
+  /* Image on LEFT (Top-Left Offset Border) */
+  .wp-block-media-text:not(.has-media-on-the-right) .wp-block-media-text__media::before {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: translate(-20px, 20px);
+    border: 2px solid #0072ce;
+    pointer-events: none;
+  }
+
+  .wp-block-media-text:not(.has-media-on-the-right) .wp-block-media-text__media {
+    margin-top: 20px;
+    margin-left: 20px;
+    width: calc(100% - 20px);
+  }
+}
+
+/* === 2. STACKED LAYOUT & MOBILE (Screen widths <= 1024px)=== */
+@media (max-width: 1024px) {
+  /* Force single-column grid stack */
+  .wp-block-media-text.is-stacked-on-mobile {
+    grid-template-columns: 100% !important;
+  }
+
+  /* Ensure media stays on top, text below */
+  .wp-block-media-text.is-stacked-on-mobile .wp-block-media-text__media {
+    grid-column: 1 !important;
+    grid-row: 1 !important;
+    margin: 0 !important;
+    width: 100% !important;
+  }
+
+  .wp-block-media-text.is-stacked-on-mobile .wp-block-media-text__content {
+    grid-column: 1 !important;
+    grid-row: 2 !important;
+  }
+
+  /* Disable decorative offset borders when stacked */
+  .wp-block-media-text .wp-block-media-text__media::after,
+  .wp-block-media-text .wp-block-media-text__media::before {
+    display: none !important;
+  }
+
+  .wp-block-media-text .wp-block-media-text__media {
+	padding: 0 3rem 1rem 1.25rem;
+  }
+	.wp-block-media-text > .wp-block-media-text__content {
+	padding: 0 4% 0 2% !important;
+	}
+}
+
+
 
 /*--------------------------------------------------------------
 # Components from TwentyTwenty
