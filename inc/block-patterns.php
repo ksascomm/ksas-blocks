@@ -221,9 +221,9 @@ if ( function_exists( 'register_block_pattern' ) ) {
 			'categories'    => array( 'ksas-office' ),
 			'viewportWidth' => 1400,
 			'content'       => '<!-- wp:columns -->
-            <div class="wp-block-columns three-column-feature"><!-- wp:column {"width":"66.66%"} -->
+            <div class="mt-8 wp-block-columns"><!-- wp:column {"width":"66.66%"} -->
             <div class="wp-block-column" style="flex-basis:66.66%"><!-- wp:heading -->
-            <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</h2>
+            <h2>Lorem ipsum dolor sit amet</h2>
             <!-- /wp:heading --></div>
             <!-- /wp:column -->
 

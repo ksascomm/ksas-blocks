@@ -2575,7 +2575,8 @@ font-family: "worksans-bold", system-ui, BlinkMacSystemFont, -apple-system, Sego
 .front.prose .entry-content h2,
 .front.prose .entry-content h3,
 .front.prose .entry-content h4 {
-  @apply mx-auto! max-w-5xl!;
+  max-width: var(--container-5xl);
+  margin-inline: auto;
 }
 
 .front.prose .entry-content h2,
@@ -2984,6 +2985,23 @@ h3.wp-block-accordion-heading {
   align-items: center;
   box-shadow: -10px 10px 0px 0px rgba(65,143,222,1),
   0px 0px 10px 0px rgba(0,0,0,0.16);
+}
+
+
+/* Override WordPress Columns Breakpoint to 1024px */
+@media (max-width: 1024px) {
+  .wp-block-columns.three-column-feature {
+    flex-wrap: wrap !important;
+    flex-direction: column !important;
+  }
+
+  .wp-block-columns.three-column-feature > .wp-block-column {
+    flex-basis: 100% !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
 }
 
 .alignfull .three-column-feature {
