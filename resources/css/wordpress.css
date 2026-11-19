@@ -1232,7 +1232,7 @@ footer.entry-footer {
 .widget .textwidget {
   @apply font-sans font-normal;
 }
-
+*/
 .widget .textwidget a {
 	border: none;
 	transition-property: box-shadow;
@@ -1252,7 +1252,7 @@ footer.entry-footer {
 	color: var(--color-white);
 	outline: 0;
 }
-
+/*
 .widget h2 {
   @apply mb-2 text-xl font-bold font-heavy;
 }
